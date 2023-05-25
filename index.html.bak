@@ -1,0 +1,650 @@
+<head>
+    <title>Information+ Conference 2023</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/2023/css/styles.css">
+    <!--    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet" />-->
+
+    <!-- JS -->
+    <!--<script src="/js/main.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+    <script src="/js/script.js"></script>-->
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://infoplus.viscussion.de/visitor.js" crossorigin="anonymous" type="text/javascript"></script>
+
+
+    <!-- metatags -->
+    <meta property="og:title" content="Information+ Conference 2023" />
+    <meta property="og:description " content="Interdisciplinary practices in information design & visualization. Edinburgh,
+      22nd – 24th November 2023" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://informationplusconference.com/2023/" />
+    <meta property="og:image" content="https://informationplusconference.com/2023/assets/infoplus2023small.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:alt" content="Information+ Conference 2023" />
+    <meta name="twitter:image" content="https://informationplusconference.com/2023/assets/infoplus2023small.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body>
+    <div class="navbar navbar-collapse" id="navbar">
+    <div class="container">
+        
+        <a href="/2023/">
+            information+
+        </a>
+
+        
+        <a href="/2023/#cfp">
+            call for presentations
+        </a>
+
+        
+        <a href="/2023/#workshops">
+            call for workshops
+        </a>
+
+        
+        <a href="/2023/#exhibition">
+            call for exhibitions
+        </a>
+
+        
+        <a href="/2023/#registration">
+            registration
+        </a>
+
+        
+        <a href="/2023/supporters">
+            supporters
+        </a>
+
+        
+        <a href="/2023/#about">
+            about
+        </a>
+
+        
+    </div>
+</div>
+
+<div class="mobile-nav">
+    <div class="items">
+        
+        <a href="/2023/" onclick="$('.mobile-nav').toggleClass('visible')" >
+            information+
+        </a>
+
+        
+        <a href="/2023/#cfp" onclick="$('.mobile-nav').toggleClass('visible')" >
+            call for presentations
+        </a>
+
+        
+        <a href="/2023/#workshops" onclick="$('.mobile-nav').toggleClass('visible')" >
+            call for workshops
+        </a>
+
+        
+        <a href="/2023/#exhibition" onclick="$('.mobile-nav').toggleClass('visible')" >
+            call for exhibitions
+        </a>
+
+        
+        <a href="/2023/#registration" onclick="$('.mobile-nav').toggleClass('visible')" >
+            registration
+        </a>
+
+        
+        <a href="/2023/supporters" onclick="$('.mobile-nav').toggleClass('visible')" >
+            supporters
+        </a>
+
+        
+        <a href="/2023/#about" onclick="$('.mobile-nav').toggleClass('visible')" >
+            about
+        </a>
+
+        
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="$('.mobile-nav').toggleClass('visible')">
+        <i class="fa fa-chevron-down"></i>
+    </a>
+</div>
+
+<br>
+<br>
+
+    <section id="canvas">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <section id="header">
+                        <div class="row">
+                            <div class="col-lg-12 pt-5">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <svg width="150" height="150" viewBox="0 0 150 150" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M42.4427 107.771C62.3839 127.713 101.098 121.33 128.913 93.5146C147.255 75.1726 144.298 73.8191 134.437 69.3066C129.345 66.976 122.411 63.8027 115.62 57.0113C110.105 51.4969 105.262 44.1746 100.553 37.0541C88.2309 18.4252 76.8229 1.17756 56.6995 21.3009C28.8844 49.116 22.5014 87.8301 42.4427 107.771ZM48.2372 102.289C63.5702 117.622 88.4299 117.622 103.763 102.289C119.096 86.9557 119.096 62.096 103.763 46.763C88.4299 31.43 63.5702 31.43 48.2372 46.763C32.9042 62.096 32.9042 86.9557 48.2372 102.289Z"
+                                                fill="url(#paint2_linear_125_98)">
+                                                <animateTransform attributeName="transform" attributeType="XML"
+                                                    type="rotate" from="0 75 75" to="360 75 75" dur="90s"
+                                                    repeatCount="indefinite" />
+                                            </path>
+                                            <g style="mix-blend-mode:hard-light">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M28.193 96.6254C47.4524 115.908 75.5689 144.058 99.8682 119.759C124.691 94.9362 129.185 59.1852 109.907 39.9068C90.6283 20.6284 54.8774 25.1228 30.0548 49.9454C5.77126 74.229 7.58916 76.0446 25.7293 94.1617C26.1319 94.5638 26.5425 94.9739 26.9611 95.3925C27.3676 95.799 27.7783 96.2101 28.193 96.6254ZM48.2372 102.289C63.5702 117.622 88.4299 117.622 103.763 102.289C119.096 86.9557 119.096 62.096 103.763 46.763C88.4299 31.43 63.5702 31.43 48.2372 46.763C32.9042 62.096 32.9042 86.9557 48.2372 102.289Z"
+                                                    fill="url(#paint0_linear_125_98)">
+                                                    <animateTransform attributeName="transform" attributeType="XML"
+                                                        type="rotate" from="0 75 75" to="360 75 75" dur="60s"
+                                                        repeatCount="indefinite" />
+                                                </path>
+                                            </g>
+                                            <g style="mix-blend-mode:hard-light">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M120.668 79.3794C120.495 75.2937 120.321 71.151 120.321 67.0633C120.321 62.6907 120.521 58.6514 120.703 54.9531C121.641 35.9965 122.135 26 93.0146 26C58.2127 26 30.0002 47.7142 30.0002 74.5C30.0002 101.286 58.2127 123 93.0146 123C122.506 123 121.624 102.067 120.668 79.3794ZM48.2371 102.289C63.5701 117.622 88.4299 117.622 103.763 102.289C119.096 86.9556 119.096 62.0959 103.763 46.7629C88.4299 31.4299 63.5701 31.4299 48.2371 46.7629C32.9041 62.0959 32.9041 86.9556 48.2371 102.289Z"
+                                                    fill="url(#paint1_linear_125_98)">
+                                                    <path
+                                                        d="M120.321 67.0633C120.321 93.8491 127.816 123 93.0143 123C58.2125 123 30 101.286 30 74.5C30 47.7142 58.2125 26 93.0143 26C127.816 26 120.321 40.2775 120.321 67.0633Z"
+                                                        fill="#EE36F7">
+                                                        <animateTransform attributeName="transform" attributeType="XML"
+                                                            type="rotate" from="0 75 75" to="-360 75 75" dur="120s"
+                                                            repeatCount="indefinite" />
+
+                                            </g>
+
+                                            <defs>
+                                                <linearGradient id="paint0_linear_125_98" x1="109.907" y1="39.9069"
+                                                    x2="40.69" y2="109.124" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#4F66F7" />
+                                                    <stop offset="1" stop-color="#3747AB" />
+                                                </linearGradient>
+                                                <linearGradient id="paint1_linear_125_98" x1="75.5002" y1="26"
+                                                    x2="75.5002" y2="123" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#EE36F7" />
+                                                    <stop offset="1" stop-color="#A525AB" />
+                                                </linearGradient>
+                                                <linearGradient id="paint2_linear_125_98" x1="118" y1="104.5"
+                                                    x2="57.5002" y2="24" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#68F7DA" />
+                                                    <stop offset="1" stop-color="#48AB97" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+
+                                    <div class="col">
+                                        <h1>Information+<br> Conference 2023</h1>
+                                        <h2>
+                                            Interdisciplinary practices in information design &
+                                            visualization
+                                        </h2>
+                                        <h3>
+                                            22<sup>nd</sup> – 24<sup>th</sup> November
+                                            2023<br />
+                                            Edinburgh, UK
+                                        </h3>
+                                        <h5>
+                                            <a href="https://twitter.com/hashtag/infoplus2023?src=hashtag_click"
+                                                target="_blank">#infoplus2023</a>
+                                        </h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-10">
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <canvas height="400"></canvas>
+        <canvas height="400" class="offscreen" style="display: none"> </canvas>
+
+
+    </section>
+
+
+
+    <section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="text"> Information+ is an <span id="unique1">interdisciplinary</span> <span
+                        id="unique2">conference</span> <span id="unique3">that</span> brings together researchers,
+                    educators, and practitioners in information design and data visualization to discuss common
+                    questions and challenges in these rapidly changing fields. Information+ seeks to foster productive
+                    exchanges amongst the variety of people involved in the theories, practices and pedagogies of
+                    analyzing and communicating information.
+                </p>
+            </div>
+            <div class="col-lg-4 dates">
+                <p>Information+ is committed to enabling a diverse, inclusive and respectful environment where all
+                    participants can learn, network, and enjoy planned activities. We are dedicated to a harassment-free
+                    experience for everyone.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="text-small">
+                    Information+ will be held in-person between November 22<sup>nd</sup> – 24<sup>th</sup>, 2023 at
+                    the
+                    University of Edinburgh, at minimal cost to attendees.
+                    Building on the experiences from the previous installments of
+                    <a href="https://informationplusconference.com/2016/" target="_blank">Information+ 2016</a> at
+                    <em>Emily Carr University of Art + Design, Vancouver</em>,
+                    <a href="https://informationplusconference.com/2018/" target="_blank">Information+ 2018</a>
+                    <em> at University of Applied Sciences Potsdam</em>, and a virtual
+                    <a href="https://informationplusconference.com/2021/" target="_blank">Information+ 2021</a>, we
+                    seek
+                    to
+                    significantly broaden the base of our interdisciplinary community.
+                    Again an in-person event, we want to emphasize exchange and community building.
+                </p>
+                <p class="text-cfp">
+                    The conference invites three types of contributions: <a href="#cfp">Presentations</a>, <a
+                        href="#workshops">Workshops & Activities</a>, and
+                    <a href="#exhibition">Exhibitions</a>. We invite proposals from all relevant fields and areas of
+                    professional practice,
+                    research, and pedagogy. We seek submissions of critical thoughts, theories, practices, and
+                    experiences around information design and data visualization and relevant application areas from
+                    both academic and non-academic perspectives including the humanities and science, art and
+                    design,
+                    and all related (interdisciplinary) fields.
+                </p>
+            </div>
+            <div class="col-lg-4 dates">
+                <br>
+                <br>
+                <p>In past years of Info+, presentations have covered a broad range of topics in information design and
+                    visualization, including:
+                    <br>
+                    <br>
+                    <strong>General topics:</strong>
+                <ul>
+                    <li>Ethical considerations;</li>
+                    <li>Design processes;</li>
+                    <li>Education;</li>
+                    <li>Diversity and inclusion;</li>
+                    <li> Modalities of data representations (touch, sound, taste, .. );</li>
+                    <li>Novel technology and AI;</li>
+                </ul>
+
+
+                <strong>Domain-specific:</strong>
+                <ul>
+                    <li>Social and political issues;</li>
+                    <li>The environment and climate action;</li>
+                    <li>Advocacy and law;</li>
+                    <li>Health and medical applications;</li>
+                    <li>Cultural analysis and collections;</li>
+                    <li>Digital humanities;</li>
+                    <li>Data journalism.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="cfp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="title">Call for Presentations</h2>
+                <p class="text">
+                    We are explicitly calling for presentations that will engage the community in timely,
+                    thought-provoking, and interdisciplinary conversations about information design and data
+                    visualization, including their design, assessment, and implications for society. We are looking for
+                    diverse positions and topics, and we especially encourage submissions from practitioners, artists,
+                    academics, and others that are not usually represented at visualization and data-oriented venues.
+                </p>
+                <p class="text">
+                    We are seeking presentations that motivate, inspire, and challenge the community, and that most
+                    importantly have the potential to spur cross-disciplinary conversations and ideas. Presentations can
+                    take many forms, including provocations, reflections, challenges, experiments, and
+                    works-in-progress. We invite new perspectives, ideas, or cross-disciplinary connections, and welcome
+                    presentation experiments that play with different modalities, performances, and audience
+                    participation.
+                </p>
+                <p class="text">
+                    Accepted submissions will be presented in-person (no online) in a single-track at the conference.
+                    Presentation lengths can vary between 5 and 15 minutes, followed by open discussions with conference
+                    participants. The program will be curated by an international programme committee and a jury, with
+                    an emphasis on promoting cross-disciplinary conversations.
+                </p>
+                <h3 class="dates">
+                    Submission</h3>
+                <p class="text">
+                    Proposals for a presentation must include a pitch statement (max 3000 char) that considers the
+                    following questions:
+                <ul>
+                    <li>What is the topic of your presentation?</li>
+                    <li>What will attendees learn or experience?</li>
+                    <li>Why is it important for the Info+ community?</li>
+                </ul>
+                </p>
+                <p class="text">
+                    Your proposal must also include a description of the anticipated form of your presentation (max
+                    1000
+                    char): is it a provocation, a reflection, a challenge, an experiment, a work-in-progress? Will
+                    there
+                    be non-traditional components to the presentation? What is the proposed length of your talk:
+                    5-10
+                    mins, 10-20 mins?
+                </p>
+                <p class="text">
+                    Optionally, proposals may include (static) materials to help reviewers assess the potential of
+                    your
+                    presentation. These materials must be uploaded in the form of a PDF.
+                </p>
+                <div class="sponsor-package">
+                    <p class="text"><strong>To submit:</strong> Submissions are made via <a href="https://easychair.org/my/conference?conf=info2023" target="_blank">EasyChair submission site</a>.
+                            <br>
+                        There will be additional details about the submission requirements in the submission form.
+                        <em>Please note that your pitch and anticipated
+                            talk format are to be uploaded via text boxes on the submission site.</em>
+                    </p>
+                    <p class="text">
+                        <strong>Submission deadline:</strong> May 31st, 2023, 23:59<a
+                            href="https://time.is/Anywhere_on_Earth">
+                            AoE (Anywhere on Earth)</a><br>
+                        Notification of acceptance: July 31, 2023
+                    </p>
+                </div>
+                <br>
+                <p class="text">
+                    Accepted presentations are invited for a full journal publication.
+                </p>
+                <p class="text">
+                    In case of questions about presentations, contact: <a
+                        href="mailto:infoplus-presentations@mlist.is.ed.ac.uk">infoplus-presentations@mlist.is.ed.ac.uk</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="workshops">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="title">Call for Workshops & Activities</h2>
+                <p class="text">
+                    Workshops offer opportunities for discussion, hands-on experiences, and networking. Activities offer
+                    opportunities for brief exercises that engage the conference attendees with data and visual
+                    representation (for instance through ice-breakers, sketching, data humor or demonstrations). We
+                    envision multiple possibilities such as running pop-up activities in the main room with all the
+                    attendees, to hands-on design workshops with smaller groups of 2 hours or even half-day community
+                    building events.
+                </p>
+                <p class="text">
+                    We are looking for proposals that provoke reflection, educate participants on existing or emerging
+                    topics, create a community of practice, or stimulate discussion by bringing complementary in person
+                    hands-on activities to the conference. Workshops and Activities can cover all the conference topics
+                    and beyond for instance creative programming, constructing data sculptures, interventions in the
+                    streets of Edinburgh, or using data as a critical lens for social good, intersectional feminism,
+                    decolonialism and sustainability.
+                </p>
+                <p class="text">
+                    Workshops and Activities can run anywhere from 30 minutes to 4 hours with an estimated attendance of
+                    2 to 200 people. Experimental and unconventional formats are especially welcome and can happen in
+                    the main audience hall, in dedicated seminar rooms or elsewhere in the city.
+                </p>
+                <h3 class="dates">
+                    Submission</h3>
+                <p class="text">
+                    Proposal submissions for Workshops and Activities should contain the following information:
+                <ul>
+                    <li>duration,</li>
+                    <li> number of expected or max attendees,</li>
+                    <li> a description of the workshop goals,</li>
+                    <li> the process and the expected outcome of the workshop,</li>
+                    <li>any constraints to run the workshop (e.g., spaces, material, participant experience, etc.)</li>
+                    <li> how this workshop contributes to the conference and community.</li>
+                </ul>
+
+                </p>
+                <div class="sponsor-package">
+                    <p class="text"><strong>To submit:</strong> Submissions are made via <a href="https://easychair.org/my/conference?conf=info2023" target="_blank">Easy Chair submission site</a>.
+                        <br>
+						 There will be additional details about the submission requirements in the submission form.
+                    </p>
+                    <p class="text">
+                        <strong>Submission deadline:</strong> June 7th, 2023,<a
+                            href="https://time.is/Anywhere_on_Earth">
+                            AoE (Anywhere on Earth)</a>
+                    </p>
+                    <p class="text">
+                        Workshop & activities will be selected through a curatorial process including an international
+                        jury
+                        of academics and professionals in the domains of design, art and computer science.
+                    </p>
+                    <p class="text">
+                        Proposals
+                        will be
+                        judged on their feasibility, creativity, diversity of content and organizers as well as on how
+                        engaging the experience will be for the participants.
+                    </p>
+                </div>
+                <br>
+                <p class="text">
+                    In case of questions about presentations, contact: <a
+                        href="mailto:infoplus-workshops@mlist.is.ed.ac.uk">infoplus-workshops@mlist.is.ed.ac.uk</a>
+                </p>
+            </div>
+        </div>
+</section>
+<section id="exhibition">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="title">Call for Exhibitions</h2>
+                <h3>Information XYZ: A design exhibition held at the Information+ conference </h3>
+                <p class="text">
+                    At the Information+ exhibition we aim at showcasing recent contributions to the visual and material
+                    communication of information. We are looking for thought-provoking or radically designed pieces that
+                    derive from collaboration among disciplines, or from an interdisciplinary practice. We are welcoming
+                    individual or group submissions of data representation and visualization pieces in which the main
+                    intent is the communication of information. These pieces will be showcased during the Information+
+                    conference at <a href="https://inspace.ed.ac.uk">Inspace</a>, an exhibition space of the Institute
+                    of Design Informatics at the University
+                    of Edinburgh.
+                </p>
+                <p>We welcome submissions in a multitude of mediums such as video (projected or displayed), interactive
+                    technology, physical and sculptural, drawings and illustrations, and digital prints. Additionally,
+                    we are also interested in showcasing the design process behind some of the featured pieces, together
+                    with all their dead-ends and accidental designs. If the work has been exhibited before, we will ask
+                    you to disclose this, and favor a new framing or interpretation linking the work to the conference
+                    and the exhibition.
+                </p>
+                <p>We are looking for a broad diversity of contributions, people, and topics, and we especially
+                    encourage practitioners, designers, artists, academics, and others who are not usually represented
+                    at visualization and other data-oriented venues. A limited example of practices and applications we
+                    are looking for are:</p>
+                <ul>
+                    <li>Communication of science</li>
+                    <li>Data journalism and storytelling</li>
+                    <li>Design studies and visual explorations</li>
+                    <li>Digital humanities</li>
+                    <li>Automated (AI) visualizations</li>
+                    <li>Materiality of visualizations (i.e. physicalizations or performances)</li>
+                    <li>Graphic systems for data representation</li>
+                    <li>Metaphoric portrayals of data</li>
+                    <li>Data-embedded architecture, situated or environmental data</li>
+                </ul>
+                <br>
+                <p>The work will be selected by the Exhibition chairs in consultation with the conference’s organizing
+                    committee. All accepted work will be featured on this website, and in an online and printed catalog.
+                    Authors of the pieces will be asked to give a short artist talk introducing their work at the
+                    opening of the exhibition. The authors will work with the conference organizers on details for
+                    showcasing their pieces in the exhibition. Exhibiting artists will get complimentary registrations
+                    to the Information+ conference. No artist fees are provided. If accepted, we can subsidize travel
+                    costs in certain cases: please reach out to the Exhibition chairs if you don’t have a supporting
+                    institution to subsidize your travel expenses.</p>
+                <div class="sponsor-package">
+					<p class="text"><strong>To submit:</strong> Submissions are made via <a href="https://easychair.org/my/conference?conf=info2023" target="_blank">EasyChair submission site</a>.
+                            <br>
+                        You will find a submission form in the system that will ask you to specify the nature of your artwork/design piece and any technical and/space requirements.
+                    </p>
+                    <p class="text">
+                        <strong>Submission deadline:</strong> June 30, 2023, 23:59<a
+                            href="https://time.is/Anywhere_on_Earth">
+                            AoE (Anywhere on Earth)</a><br>
+                        Notification of acceptance: July 21, 2023
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="registration">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <h2 class="title">Registration</h2>
+                <p class="text-add">
+                    Registration will open in July 2023.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="title">About</h2>
+                    <p class="text-add">
+                        Information+ 2023 is made possible through the help and support of many people and partnering
+                        organizations.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 uni">
+                    <h3 class="dates">Conference Chairs</h3>
+                    <p><small><a href="mailto:infoplus@mlist.is.ed.ac.uk">email chairs</a></small>
+                    </p>
+                    <p>Uta Hinrichs, <small>University of Edinburgh</small></p>
+                    <p>Benjamin Bach, <small>University of Edinburgh</small></p>
+
+
+                    <h3 class="dates">Submission Chairs</h3>
+                    <p><small><a href="mailto:infoplus-presentations@mlist.is.ed.ac.uk">email chairs</a></small>
+                    </p>
+                    <p>Miriah Meyer, <small>Linköping University</small></p>
+                    <p>Dietmar Offenhuber, <small>Northeastern University</small></p>
+
+                    <h3 class="dates">Workshops & Activity Chairs</h3>
+                    <p><small><a href="mailto:infoplus-workshops@mlist.is.ed.ac.uk">email chairs</a></small>
+                    </p>
+                    <p>Georgia Panagiotidou, <small>University College London</small></p>
+                    <p>Samuel Huron, <small>Telecom Paris Tech</small></p>
+
+                    <h3 class="dates">Supporters Chairs</h3>
+                    <p>Daniel Archambault, <small>Newcastle University</small></p>
+                    <p>Cagatay Turkay, <small>Warwick University</small></p>
+
+                    <h3 class="dates">Exhibition Chairs</h3>
+                    <p><small><a href="mailto:infoplus-exhibition@mlist.is.ed.ac.uk">email chairs</a></small>
+                    </p>
+                    <p>Pedro Cruz, <small>Northeastern University</small></p>
+                    <p>Carmen Hull, <small>Northeastern University</small></p>
+
+                    <h3 class="dates">Web, Design & Communication Chairs</h3>
+                    <p>Derya Akbaba, <small>Linköping Unviersity</small></p>
+                    <p>Tobias Kauer, <small>Unviersity of Edinburgh</small></p>
+
+
+                    <h3 class="dates">Program Committee</h3>
+                    ...tdb...
+
+
+
+
+                    <!-- Contact Info -->
+                    <h3 class="dates">Social Media & Updates</h3>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>
+                                For updates, find us on Twitter:
+                                <a href="https://twitter.com/InfoPlusConf" target="_blank">@InfoPlusConf</a><br />
+                                and Mastodon:
+                                <a href="https://vis.social/@InfoPlusConf"
+                                    target="_blank">@InfoPlusConf@vis.social</a><br />
+                            </p>
+                            <p>
+                                For mentions, use the hashtag:
+                                <a href="https://twitter.com/hashtag/infoplus2023?src=hashtag_click"
+                                    target="_blank">#infoplus2023</a>
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <a href="https://vishub.net/" target="_blank"><img alt="Logo of VisHub"
+                            src="/2023/assets/logos/vishub.png" /></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.designinformatics.org/" target="_blank"><img alt="Logo of Design Informatics"
+                            src="/2023/assets/logos/dei.png" />
+                </div>
+                <div class="col">
+                    <a href="https://www.ed.ac.uk/" target="_blank"><img alt="Logo of University of Edinburgh"
+                            src="/2023/assets/logos/uoe.png" class="logo" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="formToggle" style="position: fixed; bottom: 5px; right: 5px; z-index: 2;">
+            <button type="button" id="toggle" class="btn btn-light btn-sm">Hide survey</button>
+        </div>
+        <div class="stickyForm"
+            style="width: 100%; position: fixed; left: 0px; bottom: 0px; height: auto; background: rgba(247,208,78,1); border-top: 3px solid rgba(255,255,255,.5); z-index: 1">
+            <div class="container p-2">
+                <p class="small" style="display: inline-block">Help us better understanding the composition of our
+                    community. How would you self-identify?</p>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-dark btn-sm" id="researcher">
+                        <input type="radio" name="options" value="researcher" autocomplete="off" checked> Researcher
+                    </label>
+                    <label class="btn btn-outline-dark btn-sm" id="educator">
+                        <input type="radio" name="options" value="educator" autocomplete="off"> Educator
+                    </label>
+                    <label class="btn btn-outline-dark btn-sm" id="practitioner">
+                        <input type="radio" name="options" value="practitioner" autocomplete="off"> Practitioner
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+</body>

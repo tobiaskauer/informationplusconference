@@ -1,0 +1,1206 @@
+@import url('https://rsms.me/inter/inter.css');
+
+    :root {
+      --yellow: #ffce1e;
+      --border: #ccc;
+      --affiliation: #aaa;
+
+      --researcher: 28, 245, 245;
+      --educator: 238, 54, 247;
+      --practitioner: 79, 102, 247;
+    }
+
+.dg.main .close-button {
+    display: none;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    html {
+    font-family: 'Inter var', sans-serif;
+    }
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+    background: rgb(255, 252, 242);
+    overflow-x: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 1em;
+}
+
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 800px;
+}
+
+.title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom:1em;
+    color:black;
+    /* background: -webkit-linear-gradient(#af10ff, #ff3f19);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+
+h3 {
+    font-size: 1.2em;
+    margin-top: .8em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    color:inherit;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin-top: 0em;
+    line-height: 1.7em;
+}
+
+h5>a {
+    font-size: 1em;
+    font-weight: 600;
+    color: #000;
+    font-size: 0.8em;
+}
+
+h1 {
+    position: relative;
+    font-size: 3em;
+    font-weight: 700;
+    color:#333;
+}
+
+
+#canvas {
+    padding: 0px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/* slideDown Navbar */
+
+#myBottomnav {
+    display: none;
+}
+
+
+#navbar {
+    background: var(--yellow);
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    /* top: -50px; */
+    display: block;
+    transition: top 0.3s;
+    border-bottom: none;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: rgb(255, 252, 242);
+    text-align: center;
+    padding: 1em 1em 1em 0em;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition:0.5 ease;
+}
+
+#navbar a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    /* bottom:0; */
+    width: 100%;
+    background: var(--yellow);
+    z-index: 10000;
+}
+
+.mobile-nav .items a {
+    height: 0;
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+.mobile-nav.visible .items a {
+    height: 60px;
+    opacity: 1;
+}
+
+.mobile-nav a {
+    color: rgb(255, 252, 242);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.mobile-nav a:hover {
+    color: rgb(255, 252, 242);
+}
+
+.mobile-nav .icon {
+    transition: transform 0.35s ease;
+    transform: rotate(0);
+    position: absolute;
+}
+
+.mobile-nav.visible .icon {
+    transform: rotate(180deg);
+}
+
+/* supporters page */
+
+#contributions{
+    display: block;
+    border-top:1px solid var(--border);
+}
+
+#gains ul,
+    #packages ul,
+    #cfp ul,
+    #workshops ul,
+    #intro ul,
+    #exhibition ul {
+      list-style-type: disc;
+      list-style-position: outside;
+      margin: 0;
+    }
+
+    #gains ul li,
+    #packages ul li,
+    #cfp ul li,
+    #workshops ul li,
+    #intro ul li,
+    #exhibition ul li {
+      padding: 0 0 2px 5px;
+      margin: 0;
+      font-size: 1em;
+    }
+
+    .sponsor-package {
+        border: 1px dotted #af10ff;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      
+    /* supporters page end */
+
+#timeZone{
+    margin:20px 0 20px 0;
+}
+
+#timeZone button{
+    background-color: #ff3f19;
+    border:none;
+    color:white;
+    border-radius:100px;
+    display: inline;
+}
+
+#timeZone button p{
+    margin-bottom:0;
+}
+
+.item {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns: 100px auto;
+    filter:drop-shadow(10px);
+    margin:0 0px 15px 0px;
+    align-items: baseline;
+}
+
+.day {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.time {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.break{
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.description {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    padding: 0 0 1em 0;
+}
+
+.description .title {
+    font-size: 1.3em;
+    font-weight: 800;
+    color: var(--yellow);
+}
+
+.description img {
+    width: 20em;
+    max-width: 100%;
+    position: absolute;
+    right: -21em;
+    margin: 0 0 2em 1em;	
+}
+
+.description h4 {
+    background: var(--yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.speaker {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.type {
+    width: fit-content;
+    padding:3px 12px 3px 12px;
+    border-radius: 20px;
+    margin-left:12px;
+    color:rgb(255, 255, 255);
+    border:1px solid var(--yellow);
+
+}
+
+.type p{
+    margin:0px !important;
+    font-size: x-small !important;
+    padding:2em;
+}
+
+.number{
+    display:none;
+    background-color: rgb(255, 252, 242);
+    border:1px solid var(--yellow);
+    width: fit-content;
+    border-radius: 99999px;
+    color:black;
+}
+
+
+.accordion {
+    background-color: rgb(255, 252, 242);
+    color: black;
+    border-bottom: 1px solid var(--yellow);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 15px 35px 15px 35px;
+position: relative;
+}
+
+#contributions button:last-of-type{
+    border-bottom: none;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .focus, .active, .accordion:hover {
+        background-color:white;
+        border-bottom:1px solid white;
+        xborder:none;
+    }
+
+    .accordion:hover {
+        background-color:white;
+        border-bottom: 1px solidvar(--yellow);
+    }
+
+    .accordion.active:hover {
+        border-bottom: 1px solid white;
+    }
+
+
+    .accordion:hover h3{
+        color: var(--yellow);
+    }
+
+    .here-d3:hover a{
+        color: var(--yellow);
+    }
+
+
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+    padding: 20px 35px 20px 35px;
+    background-color: white;
+    border-bottom: 2px solid black;
+    display: none;
+    overflow: hidden;
+    }
+
+
+    .accordion:after {
+
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: inherit;
+    float: right;
+    transition: .5s all ease-out;
+    color:var(--yellow);
+
+position: absolute;
+right: 0.5rem;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.accordion.active:after {
+content: "\2796";
+}
+
+.XXXactive .day:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+    /* Display only schedule for days */
+
+    .firstPanel .panel_1, .secondPanel .panel_2, .thirdPanel .panel_3, .fourthPanel .panel_4, .fifthPanel .panel_5, .sixthPanel .panel_6, .seventhPanel .panel_7{
+    display: block;
+    }
+
+    /* Hide only schedule for days */
+
+    .firstPanel .panel_2,.firstPanel .panel_3,.firstPanel .panel_4, .firstPanel .panel_5, .firstPanel .panel_6, .firstPanel .panel_7{
+    display: none;
+    }
+
+    .secondPanel .panel_1, .secondPanel .panel_3, .secondPanel .panel_4, .secondPanel .panel_5, .secondPanel .panel_6, .secondPanel .panel_7{
+    display: none;
+    }
+
+    .thirdPanel .panel_1, .thirdPanel .panel_2, .thirdPanel .panel_4, .thirdPanel .panel_5, .thirdPanel .panel_6, .thirdPanel .panel_7{
+    display:none;
+    }
+
+    .fourthPanel .panel_1, .fourthPanel .panel_3, .fourthPanel .panel_2, .fourthPanel .panel_5, .fourthPanel .panel_6, .fourthPanel .panel_7{
+    display: none;
+    }
+
+    .fifthPanel .panel_1, .fifthPanel .panel_3, .fifthPanel .panel_4, .fifthPanel .panel_2, .fifthPanel .panel_6, .fifthPanel .panel_7{
+    display: none;
+    }
+
+    .sixthPanel .panel_1, .sixthPanel .panel_2, .sixthPanel .panel_3, .sixthPanel .panel_4, .sixthPanel .panel_5, .sixthPanel .panel_7{
+    display: none;
+    }
+
+    .seventhPanel .panel_1, .seventhPanel .panel_2, .seventhPanel .panel_3, .seventhPanel .panel_4, .seventhPanel .panel_5, .seventhPanel .panel_6{
+    display: none;
+    }
+
+
+
+@media screen and (max-width: 1000px) {
+    #navbar {
+    display: none;
+    }
+    .mobile-nav{
+    display: block;
+    transform: 0 -50%;
+    }
+
+    .accordion {
+padding: 5px 10px 5px 10px;
+}
+
+    .panel {   padding: 5px 10px 5px 10px; }
+
+    .wrap { padding: 1rem !important; } 
+
+    .description img {
+        position: relative;
+        right: 0;
+        margin: 1em;
+    }
+
+}
+
+/* End Navabar */
+
+#exhibition, #cfp {
+    border-top:1px solid var(--border);
+}
+
+#codeofconduct {
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+#about {
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+
+#pc {
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+#conference {
+    border-top: 1px solid var(--border);
+    color: #ff3f19;
+    position: sticky;
+}
+
+#conference h3{
+    margin-top:0.1em;
+}
+
+#keynotes{
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+
+#breaks{
+    border-top: 1px solid var(--border);
+    position: sticky;
+}
+
+#breaks ul {
+    list-style-type:circle;
+    list-style-position: outside;
+}
+
+#breaks li {
+font-size: 1em;
+margin-top: 1em;
+    line-height: 1.4em;
+    color: black;
+}
+
+.sticky-top{
+    display: block;
+    position: sticky;
+}
+
+#registration {
+    border-top: 1px solid var(--border);
+    color: #ff3f19;
+    position: sticky;
+}
+
+#registration h3{
+    color: #ff3f19;
+}
+
+#workshops {
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+.wrap{
+    background: rgb(255, 252, 242);
+    padding: 2rem;
+} 
+
+
+.text {
+    margin-bottom: 1em;
+}
+
+#pc .small {
+    margin-left: .25em;
+}
+
+.uni small, #contributions small {
+    color:var(--affiliation);
+} 
+
+small {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+
+
+
+
+#formats, #criteria {
+    margin-bottom: 3em;
+    color: #ff3f19;
+}
+
+footer {
+    padding: 2em 2em 4em 2em;
+    border-Top: 1px solid var(--border);
+    align-content: space-around;
+}
+
+footer>svg {
+    align-items: baseline;
+}
+
+section {
+    padding: 2em 0 2em 0;
+}
+
+section:target div.container {
+    padding-top: 3em;
+}
+
+::selection {
+    color: white;
+    background-color: #5800FF;
+}
+
+.info {
+    margin-top: 2em;
+}
+
+#intro .text {
+    font-size: 1.8em;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#888,#333);
+    -webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+}
+
+.gradient{
+    font-size: 1.8em;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#af10ff, #5800FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#intro .text-small {
+    margin-top: 2em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: black;
+}
+
+.text-cfp {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: black;
+}
+
+.text-add {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: black;
+}
+
+.text-ec {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #ff3f19;
+}
+
+
+
+.dates {
+    color: #888;
+}
+
+.dates a {
+    color: #ff3f19;				
+    font-weight: bold;
+}
+
+#about h3{
+    color: #333;
+    margin-top:2em;
+}
+
+
+.abstract{
+background-color: red;
+width:300px;
+height:fit-content;
+}
+
+
+.requirements {
+    color: #ff3f19;
+}
+
+.infobox{
+    margin-top:2em;
+}
+
+li::before {
+    content: '';
+}
+
+li:not(.dropdown-item) {
+    margin-top: 2em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+a {
+    text-decoration: none;
+    /* color: #5800FF; */
+    color: #333;
+    background: var(--yellow);
+}
+
+a:hover {
+    color: #af10ff;
+    text-decoration: none;
+}
+
+img a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+strong {
+    background: -webkit-linear-gradient(#af10ff, #5800FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 400;
+}
+
+#cfp strong {
+    background: -webkit-linear-gradient(#af10ff, #ff3f19);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a img:hover,
+a img:focus {
+    filter: invert(18%) sepia(75%) saturate(6695%) hue-rotate(277deg) brightness(102%) contrast(111%);
+    /* filter: invert(11%) sepia(79%) saturate(6701%) hue-rotate(263deg) brightness(96%) contrast(135%); */
+    transition-duration: 0.3s;
+}
+
+footer img {
+    vertical-align: middle;
+    margin-top: 2em;
+    height: 80px;
+}
+
+footer a{
+  background: none;
+}
+
+.people{
+    width: 30%;
+    height: auto;
+    margin-top:1em;
+    margin-bottom:1em;
+    display: inline;
+    background-color: transparent;
+}
+
+
+
+.wsPic{
+    width: 100%;
+    align-items: center;
+    height: auto;
+    margin-top:2em;
+    display: inline;
+    background-color: transparent;
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);	
+    animation: float 5s infinite;
+}
+
+img.wsPic2 {
+    animation: floatb 5s infinite !important;
+}
+
+.buttonInfoplus{
+background-color: #5800FF;
+border:none;
+width: 100%;
+color:white;
+text-transform: uppercase;
+transition: .5s ease;				
+}
+
+.buttonInfoplus a {
+    color: #fff;
+}
+
+.buttonInfoplus h3 {
+    margin-top: 1em;
+}
+
+.buttonInfoplus:hover{
+background-color: #af10ff;
+border:none;
+color:white;
+transform: scale(1.03);
+}
+
+@keyframes floatR {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+        transform: translatex(45px);
+    z-index:3;
+    }
+
+    25% {
+        box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+    transform: translatex(10px);
+    z-index: 3;
+    }
+
+    50% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(45px);
+    z-index:3;
+    }
+
+    75% {
+    box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+    transform: translatex(10px);
+    z-index: 0;
+    }
+
+
+    100% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+        transform: translatex(45px);
+    z-index:0;
+    }
+}
+
+@keyframes floatL {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+        transform: translatex(-20px);
+    z-index:0;
+    }
+
+    25% {
+        box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+    transform: translatex(30px);
+    z-index:0;
+    }
+
+    50% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(-20px);
+    z-index:0;
+    }
+
+    75% {
+    box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+    transform: translatex(30px);
+    z-index:3;
+    }
+
+    100% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+        transform: translatex(-20px);
+    z-index:3;
+    }
+}
+
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-20px); }
+    100% { transform: translatey(0px); }
+}
+
+@keyframes floatb {
+    0% { transform: translatey(-20px); }
+    50% { transform: translatey(0px); }
+    100% { transform: translatey(-20px); }
+}
+
+
+
+.overlay img {
+    display: inline;
+    position: relative;
+    width:40%;
+    opacity:1;
+    background-color: transparent;
+}
+
+.overlay .floatL {
+    animation: floatL 12s infinite;
+    transform: translatex(-40px);
+    animation-direction: normal;
+    height: auto;
+    margin-top:2em;
+}
+
+.overlay .floatR {
+    animation: floatR 12s infinite;
+    height: auto;
+    margin-bottom:3em;
+}
+
+
+/* .bullets-text {
+    padding-left: 70px;
+    margin-bottom: .5rem;
+    transition: 0.5s;
+}
+.bullets:before{
+background: url(./assets/bullet-arrow-red.png) no-repeat 100% 0;
+background-size: contain;
+content: "";
+width: 50px;
+-webkit-transform: translateY(5px);
+transform: translateY(5px);
+height: 23px;
+display: block;
+margin-bottom: -23px;
+}
+.bullets-blue:before{
+background: url(./assets/bullet-arrow-blue.png) no-repeat 100% 0;
+background-size: contain;
+content: "";
+width: 50px;
+-webkit-transform: translateY(5px);
+transform: translateY(5px);
+height: 23px;
+display: block;
+margin-bottom: -23px;
+} */
+
+
+#covid { 	font-size: 1.2em; }
+
+@media only screen and (max-width: 600px) {
+    h2 {
+    font-size: 1.8em;
+    font-weight: 800px;
+    }
+
+    h3 {
+    font-size: 1em;
+    }
+
+    h1 {
+    font-size: 3em;
+    font-weight: 700;
+    }
+
+    .sticky-top{
+    margin-top:1.5em;
+    }
+
+    #covid { 	font-size: 1em; }
+
+/*  img {
+    vertical-align: middle;
+    border-style: none;
+    width: 150%;
+    margin-bottom: 2em;
+    height: 80px;
+    }
+*/
+    .description img {
+        padding: 0;
+        left: -1em;
+    }
+
+    footer .col {
+        display: block;
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer .col img {
+        width: 100%;
+    }
+
+    footer {
+    padding: 0em 2em 2em 2em;
+    border-Top: 1px solid #333;
+    align-content: space-around;
+    }
+
+    @media only screen and (min-width: 1000px) {
+    #covid {
+        margin-top: -5rem;
+    }
+    }
+
+    #covid {
+    color: white;
+    padding: 1em;
+    background-color: #9D00FE;
+    margin-bottom: 2em;
+    }
+
+    #covid h3{
+    margin-top:1em;
+    }
+
+    #covid p {margin-bottom: 0;}
+}
+
+
+/* Gris Schedule Layout */
+
+@media screen and (min-width:700px) {
+.schedule {
+display: grid;
+grid-gap: 1em;
+grid-template-rows:
+  [timezones] auto 
+  [tracks] auto
+  /* [time-0700] 0.5fr */
+  [time-0700] 1fr
+  [time-0800] 1fr
+  [time-0900] 1fr
+  [time-1000] 1fr
+  [time-1100] 1fr
+  [time-1200] 1fr
+  [time-1300] 1fr
+  [time-1400] 1fr;
+  /* Note 1:
+  Use 24hr time for gridline names for simplicity
+  Note 2: Use "auto" instead of "1fr" for a more compact schedule where height of a slot is not proportional to the session length. Implementing a "compact" shortcode attribute might make sense for this!
+  Try 0.5fr for more compact equal rows. I don't quite understand how that works :)
+  */
+
+grid-template-columns:
+  [times] 6em
+  [track-1-start] 1fr
+  [track-1-end track-2-start] 1fr
+  [track-2-end track-3-start] 1fr
+  [track-3-end track-4-start] 1fr
+  [track-4-end track-5-start] 1fr
+  [track-5-end timezones] 6em
+  [timezone-end];
+}
+}
+
+
+@supports( display:grid ) {
+@media screen and (min-width:700px) {
+.track-slot{
+  display: block;
+  position: sticky;
+}
+}
+}
+
+/* Small-screen & fallback styles */
+.session {
+margin-bottom: 1em;
+}
+
+.session-title
+{
+display: flex;
+align-content: center;
+}
+
+.session {
+padding: .5em;
+font-size: .9em;
+}
+
+.session-day{
+margin-top:3em;
+}
+
+.session-title,
+.time-slot,
+.track-slot {
+
+margin: 0;
+font-size: 1em;
+font-weight:400;
+}
+
+.session-title a {
+color: #5800FF;
+transition:.8s ease;
+font-weight: bold;
+}
+
+.session-title a:hover {
+color:#af10ff;
+
+}
+
+
+.track-1 {
+background-color:rgb(255, 252, 242);
+color: #5800FF;
+border:1px solid #5800FF;
+}
+
+.track-2 {
+background-color:#5800FF;
+color: rgb(255, 252, 242);
+}
+
+.track-3 {
+background-color:white;
+color: #5800FF;
+border:1px solid #5800FF;
+}
+
+.track-all {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #af10ff;
+color: rgb(255, 252, 242);;
+}
+
+.tz small {
+color: #5800FF;
+}
+
+.tz #selected-time-zone, #guess-timezone {
+/* color: #af10ff; */
+text-decoration: underline;
+cursor: pointer;
+}
+
+.timezones-converter, .converted-timezone {
+text-align: right;
+}
+
+.time-slot.timezone {
+grid-column: timezones;
+text-align: right;
+}
+
+.session-time-box {
+display: inline-flex;
+width: 100%;
+flex-direction: row;
+justify-content: space-between;
+}
+
+#selectTimezoneModal .modal-content {
+border-color: #5800FF;
+}
+
+#selectTimezoneModal .modal-title {
+color:#5800FF;
+}
+
+#selectTimezoneModal select {
+color:#5800FF;
+border-color: #5800FF;
+}
+
+#selectTimezoneModal .close {
+color:#5800FF;
+}
+
+@media screen and (max-width: 700px) {
+.time-slot,.track-slot{
+  display: none;
+}
+}
+
+@supports( display:grid ) {
+@media screen and (min-width: 700px) {
+.session {
+  margin: 0;
+} 
+.session-day, 
+.session-time,
+.session-time-box {
+  display: none;
+}
+
+.data-walk {
+  margin-top: 30%;
+}
+
+}
+}
+
+#contributionVideoModal.modal .modal-content {
+border-radius: 0;
+padding: 0;
+border-color: #6251ff;
+}
+
+#contributionVideoModal.modal .modal-header {
+border-color: #6251ff;
+}
+
+.modal {
+z-index: 20001;
+}
+
+.modal-backdrop {
+z-index: 20000;
+}
+
+.videoHover a:hover{
+color:#af10ff;
+}
+
+#researcher.btn.active,#researcher.btn:hover  {
+    background-color: #1CF5F5 !important;
+    color: black;
+}
+
+#practitioner.btn.active,#practitioner.btn:hover  {
+    background-color: #B01CF5 !important;
+    color: black;
+}
+
+#educator.btn.active,#educator.btn:hover  {
+    background-color: #778AFF  !important;
+    color: black;
+}
