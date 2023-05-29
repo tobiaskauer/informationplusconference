@@ -1204,3 +1204,22 @@ color:#af10ff;
     background-color: #778AFF  !important;
     color: black;
 }
+
+/* SVG overlay on the keynote speakers */
+.keynote {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0;
+    overflow: visible;
+}
+
+
+.keynote svg { 
+    display: inline-block;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    overflow: visible;
+}
+/* ************* */
