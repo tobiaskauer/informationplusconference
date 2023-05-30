@@ -31,9 +31,9 @@ body {
     overflow-x: hidden;
 }
 
-canvas {
+/* canvas {
     display: block;
-}
+} */
 
 p {
     font-family: "Inter", sans-serif;
@@ -86,20 +86,20 @@ h1 {
 }
 
 
-#canvas {
+#banner {
     padding: 0px;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
-#header {
+/* #header {
     position: absolute;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-}
+} */
 
 /* slideDown Navbar */
 
