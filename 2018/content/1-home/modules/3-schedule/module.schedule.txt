@@ -1,0 +1,1231 @@
+Navtitle: Schedule
+
+----
+
+Title: Schedule
+
+----
+
+Talksdayone: 
+
+- 
+  categorydayone: administrative
+  titledayone: ""
+  timedayone: 08:00
+  authordayone: 'Breakfast & Registration'
+  abstractdayone: ""
+  imagedayone: ""
+  affiliationsdayone: ""
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+- 
+  categorydayone: administrative
+  titledayone: ""
+  timedayone: 09:00
+  authordayone: Welcome
+  abstractdayone: ""
+  imagedayone: ""
+  affiliationsdayone: ""
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+- 
+  categorydayone: keynote
+  titledayone: >
+    Inventing the future, one visualization
+    at a time
+  timedayone: 09:15
+  authordayone: Sandra Rendgen
+  abstractdayone: >
+    Information visualization is a young and
+    buzzy field. Much of its creativity and
+    research is aimed at mastering new
+    technologies, and at supporting
+    human-machine interactions of the
+    future. Yet in many current professional
+    and academic debates, there’s a near
+    total lack of historical perspective.
+    With everyone looking forward, there’s
+    no point in looking back. Or is there?
+    Thousands of examples open up a long and
+    evocative history of information
+    visualization. So, just what do these
+    Old Masters have to offer today’s
+    visualization designers and researchers?
+    When looking to invent the future, is
+    there anything to be learned from the
+    past? The talk will draw from an
+    abundance of material including classics
+    like Charles-Joseph Minard and Joseph
+    Priestley, but also many unknown
+    precursors, to demonstrate how a
+    knowledge of history helps to develop a
+    critical and sophisticated understanding
+    of the practice of information
+    visualization.
+  imagedayone: sandra.jpg
+  affiliationsdayone: >
+    Sandra Rendgen, independent author and
+    researcher, DE
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "302828789"
+- 
+  titledayone: 'Mixtec pictorial manuscripts: A source of visual information'
+  timedayone: 10:00
+  authordayone: Claudia Rebeca Méndez Escarza
+  abstractdayone: |
+    Mexican Pre-Columbian civilizations have written their history using painted language. Some of these manuscripts were painted in Oaxaca where Mixtecs have lived among other pre-Columbian civilizations. Their manuscripts portray information concerning history, location, time, and financial issues.
+    <br/><br/>
+    These manuscripts have not yet been considered as informative documents; therefore a detailed study is necessary in order to expose the main traits of informational signs and its structure. The main purpose of this paper is to unveil pictorial signs, which convey information, found in historical Mixtec manuscripts. The research will lead to a full understanding of the informational characteristics that those signs contain. It will be done by analyzing a pair of Mixtec painted manuscripts. One that has been painted during Pre-Columbian times (XIV century) and the other circa the second half of the XV century.
+    <br/><br/>
+    This paper is part of the initial phase of a doctoral degree dissertation concerning information design and visualization.
+  imagedayone: 142.jpg
+  collaboratorsdayone: >
+    Claudia Rebeca Méndez Escarza,
+    Universidad Popular Autónoma del Estado
+    de Puebla, MX
+  affiliationsdayone: >
+    Claudia Rebeca Méndez Escarza,
+    Universidad Popular Autónoma del Estado
+    de Puebla, MX
+  allauthorsdayone: ""
+  categorydayone: talk
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "298661604"
+- 
+  categorydayone: talk
+  titledayone: Quo vadis, Isotype?
+  timedayone: 10:20
+  authordayone: Günther Schreder + Eva Mayr
+  abstractdayone: |
+    About 100 years ago, Otto Neurath developed the International System of Typographic Picture Education (ISOTYPE) to visualize statistical data, support education, and communicate social and economic facts and processes in an intuitive way. While Neurath’s ideas inspired InfoVis and are well known among designers, little is known about effects on
+    recipients and Isotype has not been systematically applied in InfoVis. The first part of our presentation addresses the cognitive effects of pictorial statistics. The second part will explore future extensions of Isotype into contemporary InfoVis by leveraging animation, storytelling, and interactivity to not only communicate facts, but also support active
+    reception and reflective thinking.
+    <br/><br/>
+    In our talk, we discuss which types of diagrams and visualizations, aside from bar charts and maps, would be suitable for (partial) isotypization. What would storytelling with ISOTYPE look like (film, data documentaries)? Is it possible to take Neurath’s ideas to the 21st century?
+  imagedayone: 86.jpg
+  affiliationsdayone: >
+    Günther Schreder and Eva Mayr, Danube
+    University Krems, AT
+  allauthorsdayone: >
+    Günther Schreder, Florian Windhager,
+    Nicole Hynek, Georg Neubauer, Florian
+    Halm and Eva Mayr
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "298663269"
+- 
+  categorydayone: administrative
+  titledayone: ""
+  timedayone: 10:40
+  authordayone: Break
+  abstractdayone: ""
+  imagedayone: ""
+  affiliationsdayone: ""
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+- 
+  categorydayone: talk
+  titledayone: >
+    A History of “visual literacy”
+    campaigns
+  timedayone: 11:20
+  authordayone: Sam Holleran
+  abstractdayone: |
+    This presentation traces the history of “visual literacy” campaigns and the application of the term to a wide variety of programs within design education and the social sciences. It examines educator-created tools that aim to teach students to prune away excess visual information, as well as the position of the viewer in a world increasingly saturated with pictures.
+    <br/><br/>
+    The presentation will chart several major campaigns from the U.S.—sponsored by libraries, major universities, and NGOs —that sought to define and improve visual literacy beginning in the 1970s. These public interest initiatives shifted the notion of “literacy” from the mass literacy campaigns of the 1960s, to the arena of the visual in the 1970s. In the push for the public to become savvy “knowers” of images, we see a change in the way graphic media is created and visual space is perceived.
+  imagedayone: 59.jpg
+  affiliationsdayone: Sam Holleran, AIGA NY, New York, US
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "298666039"
+- 
+  categorydayone: talk
+  titledayone: The BMJ visual abstracts
+  timedayone: 11:40
+  authordayone: Will Stahl-Timmins
+  abstractdayone: |
+    To help time-pressured readers of The British Medical to quickly understand key messages of clinical trials that we publish, we have begun creating visual abstracts. They offer a quick overview of the key points of a paper, and are used on our website, print journal, and social media channels.
+    <br/><br/>
+    We conducted formative user evaluations to help us determine which information to include. Summative evaluation post-publication has been encouraging. However, it remains to be seen whether this is a sustained pattern, or a halo effect because of the novelty of the visual abstracts. We are cautiously optimistic about the effects of introducing visual abstracts in the journal. We believe that we have managed to strike a balance between the twin evils of information overload and oversimplification of nuanced messages.
+  imagedayone: 77.jpg
+  affiliationsdayone: Will Stahl-Timmins, The BMJ, GB
+  allauthorsdayone: ""
+  daytimedayone: am
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "298668737"
+- 
+  categorydayone: talk
+  titledayone: >
+    Designing an optimal document in the
+    health sector
+  timedayone: 12:00
+  authordayone: Guillermina Noël + Jorge Frascara
+  abstractdayone: |
+    Medical personnel usually write and design documents that inform physicians or patients about procedures or therapies. Document design, however, requires skills that are not normally applied, resulting in information that is often not used properly.
+    </br></br>
+    The Alberta Colorectal Cancer Screening Program commissioned us to re-design existing instructional documents. We reviewed them, developed performance specifications for their re-design, and used an iterative process of prototypes and testing, also resorting to literature on reading comprehension, memorization and use of information, involving plain language, visual perception, page layout, legibility, editorial consistency and use of images.
+    </br></br>
+    To redesign the document we identified 23 principles based on peer-reviewed research. We tested each iteration with users to ensure ease of use, completeness of information, accuracy and clarity, to facilitate adoption.
+    </br></br>
+    The document has been downloaded 26,000 times, suggesting a good physician reception. An evaluation of the impact on use of the information by patients is underway.
+  imagedayone: 30.jpg
+  affiliationsdayone: >
+    Guillermina Noel and Jorge Frascara,
+    University of Alberta, Edmonton, CA
+  allauthorsdayone: >
+    Guillermina Noel, Jorge Frascara and
+    Clarence Wong
+  daytimedayone: pm
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300563351"
+- 
+  categorydayone: lightningtitle
+  authordayone: Sol Kawage
+  titledayone: Adventures in colour coding
+  timedayone: 12:25
+  abstractdayone: |
+    At the end of 2017 we won an international design competition to design the wayfinding system for the Skicircus Saalbach Hintgerglemm Leogang Fieberbrunn, one of the largest ski areas in Austria. A key factor in the project is how to facilitate speed and accuracy in transmitting essential information. Our starting point was the logic of highways, which led us to create a radically reduced standard. These two factors influenced our research and practice into colour coding in skiing areas.
+    <br/><br/>
+    Colour is an essential tool for us environmental graphic designers and our decisions have a huge impact on the overall system, but there are limitations by way of numerous legal requirements, cultural habits and environmental conditions which restrict the choices.
+    <br/><br/>
+    In this talk we will show how we faced the challenges posed by these limitations, and how we came up with the colour coding for the different variables that required it, taking into account simplicity, contrast and nameability.
+  imagedayone: 120.jpg
+  affiliationsdayone: Sol Kawage, Motasdesign, AT
+  allauthorsdayone: >
+    Sol Kawage, Christian Lunger and Markus
+    Scheiber
+  daytimedayone: pm
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300564405"
+- 
+  categorydayone: lightning
+  daytimedayone: pm
+  authordayone: Adina Renner
+  titledayone: >
+    Connecting people through visualization.
+    Creating a data-driven visual identity
+    that encourages meaningful interactions
+  timedayone: 12:30
+  abstractdayone: |
+    A fundamental challenge when organizing a conference is how to facilitate the development of purposeful connections, both between and among the audience, the speakers, and their topics. Rather than assigning a specific time and place for people to interact, Visualizing Knowledge Conference 2018 devised a system that encouraged connections through the features of the conference’s identity. Applying User-Centered Design methods, the team developed two visual elements that stimulated the formation of connections: a data-driven shape that revealed each participant’s interest in core aspects of the information design process, and a wordmark that could be extended with the topics addressed at the conference. These nonintrusive elements allowed for an individual pace to human interactions in a large gathering of people.
+    <br/><br/>
+    The lightning talk will give an overview of the design process, discuss learnings and elaborate on the potential of our approach.
+  imagedayone: 92.jpg
+  affiliationsdayone: >
+    Adina Renner, Aalto University,
+    Helsinki, FI
+  allauthorsdayone: >
+    Rupesh Vyas, Adina Renner, Alessandra
+    Del Nero, Heini Kekki, Lilla Tóth,
+    Pei-Yu Lin, Qin Yang, Minna Ainoa
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300565522"
+- 
+  categorydayone: lightning
+  daytimedayone: pm
+  authordayone: Jessica Bellamy
+  titledayone: 'Access to information design: A design tool for the people'
+  timedayone: 12:35
+  abstractdayone: >
+    Not all professionals who work with data
+    have the creative skills necessary to
+    create an easy to interpret, effective
+    visualization strategy. Most
+    professionals have a data design
+    repository that is limited to
+    traditional and overused graphics such
+    as pie charts, bar graphs, area charts,
+    etc. But what if there was a design tool
+    that could help expand their visual
+    vocabulary? As an infographic designer
+    and information design teacher, in 2017,
+    I created the Infographic Wheel. The
+    Infographic Wheel is a handheld design
+    tool that helps people select a visual
+    layout based on the characteristics of
+    their dataset. This tool makes
+    information design more accessible for
+    the average person. As more people gain
+    the ability to communicate complex
+    topics in inventive ways, we both
+    amplify new ideas and increase our
+    opportunities as a visual global society
+    to communicate more efficiently with
+    each other.
+  imagedayone: 10.jpg
+  affiliationsdayone: 'Jessica Bellamy, GRIDS: The Grassroots Information Design Studio, US'
+  allauthorsdayone: ""
+  lightninglastdayone: last
+  anchorlink: ""
+  videolinkdayone: "300566593"
+- 
+  categorydayone: administrative
+  daytimedayone: pm
+  authordayone: Lunch
+  titledayone: ""
+  timedayone: 12:45
+  abstractdayone: ""
+  imagedayone: ""
+  affiliationsdayone: ""
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+- 
+  categorydayone: talk
+  daytimedayone: pm
+  authordayone: Olivia Vane + Stephen Boyd Davis
+  titledayone: >
+    Designers — what are they good for (in
+    data visualisation)?
+  timedayone: 02:05
+  abstractdayone: 'Our focus is the digital humanities, especially visualisation of datasets such as text archives and object collections data in museums. The name “digital humanities” implies just two disciplines, computing and the humanities. What is the designer’s role?  Collectively we should be able to explain what our contribution is —especially when some may fear our replacement by AI systems. We argue that there are particular aspects of designing that are distinctive and can enable more effective visualisations to be produced: (1) expertise in the visual articulation of meaning, (2) human-centric methods, and (3) the quick and adaptable use of low-fidelity early prototyping. We base our argument especially on the idea of design as a form of inquiry or research, and illustrate the three benefits using our recent interactive data visualisations with organisations including the Wellcome Library, Cooper Hewitt Smithsonian Design Museum and V&A London.'
+  imagedayone: 69.jpg
+  affiliationsdayone: >
+    Stephen Boyd Davis and Olivia Vane,
+    Royal College of Art, London, GB
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300569874"
+- 
+  categorydayone: talk
+  daytimedayone: pm
+  authordayone: Sarah Campbell
+  titledayone: 'Feeling numbers: The emotional impact of proximity techniques in visualization'
+  timedayone: 02:25
+  abstractdayone: >
+    Data visualizations are used as
+    rhetorical instruments, but how they
+    persuade has yet to be fully understood.
+    In scholarly critique, persuasion in
+    visualizations has been negatively
+    related to concepts like bias and
+    deception. However, when considering
+    visualization as a form of
+    communication, persuasion is a natural
+    and critical part of conveying a
+    message. Of Aristotle’s three modes of
+    persuasion, the appeal to emotions has
+    been the most overlooked in rhetoric
+    research of information visualization.
+    We present empirical research which
+    validates the ability of visualizations
+    to appeal to emotions through proximity
+    techniques. The findings indicate that
+    the framing of data matters, that people
+    feel greater interest towards a topic
+    when the visualized data are more
+    relevant to them, and that data
+    representing events closer in time are
+    more affecting. This research takes a
+    step towards improving our understanding
+    on the use and impact of techniques that
+    appeal to emotions in visualization.
+  imagedayone: 76.jpg
+  affiliationsdayone: >
+    Sarah Campbell, Northeastern University,
+    Boston, US
+  allauthorsdayone: Sarah Campbell and Dietmar Offenhuber
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300572984"
+- 
+  categorydayone: talk
+  daytimedayone: pm
+  authordayone: Doris Kosminsky + Jagoda Walny
+  titledayone: 'Belief at first sight: Data visualization and the rationalization of seeing'
+  timedayone: 02:45
+  abstractdayone: >
+    Data visualization has been increasingly
+    represented in public discourse as an
+    objective proof of facts. However,
+    visualization is only a single
+    translation of reality. It is crucial
+    that we consider why data visualization
+    has been primarily thought of as truth,
+    irrespective of the origin of the data,
+    its processing, the choices made by
+    designers, developers and clients, or
+    its display context. We reflect
+    theoretically on data visualization as a
+    system of representation historically
+    anchored in science and rationalism. It
+    establishes itself within a lineage of
+    conventions for visual representation
+    grounded in objectivity and rationality,
+    which extends from the Renaissance
+    perspective to the present passing
+    through the photographic image, movies,
+    TV, and finally computer graphics. By
+    starting a discussion about the tendency
+    to see a “natural” credibility in
+    data visualization rooted in its
+    historical context, we might broaden our
+    approach to presenting data
+    visualizations in the public discourse.
+  imagedayone: 60.jpg
+  affiliationsdayone: >
+    Doris Kosminsky, Universidade Federal do
+    Rio de Janeiro, BR Jagoda Walny,
+    University of Calgary, CA
+  allauthorsdayone: >
+    Doris Kosminsky, Jagoda Walny, Søren
+    Knudsen, Jo Vermeulen, Wesley Willet and
+    Sheelagh Carpendale
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300582221"
+- 
+  categorydayone: lightningtitle
+  daytimedayone: pm
+  authordayone: Sibylle Schlaich + Anita Meier
+  titledayone: 'Public pictograms: Pointing out trends for the future'
+  timedayone: 03:10
+  abstractdayone: |
+    In this presentation, we give a brief summary of a study to draw the attention to the challenging perception of the two public information pictograms: “elevator” and “toilet”. In wayfinding and on signage, both indicate the location of a destination. Although the semantic information is completely different, both pictograms partly visualize the same: Front view of standing human figures. On signs and in certain contexts this can lead to confusion.
+    </br></br>
+    The representation of human figures is increasingly being questioned on the basis of public and political discussions on gender issues. Moreover, attention to accessibility is also strongly incorporated in these two pictograms. Thus, both pictograms are in an evolution process in order to meet current requirements. Do more messages require a more complex pictogram? How far can we go?
+    </br></br>
+    We envision that this study will raise awareness of the handling of these pictograms and point out trends for future visualization.
+  imagedayone: 48.jpg
+  affiliationsdayone: >
+    Sibylle Schlaich and Anita Meier,
+    Moniteurs GmbH, DE
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300583798"
+- 
+  categorydayone: lightning
+  daytimedayone: pm
+  authordayone: Valentina D’Efilippo
+  titledayone: Mapping the world from memory
+  timedayone: 03:15
+  abstractdayone: >
+    A large collection of hundreds of
+    hand-drawn maps provides a fascinating
+    array of geospatial recall and artistic
+    skill. And, more importantly, leads to
+    compelling observations on how we
+    create, read, and interpret visual
+    displays of information. During this
+    short format talk, I will share my
+    observations from hundreds of hand-drawn
+    maps and my experience in using
+    cognitive maps as a tool to rapid
+    prototype visual displays of information
+    – focusing on the subjectivity that
+    goes into both the encoding and decoding
+    process. In fact, internal maps
+    influence the way we not only read but
+    also create maps through framing,
+    coding, and designing during conception
+    and execution
+  imagedayone: 97.jpg
+  affiliationsdayone: 'Valentina D’Efilippo, Signal Noise - The Economist Group, GB'
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "300585415"
+- 
+  categorydayone: lightning
+  daytimedayone: pm
+  authordayone: Nadieh Bremer
+  titledayone: 'The creation of the “Bussed Out: How America moves its homeless” article'
+  timedayone: 03:20
+  abstractdayone: 'Each year, US cities give thousands of homeless people one-way bus tickets out of town. An 18-month nationwide investigation by The Guardian reveals what really happens at journey’s end. From looking at the big picture of the more than 34,000 journeys that were gathered, down to the individual. This article combines text, animated data visualizations, photography & videos to create one compelling piece to show the readers the impact of the journeys taken. I was one of the main people responsible for getting this story told and during the talk I will take you through a few of the major points of the design process behind the piece. How I & Shirley Wu joined the project and dove into 4 hectic months of data cleaning, analysis, designing, prototyping and finally putting everything together into one page that had to look good on practically any digital device with a screen.'
+  imagedayone: 01.jpg
+  affiliationsdayone: Nadieh Bremer, Visual Cinnamon, NL
+  allauthorsdayone: ""
+  lightninglastdayone: last
+  anchorlink: ""
+  videolinkdayone: "303001522"
+- 
+  categorydayone: administrative
+  daytimedayone: pm
+  authordayone: Break
+  titledayone: ""
+  timedayone: 03:30
+  abstractdayone: ""
+  imagedayone: ""
+  affiliationsdayone: ""
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+- 
+  categorydayone: talk
+  daytimedayone: pm
+  authordayone: Grga Basic
+  titledayone: 'We Can: Data driven project exploring the lives of NYC canners'
+  timedayone: 04:10
+  abstractdayone: >
+    Canning —picking up cans and bottles
+    on the streets for a living— has been
+    an increasingly popular activity in New
+    York City for over 30 years, becoming an
+    indirect welfare system created and
+    sustained by redeeming garbage, worth 5
+    cents apiece. Over the past year,
+    journalist Francesca Berardi followed a
+    group of canners in their daily
+    activity, collecting qualitative and
+    quantitative information about their
+    work. They come in the forms of
+    handwritten notes, sketches, oral
+    history interviews, photos, videos, and
+    GPS tracks of their itineraries. We Can
+    combines the aforementioned media into
+    an interactive and immersive web
+    experience. As the stories of canners
+    unfold across mental maps of the city
+    that take shape through illustration,
+    analogue data visualization, and oral
+    history, we push for new and
+    experimental forms of urban storytelling
+    that explores a more co-owned narrative
+    through pairing geospatial data with the
+    extraordinary nuances of human lives and
+    experiences.
+  imagedayone: 133.jpg
+  affiliationsdayone: >
+    Grga Basic, Columbia University Center
+    for Spatial Research, New York, US
+    Francesca Berardi, Columbia University
+    Brown Institute for Media Innovation,
+    New York, US
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "301945400"
+- 
+  categorydayone: talk
+  daytimedayone: pm
+  authordayone: Kennedy Elliott
+  titledayone: 'Think like a journalist: Tips for stronger, clearer and more cohesive visual narratives'
+  timedayone: 04:30
+  abstractdayone: |
+    I’ve learned that after more than ten years working in news, the lessons I’ve learned as a journalist are infinitely applicable to every field. Implementing the tools, techniques and perspectives of a journalist makes a story more cohesive and more comprehensible to an audience. At the center of this philosophy is to simply understand readers and to anticipate their needs.
+    <br/><br/>
+    As journalists, our job is to understand what information readers would value the most and communicate with them appropriately. At National Geographic, we regularly must make esoteric information more comprehensible to a non-expert, but enthusiastic audience.
+    <br/><br/>
+    In this session, I’ll talk about some of the skills I’ve learned as a journalist. I’ll show some of my favorite science graphics from National Geographic and talk about the path we took to produce the visual story. I’ll review how to report and visualize your data for stronger, clearer and more cohesive narratives.
+  imagedayone: 146.jpg
+  affiliationsdayone: Kennedy Elliott, National Geographic, US
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "301942604"
+- 
+  categorydayone: keynote
+  daytimedayone: pm
+  authordayone: 'Reuben Fischer-Baum  </br> + Chiqui Esteban'
+  titledayone: >
+    Working in a graphics visual
+    storytelling team
+  timedayone: 04:55
+  abstractdayone: 'The Washington Post graphics team has moved on from the classical role of graphics departments to become a one-stop shop for visual narrative content. The role of this group is not only focused on creating graphics and visualizations as isolated items, but to develop complete stories that use visual content as the main vehicle to transmit information. That doesn’t mean forgetting the value of the text, the power of other visual formats like video, illustration or photo, the advantages of an attractive design, the eventual bells and whistles or even the little charts and locators that make the day-to-day of a newsroom. Narrative structure, constant edition, rigor, but also originality, boldness and fun are the pillars of, not a collection of individuals, but a team created with diversity of skills and backgrounds in mind: cartographers, engineers, writers, data reporters, designers, graphics artists … but journalists first.'
+  imagedayone: chiqui.jpg
+  affiliationsdayone: 'Reuben Fischer-Baum & Chiqui Esteban, The Washington Post, Washington DC, US'
+  allauthorsdayone: ""
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: "301938339"
+- 
+  categorydayone: dinner
+  daytimedayone: pm
+  authordayone: Dialog dinner
+  titledayone: ""
+  timedayone: 06:00
+  abstractdayone: >
+    We are closing the first day of the
+    conference with our Dialog Dinner. The
+    conference participants will be able to
+    continue the topics and discussions of
+    the day over great food and drink. We
+    want to provide our guests with a
+    data-driven culinary experience and
+    encourage them to engage in larger
+    discussions and individual
+    conversations.
+  imagedayone: dialogue-dinner-sketch_02.jpg
+  affiliationsdayone: Boris Müller, Fachhochschule Potsdam
+  allauthorsdayone: Studio Inés Lauber
+  lightninglastdayone: ""
+  anchorlink: ""
+  videolinkdayone: ""
+
+----
+
+Talksdaytwo: 
+
+- 
+  categorydaytwo: administrative
+  authordaytwo: 'Breakfast & Registration'
+  titledaytwo: ""
+  timedaytwo: 08:00
+  abstractdaytwo: ""
+  imagedaytwo: ""
+  affiliationsdaytwo: ""
+  allauthorsdaytwo: ""
+  daytimedaytwo: am
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: ""
+- 
+  categorydaytwo: keynote
+  daytimedaytwo: am
+  authordaytwo: 'Fernanda Viégas </br> + Martin Wattenberg'
+  titledaytwo: Data visualization for machine learning
+  timedaytwo: 09:30
+  abstractdaytwo: "Machine learning is playing an increasingly influential role in the world due to dramatic technical leaps in recent years. But these new developments bring their own questions. How can we understand what is going on under the hood of deep neural networks? How can we better debug these systems? How can we broaden the conversation about ML-enabled automated decision making? It turns out that visualization can play a central role in answering these questions. We'll discuss recent work that shows how interactive exploration can help people use, interpret, and learn about machine intelligence."
+  imagedaytwo: fernanda_martin.jpg
+  affiliationsdaytwo: 'Fernanda Viégas & Martin Wattenberg, Google’s PAIR (People+AI Research), Cambridge, MA, US'
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304131671"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: am
+  authordaytwo: 'Christian Au + Christian Laesser<br/>+ Stephan Thiel'
+  titledaytwo: >
+    Peakspotting — a visual tool for
+    managing the capacity of Germany’s
+    rail traffic network
+  timedaytwo: 10:15
+  abstractdaytwo: |
+    The Peak Spotting software combines machine learning and visual analytics to help manage Germany’s rail traffic network. The project allows yield and capacity managers to identify potential bottlenecks based on passenger load predictions. It provides actionable information to several teams through data exploration and collaboration features, which contribute directly to improving planning and management.
+    <br/><br/>
+    In this talk, we present a design case study and share our lessons learned in enabling innovation in complex corporate settings. We will discuss the full design and development process of the tool from ideation, data and concept exploration over design and implementation to usage tracking and iterative refinement.
+    <br/><br/>
+    Of particular interest is the role of automation and analytics tools in digital transformation processes — how can we facilitate the transition from manual work and implicit knowledge to higher level tasks, supported by algorithms and visual analytics tools? And how does this change operational processes and job profiles?
+  imagedaytwo: 74_b.jpg
+  affiliationsdaytwo: 'Christian Au, University of Applied Sciences Mainz, DE Christian Laesser and Moritz Stefaner, Truth & Beauty, DE Stephan Thiel, Studio NAND, DE'
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304135281"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: am
+  authordaytwo: Raphael Reimann
+  titledaytwo: 'Empathizing with AI: How to see like a self-driving car'
+  timedaytwo: 10:35
+  abstractdaytwo: |
+    “Who Wants to be a Self-Driving Car?” is a data driven trust exercise aiming to explore the technology behind self-driving cars from a human perspective. It uses real-time, three dimensional mapping and object recognition to help people navigate through space. This data is presented to the driver via a virtual reality headset, putting the driver into the position of the control unit of the vehicle.
+    <br/><br/>
+    The talk will be about the idea and intention behind the project, also giving insight into how the vehicle works. After gaining an overview of the technical setup, we will lay out and discuss design decisions and key takeaways from the experience of “seeing the world through the eyes of a self-driving car”. Finally we will talk about the experience we have gathered showcasing the experience to different audiences, along with approaches on formalizing the debate around humanizing technology in autonomous systems.
+  imagedaytwo: 50.jpg
+  affiliationsdaytwo: Raphael Reimann, Moovel Lab, DE
+  allauthorsdaytwo: >
+    Raphael Reimann, Joey Lee and Benedikt
+    Groß
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304138937"
+- 
+  categorydaytwo: administrative
+  daytimedaytwo: am
+  authordaytwo: Break
+  titledaytwo: ""
+  timedaytwo: 10:55
+  abstractdaytwo: ""
+  imagedaytwo: ""
+  affiliationsdaytwo: ""
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: ""
+- 
+  categorydaytwo: talk
+  daytimedaytwo: am
+  authordaytwo: >
+    Jesse Josua Benjamin + Claudia
+    Müller-Birn
+  titledaytwo: >
+    Designing for algorithm awareness in
+    peer production systems
+  timedaytwo: 11:35
+  abstractdaytwo: >
+    Algorithms increasingly impact human
+    decision-making by stimulating,
+    informing, controlling and reacting to
+    human activities, thus, necessitating
+    the need for algorithm explainability.
+    In this project, we investigate the
+    RECOIN (Relative Completeness Indicator)
+    tool as a use case for algorithm
+    awareness; a current topic delineating
+    the extent to which a person is
+    contextually aware of the existence and
+    function of algorithms. RECOIN is a tool
+    for Wikidata, a collaborative knowledge
+    base that stores structured data and
+    supports numerous Wikimedia projects.
+    RECOIN aims to augment human
+    decision-making on data contributions by
+    measuring the relative completeness of
+    data items and by recommending potential
+    contributions. With concerns over
+    encoded cultural bias, RECOIN reflects
+    the complexities of co-evolving social
+    and algorithmic governance mechanisms.
+    Addressing these issues, we showcase
+    three distinct visualisation designs of
+    RECOIN through the lens of algorithm
+    awareness and discuss experimental
+    findings regarding their varying effects
+    on human decision-making and
+    understanding.
+  imagedaytwo: 99.jpg
+  affiliationsdaytwo: >
+    Jesse Josua Benjamin, Freie Universität
+    Berlin, DE
+  allauthorsdaytwo: >
+    Jesse Josua Benjamin, Claudia
+    Müller-Birn and Simon Razniewski
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304319456"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: am
+  authordaytwo: Pedro M. Cruz
+  titledaytwo: >
+    Simulated dendrochronology of immigrants
+    and natural-borns in the United States,
+    showing the fifty states (1790–2016)
+  timedaytwo: 11:55
+  abstractdaytwo: >
+    Immigrants are central to the identity
+    of the United States, the population of
+    which has grown in number and diversity
+    as a function of new arrivals from
+    around the globe. In this communication,
+    we go through the design process, the
+    implementation, and the ongoing results
+    of a visualization project leveraging
+    arboreal visual metaphors to explore the
+    contribution of immigrants to the
+    country’s population. Immigrants and
+    native-born persons are represented and
+    differentiated as cells in trees, with
+    layered annual rings capturing patterns
+    of population growth. These rings
+    register, in their shape and color,
+    certain environmental conditions. In
+    order to mimic the natural process by
+    which growth rings are formed (the
+    science of which is called
+    dendrochronology), our project devises a
+    computational system that generates tree
+    rings as if cells were data-units.
+  imagedaytwo: 64.jpg
+  affiliationsdaytwo: >
+    Pedro M. Cruz, Northeastern University,
+    Boston, US
+  allauthorsdaytwo: >
+    Pedro M. Cruz, Avni Ghael, Stephen
+    Costa, John Wihbey and Felipe Leonardo
+    Santos Shibuya
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304147603"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: Richard Brath
+  titledaytwo: >
+    Techniques for adding diverse contextual
+    data into visualizations
+  timedaytwo: 12:15
+  abstractdaytwo: |
+    Many current visualizations focus on a few data variables and simple representations for rapid visual perception. But many real-world problems require multi-variate decisions. While interactions can help explore contextual information —the context can only be uncovered if explicitly sought, meaning that it can be missed.
+    <br/><br/>
+    Instead, there are many historic visualization approaches which bring together heterogeneous data into high dimensional, data-dense plots, such as atlas maps, genealogical diagrams, detailed tables and railway timetables for analytical applications such as planning journeys, tracing relationships, extrapolating properties, and managing operations. A review of historic examples show contextual techniques, such as: shared coordinates to facilitate placement of data; enhanced multivariate marks such as icons or text; flexibility of layout and content to locate related information legibly; use of cues to facilitate macro and micro patterns; and use of differentiated markers that can be perceptually filtered to facilitate comparison across entities.
+  imagedaytwo: 127.jpg
+  affiliationsdaytwo: >
+    Richard Brath, Uncharted Software,
+    Toronto, CA
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304321201"
+- 
+  categorydaytwo: administrative
+  daytimedaytwo: pm
+  authordaytwo: Lunch
+  titledaytwo: ""
+  timedaytwo: 12:35
+  abstractdaytwo: ""
+  imagedaytwo: ""
+  affiliationsdaytwo: ""
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: ""
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: Yvette Shen
+  titledaytwo: 'Visualizing philosophy: A modern design approach to understand I-Ching'
+  timedaytwo: 01:55
+  abstractdaytwo: |
+    This project uses text mining and interactive data visualization techniques to reveal new patterning insights of the ancient Chinese text I-Ching from both divinatory and philosophical perspectives. The implication of the hexagram patterns and their correlations with the commentaries are analyzed through text mining. The macro/micro visualization design strategy offers a comprehensive interactive experience to the viewers and sheds new light on this ancient book.
+    <br/><br/>
+    The goal of the project is to overcome cultural and language barriers, and investigate more innovative methods to objectively analyze and interpret I-Ching than language translations. The visualization approach and research process explore four aspects of I-Ching: the geometrical patterns of the Hexagrams, the semantics of the Hexagrams, the occurrences of keywords related to divination, and the thematic categories of the Decisions. Visualizing abstract text information that is polysemic and sometimes uncertain provides a new way to view and understand I-Ching and Chinese philosophy that can reach to a wide range of audiences.
+  imagedaytwo: 62.jpg
+  affiliationsdaytwo: >
+    Yvette Shen, Ohio State University,
+    Columbus, US
+  allauthorsdaytwo: >
+    Yvette Shen, Peiyuan Tang and Han-Wei
+    Shen
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304324764"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: Kelly Murdoch-Kitt + Denielle J. Emans
+  titledaytwo: >
+    Participatory data visualizations
+    support intercultural collaboration
+  timedaytwo: 02:15
+  abstractdaytwo: >
+    Although tools for working across
+    distance and time are prevalent,
+    inexpensive, and accessible to many,
+    their existence does not guarantee
+    successful intercultural work.
+    Culturally attuned methods are the
+    missing ingredient to bring design teams
+    together across geographic and social
+    borders. Participatory information
+    visualizations —created by students or
+    professional design practitioners
+    involved in intercultural
+    collaborations— can contribute
+    significantly to a shared sense of
+    community. The authors’ ongoing
+    research has produced several
+    participatory visualization methods; one
+    recent method that holds great promise
+    is the High-Low Context Matrix. Created
+    in real time through a combination of
+    physical and digital tools, this matrix
+    shows how each participant maps along
+    the cultural continuums developed by
+    anthropologist Edward T. Hall, and helps
+    participants envision each other as a
+    collaborative community. The information
+    visualization results in energized
+    discussion among cross-cultural
+    teammates —they begin to investigate
+    culturally determined attitudes and
+    linguistic patterns that shape
+    communication, personality dynamics, and
+    educational goals.
+  imagedaytwo: 148.jpg
+  affiliationsdaytwo: >
+    Kelly Murdoch-Kitt, University of
+    Michigan, US Denielle J. Emans, Virginia
+    Commonwealth University in Qatar, QA
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "304326806"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: Anne Luther
+  titledaytwo: 'Qualitative data visualization: The Entity Mapper'
+  timedaytwo: 02:35
+  abstractdaytwo: >
+    This paper introduces how we can develop
+    data visualization in qualitative
+    research with an example of a software
+    that was developed by Dr. Anne Luther
+    and her team at the Parsons Institute
+    for Information Mapping at The New
+    School in New York, today’s Center for
+    Data Arts. The Entity Mapper is a data
+    visualization tool that makes data
+    visually accessible without losing the
+    complex and manual character of
+    qualitative analysis. Many of the
+    methods used to access, understand, and
+    analyze qualitative data are based on
+    relational links between unstructured
+    data, and abstracted concepts
+    researchers develop. Understanding how
+    node-and-link visualizations might be
+    helpful for mapping relational data, the
+    Entity Mapper visualizes semiconstrained
+    relational networks using qualitative
+    data exported from Atlas.ti. The Entity
+    Mapper is an open source project
+    published on GitHUB.
+  imagedaytwo: 58.jpg
+  affiliationsdaytwo: >
+    Anne Luther, Center for Data Arts, The
+    New School, New York, US
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "305834126"
+- 
+  categorydaytwo: lightningtitle
+  daytimedaytwo: pm
+  authordaytwo: Theodor Hillmann
+  titledaytwo: Modal
+  timedaytwo: 03:00
+  abstractdaytwo: |
+    Modal is a research tool for annotating complex structures in texts. It enables users to develop multiple perspectives on texts by allowing them to annotate and categorise passages into self-defined structures. Based on insights gained in collaborative workshops with literary scholars and students, Modal introduces a way to analyse text fragments isolated from their original context in different columns assigned by the user. With this comprehensive analysis, users gain a superior understanding of texts during research.
+    <br/><br/>
+    The user interface provides multiple visualisation perspectives: a distant view of all annotations, a classic close reading and several cut-up views comprised of the individual passages and their distributions within the document. The interaction concept strives for a rich user experience with an elaborate typographical use and a tested intuitive user flow.
+  imagedaytwo: 65.jpg
+  affiliationsdaytwo: Theodor Hillmann, FH Potsdam, DE
+  allauthorsdaytwo: >
+    Julian Thiel, Theodor Hillmann, Joshua
+    Pacheco, Fabian Wohlfart, Jan-Erik
+    Stange
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "306921193"
+- 
+  categorydaytwo: lightning
+  daytimedaytwo: pm
+  authordaytwo: Fritz Lekschas
+  titledaytwo: Visually exploring the genome at scale
+  timedaytwo: 03:05
+  abstractdaytwo: 'The human genome is about 2 meters long and tightly folded into the cell nucleus, a sphere that is 4 million times smaller than a pinhead. How do cells avoid entangling the DNA and ensure accessibility of necessary parts? Biologists study DNA folding through the detection of pairwise physical interactions along the DNA, which results in a 3-by-3 million pixel matrix. Visualized as a heatmap, thousands of local visual patterns become apparent. Yet studying these patterns is like trying to understand the average layout of parks while viewing countries on a world map. Biologists need to inspect these patterns for sensemaking of biological features. We have developed 3 interactive tools to explore such large datasets at different steps: (1) seamless browsing using HiGlass; (2) local pattern exploration through decomposition in HiPiler; and (3) guided navigation with Scalable Insets. I will present our tools and discuss the generalizability of their underlying concepts.'
+  imagedaytwo: 49.jpg
+  affiliationsdaytwo: >
+    Fritz Lekschas, Harvard University,
+    Cambridge, MA, US
+  allauthorsdaytwo: >
+    Fritz Lekschas, Benjamin Bach, Peter
+    Kerpedjiev, Michael Behrisch, Nils
+    Gehlenborg and Hanspeter Pfister
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "306922251"
+- 
+  categorydaytwo: lightning
+  daytimedaytwo: pm
+  authordaytwo: Alec Barrett
+  titledaytwo: 'Mechanical inspiration for digital design: Lessons from the split‑flap board'
+  timedaytwo: 03:10
+  abstractdaytwo: 'What lessons can the mechanical split-flap board, a.k.a. the Solari board, offer for digital information design? Solari boards were ubiquitous for decades in train stations and airports around the world. Their distinctive combination of motion and sound made them so popular that many modern transport hubs now feature digital versions with the same structure and constraints as the originals. In this talk I will analyze the Solari board’s visual design in the context of design theory and in comparison with other familiar displays, including stock market ticker tapes and stadium scoreboards. I will argue that creators of data visualizations can learn from three aspects of the Solari board’s transitions: prolonged sensory stimuli, which draw the viewer’s attention; a simple algorithm by which the board changes states; and the board’s economy of space, which is made possible by the middle split and its use of depth.'
+  imagedaytwo: 13.jpg
+  affiliationsdaytwo: Alec Barrett, TWO-N, New York, US
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: last
+  anchorlink: ""
+  videolinkdaytwo: "306923056"
+- 
+  categorydaytwo: administrative
+  daytimedaytwo: pm
+  authordaytwo: Break
+  titledaytwo: ""
+  timedaytwo: 03:20
+  abstractdaytwo: ""
+  imagedaytwo: ""
+  affiliationsdaytwo: ""
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: ""
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: "Catherine D'Ignazio"
+  titledaytwo: Data feminism
+  timedaytwo: 04:00
+  abstractdaytwo: |
+    Data visualizations can dazzle, inform, and persuade. It is precisely this power that makes it worth asking: "Visualization by whom? For whom? In whose interest? Informed by whose values?" These are some of the questions that emerge from what we call data feminism, a way of thinking about data and its visualization that is informed by the past several decades of intersectional feminist activism and thinking.
+    <br/><br/>
+    Using visualization as a starting point, this paper works backwards through the data-processing pipeline in order to show how a feminist approach to thinking about data not only exposes how power and privilege presently operate in data science, but also suggests how different design principles can help to expose inequality, mitigate bias, and work towards justice. In the process, we discuss the talented journalists, artists, data scientists and communities that are at the forefront of data-driven justice.
+  imagedaytwo: 93.jpg
+  affiliationsdaytwo: "Catherine D'Ignazio, Emerson College/MIT, Boston, US"
+  allauthorsdaytwo: "Catherine D'Ignazio and Lauren Klein"
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "306925933"
+- 
+  categorydaytwo: talk
+  daytimedaytwo: pm
+  authordaytwo: Greg McInerny
+  titledaytwo: >
+    Lost in the universe of graphical
+    objects? Critical visualisation,
+    disciplinary myopias and the
+    visualisation spectrum
+  timedaytwo: 04:20
+  abstractdaytwo: >
+    When do graphs become visualisations?
+    What do visualisations visualise? This
+    talk investigates how we ask these
+    questions through the “Universe of
+    Graphical Objects” (UGO); a
+    hyper-volume containing the infinite
+    possible variations and permutations of
+    graphical objects from which
+    visualisations are selected. Different
+    disciplines attempt to probe and sample
+    this universe, but with different
+    theories, methods and objectives. Which
+    locations and zones are good, bad or
+    ugly? Different disciplines do not have
+    to agree on this mapping and UGO invites
+    us to reflect on what we know about its
+    graphical properties and how. As each
+    disciplinary framing enables a clearer
+    picture of visualisation we can
+    simultaneously developed disciplinary
+    myopia, which limit what we can look for
+    in UGO and what we find. If we look out
+    from UGO, our graphical universe, and
+    onto our disciplines, can we make new
+    interdisciplinary connections? Are there
+    alternative ways to understand which
+    graphical objects “visualise”?
+  imagedaytwo: 38.jpg
+  affiliationsdaytwo: >
+    Greg McInerny, Centre for
+    Interdisciplinary Methodologies,
+    University of Warwick, GB
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "306928686"
+- 
+  categorydaytwo: keynote
+  daytimedaytwo: pm
+  authordaytwo: Ron Morrison
+  titledaytwo: 'Decoding space: Liquid infrastructures'
+  timedaytwo: 04:45
+  abstractdaytwo: |
+    Artificially intelligent systems (AI) are increasingly the ubiquitous, unseen arbiters of our social, civic and family lives. Ever increasing computational power, combined with almost limitless data, has led to a turning point in the way artificial intelligence assists, judges and cares for humans. But in the wake of such power we must ask, what are we making inherently unknowable as the world becomes more predictable, managed, and discrete? And what does it look like to spatialize memories, knowledge, and experiences of urban geographies that lie outside of the algorithm?
+    <br/><br/>
+    “Decoding Space: Liquid Infrastructures,” meditates on redlining, a popular narrative of post-WWII economic segregation and a conceptual framework that is often engaged to explain contemporary patterns of poverty and racial segregation. This keynote engages redlining and subaltern geographies as a critical intervention in reframing race, space, knowledge, and data.
+  imagedaytwo: ron.jpg
+  affiliationsdaytwo: >
+    Ron Morrison, University of Southern
+    California, Los Angeles, US
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: "306993793"
+- 
+  categorydaytwo: administrative
+  daytimedaytwo: pm
+  authordaytwo: Closing
+  titledaytwo: ""
+  timedaytwo: 05:30
+  abstractdaytwo: ""
+  imagedaytwo: ""
+  affiliationsdaytwo: ""
+  allauthorsdaytwo: ""
+  lightninglastdaytwo: ""
+  anchorlink: ""
+  videolinkdaytwo: ""
+
+----
+
+Headerdescdayone: Saturday, 20 Oct
+
+----
+
+Headertimedayone: 
+
+----
+
+Headerdescdaytwo: Sunday, 21 Oct
+
+----
+
+Headertimedaytwo: 
+
+----
+
+Headerdescdayzero: Friday, 19 Oct
+
+----
+
+Headertimedayzero: 
+
+----
+
+Talksdayzero: 
+
+- 
+  categorydayzero: administrative
+  daytimedayzero: am
+  lightninglastdayzero: ""
+  authordayzero: Registration
+  titledayzero: ""
+  timedayzero: 09:00
+  abstractdayzero: ""
+  imagedayzero: ""
+  affiliationsdayzero: ""
+  allauthorsdayzero: ""
+  anchorlink: ""
+- 
+  categorydayzero: bold
+  daytimedayzero: am
+  lightninglastdayzero: first
+  authordayzero: Full-day workshops
+  titledayzero: ""
+  timedayzero: 10:00
+  abstractdayzero: ""
+  imagedayzero: ""
+  affiliationsdayzero: ""
+  allauthorsdayzero: ""
+  anchorlink: workshops
+- 
+  categorydayzero: bold
+  daytimedayzero: pm
+  lightninglastdayzero: first
+  authordayzero: Half-day workshop
+  titledayzero: ""
+  timedayzero: 02:00
+  abstractdayzero: ""
+  imagedayzero: ""
+  affiliationsdayzero: ""
+  allauthorsdayzero: ""
+  anchorlink: workshops
+- 
+  categorydayzero: dinner
+  daytimedayzero: pm
+  lightninglastdayzero: first
+  authordayzero: Exhibition opening
+  titledayzero: ""
+  timedayzero: 07:00
+  abstractdayzero: ""
+  imagedayzero: ""
+  affiliationsdayzero: ""
+  allauthorsdayzero: ""
+  anchorlink: exhibition
+
+----
+
+Photodocumentationdinner: 
+
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web022.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web024.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web028.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web036.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web043.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web049.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web055.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web059.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web067.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web082.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web095.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web099.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web113.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web122.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web128.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web129.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web131.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web134.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web142.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web154.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web163.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web165.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    dinner_2018_information-_cflamme_day2-web179.jpg
+  text: 'Photo: Constanze Flamme'

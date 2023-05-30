@@ -1,0 +1,131 @@
+Navtitle: Venue
+
+----
+
+Title: Venue
+
+----
+
+Textlarge: This year’s conference took place at the University of Applied Sciences Potsdam (FH Potsdam), approximately one hour away from Berlin.
+
+----
+
+Imageleft: image3.jpg
+
+----
+
+Imageright: image1.jpg
+
+----
+
+Locationheadline: Location
+
+----
+
+Locationtext: 
+
+The conference will be held at the main building of the University of Applied Sciences Potsdam. With innovative study programs like interface design and urban futures as well as two research labs (Urban Complexity Lab and the Interaction Design Lab), the university provides space for a wide spectrum of visualization research and teaching. 
+
+Potsdam is the capital of the federal state of Brandenburg with a history of over 1000 years and is a city of UNESCO World Heritage. A once royal capital, Potsdam is characterized by fifteen palaces including the famous Sanssouci, many parks and lakes and a diverse cultural heritage. 
+Potsdam is also a center of science, with over 40 scientific institutions operating in the city and has one of the highest ratios of scientists in Germany. Furthermore, the Babelsberg film studios are Europe's biggest cohesive film production complex, having created a broad range of international productions, including awarded movies like The Pianist or The Grand Budapest Hotel.
+
+The university is situated north of the city center. The campus and public transport to the location are wheelchair-accessible. For more information regarding accessibility please contact us via (email: admin@informationplusconference.com text: E-mail. class: cross-link-small)
+
+----
+
+Locationmapfirst: map_black.jpg
+
+----
+
+Locationmapsecond: map_red.jpg
+
+----
+
+Directionsheadline: Directions
+
+----
+
+Directionsintro: We recommend travel by public transportation. The Berlin ABC ticket allows the use of buses, trams, and trains in Berlin as well as Potsdam.
+
+----
+
+Directionsbullets: 
+
+- 
+  text: >
+    If you are flying in, coming from Berlin
+    Schönefeld Airport, you can take a
+    regional train (RB22 to S Griebnitzsee
+    Bhf, 50 min) directly to Potsdam
+    Hauptbahnhof (central station). Arriving
+    at Tegel Airport, you can take an
+    airport bus (TXL to S+U Alexanderplatz,
+    25 min) to Berlin Hauptbahnhof (central
+    station) and go on from there.
+- 
+  text: >
+    If you arrive by train, it is likely you
+    will arrive at Berlin Hauptbahnhof
+    (central station).
+- 
+  text: >
+    From Berlin Hauptbahnhof you can take
+    the S-Bahn (S7 to Potsdam Hbf, 45 min)
+    or a regional train (RE1 to
+    Brandenburg/Magdeburg Hbf or RB21 to
+    Wustermark/Golm Bhf, 25 min) to get to
+    Potsdam Hauptbahnhof.
+- 
+  text: >
+    From Potsdam Hauptbahnhof, you can
+    either take tram 92 to Kirschallee or
+    tram 96 to Campus Jungfernsee and get
+    off at Campus Fachhochschule (12 min).
+    Alternatively, you can reach the campus
+    by bike (15 min), which you can rent at
+    the central station.
+
+----
+
+Stayintro: Potsdam as well as the nearby Berlin offer a wide variety of places to stay. Hotels near our conference location are:
+
+----
+
+Staybulletsfirst: 
+
+- 
+  text: Dorint Hotel Sanssouci
+  link: https://hotel-potsdam.dorint.com/en/
+  subtext: FOR CONFERENCE RATE PLEASE USE
+  subtextlink: >
+    http://informationplusconference.com/2018/dorinthotel.pdf
+  street: Jägerallee 20
+  city: 14469 Potsdam
+
+----
+
+Staybulletssecond: 
+
+- 
+  text: Villa Monte Vino
+  link: https://www.hotelvillamontevino.de/
+  subtext: ""
+  subtextlink: ""
+  street: Gregor-Mendel-Straße 27
+  city: 14469 Potsdam
+- 
+  text: Hotel NH Potsdam
+  link: >
+    https://www.nh-hotels.com/hotel/nh-potsdam
+  subtext: ""
+  subtextlink: ""
+  street: Friedrich-Ebert-Str. 88
+  city: 14467 Potsdam
+
+----
+
+Headlinedirections: 
+
+----
+
+Textdirections: 

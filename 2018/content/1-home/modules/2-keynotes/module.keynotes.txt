@@ -1,0 +1,77 @@
+Speakers: 
+
+- 
+  speaker: 'Reuben Fischer-Baum & Chiqui Esteban'
+  institute: reuben.png
+  text: "Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic, The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com."
+  image: chiqui-esteban.png
+- 
+  image: ronald-morrison.png
+  speaker: Ron Morrison
+  institute: ""
+  text: >
+    Ron Morrison is a designer, artist, and
+    researcher working across the fields of
+    human geography, digital technology, and
+    urbanism. They investigate how the
+    unassimilable complicates race and
+    geographic space as fixed and knowable.
+    From building open source platforms to
+    upend solitary confinement to crafting
+    community based archives to combat
+    gentrification, their work explores
+    cartographies of slow violence,
+    cybernetics, and blackness. Their work
+    was implemented in the US, Ghana,
+    Colombia, Ethiopia, Italy and featured
+    at AIA New York, UN World Urban Forum,
+    and Tribeca Film Festival. They are
+    currently an Annenberg PhD fellow at the
+    University of Southern California in Los
+    Angeles.
+- 
+  image: sandra-rendgen.png
+  speaker: Sandra Rendgen
+  institute: ""
+  text: >
+    Sandra Rendgen is an independent author
+    and researcher with a particular focus
+    on data visualization, interactive media
+    and the history of infographics. Her
+    academic background is in art history
+    and cultural theory. In collaboration
+    with Taschen Publishing, she released
+    “Information Graphics” (2012) and
+    “Understanding the World” (2014).
+    Currently she is working on two new
+    books about the history of data
+    visualization and information graphics.
+- 
+  speaker: 'Fernanda Viégas & Martin Wattenberg'
+  institute: fernanda.png
+  text: >
+    Fernanda Viégas and Martin Wattenberg
+    co-lead Google’s PAIR (People+AI
+    Research) initiative, part of Google
+    Brain. Their work in machine learning
+    focuses on transparency and
+    interpretability, as part of a broad
+    agenda to improve human/AI interaction.
+    They are well known for their
+    contributions to social and
+    collaborative visualization, and the
+    systems they’ve created are used daily
+    by millions of people. Their
+    visualization-based artwork has been
+    exhibited worldwide, and is part of the
+    permanent collection of Museum of Modern
+    Art in New York.
+  image: martin.png
+
+----
+
+Title: Keynotes
+
+----
+
+Navtitle: Keynotes

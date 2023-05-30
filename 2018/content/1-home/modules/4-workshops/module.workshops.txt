@@ -1,0 +1,88 @@
+Title: Workshops
+
+----
+
+Navtitle: Workshops
+
+----
+
+Textlarge: The workshops at Information+ [19 Oct] offered a hands-on, conversational, and empowering opportunity to acquire new skills, engage in vibrant discussions, and warm up to the conference.
+
+----
+
+Photodocumentationpudding: 
+
+- 
+  image: pudding_fabian-schrader-1.jpg
+  text: 'Photo: Fabian Schrader'
+- 
+  image: pudding_flore-de-crombrugghe-1.jpg
+  text: 'Photo: Flore de Crombrugghe'
+- 
+  image: pudding_marian-doerk-1.jpg
+  text: 'Photo: Marian Dörk'
+- 
+  image: pudding_marian-doerk-2.jpg
+  text: 'Photo: Marian Dörk'
+
+----
+
+Photodocumentationinvestigator: 
+
+- 
+  image: investigator_isabel-meirelles.jpg
+  text: 'Photo: Isabel Meirelles'
+- 
+  image: investigator_jens-ove-droessiger-1.jpg
+  text: 'Photo: Jens Ove Drößiger'
+- 
+  image: investigator_jens-ove-droessiger-2.jpg
+  text: 'Photo: Jens Ove Drößiger'
+
+----
+
+Photodocumentationwalk: 
+
+- 
+  image: datawalk__ll_6491.jpg
+  text: 'Photo: William Heiko Schmidt'
+- 
+  image: datawalk__ll_6547.jpg
+  text: 'Photo: William Heiko Schmidt'
+- 
+  image: datawalk__ll_6696.jpg
+  text: 'Photo: William Heiko Schmidt'
+- 
+  image: datawalk__ll_6732.jpg
+  text: 'Photo: William Heiko Schmidt'
+- 
+  image: datawalk__ll_6774.jpg
+  text: 'Photo: William Heiko Schmidt'
+
+----
+
+Photodocumentationdepot: 
+
+- 
+  image: dive_2018-10-19-23.13.22.jpg
+  text: 'Photo: Michael Dustin Kummer'
+- 
+  image: dive_2018-10-19-23.13.40.jpg
+  text: 'Photo: Michael Dustin Kummer'
+- 
+  image: dive_2018-10-19-23.13.46.jpg
+  text: 'Photo: Michael Dustin Kummer'
+- 
+  image: dive_2018-10-19-23.13.53.jpg
+  text: 'Photo: Michael Dustin Kummer'
+
+----
+
+Photodocumentationtrifacta: 
+
+- 
+  image: julian-lucas-wohlleber-1.jpg
+  text: 'Photo: Julian Lucas Wohlleber'
+- 
+  image: julian-lucas-wohlleber-2.jpg
+  text: 'Photo: Julian Lucas Wohlleber'

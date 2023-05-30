@@ -1,0 +1,192 @@
+@import url('https://rsms.me/inter/inter.css');
+
+.dg.main .close-button {
+  display: none;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  background: linear-gradient(white, #fffff2);
+}
+
+canvas {
+  display: block;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+}
+
+h1 {
+  position: relative;
+  font-size: 4em;
+  font-weight: 700;
+background-image: linear-gradient(to right, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 800px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+h4 {
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+
+#canvas {
+  padding: 0px;
+  position: relative;
+  z-index: 0;
+}
+
+canvas {
+  z-index: -9999;
+  position:relative;
+}
+
+#header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#intro {
+  border-top: 1px solid black;
+
+}
+
+footer {
+  border-top: 1px solid black;
+  padding: 2em 4em 4em 4em;
+}
+
+
+.footer-text {
+  font-size: 1em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+  font-weight: 600;
+  color: black;
+}
+
+section {
+  padding: 2em 0 2em 0;
+}
+
+::selection {
+  color: black;
+  background-color: white;
+}
+
+.info {
+  margin-top: 2em;
+}
+
+.text {
+  font-size: 1.8em;
+  font-weight: 500;
+  background-image: linear-gradient(to left, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-small {
+  margin-top: 2em;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: black;
+}
+
+.dates {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  background-image: linear-gradient(to right, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+transition: 1s;
+}
+
+a:hover {
+  background-image: linear-gradient(to left, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+}
+
+img a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 60%;
+}
+
+
+
+strong {
+  background-image: linear-gradient(to right, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a img:hover,
+a img:focus {
+filter: invert(28%) sepia(99%) saturate(1594%) hue-rotate(233deg) brightness(99%) contrast(111%);  /* filter: invert(11%) sepia(79%) saturate(6701%) hue-rotate(263deg) brightness(96%) contrast(135%); */
+  transition-duration: 0.3s;
+}
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.8em;
+    font-weight: 800px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #6251ff, #0087ff, #00a9ff, #00c4fa, #00d9e1, #2bdcbd, #6ada8f, #a1d460, #cfb93e, #f09942);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;};
+    /* background: -webkit-linear-gradient(#af10ff, #ff9ba7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+
+
+
+
+
+}

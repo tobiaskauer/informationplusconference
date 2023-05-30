@@ -1,0 +1,21 @@
+Title: conference 2018
+
+----
+
+Text: 
+
+Following the success of (link: http://informationplusconference.com/2016/ text: Information+ 2016 class: cross-link-small )  &ensp;   in Vancouver, Canada, the biennial conference brings together researchers and practitioners in information design and visualization to discuss common questions and challenges in these rapidly changing fields. Unlike discipline-specific gatherings, Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices, and pedagogies of analyzing and communicating information.  
+
+Information+ 2018 again included three events: a workshop day [19 Oct], a two-day conference [20–21 Oct], and an exhibition of historic information design [19 Oct – 14 Dec]. The events took place at the University of Applied Sciences Potsdam (FH Potsdam), which was the first university to offer a study program in interface design in Germany. It has since gained international reputation for their design-oriented information visualization research.
+
+----
+
+Headertitle: Interdisciplinary practices in information design & visualization 19–21 October 2018 in Potsdam, Germany
+
+----
+
+Textlarge: Information+ 2018 was co-located with (link: http://ieeevis.org/year/2018/welcome text: IEEE VIS 2018), [21–26 Oct] in Berlin. The conferences were separate events, requiring separate registration. By co-locating these events, we encouraged cross-disciplinary discourse, especially with regards to exchanges between the science and design ‘camps’ of the visualization community.
+
+----
+
+Navtitle: Start

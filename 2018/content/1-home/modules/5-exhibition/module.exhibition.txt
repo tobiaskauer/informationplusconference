@@ -1,0 +1,149 @@
+Navtitle: Exhibition
+
+----
+
+Textlarge: The exhibition “Image Factories” (Bildfabriken) organized by the German Museum of Books and Writing of the  (link: http://www.dnb.de/EN/Home/home_node.html text: German National Library popup: yes) opened at the University of Applied Sciences Potsdam [19 Oct – 14 Dec] during Information+ 2018.
+
+----
+
+Text: 
+
+The exhibition focuses on a period of visualization history that was characterized by information overload and growing demands for visual communication in the early 20th century.
+
+Two specific responses are highlighted, each paving the way for a newly established genre of infographics. The Austrians Otto and Marie Neurath, and the German physician Fritz Kahn, developed their distinctive visual languages almost simultaneously, in both cases based on formal stylization of the human body. Neuraths’ “Isotype” utilized pictogram-like graphics as counting units for the quantification of social realities. In contrast Kahn’s “Factories of the Human Body”
+
+----
+
+Title: Exhibition
+
+----
+
+Imageleft: kahn.jpg
+
+----
+
+Imageright: neurath.png
+
+----
+
+Sublineleft: Fritz Kahn: Die Empfindungsbahn, 1929. Image: Kosmos/Debschitz
+
+----
+
+Sublineright: Gesellschafts- und Wirtschaftsmuseum Wien. Image: Otto and Marie Neurath Isotype Collection, University of Reading
+
+----
+
+Intro: 
+
+----
+
+Bullets: 
+
+- 
+  text: 'Location: FH Potsdam, Hauptgebäude    Kiepenheuerallee 5, 14469 Potsdam'
+- 
+  text: 'Opening hours: 23 Oct - 14 Dec 2018, <br>Monday - Friday, 11am - 4pm'
+- 
+  text: 'Opening reception: 19 Oct 2018 at 7pm'
+
+----
+
+Texttwo: The exhibition includes detailed reproductions and animations from the rich holdings of the German National Library and from American and British archives. The exhibition was developed at the German Museum of Books and Writing together with the Institute of Communication and Media Studies, University of Erfurt.
+
+----
+
+Textfirst: The exhibition focuses on a period of visualization history that was characterized by information overload and growing demands for visual communication in the early 20th century. Two specific responses are highlighted, each paving the way for a newly established genre of infographics.
+
+----
+
+Textsecond: The teams around the Austrians Otto & Marie Neurath, and the German physician Fritz Kahn, developed their distinctive visual languages almost simultaneously, in both cases based on formal stylization of the human body. The Neuraths’ “Isotype” utilized pictogram-like graphics as counting units for the quantification of social realities. In contrast Kahn’s “Factories of the Human Body” employed sequences of mechanistically interpreted diagrams, in which the human being was depicted as an “Industrial Palace”.
+
+----
+
+Textthird: The exhibition includes detailed reproductions and animations from the rich holdings of the German National Library and from American and British archives. The exhibition was developed at the German Museum of Books and Writing together with the Institute of Communication and Media Studies, University of Erfurt.
+
+----
+
+Textfourth: 
+
+----
+
+Photodocumentation: 
+
+- 
+  image: >
+    2018_information-_cflamme_day1_web018.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web021.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web027.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web029.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web031.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web032.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web039.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web045.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web051.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web066.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web076.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web085.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web089.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web095.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web097.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web100.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web108.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web112.jpg
+  text: 'Photo: Constanze Flamme'
+- 
+  image: >
+    2018_information-_cflamme_day1_web115.jpg
+  text: 'Photo: Constanze Flamme'

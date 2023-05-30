@@ -1,0 +1,4 @@
+[23-Jan-2018 21:03:58 UTC] PHP Warning:  scandir(images/gallery/): failed to open dir: No such file or directory in /home/imeirelles/public_html/informationplusconference.com/2016/getNames.php on line 4
+[23-Jan-2018 21:03:58 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/imeirelles/public_html/informationplusconference.com/2016/getNames.php on line 4
+[23-Jan-2018 21:05:45 UTC] PHP Warning:  scandir(images/gallery/): failed to open dir: No such file or directory in /home/imeirelles/public_html/informationplusconference.com/2016/getNames.php on line 4
+[23-Jan-2018 21:05:45 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/imeirelles/public_html/informationplusconference.com/2016/getNames.php on line 4

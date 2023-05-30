@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="style-color.css"> -->
+    <script src="main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+    <title>Information+ Conference 2021</title>
+    <!-- metatag -->
+    <meta property="og:title" content="Information+ Conference 2021" />
+    <meta
+      property="og:description "
+      content="Interdisciplinary practices in information design & visualization. Online,
+		27 September - 1 October 2021"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://informationplusconference.com/2021/"
+    />
+    <meta
+      property="og:image"
+      content="https://informationplusconference.com/2021/assets/infoplus21small.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:alt" content="Information+ Conference 2021" />
+    <meta
+      name="twitter:image"
+      content="https://informationplusconference.com/2021/assets/infoplus21small.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+		
+		<style>
+
+			@import url('https://rsms.me/inter/inter.css');
+
+			.dg.main .close-button {
+			  display: none;
+			}
+
+			html {
+			  font-family: 'Inter', sans-serif;
+			}
+
+			@supports (font-variation-settings: normal) {
+			  html {
+			    font-family: 'Inter var', sans-serif;
+			  }
+			}
+
+			body {
+			  font-family: "Inter", sans-serif;
+			  font-size: 1em;
+			  background: rgb(255, 252, 242);
+			  overflow-x: hidden;
+			}
+
+			canvas {
+			  display: block;
+			}
+
+			p {
+			  font-family: "Inter", sans-serif;
+			  font-size: 1em;
+			}
+
+
+			h2 {
+			  font-size: 1.5em;
+			  font-weight: 800px;
+			}
+
+			.title{
+			  font-size: 2em;
+			  font-weight: 800;
+			  margin-bottom:1em;
+			  color:black;
+			  /* background: -webkit-linear-gradient(#af10ff, #ff3f19);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent; */
+			}
+
+
+			h3 {
+			  font-size: 1.2em;
+			  margin-top: .8em;
+			  margin-bottom: 1em;
+			  font-weight: bold;
+			  color:inherit;
+			}
+
+			h4 {
+			  font-size: 1.1em;
+			  margin-top: 0em;
+			  line-height: 1.7em;
+			}
+
+			h5>a {
+			  font-size: 1em;
+			  font-weight: 600;
+			  color: #5800FF;
+			  font-size: 0.8em;
+			}
+
+			h1 {
+			  position: relative;
+			  font-size: 4em;
+			  font-weight: 700;
+			  /* color:#ff3f19; */
+			  background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent; 
+			}
+
+
+			#canvas {
+			  padding: 0px;
+			  position: relative;
+			  overflow-x: hidden;
+			  overflow-y: hidden;
+			}
+
+			#header {
+			  position: absolute;
+			  display: flex;
+			  align-items: center;
+			  align-content: center;
+			  justify-content: center;
+			}
+
+			/* slideDown Navbar */
+
+			#myBottomnav {
+			  display: none;
+			}
+
+
+			#navbar {
+			  background: linear-gradient(0deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 5%, rgba(88, 0, 255, 1) 100%);
+			  position: fixed;
+			  z-index: 9999;
+			  width: 100%;
+			  top: -50px;
+			  display: block;
+			  transition: top 0.3s;
+			  border-bottom: none;
+			}
+
+			#navbar a {
+			  float: left;
+			  display: block;
+			  color: rgb(255, 252, 242);
+			  text-align: center;
+			  padding: 1em 1em 1em 0em;
+			  font-size: 1em;
+			  font-weight: 400;
+			  text-transform: uppercase;
+			  transition:0.5 ease;
+			}
+
+			#navbar a:hover {
+			  color: #ff3f19;
+			  text-decoration: none;
+			}
+
+			.mobile-nav {
+			  display: none;
+			  position: fixed;
+			  bottom:0;
+			  width: 100%;
+			  background: linear-gradient(180deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 98%, rgba(88, 0, 255, 1) 100%);
+			  z-index: 10000;
+			}
+
+			.mobile-nav .items {
+			  padding-bottom: 60px;
+			}
+
+			.mobile-nav .items a {
+			  height: 0;
+			  opacity: 0;
+			  transition: all 0.35s ease;
+			}
+			.mobile-nav.visible .items a {
+			  height: 60px;
+			  opacity: 1;
+			}
+
+			.mobile-nav a {
+			  color: rgb(255, 252, 242);
+			  height: 60px;
+			  width: 100%;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  text-transform: uppercase;
+			  font-size: 1.2em;
+			}
+
+			.mobile-nav a:hover {
+			  color: rgb(255, 252, 242);
+			}
+
+			.mobile-nav .icon {
+			  transition: transform 0.35s ease;
+			  transform: rotate(0);
+			  position: absolute;
+			  bottom: 0;
+			}
+
+			.mobile-nav.visible .icon {
+			  transform: rotate(180deg);
+			}
+
+			/* contributions */
+
+			#contributions{
+			  display: block;
+			  border-top:1px solid #5800FF;
+			}
+
+			#timeZone{
+			  margin:20px 0 20px 0;
+			}
+
+			#timeZone button{
+			  background-color: #ff3f19;
+			  border:none;
+			  color:white;
+			  border-radius:100px;
+			  display: inline;
+			}
+
+			#timeZone button p{
+			  margin-bottom:0;
+			}
+
+			.item {
+			  display: grid;
+			  grid-column-gap: 15px;
+			  grid-row-gap: 15px;
+			  grid-template-columns: 100px auto;
+			  filter:drop-shadow(10px);
+			  margin:0 0px 15px 0px;
+			  align-items: baseline;
+			}
+
+			.day {
+			  grid-row-start: 1;
+			  grid-row-end: 4;
+			}
+
+			.time {
+			  grid-row-start: 1;
+			  grid-row-end: 4;
+			}
+
+			.break{
+			  grid-row-start: 1;
+			  grid-row-end: 4;
+			}
+
+			.description {
+			  grid-column-start: 1;
+			  grid-column-end: 10;
+			  padding: 0 0 1em 0;
+			}
+
+			.description .title {
+			  font-size: 1.3em;
+			  font-weight: 800;
+			  color: #5800FF;
+			}
+
+			.description img {
+				width: 20em;
+				max-width: 100%;
+				position: absolute;
+				right: -21em;
+				margin: 0 0 2em 1em;	
+			}
+
+			.description h4 {
+			  background: -webkit-linear-gradient(#af10ff, #5800FF);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  font-weight: 400;
+				font-size: 1.3em;
+			}
+
+			.speaker {
+			  grid-row-start: 1;
+			  grid-row-end: 4;
+			}
+
+			.type {
+			  width: fit-content;
+			  padding:3px 12px 3px 12px;
+			  border-radius: 20px;
+			  margin-left:12px;
+			  color:rgb(255, 255, 255);
+			  border:1px solid #5800FF;
+
+			}
+
+			.type p{
+			  margin:0px !important;
+			  font-size: x-small !important;
+			  padding:2em;
+			}
+
+			.number{
+			  display:none;
+			  background-color: rgb(255, 252, 242);
+			  border:1px solid #af10ff;
+			  width: fit-content;
+			  border-radius: 99999px;
+			  color:black;
+			}
+
+
+			.accordion {
+			  background-color: rgb(255, 252, 242);
+			  color: black;
+			  border-bottom: 1px solid #af10ff;
+			  border-top: none;
+			  border-left: none;
+			  border-right: none;
+			  cursor: pointer;
+			  width: 100%;
+			  text-align: left;
+			  padding: 15px 35px 15px 35px;
+        position: relative;
+			}
+
+			#contributions button:last-of-type{
+				border-bottom: none;
+			}
+  
+			    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+			    .focus, .active, .accordion:hover {
+			      background-color:white;
+			      border-bottom:1px solid white;
+			      xborder:none;
+			    }
+  
+			    .accordion:hover {
+			      background-color:white;
+			      border-bottom: 1px solid #af10ff;
+			    }
+		
+			    .accordion.active:hover {
+			      border-bottom: 1px solid white;
+			    }
+		
+  
+			    .accordion:hover h3{
+			      color: #af10ff;
+			    }
+  
+			    .here-d3:hover a{
+			      color: #af10ff;
+			    }
+  
+  
+			  /* Style the accordion panel. Note: hidden by default */
+			  .panel {
+			    padding: 20px 35px 20px 35px;
+			    background-color: white;
+			    border-bottom: 2px solid black;
+			    display: none;
+			    overflow: hidden;
+			  }
+
+
+			 .accordion:after {
+   
+			  content: '\02795'; /* Unicode character for "plus" sign (+) */
+			  font-size: inherit;
+			  float: right;
+			  transition: .5s all ease-out;
+			  color:#af10ff;
+
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+			}
+
+      .accordion.active:after {
+        content: "\2796";
+      }
+
+			.XXXactive .day:after {
+			  content: "\2796"; /* Unicode character for "minus" sign (-) */
+			  border-top: none;
+			  border-left: none;
+			  border-right: none;
+			}
+
+
+			  /* Display only schedule for days */
+
+			  .firstPanel .panel_1, .secondPanel .panel_2, .thirdPanel .panel_3, .fourthPanel .panel_4, .fifthPanel .panel_5, .sixthPanel .panel_6, .seventhPanel .panel_7{
+			    display: block;
+			  }
+
+			  /* Hide only schedule for days */
+
+			  .firstPanel .panel_2,.firstPanel .panel_3,.firstPanel .panel_4, .firstPanel .panel_5, .firstPanel .panel_6, .firstPanel .panel_7{
+			    display: none;
+			  }
+
+			  .secondPanel .panel_1, .secondPanel .panel_3, .secondPanel .panel_4, .secondPanel .panel_5, .secondPanel .panel_6, .secondPanel .panel_7{
+			    display: none;
+			  }
+
+			  .thirdPanel .panel_1, .thirdPanel .panel_2, .thirdPanel .panel_4, .thirdPanel .panel_5, .thirdPanel .panel_6, .thirdPanel .panel_7{
+			    display:none;
+			  }
+  
+			  .fourthPanel .panel_1, .fourthPanel .panel_3, .fourthPanel .panel_2, .fourthPanel .panel_5, .fourthPanel .panel_6, .fourthPanel .panel_7{
+			    display: none;
+			  }
+
+			  .fifthPanel .panel_1, .fifthPanel .panel_3, .fifthPanel .panel_4, .fifthPanel .panel_2, .fifthPanel .panel_6, .fifthPanel .panel_7{
+			    display: none;
+			  }
+
+			  .sixthPanel .panel_1, .sixthPanel .panel_2, .sixthPanel .panel_3, .sixthPanel .panel_4, .sixthPanel .panel_5, .sixthPanel .panel_7{
+			    display: none;
+			  }
+
+			  .seventhPanel .panel_1, .seventhPanel .panel_2, .seventhPanel .panel_3, .seventhPanel .panel_4, .seventhPanel .panel_5, .seventhPanel .panel_6{
+			    display: none;
+			  }
+
+
+
+			@media screen and (max-width: 1000px) {
+			  #navbar {
+			    display: none;
+			  }
+			  .mobile-nav{
+			    display: block;
+			  }
+
+				.accordion {
+          padding: 5px 10px 5px 10px;
+        }
+
+				.panel {   padding: 5px 10px 5px 10px; }
+		
+				.wrap { padding: 1rem !important; } 
+	
+				.description img {
+					position: relative;
+					right: 0;
+					margin: 1em;
+				}
+	
+			}
+
+			/* End Navabar */
+			#intro {
+			  border-top: 1px solid #5800FF;
+			}
+
+			#cfp {
+			  border-top: 1px solid #ff3f19;
+			  color: #ff3f19;
+			  position: sticky;
+			}
+
+			#codeofconduct {
+			  border-top: 1px solid #5800FF;
+			  color: black;
+			  position: sticky;
+			}
+
+			#about {
+			  border-top: 1px solid #5800FF;
+			  color: black;
+			  position: sticky;
+			}
+			
+
+			#pc {
+			  border-top: 1px solid #af10ff;
+			  color: black;
+			  position: sticky;
+			}
+
+			#conference {
+			  border-top: 1px solid #ff3f19;
+			  color: #ff3f19;
+			  position: sticky;
+			}
+
+			#conference h3{
+			  margin-top:0.1em;
+			}
+
+			#keynotes{
+			  border-top: 1px solid #5800FF;
+			  color: black;
+			  position: sticky;
+			}
+
+
+			#breaks{
+			  border-top: 1px solid #5800FF;
+			  position: sticky;
+			}
+
+      #breaks ul {
+			  list-style-type:circle;
+			  list-style-position: outside;
+			}
+
+      #breaks li {
+        font-size: 1em;
+        margin-top: 1em;
+			  line-height: 1.4em;
+			  color: black;
+			}
+
+			.sticky-top{
+			  display: block;
+			  position: sticky;
+			}
+
+			#registration {
+			  border-top: 1px solid #ff3f19;
+			  color: #ff3f19;
+			  position: sticky;
+			}
+
+			#registration h3{
+			  color: #ff3f19;
+			}
+
+			#workshops {
+			  border-top: 1px solid #af10ff;
+			  color: black;
+			  position: sticky;
+			}
+
+			.wrap{
+			  background: rgb(255, 252, 242);
+			  padding: 2rem;
+			} 
+
+
+			.text {
+			  margin-bottom: 1em;
+			}
+
+			#pc .small {
+			  margin-left: .25em;
+			}
+
+			.uni small, #contributions small {
+			  color:#5800FF;
+			} 
+
+			small {
+			  text-transform: uppercase;
+			  font-size: 0.8em;
+			  font-weight: 500;
+			}
+
+
+
+
+
+			#formats, #criteria {
+			  margin-bottom: 3em;
+			  color: #ff3f19;
+			}
+
+			footer {
+			  padding: 2em 2em 4em 2em;
+			  border-Top: 1px solid #5800FF;
+			  align-content: space-around;
+			}
+
+			footer>svg {
+			  align-items: baseline;
+			}
+
+			section {
+			  padding: 2em 0 2em 0;
+			}
+
+			::selection {
+			  color: white;
+			  background-color: #5800FF;
+			}
+
+			.info {
+			  margin-top: 2em;
+			}
+
+			#intro .text {
+			  font-size: 1.8em;
+			  font-weight: 500;
+			  background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			}
+
+			.gradient{
+			    font-size: 1.8em;
+			  font-weight: 500;
+			  background: -webkit-linear-gradient(#af10ff, #5800FF);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			}
+
+			#intro .text-small {
+			  margin-top: 2em;
+			  font-size: 1.2em;
+			  line-height: 1.5em;
+			  color: black;
+			}
+
+			.text-cfp {
+			  font-size: 1.2em;
+			  line-height: 1.5em;
+			  color: black;
+			}
+
+			.text-add {
+			  font-size: 1.2em;
+			  line-height: 1.5em;
+			  color: black;
+			}
+
+			.text-ec {
+			  font-size: 1.2em;
+			  line-height: 1.5em;
+			  color: #ff3f19;
+			}
+
+
+
+			.dates {
+			  color: #5800FF;
+			}
+			
+			.dates a {
+			  color: #ff3f19;				
+				font-weight: bold;
+			}
+
+			#about h3{
+			  color: #5800FF;
+			  margin-top:2em;
+			}
+
+
+			.abstract{
+			background-color: red;
+			width:300px;
+			height:fit-content;
+			}
+
+
+			.requirements {
+			  color: #ff3f19;
+			}
+
+			.infobox{
+			  margin-top:2em;
+			}
+
+			li::before {
+			  content: '';
+			}
+
+			li:not(.dropdown-item) {
+			  margin-top: 2em;
+			  font-size: 1.2em;
+			  line-height: 1.5em;
+			}
+
+			ul {
+			  list-style-type: none;
+			  list-style-position: inside;
+			}
+
+			a {
+			  text-decoration: none;
+			  color: #5800FF;
+			}
+
+			a:hover {
+			  color: #af10ff;
+			  text-decoration: none;
+			}
+
+			img a:hover {
+			  color: white;
+			  cursor: pointer;
+			}
+
+			strong {
+			  background: -webkit-linear-gradient(#af10ff, #5800FF);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  font-weight: 400;
+			}
+
+			#cfp strong {
+			  background: -webkit-linear-gradient(#af10ff, #ff3f19);
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			}
+
+			a img:hover,
+			a img:focus {
+			  filter: invert(18%) sepia(75%) saturate(6695%) hue-rotate(277deg) brightness(102%) contrast(111%);
+			  /* filter: invert(11%) sepia(79%) saturate(6701%) hue-rotate(263deg) brightness(96%) contrast(135%); */
+			  transition-duration: 0.3s;
+			}
+
+			footer img {
+			  vertical-align: middle;
+				width: 50%;
+			  margin-top: 2em;
+			  height: 80px;
+			}
+
+			.logo {
+			  width: 70%;
+			}
+
+			.people{
+			  width: 30%;
+			  height: auto;
+			  margin-top:1em;
+			  margin-bottom:1em;
+			  display: inline;
+			  background-color: transparent;
+			}
+
+
+
+			.wsPic{
+			  width: 100%;
+			  align-items: center;
+			  height: auto;
+			  margin-top:2em;
+			  display: inline;
+			  background-color: transparent;
+				box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);	
+			  animation: float 5s infinite;
+			}
+
+			img.wsPic2 {
+			  animation: floatb 5s infinite !important;
+			}
+
+      .buttonInfoplus{
+        background-color: #5800FF;
+        border:none;
+        width: 100%;
+        color:white;
+        text-transform: uppercase;
+        transition: .5s ease;				
+      }
+			
+			.buttonInfoplus a {
+				color: #fff;
+			}
+			
+			.buttonInfoplus h3 {
+				margin-top: 1em;
+			}
+
+      .buttonInfoplus:hover{
+        background-color: #af10ff;
+        border:none;
+        color:white;
+        transform: scale(1.03);
+      }
+
+			@keyframes floatR {
+				0% {
+					box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+					transform: translatex(45px);
+			    z-index:3;
+				}
+
+				25% {
+					box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+			    transform: translatex(10px);
+			    z-index: 3;
+				}
+
+			  50% {
+			    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+			    transform: translatex(45px);
+			    z-index:3;
+				}
+
+			  75% {
+			    box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+			    transform: translatex(10px);
+			    z-index: 0;
+				}
+
+
+				100% {
+			    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+					transform: translatex(45px);
+			    z-index:0;
+				}
+			}
+
+			@keyframes floatL {
+			  0% {
+					box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+					transform: translatex(-20px);
+			    z-index:0;
+				}
+
+				25% {
+					box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+			    transform: translatex(30px);
+			    z-index:0;
+				}
+
+			  50% {
+			    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+			    transform: translatex(-20px);
+			    z-index:0;
+				}
+
+			  75% {
+			    box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+			    transform: translatex(30px);
+			    z-index:3;
+				}
+
+				100% {
+			    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+					transform: translatex(-20px);
+			    z-index:3;
+				}
+			}
+
+			@keyframes float {
+			  0% { transform: translatey(0px); }
+			  50% { transform: translatey(-20px); }
+				100% { transform: translatey(0px); }
+			}
+
+			@keyframes floatb {
+			  0% { transform: translatey(-20px); }
+			  50% { transform: translatey(0px); }
+				100% { transform: translatey(-20px); }
+			}
+
+
+
+			.overlay img {
+			  display: inline;
+			  position: relative;
+			  width:40%;
+			  opacity:1;
+			  background-color: transparent;
+			}
+
+			.overlay .floatL {
+			  animation: floatL 12s infinite;
+			  transform: translatex(-40px);
+			  animation-direction: normal;
+			  height: auto;
+			  margin-top:2em;
+			}
+
+			.overlay .floatR {
+			  animation: floatR 12s infinite;
+			  height: auto;
+			  margin-bottom:3em;
+			}
+
+
+			/* .bullets-text {
+			    padding-left: 70px;
+			    margin-bottom: .5rem;
+			    transition: 0.5s;
+			}
+
+			.bullets:before{
+			background: url(./assets/bullet-arrow-red.png) no-repeat 100% 0;
+			background-size: contain;
+			content: "";
+			width: 50px;
+			-webkit-transform: translateY(5px);
+			transform: translateY(5px);
+			height: 23px;
+			display: block;
+			margin-bottom: -23px;
+			}
+
+			.bullets-blue:before{
+			background: url(./assets/bullet-arrow-blue.png) no-repeat 100% 0;
+			background-size: contain;
+			content: "";
+			width: 50px;
+			-webkit-transform: translateY(5px);
+			transform: translateY(5px);
+			height: 23px;
+			display: block;
+			margin-bottom: -23px;
+			} */
+
+
+			#covid { 	font-size: 1.2em; }
+
+			@media only screen and (max-width: 600px) {
+			  h2 {
+			    font-size: 1.8em;
+			    font-weight: 800px;
+			  }
+
+			  h3 {
+			    font-size: 1em;
+			  }
+
+			  h1 {
+			    font-size: 3em;
+			    font-weight: 700;
+			  }
+
+			  .sticky-top{
+			    margin-top:1.5em;
+			  }
+
+				#covid { 	font-size: 1em; }
+
+			/*  img {
+			    vertical-align: middle;
+			    border-style: none;
+			    width: 150%;
+			    margin-bottom: 2em;
+			    height: 80px;
+			  }
+			*/
+				.description img {
+					padding: 0;
+					left: -1em;
+				}
+	
+				footer .col {
+				 display: block;
+				 width: 100%;
+				 padding: 15px;
+				}
+
+				footer .col img {
+					width: 100%;
+				}
+	
+			  footer {
+			    padding: 0em 2em 2em 2em;
+			    border-Top: 1px solid #5800FF;
+			    align-content: space-around;
+			  }
+
+			 @media only screen and (min-width: 1000px) {
+			  	#covid {
+			      margin-top: -5rem;
+			    }
+			  }
+
+			  #covid {
+			  	color: white;
+			  	padding: 1em;
+			  	background-color: #9D00FE;
+			  	margin-bottom: 2em;
+			  }
+
+			  #covid h3{
+			    margin-top:1em;
+			  }
+
+			  #covid p {margin-bottom: 0;}
+			}
+
+
+/* Gris Schedule Layout */
+
+@media screen and (min-width:700px) {
+  .schedule {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows:
+      [timezones] auto 
+      [tracks] auto
+      /* [time-0700] 0.5fr */
+      [time-0700] 1fr
+      [time-0800] 1fr
+      [time-0900] 1fr
+      [time-1000] 1fr
+      [time-1100] 1fr
+      [time-1200] 1fr
+      [time-1300] 1fr
+      [time-1400] 1fr;
+      /* Note 1:
+      Use 24hr time for gridline names for simplicity
+
+      Note 2: Use "auto" instead of "1fr" for a more compact schedule where height of a slot is not proportional to the session length. Implementing a "compact" shortcode attribute might make sense for this!
+      Try 0.5fr for more compact equal rows. I don't quite understand how that works :)
+      */
+    
+    grid-template-columns:
+      [times] 6em
+      [track-1-start] 1fr
+      [track-1-end track-2-start] 1fr
+      [track-2-end track-3-start] 1fr
+      [track-3-end track-4-start] 1fr
+      [track-4-end track-5-start] 1fr
+      [track-5-end timezones] 6em
+      [timezone-end];
+  }
+}
+
+
+@supports( display:grid ) {
+  @media screen and (min-width:700px) {
+    .track-slot{
+      display: block;
+      position: sticky;
+    }
+  }
+}
+
+/* Small-screen & fallback styles */
+.session {
+  margin-bottom: 1em;
+}
+
+.session-title
+{
+  display: flex;
+  align-content: center;
+}
+
+.session {
+  padding: .5em;
+  font-size: .9em;
+}
+
+.session-day{
+  margin-top:3em;
+}
+
+.session-title,
+.time-slot,
+.track-slot {
+
+  margin: 0;
+  font-size: 1em;
+  font-weight:400;
+}
+
+.session-title a {
+  color: #5800FF;
+  transition:.8s ease;
+	font-weight: bold;
+}
+
+.session-title a:hover {
+  color:#af10ff;
+
+}
+
+
+.track-1 {
+  background-color:rgb(255, 252, 242);
+  color: #5800FF;
+  border:1px solid #5800FF;
+}
+
+.track-2 {
+  background-color:#5800FF;
+  color: rgb(255, 252, 242);
+}
+
+.track-3 {
+  background-color:white;
+  color: #5800FF;
+  border:1px solid #5800FF;
+}
+
+.track-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #af10ff;
+  color: rgb(255, 252, 242);;
+}
+
+.tz small {
+  color: #5800FF;
+}
+
+.tz #selected-time-zone, #guess-timezone {
+  /* color: #af10ff; */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.timezones-converter, .converted-timezone {
+  text-align: right;
+}
+
+.time-slot.timezone {
+  grid-column: timezones;
+  text-align: right;
+}
+
+.session-time-box {
+  display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#selectTimezoneModal .modal-content {
+ border-color: #5800FF;
+}
+
+#selectTimezoneModal .modal-title {
+  color:#5800FF;
+}
+
+#selectTimezoneModal select {
+  color:#5800FF;
+  border-color: #5800FF;
+}
+
+#selectTimezoneModal .close {
+  color:#5800FF;
+}
+
+@media screen and (max-width: 700px) {
+  .time-slot,.track-slot{
+      display: none;
+    }
+  }
+
+@supports( display:grid ) {
+  @media screen and (min-width: 700px) {
+    .session {
+      margin: 0;
+    } 
+    .session-day, 
+    .session-time,
+    .session-time-box {
+      display: none;
+    }
+
+    .data-walk {
+      margin-top: 30%;
+    }
+
+
+  }
+}
+
+#contributionVideoModal.modal .modal-content {
+  border-radius: 0;
+  padding: 0;
+  border-color: #6251ff;
+}
+
+#contributionVideoModal.modal .modal-header {
+  border-color: #6251ff;
+}
+
+.modal {
+  z-index: 20001;
+}
+
+.modal-backdrop {
+  z-index: 20000;
+}
+
+.videoHover a:hover{
+  color:#af10ff;
+}
+
+		</style>
+  </head>
+  <body>
+    <!-- <content> -->
+    <section id="canvas">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <section id="header">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1 class="gradienttext">Information+ Conference 2021</h1>
+                </div>
+                <div class="col-lg-10">
+                  <h2>
+                    Interdisciplinary practices in information design &
+                    visualization
+                  </h2>
+                  <h3>
+                    Online, 27<sup>th</sup> September – 1<sup>st</sup> October
+                    2021
+                  </h3>
+                  <h5>
+                    <a
+                      href="https://twitter.com/hashtag/infoplus2021?src=hashtag_click"
+                      target="_blank"
+                      >#infoplus2021</a
+                    >
+                  </h5>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <canvas height="400"></canvas>
+      <canvas height="400" class="offscreen" style="display: none"> </canvas>
+      <script src="vec2.js"></script>
+      <script src="script.js"></script>
+    </section>
+    <div id="navbar">
+      <div class="container">
+        <a href="#header">Information+</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#keynotes">Keynotes</a>
+        <a href="#contributions">Contributions</a>
+        <a href="#breaks">Breaks</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#codeofconduct">Code of Conduct</a>				
+        <a href="#about">About</a>
+
+      </div>
+    </div>
+    <!-- 🌺🌸🌼🍀 remove from here -->
+    <!-- <div class="bottomnav" id="myBottomnav">
+      <a href="#header">Information+</a>
+      <a href="#cfp">Call for Participation</a>
+      <a href="#pc">Committee</a>
+      <a href="#keynotes">Keynotes</a>
+      <a href="#exhibition">Exhibition</a>
+      <a href="#diversity">Diversity</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div> -->
+    <!-- 🌺🌸🌼🍀 remove to here -->
+    <div class="mobile-nav">
+      <div class="items">
+        <a href="#header" onclick="$('.mobile-nav').toggleClass('visible')">Information+</a>
+      <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
+      <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
+      <a href="#contributions" onclick="$('.mobile-nav').toggleClass('visible')">Contributions</a>
+      <a href="#breaks" onclick="$('.mobile-nav').toggleClass('visible')">Breaks</a>
+      <a href="#workshops" onclick="$('.mobile-nav').toggleClass('visible')">Workshops</a>
+      <a href="#codeofconduct" onclick="$('.mobile-nav').toggleClass('visible')">Code of Conduct</a>
+      <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')">About</a></div>
+      <a
+        href="javascript:void(0);"
+        class="icon"
+        onclick="$('.mobile-nav').toggleClass('visible')"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="text">
+              Information+ is an interdisciplinary conference that brings
+              together researchers, educators, and practitioners in information
+              design and data visualization to discuss common questions and
+              challenges in these rapidly changing fields. Information+ seeks to
+              foster productive exchanges amongst the variety of people involved
+              in the theories, practices and pedagogies of analyzing and
+              communicating information.
+            </p>
+            <p class="text-small">
+              Information+ will be held online between 27<sup>th</sup> September
+              – 1<sup>st</sup> October, 2021 at minimal cost to attendees.
+              Building on the experiences from the previous installments of
+              <a
+                href="https://informationplusconference.com/2016/"
+                target="_blank"
+                >Information+ 2016</a
+              >
+              at <em>Emily Carr University of Art + Design, Vancouver</em> and
+              <a
+                href="https://informationplusconference.com/2018/"
+                target="_blank"
+                >Information+ 2018</a
+              >
+              <em> at University of Applied Sciences Potsdam</em>, we seek to
+              significantly broaden the base of our interdisciplinary community.
+              We are working to design a new kind of online event for the
+              Information+ community; it will not be a typical online
+              conference. We will be posting regular updates about our plans for
+              the format as they develop.
+            </p>
+            <p class="text-small">
+              <em
+                >In 2020, Information+ was scheduled to be held in-person at the
+                Georgia Institute of Technology in Atlanta, Georgia (USA). Due
+                to the risks posed by COVID-19, that event was cancelled. The
+                2021 online format is intended to enable the safest and most
+                inclusive possible event, given continued uncertainties about
+                the viability of large in-person gatherings.</em
+              >
+            </p>
+          </div>
+          <div class="col-lg-4 dates">
+            <h3>Remote, but real-time</h3>
+            <p>
+							Information+ will take place remotely between <b>27 Sept. and 1 Oct.</b> via Zoom. Each day of the conference will include two sets of live conversations with breaks in between during a 3-hour window, from <b>9 am – 12 pm EST</b>. We hope that this <a href="#schedule">conference schedule</a> eases participation across most time zones. Presenters will engage in conversations that will be open for questions by the attendees. The <a href="#contributions">accepted contributions</a> are shared as pre-recorded videos ahead of the live event. As usual, there will be <a href="#breaks">plenty of breaks</a> for participants to meet and mingle.<br><br>
+							<!-- <em>Over the course of the next weeks, more details on registration, workshops, and panels will be published below.</em> -->
+
+              <!-- <button class="buttonInfoplus" type="button">
+                <h3><a href="https://www.eventbrite.com/e/170972000857">Registration is open</a></h3>
+              </button>
+							<br><br> -->
+							
+							 Information+ is committed to enabling a diverse, inclusive and respectful environment where all participants can learn, network, and enjoy planned activities. We are dedicated to a harassment-free experience for everyone. For this purpose, all participants are required to agree with our <a href="#codeofconduct">code of conduct</a>.							
+						</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   <section id="schedule">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Schedule</h2>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-add">
+                The schedule below is for the live events during the conference. 
+                <!-- <br> -->
+                You can watch the <a href="#contributions">pre-recorded talks</a> and <span class="videoHover" style="color:#5800FF; cursor: pointer;">
+                <a style="white-space: nowrap" data-toggle="modal" onclick="openWelcomeVideo()">
+                  <i class="fa fa-play-circle"></i>&nbsp;welcome&nbsp;message</a></span> at your own time.
+              </p>
+        </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+            <div class="schedule" aria-labelledby="schedule-heading">
+
+              <div class="tz" style="grid-column: times / track-1-end; grid-row: timezones;">
+                <p class="mb-0"><small><i class="fa fa-map-marker" aria-hidden="true"></i> Conference Timezone</small></p>
+                <p>Atlanta (America/New York)</p>
+              </div>
+
+              <div class="tz timezones-converter" style="grid-column: track-3-end / timezone-end; grid-row: timezones;">
+                <p class="mb-0"><small><i class="fa fa-globe" aria-hidden="true"></i> Your Timezone</small></p>
+                <p><select id="time-zones" class="text-right" onchange="convertTimezones(this.value)"></select></p>
+
+
+
+                <p class="d-none" type="button" data-toggle="modal" data-target="#selectTimezoneModal"><span id="selected-time-zone">Loading timezone&hellip;</span></p>
+
+
+                <div class="text-left modal fade" id="selectTimezoneModal" tabindex="-1" aria-labelledby="selectTimezoneModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="selectTimezoneModalLabel">Change timezone</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Pick one from the list of the available timezones (IANA)</p>
+                        <p><select id="time-zones" class="w-100" onchange="convertTimezones(this.value)"></select></p>
+                        <p>or <span id="guess-timezone" onclick="guessTimezone()">guess it from your browser</span> <i class="fa fa-magic" aria-hidden="true"></i></p>
+                        <p>Your browser will remember the selection for upcoming visits.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Mon, 27 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;">Tue, 28 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Wed, 29 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Thu, 30 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-5; grid-row: tracks;">Fri, 1 Oct</span>
+              
+              <h2 class="time-slot" style="grid-row: time-0700;">7:00am</h2>  
+              <h2 class="time-slot" style="grid-row: time-0800;">8:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-0900;">9:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1000;">10:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1100;">11:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1200;">12:00pm</h2>
+              <h2 class="time-slot" style="grid-row: time-1300;">1:00pm</h2>
+              <h2 class="time-slot" style="grid-row: time-1400;">2:00pm</h2>
+
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-0700;" data-time="07">7:00am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-0800;" data-time="08">8:00am</h2>      
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-0900;" data-time="09">9:00am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1000;" data-time="10">10:00am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1100;" data-time="11">11:00am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1200;" data-time="12">12:00pm</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1300;" data-time="13">1:00pm</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1400;" data-time="14">2:00pm</h2>
+     
+              
+            
+              <h3 class="session-day">Mon, 27 Sep</h2>
+
+               <div class="session session-1 track-2" style="grid-column: track-1; grid-row: time-0900 / time-1000;">
+                <div class="session-time-box"><div class="session-time">9:00am - 10:00am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">9:00am - 10:00am</div></div>
+                <span class="session-track">Keynote conversation</span>
+                <h3 class="session-title"><a style="color:white" href="#keynotes">(Mis)Organizing Information</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-1; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title"><a style="color:white" href="#breaks">Let's take a break!</a></h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-1; grid-row: time-1100 / time-1200;">
+                <div class="session-time-box"><div class="session-time">11:00am - 12:00pm</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11:00am - 12:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Visualizing Uncertainty</a></h3>
+              </div> 
+
+              <div style="grid-column: track-1; grid-row: time-1200 / time-1400; justify-content: center;">
+                <div class="session session-1 track-1 data-walk">
+                  <div class="session-time-box"><div class="session-time">12:30pm - 1:30pm</div><div class="session-time converted-timezone text-lowercase" data-time="12" data-minutes="30" data-duration="1">12:30am - 1:30pm</div></div>
+                  <span class="session-track">Workshop</span>
+                  <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+                </div>
+              </div>
+
+         
+              <h3 class="session-day">Tue, 28 Sep</h2>
+
+               <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-0900 / time-1000;">
+                <div class="session-time-box"><div class="session-time">9:00am - 10:00am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">9:00am - 10:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Getting Critical</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-2; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title"><a style="color:white" href="#breaks">Let's take a break!</a></h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-1100 / time-1200;">
+                <div class="session-time-box"><div class="session-time">11:00am - 12:00pm</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11:00am - 12:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Reframing Maps</a></h3>
+              </div>
+
+
+        
+
+              <h3 class="session-day">Wed, 29 Sep</h2>
+              
+              <div style="grid-column: track-3; grid-row: time-0700 / time-0900;">
+                <div class="session session-1 track-1 h-75">
+                  <div class="session-time-box"><div class="session-time">7:00am - 8:30am</div><div class="session-time converted-timezone text-lowercase" data-time="07" data-minutes="00" data-duration="1.5">7:00am - 8:30am</div></div>
+                  <span class="session-track">Workshop</span>
+                  <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
+                </div>
+              </div>
+
+              <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-0900 / time-1000;">
+                <div class="session-time-box"><div class="session-time">9:00am - 10:00am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">9:00am - 10:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Rethinking Practice</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-3; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title"><a style="color:white" href="#breaks">Let's take a break!</a></h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-1100 / time-1200;">
+                <div class="session-time-box"><div class="session-time">11:00am - 12:00pm</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11:00am - 12:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Communicating Science</a></h3>
+              </div> 
+
+
+              <h3 class="session-day">Thu, 30 Sep</h2>
+
+               <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-0900 / time-1000;">
+                <div class="session-time-box"><div class="session-time">9:00am - 10:00am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">9:00am - 10:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Deliberating Health</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-4; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title"><a style="color:white" href="#breaks">Let's take a break!</a></h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-1100 / time-1200;">
+                <div class="session-time-box"><div class="session-time">11:00am - 12:00pm</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11:00am - 12:00am</div></div>
+                <span class="session-track">Author conversation</span>
+                <h3 class="session-title"><a href="#contributions">Getting Physical</a></h3>
+              </div> 
+
+
+              <h3 class="session-day">Fri, 1 Oct</h2>
+              <div style="grid-column: track-5; grid-row: time-0700 / time-0900;">
+                <div class="session session-1 track-1 h-75">
+                  <div class="session-time-box"><div class="session-time">7:00am - 8:30am</div><div class="session-time converted-timezone text-lowercase" data-time="07" data-minutes="00" data-duration="1.5">7:00pm - 8:30am</div></div>
+                  <span class="session-track">Workshop</span>
+                  <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
+                </div>
+              </div>
+              <div class="session session-1 track-2" style="grid-column: track-5; grid-row: time-0900 / time-1000;">
+                <div class="session-time-box"><div class="session-time">9:00am - 10:00am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">9:00am - 10:00am</div></div>
+                <span class="session-track">Keynote conversation</span>
+                <h3 class="session-title"><a style="color:white" href="#keynotes">On Maps</a></h3>
+              </div>
+
+              <div class="session track-all desktop-all" style="grid-column: track-1-start / track-5-end; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title"><a style="color:white" href="#breaks">Let's take a break!</a></h3>
+              </div>
+               
+              
+              <div class="session session-1 track-3" style="grid-column: track-5; grid-row: time-1100 / time-1200;">
+                <div class="session-time-box"><div class="session-time">11:00am - 12:00pm</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11:00am - 12:00am</div></div>
+                <span class="session-track">Closing & Summary</span>
+              </div> 
+
+              <div style="grid-column: track-5; grid-row: time-1200 / time-1400; justify-content: center;">
+                <div class="session session-1 track-1 data-walk">
+                  <div class="session-time-box"><div class="session-time">12:30pm - 1:30pm</div><div class="session-time converted-timezone text-lowercase" data-time="12" data-minutes="30" data-duration="1">12:30am - 1:30pm</div></div>
+                  <span class="session-track">Workshop</span>
+                  <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+    </section>
+
+    <section id="keynotes">
+        <div class="wrap">
+          <div class="container">
+            <h2 class="title">Keynote conversations</h2>
+            <div class="row">
+              <div class="col-sm uni">
+              <div class="overlay">
+                <img alt="photo of Shannon Mattern" class="people floatL" src="assets/keynote_1.png" />
+                <img alt="photo of Kameelah Janan Rasheed" class="people floatR" src="assets/keynote_2.png" /></div>
+
+                <h3 class="dates">(Mis)Organizing Information</h3>
+            <div class="uni">
+              <p>Shannon Mattern, <small>The New School</small></p>
+              <p>Kameelah Janan Rasheed, <small>Learner</small></p>
+            </div>
+              <p class="text-add">
+               This conversation brings together Kameelah Janan Rasheed, a learner who explores the poetics and politics of the unfinished and uncategorized through her sprawling installations, public art, publications, poems, other forms yet to be determined; and Shannon Mattern, a Professor of Anthropology at The New School, who has written books, taught classes, and worked with community groups on projects about maps, libraries, archives, media architectures and infrastructures, and urban data. We’ll address such themes as: how the designed world materializes humans’ and other species’ means of (mis)organizing information, miscommunication, and the productivity of error, ambiguity, and opacity.
+              </p>
+            </div>
+            <div class="col-sm uni">
+              <div class="overlay">
+                <img alt="photo of Margaret Pearce"  class="people floatL" src="assets/keynote_4.png"/>
+                <img alt="photo of Marty Schnure" class="people floatR" src="assets/keynote_3.png"/></div>
+
+                <h3 class="dates">On Maps</h3>
+                <p>Margaret Pearce, <small>Studio 1:1</small></p>
+                <p>Marty Schnure, <small>The Wilderness Society and Maps for Good</small></p>
+              <p class="text-add">
+                What are the impacts we seek when we map, and how do we shape
+                our work to make those impacts possible? What are the barriers?
+                What is the role of collaboration, and what does good
+                collaboration look like? These questions are our focus. We are
+                two women cartographers in the United States. Margaret Pearce is
+                an independent cartographer and owner of Studio 1:1. Marty
+                Schnure leads cartography and spatial analysis at The Wilderness
+                Society and co-founded Maps for Good. Though we belong to
+                different generations, and work in different spheres, we both
+                approach cartography with a strong sense of purpose and
+                commitment. In this conversation we discuss the intentions that
+                guide our work and explore the meaning of responsibility as it
+                manifests in the process, form, and technique of representing
+                spatial data.
+              </p>
+            </div>
+        </div>
+      </div>
+	</div>
+    </section>
+ 
+    <section id="contributions">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Contributions: Author conversations</h2>
+          <div class="row">
+            <div class="col-lg-8">
+                <div>
+                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="one accordion collapsible-link">
+                  <h3 class="dates day my-1">Visualizing Uncertainty</h3>
+                  <p class="my-0">Mon, 27 Sep: Second conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Danielle Szafir</p>
+                </button>
+              <div class="panel here-d3 firstPanel"></div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+                <h3 class="dates day my-1">Getting Critical</h3>
+                <p class="m-0">Tue, 28 Sep: First conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Catherine D’Ignazio</p>
+              </button>
+            <div class="panel here-d3 secondPanel"></div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+                <h3 class="dates day my-1">Reframing Maps</h3>
+                <p class="m-0">Tue, 28 Sep: Second conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Vincent Brown</p>
+              </button>
+            <div class="panel here-d3 thirdPanel"></div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+              <h3 class="dates day my-1">Rethinking Practice</h3>
+              <p class="m-0">Wed, 29 Sep: First conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Kennedy Elliot</p>
+            </button>
+            <div class="panel here-d3 fourthPanel"></div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">           
+              <h3 class="dates day my-1">Communicating Science</h3>
+              <p class="m-0">Wed, 29 Sep: Second conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Jessica Roberts</p>
+              </button>
+              <div class="panel here-d3 fifthPanel"></div>
+
+              <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+                    <h3 class="dates day my-1">Deliberating Health</h3>
+                    <p class="m-0">Thu, 30 Sep: First conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Karel Van-Der-Waarde</p>
+                </button>
+                <div class="panel here-d3 sixthPanel"></div>
+
+                <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+                      <h3 class="dates day my-1">Getting Physical</h3>
+                      <p class="my-0">Thu, 30 Sep: Second conversation<span class="d-none d-md-inline"> — </span><br class="d-inline d-md-none"/>Moderator: Skye Moret</p>
+                  </button>
+                  <div class="panel here-d3 seventhPanel"></div>
+      </div>
+            </div> 
+            <div class="col-sm dates sticky-top">
+              <!-- <h3>Panels as conversations</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+            </div>         
+                    </div>
+                  </div>
+									</div>
+    </section>
+
+    <section id="breaks">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Breaks: Conversation rooms</h2>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-add">
+                In keeping with the conversation-based conference format, there will be an
+                opportunity each day (10-11am EST) for attendees to engage in impromptu
+                activities together, some of which will be moderated. These will occur in a
+                variety of breakout rooms in Zoom. In order to stimulate lively and even
+                unconventional conference interactions, these breakout rooms will have their
+                own themes. Some of these, we have developed ourselves. Alternative breakout
+                rooms can be proposed up to a day beforehand by attendees, as long as they
+                are willing to moderate if necessary.
+              </p>
+              <br/>
+              <h3 class="dates">
+                Unmoderated breakout rooms on a daily basis
+              </h3>
+              <ul class="list days">
+                <li><strong>Presenter Room</strong>: Meet the presenters of the day</li>
+                <li><strong>Lunch Room</strong>: Eat and/or drink together</li>
+                <li><strong>Share Room</strong>: Show your latest design work</li>
+                <li><strong>Family Room</strong>: Invite your children to say hello</li>
+                <li><strong>Zoo Room</strong>: Introduce your pets</li>
+                <li><strong>Walking Room</strong>: Go outside, while staying connected (voice only)</li>
+                <li><strong>Silent Room</strong>: For those who need to respond to e-mails</li>
+                <li><strong>Screening Room</strong>: (Re)watch the videos for the afternoon session</li>
+              </ul>
+              <br/>
+              <h3 class="dates">
+                Moderated breakout rooms on particular days
+              </h3>
+              <ul class="list days">
+                <li><strong>Drawing Room</strong>: Participate in various drawing activities with Isabel Meirelles (Tuesday, Sep 28)</li>
+                <li><strong>Baking Room</strong>: Exchange bread recipes with Marian Dörk (Wednesday, Sep 29)</li>
+                <li><strong>Reading Room</strong>: Share favorite passages with Yanni Loukissas (Thursday, Sep 30)</li>
+                <li><strong>Map Room</strong>: Share your maps-in-progress with Clio Andris and receive feedback. 
+									Please submit your files, name, and affiliation via <a href="https://forms.gle/DtuW6pLfpH5xs91p9">this form</a> or <a href="mailto:clio@gatech.edu">by email</a> (Friday, Oct 1)</li>
+              </ul>
+              </div>
+              <div class="col-lg-4 dates">
+              <h3 style="margin-top:0px">Stay tuned!</h3>
+              <p>Let us know if you would like to facilitate your own conversation room. <b><span><a href="mailto:admin@informationplusconference.com">Email us</a></span></b>
+                 a short description of the room and an evocative title split by a colon.
+								 We will update the information on these rooms as new ones are proposed and opened by participants.
+              </p>  
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+ <section id="workshops">
+	 		<div class="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="title">Workshops</h2>
+            <p class="text-add">
+              The workshops at Information+ offer a hands-on, conversational, and empowering opportunity to acquire new skills, interact with other participants, and engage in vibrant discussions. Sign-up was part of registration. All seats are now taken.
+            </p>
+            <div class="row">
+              <div class="col-lg-6 uni">
+                <section>
+                <h3 class="dates">Unsettling Boundaries Through Data</h3>
+                <p>Sylvia Janicki and Shubhangi Gupta, <span><small>Georgia Institute of Technology</small></span></p>
+                <img alt="Cover for the Unsettling Boundaries Through Data Workshop" class="wsPic" src="assets/ws_datawalk.png"/>
+              </section>
+              <p class="text-add">
+                What are the spatial, temporal and cultural boundaries that shape our experiences of cities? Who experiences these boundaries and when? How do boundaries in the city segregate publics and work to exclude differences in publics? In this workshop, we invite participants to create, analyze and visualize data about the urban environment to understand and question boundaries that demarcate cities materially, conceptually, and or experientially. 
+                <p class="text-add">The workshop will consist of two data walks where participants collect data about their experiences. These data walks are followed by small group discussions in which participants analyze the data and place it in social, political, and historical contexts. Participants will further reflect upon who created the data, how the data was created, and the place and time the data was created in. Drawing upon the walks and subsequent discussions, the participants will represent their experience through the design of feminist data visualizations. More broadly, participants critically engage with the presence and functionings of boundaries in the city with an eye toward questions of equity and social justice. </p>
+                <p class="text-add">
+                  The workshop is open to students, scholars, practitioners, activists or anyone interested in data and cities. No prior experience in design or data visualization is needed.</p>
+                  <p class="text-add" style="color:#5800FF">Maximum number of participants: 12</p>
+            
+              </div>
+              <div class="col-lg-6 uni">
+                <section>
+                <h3 class="dates">Open Data Visualizations with RAWGraphs 2.0</h3>
+                <p>Michele Mauri and Tommaso Elli, <span><small>Politecnico di Milano</small></span></p>
+                <img alt="Cover for the RAWGraphs Workshop" class="wsPic wsPic2" src="assets/ws_raw.png"/>
+              </section>
+              <!-- <h4 class="dates">Creating Custom Visualisations starting from semi-finished editable outputs</h4> -->
+
+              <p class="text-add">Despite the proliferation of visualization tools, what these software produce is usually “boxed” within the the logics of the applications with limited flexibility. In response, RAWGraphs is a web application aimed at the creation of “open outputs”: semi-finished visualizations exportable in editable formats. The outputs are designed to be further edited, so we can take advantage of vector graphic editors (like Inkscape, Figma or Illustrator), allowing users to rework and make the visualization perfect for the target context. In addition, RAWGraphs enables the use of Javascript to add interactivity and to facilitate incorporating the visualizations in web projects. </p>
+              <p class="text-add">In this workshop, participants will learn how to use RAWGraphs to produce semi-finished visualizations and to refine them to suit their specific needs through guided hands-on exercises. </p>
+              <p class="text-add">The workshop is structured around two moments, for a total of circa 3 hours. Firstly we introduce and work with the application and secondly we demonstrate the fine-tuning and publishing of visualizations using other tools. After a brief introduction, instructors will guide participants through a series of hands-on exercises centered around importing data, creating visualizations, and adapting them for printed and interactive outputs. Some open datasets will be available for use, but participants are free to bring their own data!</p>
+              <p class="text-add">We welcome participants who are passionate about graphic design and open source. Coding knowledge is not mandatory, especially if you want to focus on printed visualizations, but if you have some you will be able to experiment with interactivity.</p>
+              <p class="text-add" style="color:#5800FF">Maximum number of participants: 15</p>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+				</div>
+    </section> 
+		
+		
+    <section id="codeofconduct">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Code of conduct</h2>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-add">
+								All participants are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
+								<br><br>
+											Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, breakout rooms, and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.
+											<br><br>
+											Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, and unwelcome sexual attention.
+							<br><br>
+											Participants asked to stop any harassing behavior are expected to comply immediately. If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+							<br><br>
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of the organizing team immediately. Organizers can be identified as they are co-hosts on the Zoom call. You can also <a href="mailto:admin@informationplusconference.com">send an email to the organizers</a>.
+							<br><br>
+The conference organizers will be happy to help participants and assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+							<br><br>
+											We expect participants to follow these rules throughout the entire conference, all workshop activities, and conference-related social events.
+              </p>
+						</div>
+              <!-- <div class="col-lg-4 dates">
+              <h3 style="margin-top:0px">In short</h3>
+              <p>Information+ is committed to enabling a diverse, inclusive and respectful environment where all participants can learn, network, and enjoy planned activities. We are dedicated to a harassment-free experience for everyone.
+              </p>
+            </div> -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+		
+		
+		
+    <!-- <section id = "registration">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <h2 class="title">Registration</h2>
+            <p class="text-add">
+          More on this soon
+            </p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+            <h3>How to register</h3>
+            <p>Information about registration will be available soon.</p>
+              </div>
+            </div>
+            </div>
+    </section>
+ 
+  
+<section id="cfp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="title">Call for Participation</h2>
+            <p class="text-cfp">
+              Information+, an interdisciplinary conference for information
+              design and data visualization, invites proposals from all relevant
+              areas of professional practice, research, and pedagogy.
+            </p>
+            <p class="text-cfp">
+              We welcome submissions on topics, such as but not limited to the
+              following:
+              <em
+                >algorithmic accountability, critical visualization, cultural
+                analytics, data journalism, data studies, digital civics,
+                digital humanities, environmental awareness, health information,
+                historical collections, science communication, and social
+                advocacy</em
+              >. All proposals must feature original work, which has not been
+              presented previously.
+            </p>
+            <p class="text-cfp">
+              Proposals should contain the following elements: a clear research
+              question or design objective; a discussion of related work; an
+              explanation of methods employed or design decisions undertaken;
+              culminating findings, reflections, and contributions. There are
+              two possible <a href="#formats">formats for proposals</a>, both of
+              which are appropriate for academic and practice-based work:
+              15-minute paper presentations and 5-minute lightning talks.
+              Please, use
+              <a href="https://easychair.org/my/conference?conf=info2021#"
+                >EasyChair</a
+              >
+              to submit your proposals by 20 May 2021. The paper presentations
+              and lightning talks will be pre-recorded by the authors, with live
+              discussions among presenters and participants during the event
+              between 27<sup>th</sup> – October 2<sup>nd</sup>. More information
+              about the live format will be shared after contributions have been
+              accepted.
+            </p>
+            <h3 class="text-add">Additional information</h3>
+            <p class="text-add">
+              To foster a diversity of submissions,
+              <em>only one proposal is allowed by each author</em>. In the case
+              of multi-authored submissions, the limit is increased to two
+              proposals per author.
+            </p>
+            <p class="text-add">
+              <em>Authors accepted for presentation </em> at the conference will
+              have an opportunity to submit articles for publication in a
+              special issue of an open-access academic journal. Articles will be
+              selected by a peer review process. Submission and selection for
+              the journal will take place after the conference. Previous special
+              issues have been published as open access with the Information
+              Design Journal:
+              <a href="https://doi.org/10.1075/idj.23.1">IDJ 23.1</a> has
+              articles from the 2016 conference, and
+              <a href="https://doi.org/10.1075/idj.25.1">IDJ 25:1</a> from the
+              2018 event.
+            </p>
+          </div>
+          <div class="col-sm">
+            <article id="formats">
+              <h3>Formats for Proposals</h3>
+              <h4 class="format-ec">15-minute paper presentation</h4>
+              <p>
+                Submit a long abstract (1000 words) with one descriptive figure
+                and 3 keywords.
+              </p>
+              <h4 class="format-ec">5-minute lightning talk</h4>
+              <p>
+                Submit a short abstract (500 words) with one descriptive figure
+                and 3 keywords.
+              </p>
+              <p>
+                → Please, submit via
+                <a href="https://easychair.org/my/conference?conf=info2021#"
+                  >EasyChair</a
+                >
+                by 20 May.
+              </p>
+            </article>
+            <article id="criteria">
+              <h3>Evaluation Criteria</h3>
+              <p>
+                Each submission will be evaluated by three independent reviewers
+                from the Program Committee. Evaluations will be based on the
+                following criteria:
+              </p>
+              <h4>Originality</h4>
+              <p>
+                <em
+                  >Does the submission explore a novel, unconventional, or
+                  understudied approach to representing information?</em
+                >
+              </p>
+              <p></p>
+              <h4>Impact</h4>
+              <p>
+                <em
+                  >Is the submission of potential interest to a broader
+                  audience, beyond the author’s primary area of academic
+                  research or practice?</em
+                >
+              </p>
+              <p></p>
+              <h4>Contribution</h4>
+              <p>
+                <em
+                  >Does the submission build upon and extend current knowledge
+                  of information design and visualization through the use of
+                  empirical, critical, or theoretical methods?</em
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section id="about">
+      <div class="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="title">About</h2>
+            <p class="text-add">
+              Information+ 2021 is made possible through the help and support of
+              many people and partnering organizations.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 uni">
+            <h3 class="dates">Organizers</h3>
+            <p>Yanni Loukissas, <small>Georgia Tech</small></p>
+            <p>Marian Dörk, <small>FH Potsdam</small></p>
+            <p>Isabel Meirelles, <small>OCAD University</small></p>
+
+           <h3 class="dates">Chairs</h3>
+            <p>Catherine D'Ignazio, <small>MIT</small></p>
+						<p>Lauren Klein, <small>Emory University</small></p>
+            <p>Michele Mauri, <small>Politecnico di Milano</small></p>
+            <p>Nassim Parvin, <small>Georgia Tech</small></p>
+            <p>Romi Ron Morrison, <small>University of Southern California</small></p>
+          </div>
+          <div class="col-md-4 uni">
+            <h3 class="dates">Website</h3>
+            <p>
+              Beatrice Gobbo, Tommaso Elli and Andrea Benedetti,
+              <small>Politecnico di Milano</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="dates">Program Committee</h3>
+            <div class="row">
+              <div class="col-md-6 uni">
+                <!-- <p>Name, <small>Institution</small></p> -->
+                <p>Angela Iarocci, <small>Sheridan College</small></p>
+                <p>Angela Norwood, <small>York University</small></p>
+                <p>
+                  Angus Forbes,
+                  <small>University of California, Santa Cruz</small>
+                </p>
+                <p>Anne Luther, <small>MARKK </small></p>
+                <p>Arvind Satyanarayan, <small>MIT</small></p>
+                <p>Carl DiSalvo, <small>Georgia Tech</small></p>
+                <p>
+                  Carla Spinillo, <small>Universidade Federal do Paraná</small>
+                </p>
+                <p>Catherine D'Ignazio, <small>MIT</small></p>
+                <p>
+                  Chad Skelton, <small>Kwantlen Polytechnic University</small>
+                </p>
+                <p>Charles Perin, <small>University of Victoria</small></p>
+                <p>Christopher Collins, <small>UOIT</small></p>
+                <p>Clio Andris, <small>Georgia Tech</small></p>
+                <p>
+                  Danielle Szafir, <small>University of Colorado Boulder</small>
+                </p>
+                <p>
+                  Dietmar Offenhuber, <small>Northeastern University</small>
+                </p>
+                <p>Dominikus Baur, <small>do.minik.us</small></p>
+                <p>
+                  Doris Kosminsky, <small>Universidade Federal do RJ</small>
+                </p>
+                <p>Eric Kindel, <small>The University of Reading</small></p>
+                <p>
+                  Heather Corcoran,
+                  <small>Washington University in St. Louis</small>
+                </p>
+                <p>Ilia Blinderman, <small>Pudding.cool</small></p>
+                <p>Jagoda Walny, <small>Canada Energy Regulator</small></p>
+                <p>Jan Willem Tulp, <small>TULP interactive</small></p>
+                <p>Jason Dykes, <small>City, University of London</small></p>
+                <p>Jeremy Boy, <small>UNDP</small></p>
+                <p>
+                  Jessica Bellamy, <small>Root Cause Research Center</small>
+                </p>
+                <p>Jessica Roberts, <small>Georgia Tech</small></p>
+                <p>John Stasko, <small>Georgia Tech</small></p>
+                <p>Jorge Frascara, <small>University of Alberta</small></p>
+                <p>
+                  Karel Van-Der-Waarde,
+                  <small>Swinburne University of Technology, Melbourne</small>
+                </p>
+                <p>Katherine Gillieson, <small>Emily Carr University</small></p>
+                <p>Katherine Hepworth, <small>University of Nevada</small></p>
+                <p>Kennedy Elliott, <small>National Geographic</small></p>
+                <p>Laura Perovich, <small>MIT</small></p>
+                <p>Lauren Klein, <small>Emory University</small></p>
+                <p>Lisa Charlotte Muth, <small>Datawrapper</small></p>
+                <p>Lynn Cherny, <small>Ghostweather R&D</small></p>
+              </div>
+              <div class="col-md-6 uni">
+                <p>Maarten Lambrechts, <small>Freelance</small></p>
+                <p>
+                  María de los Ángeles Briones,
+                  <small>Politecnico di Milano</small>
+                </p>
+                <p>
+                  Maria-Gonzalez deCossio,
+                  <small>Universidad Autónoma Metropolitana</small>
+                </p>
+                <p>Matthew Brehmer, <small>Tableau</small></p>
+                <p>Meghan Kelly, <small>University of Wisconsin</small></p>
+                <p>Michele Mauri, <small>Politecnico di Milano</small></p>
+                <p>Miriah Meyer, <small>Linköping University</small></p>
+                <p>
+                  Mitchell Whitelaw,
+                  <small>Australian National University</small>
+                </p>
+                <p>Moritz Stefaner, <small>Truth & Beauty</small></p>
+                <p>
+                  Mushon Zer-Aviv,
+                  <small>Shenkar School of Engineering and Design</small>
+                </p>
+                <p>
+                  Nicole Catherine Coleman, <small>Stanford University</small>
+                </p>
+                <p>Olivia Vane, <small>British Library</small></p>
+                <p>Paolo Ciuccarelli, <small>Northeastern University</small></p>
+                <p>Pedro Cruz, <small>Northeastern University</small></p>
+                <p>Rahul Bhargava, <small>Northeastern University</small></p>
+                <p>Rico Chapman, <small>Clark Atlanta University</small></p>
+                <p>Robert Kosara, <small>Tableau</small></p>
+                <p>
+                  Rodrigo Medeiros,
+                  <small
+                    >Inst. Fed. de Educação Ciência e Tecnologia, Paraíba</small
+                  >
+                </p>
+                <p>Romina Colman, <small>La Nacion</small></p>
+                <p>Romi-Ron Morrison, <small>USC</small></p>
+                <p>Rupesh Mansi Vyas, <small>Aalto University</small></p>
+                <p>Sarah Goodwin, <small>Monash University</small></p>
+                <p>Siqi Zhu, <small>Sidewalk Labs</small></p>
+                <p>
+                  Skye Moret, <small>Pacific Northwest College of Art</small>
+                </p>
+                <p>
+                  Stacie Rohrbach,
+                  <small>Carnegie Mellon, School of Design</small>
+                </p>
+                <p>Stephen Boyd Davis, <small>RCA</small></p>
+                <p>Tamara Munzner, <small>UBC</small></p>
+                <p>
+                  Till Nagel,
+                  <small>Mannheim University of Applied Sciences</small>
+                </p>
+                <p>Tim Stallmann, <small>RAD Cat</small></p>
+                <p>Uta Hinrichs, <small>University of Edinburgh</small></p>
+                <p>Valentina D'Efilippo, <small>The Economist</small></p>
+                <p>
+                  Veronika Egger,
+                  <small
+                    >IIID – International Institute for Information
+                    Design</small
+                  >
+                </p>
+                <p>Vincent Brown, <small>Harvard University</small></p>
+                <p>Yuri Engelhardt, <small>University of Amsterdam</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="dates">Contact</h3>
+        <div class="row">
+          <div class="col-lg-8">
+            <p>
+              For updates, find us on Twitter:
+              <a href="https://twitter.com/InfoPlusConf" target="_blank"
+                >@InfoPlusConf</a
+              ><br />
+            </p>
+            <p>
+              For mentions, use the hashtag:
+              <a
+                href="https://twitter.com/hashtag/infoplus2021?src=hashtag_click"
+                target="_blank"
+                >#infoplus2021</a
+              >
+            </p>
+            <p>
+              For questions, please email us:
+              <a href="mailto:admin@informationplusconference.com"
+                >admin@informationplusconference.com</a
+              >
+            </p>
+            <br />
+            <p>
+              Thanks to <a href="https://noahveltman.com/">Noah Veltman</a> for the beautiful flocking boids<br>							
+							…&nbsp;and to <a href="https://confcodeofconduct.com">Conference Code of Conduct</a> for the template.
+            </p>
+          </div>
+        </div>
+      </div></div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col">
+            <a href="https://www.gatech.edu/" target="_blank"
+              ><img
+                alt="Logo of Georgia Tech"
+                src="./assets/Georgia_Tech_logo-01.svg"
+            /></a>
+          </div>
+          <div class="col">
+            <a href="https://www.fh-potsdam.de/" target="_blank"
+              ><img
+                alt="Logo of Fachhochschule Potsdam"
+                src="./assets/FHP_logo-01.svg"
+            /></a>
+          </div>
+          <div class="col">
+            <a href="https://www.ocadu.ca/" target="_blank"
+              ><img alt="Logo of OCAD" src="./assets/ocad-01.svg" class="logo"
+            /></a>
+          </div>
+          <div class="col">
+            <a href="https://polimi.it" target="_blank"
+              ><img
+                alt="Logo of Polimi"
+                src="./assets/logo_poli.svg"
+                class="logo"
+            /></a>
+          </div>
+          <div class="col">
+            <a href="https://densitydesign.org" target="_blank"
+              ><img
+                alt="Logo of DensityDesign"
+                src="./assets/logo-dd-01.svg"
+                class="logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Modal overlay for contributions videos -->
+    <div class="text-left modal fade" id="contributionVideoModal" tabindex="-1" aria-labelledby="contributionVideoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header py-2 pl-4">
+            <h6 id="modal-video-title" class="modal-title">Title goes here</h6>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe id="modal-video-iframe" src="" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+              </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Modal overlay for cwelcome videos -->
+      <!-- <div class="text-left modal fade" id="welcomeVideoModal" tabindex="-1" aria-labelledby="welcomeVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header py-2 pl-4">
+              <h6 id="modal-video-title" class="modal-title">Yanni Loukissas, Marian Dörk, Isabel Meirelles and Dean Kaye Husbands Fealing - Welcome</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body p-0">
+              <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe id="modal-video-iframe" src="https://player.vimeo.com/video/609977122?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                </iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+
+    <!-- Moment.js and Moment Timezone to include all IANA zones -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <!-- Luxon to handle date/time conversions -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" integrity="sha256-CnZmNCHHUMy22/PJclCIISZ5Ib4MnUu+7ee5YNxtsZQ=" crossorigin="anonymous"></script>
+    
+
+    <script>
+
+      function openWelcomeVideo() {
+
+        $('#contributionVideoModal').modal('toggle')
+            const videoId = "609977122"
+            document.querySelector("#modal-video-iframe").setAttribute("src", `https://player.vimeo.com/video/${videoId}?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0`)
+            document.querySelector("#modal-video-title").innerHTML = `Yanni Loukissas, Marian Dörk, Isabel Meirelles and Dean Kaye Husbands Fealing - Welcome`;
+
+      }
+
+
+$(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+        
+      });
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+d3.csv("contributions.csv", function(data) {
+
+        const panels = d3
+          .nest()
+          .key(d=>d.panel)
+          .entries(data);
+
+        const schedule = d3
+        .selectAll('#contributions .here-d3');
+
+        const group = schedule
+        .selectAll('.day')
+        .data(panels)
+        .enter()
+        .append('div')
+        .attr('class',d=> `panel_${d.key}`);
+
+        const item = group
+        .selectAll('.item')
+        .data(d=>d.values)
+        .enter()
+        .append('div')
+        .attr('class',d=>`item ${d.type}`);
+
+        // item
+        // .append('div')
+        // .classed('itemNotFiltered',true)
+        // .text(d=>d.cest);
+
+        // item
+        // .append('div')
+        // .append('p')
+        // .text(d=>d.session)
+        // .style('color', '#ccc')
+        // .style('margin-top', '15px')
+
+
+        const description = item
+        .append('div')
+        .classed('description',true)
+
+        description
+				.append('img')
+        .attr("src", function(d) { 
+					return "assets/"+d.number+".png" 
+				});
+				
+        // .style("color", "#5800FF")
+        // .classed('text-add', true)
+        // .style('display',d=>d.title===''?'none':'block')
+        // .classed('col-lg-12', true);
+				
+        description
+				.append('h4')
+        .text(d=>d.title)
+        .style("color", "#5800FF")
+        .classed('text-add', true)
+        .style('display',d=>d.title===''?'none':'block')
+        .classed('col-lg-12', true);
+
+        description
+        .append('p')
+        .html(d=>d.authors)
+        .classed('col-lg-12', true);
+        // .append('small')
+        // .text(d=>d.affiliation)
+        // .style('display',d=>d.affiliation===''?'none':'block')
+        // .style("color", "#5800FF")
+        // .style("text-transform", "uppercase");
+
+
+        description
+        .append('p')
+        .classed('text-add', true)
+        .text(d=>d.description)
+        // .style('margin-top', '1em')
+        // .style('margin-bottom', '1.5em')
+        .style('display',d=>d.description===''?'none':'block')
+        .classed('col-lg-12', true);
+
+        // description
+        // .append('p')
+        // .classed('type',true)
+        // .text(d=>d.type)
+        // .classed('col-lg-8', true)
+        // .style('display',d=>d.type===''?'none':'block')
+        // .style("background-color", function(d) {
+        //     if (d.type === "paper") {return "#5800FF"}
+        //     else    { return "rgb(255, 252, 242)" }})
+        //     .style("color", function(d) {
+        //     if (d.type === "paper") {return "rgb(255, 252, 242)"}
+        //     else    { return "#5800FF" }});
+
+        // description
+        // .append('div')
+        // .classed('col-lg-12', true)
+        // .append('p')
+        // // .text("⁓")
+        // .style("color", "#af10ff")
+        // .style("text-align", "center")
+        // .style('margin-bottom', '1.5em');
+        //
+
+       
+				description
+          .append('p')
+          .classed('col-lg-12', true)
+          .style('display',d=>d.link===''?'none':'block')
+          .style('cursor', 'pointer')			
+          .append("a")
+          .html( function(d) {return '<i class="fa fa-play-circle" aria-hidden="true"></i> ' + d.action})
+          // .attr("href", d=>d.link)
+          // .attr("xlink:target", "_blank")
+          .classed("action", true)
+          .style("color", "#5800FF")
+          .on("click", (d)=>{
+            $('#contributionVideoModal').modal('toggle')
+            const videoId = d.link.split("/").pop()
+            document.querySelector("#modal-video-iframe").setAttribute("src", `https://player.vimeo.com/video/${videoId}?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0`)
+            document.querySelector("#modal-video-title").innerHTML = d.title;
+          });
+
+        // Prevent video from playing in background
+        $('#contributionVideoModal').on('hidden.bs.modal', function (event) {
+          document.querySelector("#modal-video-iframe").removeAttribute("src")
+        })
+
+      });
+
+      // function init() {
+      //   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing',
+      //     callback: function(data, tabletop) {
+      //       populateSchedule(data.schedule.elements);
+      //     },
+      //     simpleSheet: false
+      //   } );
+      // }
+      //window.addEventListener('DOMContentLoaded', init);
+    </script>
+
+    <!-- Script to perform conversions -->
+    <script src="./time-conversion.js" defer></script>
+  </body>
+</html>

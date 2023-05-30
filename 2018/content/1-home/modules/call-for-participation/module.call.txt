@@ -1,0 +1,46 @@
+Title: Call for participation
+
+----
+
+Text: As an interdisciplinary event, we invite proposals from all fields of professional practice, research, and education in information design and visualization. We welcome submissions on such topics as (but not limited to): the environment, advocacy and law, health and medical applications, social and political issues, cultural analysis and collections, digital humanities, and projects in data journalism. Authors accepted for presentation at the conference will have an opportunity to submit articles for publication in a special issue of an academic journal (to be announced soon). The special issue will contain articles selected by a peer review process.
+
+----
+
+Text-large: <?= $module->text__large()->kirbytext() ?>
+
+----
+
+Large: asdasd
+
+----
+
+Textlarge: We invite you to submit proposals using (link: https://easychair.org/conferences/?conf=info2018 text: Easy Chair target: _blank). We encourage both academic and practice-based presentations for the following opportunities:
+
+----
+
+Abstracts: 
+
+- 
+  title: 'paper presentations:'
+  time: "15"
+  description: >
+    an abstract (500 words) with one
+    descriptive figure and 3 keywords.
+- 
+  title: lightning talks
+  time: "5"
+  description: >
+    a short abstract (250 words) with one
+    descriptive figure and 3 keywords.
+
+----
+
+Navtitle: Call
+
+----
+
+Abstract01: 
+
+----
+
+Abstract02: 

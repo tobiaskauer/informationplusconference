@@ -1,0 +1,13 @@
+Title: Registration and Pricing
+
+----
+
+Navtitle: register
+
+----
+
+Textlarge: The registration fee for the conference is 300 €. Accepted speakers, university students, retirees, and unemployed attendees are eligible for a reduced registration fee of 150 €. Registration is now closed.
+
+----
+
+Text: Registered attendees have access to the full conference program throughout Saturday and Sunday [20-21 Oct] consisting of invited keynotes as well as the submitted paper presentations and lightning talks. The conference registration includes basic breakfast, coffee breaks, and lunch on site on both days, and a dialog dinner on Saturday evening. Sign-up for one of the workshops on Friday [19 Oct] is optional, but needs to be done during the registration process.

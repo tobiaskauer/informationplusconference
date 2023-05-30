@@ -1,0 +1,84 @@
+Title: diversity scholarship
+
+----
+
+Navtitle: diversity
+
+----
+
+Textlarge: The Information+ Conference welcomes and encourages participation by people of all backgrounds and identities. We are committed to fostering and sustaining an environment of respect and inclusivity. To increase participation at the Information+ by underrepresented or historically marginalized groups, we are offering up to 10 need-based diversity scholarships. Priority will be given to applicants who have their contributions accepted for presentation at the conference.
+
+----
+
+Text: The Information+ Conference welcomes and encourages participation by people of all backgrounds and identities. We are committed to fostering and sustaining an environment of respect and inclusivity. To increase participation at the Information+ by underrepresented or historically marginalized groups, we awarded 10 diversity scholarships. Priority was given to applicants who have their contributions accepted for presentation at the conference.
+
+----
+
+Information: The Information+ Diversity Scholarship Committee will review applications based on a combination of need and impact, and will award up to 10 diversity scholarships that will include:
+
+----
+
+Bullets: 
+
+- 
+  text: Complementary Conference registration.
+- 
+  text: 'A maximum of: 500 € per recipient within Europe, and 1,000 € per recipient from other countries. We understand that the funds may not cover all costs, but we do hope the scholarship will help recipients attend the conference. Funds can be used to help support travel, lodging, and childcare. Recipients will need to keep original flight or train tickets, expense receipts, and evidence of payment (i.e. bank statement) up to described limits for reimbursement once the conference is over.'
+
+----
+
+Events: 
+
+- 
+  event: 10 July
+  description: Application period closes.
+- 
+  event: 31 July
+  description: Notifications sent.
+
+----
+
+Bulletsintro: The Information+ Diversity Scholarship Committee will review applications based on a combination of need and impact, and will award up to 10 diversity scholarships that will include:
+
+----
+
+Intro: The Information+ Diversity Scholarship Committee reviewed applications based on a combination of need and impact, and awarded 10 diversity scholarships that include:
+
+----
+
+Eligable: 
+
+- 
+  text: 'Applicants from underrepresented and/or marginalized groups including, but not limited to: gender, identity, race, ethnicity, disabilities, socioeconomic status, discipline.'
+- 
+  text: >
+    Financial need in order to be able to
+    attend the conference.
+- 
+  text: 18 years or older.
+
+----
+
+Scholarcomittee: 
+
+- 
+  name: Arvind Satyanarayan
+  institution: MIT EECS/CSAIL
+- 
+  name: Catherine D’ignazio
+  institution: EMERSON COLLEGE
+- 
+  name: Isabel Meirelles (chair)
+  institution: OCAD UNIVERSITY
+- 
+  name: Jen Christiansen
+  institution: SCIENTIFIC AMERICAN
+- 
+  name: Maria Gonzalez De Cossio
+  institution: UNIVERSIDAD AUTÓNOMA METROPOLITANA
+- 
+  name: Yanni A Loukissas
+  institution: GEORGIA INSTITUTE OF TECHNOLOGY
+- 
+  name: Yu-Ru Lin
+  institution: UNIVERSITY OF PITTSBURGH

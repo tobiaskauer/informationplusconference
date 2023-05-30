@@ -1,0 +1,38 @@
+Title: Important Dates
+
+----
+
+Dates: 
+
+- 
+  event: Submission deadline
+  start: 2018-02-02
+  end: ""
+  date: 15 May
+- 
+  event: Notification of acceptance
+  start: 2018-02-16
+  end: 2018-02-25
+  date: 02 Jul
+- 
+  event: Diversity scholarship deadline
+  date: 10 Jul
+- 
+  event: Diversity scholarship notifications
+  date: 31 Jul
+- 
+  event: Registration open
+  date: 20 Aug
+- 
+  event: 'Workshop & Conference'
+  date: 19–21 Oct
+- 
+  event: Exhibition
+  date: 19 Oct – 14 Dec
+- 
+  event: IEEE VIS (separate registration)
+  date: 21–26 Oct
+
+----
+
+Navtitle: Dates

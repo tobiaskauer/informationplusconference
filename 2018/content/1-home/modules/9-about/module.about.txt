@@ -1,0 +1,266 @@
+Title: About
+
+----
+
+Text: Information+ 2018 was made possible through the help and support of many people and partnering organizations.
+
+----
+
+Committee: 
+
+- 
+  member: Gregor Aisch
+  institute: Datawrapper
+  link: https://driven-by-data.net/
+- 
+  member: Dominikus Baur
+  institute: do.minik.us
+  link: https://do.minik.us/
+- 
+  member: Rahul Bhargava
+  institute: MIT Center for Civic Media
+  link: http://rahulbotics.com/
+- 
+  member: Jeremy Boy
+  institute: United Nations
+  link: http://www.jyby.eu/
+- 
+  member: Matthew Brehmer
+  institute: Microsoft
+  link: https://mattbrehmer.github.io/
+- 
+  member: Nadieh Bremer
+  institute: Visual Cinnamon
+  link: https://www.visualcinnamon.com/
+- 
+  member: Petra Cerne Oven
+  institute: University of Ljubljana
+  link: >
+    http://www.aluo.uni-lj.si/zaposleni/petra-cerne-oven/
+- 
+  member: Karen Cheng
+  institute: University of Washington
+  link: >
+    https://art.washington.edu/people/karen-cheng
+- 
+  member: Jen Christiansen
+  institute: Scientific American
+  link: http://jenchristiansen.com/
+- 
+  member: Paolo Ciuccarelli
+  institute: Politecnico di Milano
+  link: >
+    https://densitydesign.org/person/paolo-ciuccarelli/
+- 
+  member: Nicole Coleman
+  institute: Stanford University
+  link: http://library.stanford.edu/people/cnc
+- 
+  member: Christopher Collins
+  institute: UOIT
+  link: http://vialab.science.uoit.ca/
+- 
+  member: Catherine D’ignazio
+  institute: Emerson College
+  link: http://www.kanarinka.com/
+- 
+  member: Patricio Davila
+  institute: OCAD University
+  link: 'https://www2.ocadu.ca/bio/patricio-d%C3%A1vila-1'
+- 
+  member: Jason Dykes
+  institute: City, University of London
+  link: >
+    https://www.city.ac.uk/people/academics/jason-dykes
+- 
+  member: Veronika Egger
+  institute: >
+    IIID – Intl. Inst. for Information
+    Design
+  link: http://www.iiid.net/
+- 
+  member: Priscila Farias
+  institute: FAU-USP
+  link: >
+    http://www.fau.usp.br/docentes/priscila-lena-farias/
+- 
+  member: Angus Forbes
+  institute: University of California, Santa Cruz
+  link: >
+    https://creativecoding.soe.ucsc.edu/angus/
+- 
+  member: Jorge Frascara
+  institute: University of Alberta
+  link: >
+    http://www.frascara-noel.net/jorge-frascara/
+- 
+  member: Manuela Garreton
+  institute: >
+    Pontificia Universidad Católica de
+    Chile
+  link: http://manuelagarreton.cl/
+- 
+  member: Katherine Gillieson
+  institute: ECUAD
+  link: http://gillieson.ca/
+- 
+  member: Maria Gonzalez de Cossio
+  institute: Universidad Autónoma Metropolitana
+- 
+  member: Peter Hall
+  institute: University of the Arts London
+  link: >
+    http://www.arts.ac.uk/csm/people/teaching-staff/graphic-communication-design/dr-peter-hall/
+- 
+  member: Uta Hinrichs
+  institute: University of St Andrews
+  link: http://www.utahinrichs.de/
+- 
+  member: Jessica Hullman
+  institute: University of Washington
+  link: https://faculty.washington.edu/jhullman/
+- 
+  member: Eric Kindel
+  institute: The University of Reading
+  link: >
+    https://www.reading.ac.uk/typography/about/staff_list/e-t-kindel.aspx
+- 
+  member: Andy Kirk
+  institute: Visualising Data
+  link: http://www.visualisingdata.com/
+- 
+  member: Robert Kosara
+  institute: Tableau
+  link: https://eagereyes.org/
+- 
+  member: Yu-Ru Lin
+  institute: University of Pittsburgh
+  link: http://www.yurulin.com/
+- 
+  member: Yanni A Loukissas
+  institute: Georgia Institute of Technology
+  link: http://loukissas.lmc.gatech.edu/
+- 
+  member: Elijah Meeks
+  institute: Netflix
+  link: http://elijahmeeks.com/
+- 
+  member: Miriah Meyer
+  institute: University of Utah
+  link: https://www.cs.utah.edu/~miriah/
+- 
+  member: Boris Müller
+  institute: Fachhochschule Potsdam
+  link: http://www.esono.com/
+- 
+  member: Scott Murray
+  institute: "O'Reilly"
+  link: http://alignedleft.com/
+- 
+  member: Till Nagel
+  institute: Mannheim University of Applied Sciences
+  link: http://tillnagel.com/
+- 
+  member: Guillermina Noel
+  institute: University of Alberta
+- 
+  member: Angela Norwood
+  institute: York University
+  link: ""
+- 
+  member: Dietmar Offenhuber
+  institute: Northeastern University
+  link: http://offenhuber.net/
+- 
+  member: Charles Perin
+  institute: City, University of London
+  link: http://charlesperin.net/
+- 
+  member: Nathalie Riche
+  institute: Microsoft
+  link: >
+    https://www.microsoft.com/en-us/research/people/nath/
+- 
+  member: Stacie Rohrbach
+  institute: Carnegie Mellon, School of Design
+  link: >
+    https://design.cmu.edu/people/faculty/stacie-rohrbach
+- 
+  member: Irene Ros
+  institute: Google
+  link: http://www.ireneros.com/
+- 
+  member: Arvind Satyanarayan
+  institute: MIT EECS/CSAIL
+  link: http://arvindsatya.com/
+- 
+  member: Chad Skelton
+  institute: Kwantlen Polytechnic University
+  link: http://www.chadskelton.com/
+- 
+  member: Sarah Slobin
+  institute: Reuters
+  link: http://www.sarahslobin.com/
+- 
+  member: Carla Spinillo
+  institute: Universidade Federal do Paraná
+- 
+  member: Moritz Stefaner
+  institute: 'Truth & Beauty'
+  link: https://truth-and-beauty.net/
+- 
+  member: Michael Stoll
+  institute: Augsburg University of Applied Sciences
+  link: http://www.hs-augsburg.de/~mstoll/
+- 
+  member: Danielle Szafir
+  institute: University of Colorado Boulder
+  link: http://danielleszafir.com/
+- 
+  member: Karel van der Waarde
+  institute: Swinburne University of Technology
+  link: >
+    http://graphicdesign-research.com/Karel/Home.html
+- 
+  member: Sue Walker
+  institute: The University of Reading
+  link: >
+    https://www.reading.ac.uk/typography/about/Staff_list/s-f-walker.aspx
+- 
+  member: Shirley Wu
+  institute: sxywu.com
+  link: http://sxywu.com/
+
+----
+
+Organizers: 
+
+- 
+  institute: Fachhochschule Potsdam
+  organizer: Marian Dörk
+- 
+  organizer: Isabel Meirelles
+  institute: OCAD University
+
+----
+
+Team: 
+
+- 
+  member: 'Fabian Dinklage & Florian Zia'
+  section: BA Interface Design, FH Potsdam
+
+----
+
+Navtitle: About
+
+----
+
+Contact: 
+
+- 
+  bullet01: 'For updates, find us on Twitter: @InfoPlusConf'
+  bullet02: For questions, please send us an email.
+  bullet: '*Italic text* For updates, find us on Twitter: (twitter: @InfoPlusConf)'
+- 
+  bullet: For questions, please send us an email.

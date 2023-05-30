@@ -1,0 +1,14 @@
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="schedule-v4" transform="translate(-446.000000, -310.000000)" fill="#FF0000" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(445.731707, 309.718750)">
+                <path d="M0.359408773,0.656640625 L0.359408773,2.75664063 C0.359408773,4.68963725 1.92641215,6.25664063 3.85940877,6.25664063 C5.7924054,6.25664063 7.35940877,4.68963725 7.35940877,2.75664063 L7.35940877,0.656640625 L0.359408773,0.656640625 Z" id="Oval-3"></path>
+                <rect id="Rectangle-5" x="3.35940877" y="5.25664063" width="1" height="6"></rect>
+                <rect id="Rectangle-5-Copy" transform="translate(3.859409, 11.756641) rotate(-90.000000) translate(-3.859409, -11.756641) " x="3.35940877" y="9.25664063" width="1" height="5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
