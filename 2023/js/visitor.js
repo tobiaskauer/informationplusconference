@@ -5,7 +5,6 @@ function visualizeSessions(target) {
   let nodes = [];
   let network = {};
   let opacityScale = d3.scaleLinear().domain([0, 150]).range([1, 0]);
-  console.log(opacityScale.domain());
   let colorScale = d3
     .scaleOrdinal()
     .domain(["practitioner", "educator", "researcher"])
@@ -95,8 +94,10 @@ function visualizeSessions(target) {
   getVisitorData();
 
   const generatePath = (r) => {
+    //values between .8 and 1.3
     let wobbleB = Math.random() * 0.5 + 0.8;
     let wobbleR = Math.random() * 0.5 + 0.8;
+
     return `
     M${wobbleR * r} ${0.5 * r}
     C${wobbleR * r} ${0.75 * r} ${0.75 * r} ${wobbleB * r} ${0.5 * r} ${
@@ -219,9 +220,7 @@ function visualizeSessions(target) {
           } else if (d.y >= height - buffer) {
             y = height - buffer;
           }
-          return `translate(${x - d.radius},${y - d.radius}) rotate(${
-            d.angle
-          })`;
+          return `translate(${x},${y}) rotate(${d.angle})`;
         })
         .attr("fill", (d) => d.color)
         .attr("opacity", (d, i) => (i ? 0.3 : 1));
