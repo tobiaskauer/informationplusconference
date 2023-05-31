@@ -2,9 +2,8 @@ function visualizeSessions(target) {
   let api = "https://viscussion.de:3003/api/visitor";
   //api = "http://localhost:3003/api/visitor";
   let updateInterval = 30000;
-  let nodes = [];
   let network = {};
-  let opacityScale = d3.scaleLinear().domain([0, 150]).range([1, 0]);
+  let opacityScale = d3.scaleLinear().domain([0, 200]).range([1, 0]);
   let colorScale = d3
     .scaleOrdinal()
     .domain(["practitioner", "educator", "researcher"])
@@ -148,8 +147,9 @@ function visualizeSessions(target) {
 
   const renderVis = () => {
     let buffer = 20;
-    let width = $(target).width();
-    let height = $(target).height();
+    let width = $(target).outerWidth();
+
+    let height = $(target).outerHeight();
     const svg = d3
       .select(target)
       .append("svg")
@@ -230,9 +230,15 @@ function visualizeSessions(target) {
       var l = links.selectAll("line").data(network.links);
       l.enter()
         .append("line")
-        .attr("stroke", network.nodes[0].color)
+
         .attr("stroke-width", 2)
         .merge(l)
+        .attr(
+          "stroke",
+          (d) =>
+            //d.target.color
+            network.nodes[0].color
+        )
         .attr("x1", (d) => d.source.x)
         .attr("y1", (d) => d.source.y)
         .attr("x2", (d) => d.target.x)
@@ -253,7 +259,15 @@ function visualizeSessions(target) {
 
   //BEGIN: USER FORM
   $(document).ready(function () {
-    $(".btn-group .btn").on("click", function (evt) {
+    $("button.userType").on("click", function (evt) {
+      evt.stopPropagation();
+      evt.preventDefault();
+      $("button.userType").removeClass("active");
+      $(this).toggleClass("active");
+      let category = $(this).val();
+      updateVisitor(category);
+    });
+    /*  $(".btn-group .btn").on("click", function (evt) {
       evt.stopPropagation();
       evt.preventDefault();
       $(".btn-group .btn").removeClass("active");
@@ -272,6 +286,6 @@ function visualizeSessions(target) {
       } else {
         $(this).text("Hide survey");
       }
-    });
+    });*/
   });
 }

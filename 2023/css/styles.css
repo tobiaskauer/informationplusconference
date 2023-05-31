@@ -1190,7 +1190,7 @@ z-index: 20000;
 color:#af10ff;
 }
 
-#researcher.btn.active,#researcher.btn:hover  {
+/*#researcher.btn.active,#researcher.btn:hover  {
     background-color: #1CF5F5 !important;
     color: black;
 }
@@ -1203,7 +1203,23 @@ color:#af10ff;
 #educator.btn.active,#educator.btn:hover  {
     background-color: #778AFF  !important;
     color: black;
+}*/
+button.userType {
+    background: none;
+    border-radius: 2px;
 }
+
+button.userType#practitioner { border: 2px solid #B01CF5;}
+button.userType#educator { border: 2px solid #778AFF;}
+button.userType#researcher { border: 2px solid #1CF5F5;}
+
+button.userType#practitioner:hover, button.userType#practitioner.active { background: #B01CF5; color: #fff}
+button.userType#educator:hover, button.userType#educator.active { background: #778AFF; color: #fff}
+button.userType#researcher:hover, button.userType#researcher.active { background: #1CF5F5; color: #fff}
+
+
+/*.domain(["practitioner", "educator", "researcher"])
+    .range(["#B01CF5", "#778AFF", "#1CF5F5"]);*/
 
 
 
