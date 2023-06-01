@@ -186,6 +186,7 @@ function visualizeSessions(target) {
     d3.select(target)
       .on("touchmove", (event) => event.preventDefault())
       .on("pointermove", pointed)
+      .on("click", pulse)
       .on("mouseleave", centerNode());
 
     function pointed(event) {
@@ -197,6 +198,26 @@ function visualizeSessions(target) {
       //TODO: move first node to center
       network.nodes[0].fx = width * 0.75;
       network.nodes[0].fy = height / 2;
+    }
+    function pulse() {
+      simulation.force(
+        "collide",
+        d3
+          .forceCollide()
+          .radius((d, i) => (i ? d.radius : 200))
+          .iterations(2)
+          .strength(1)
+      );
+      setTimeout(function () {
+        simulation.force(
+          "collide",
+          d3
+            .forceCollide()
+            .radius((d, i) => (i ? d.radius : 100))
+            .iterations(2)
+            .strength(1)
+        );
+      }, 200);
     }
 
     function ticked() {
