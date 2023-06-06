@@ -79,8 +79,9 @@ function visualizeSessions(target) {
         console.log(
           `[success] Received ${data.length} visitor traces from server.`
         );
-        let doublethefun = data.concat(data); //double number of sessions while collecting data
-        network = renderNetwork(doublethefun);
+        //let doublethefun = data.concat(data); //double number of sessions while collecting data
+        //network = renderNetwork(doublethefun);
+        network = renderNetwork(data);
         renderVis();
       },
 
@@ -148,6 +149,7 @@ function visualizeSessions(target) {
   const renderVis = () => {
     let buffer = 20;
     let width = $(target).outerWidth();
+    if (width < 576) return false; //dont render vis on mobile
 
     let height = $(target).outerHeight();
     const svg = d3
