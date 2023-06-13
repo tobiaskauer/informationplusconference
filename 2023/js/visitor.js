@@ -165,7 +165,7 @@ function visualizeSessions(target) {
     const simulation = d3
       .forceSimulation(network.nodes)
       .alphaTarget(0.3) // stay hot
-      .velocityDecay(0.09)
+      .velocityDecay(0.2)
       .force("x", d3.forceX().strength(0.005))
       .force("y", d3.forceY(height / 2).strength(0.02))
       .force("center", d3.forceCenter(width / 2, height / 2).strength(0.1))
@@ -177,10 +177,10 @@ function visualizeSessions(target) {
           .iterations(2)
           .strength(1)
       )
-      .force(
+      /*.force(
         "charge",
-        d3.forceManyBody().strength((d, i) => (i ? -1 : 4))
-      )
+        d3.forceManyBody().strength((d, i) => (i ? -1 : 0.1))
+      )*/
       .force("link", d3.forceLink().links(network.links).strength(0))
 
       .on("tick", ticked);
