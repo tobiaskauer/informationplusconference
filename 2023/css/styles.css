@@ -214,6 +214,10 @@ h1 {
         border-radius: 5px;
         padding: 10px;
       }
+
+    .sponsor-package.expired > p{
+        color: grey;
+      }  
       
     /* supporters page end */
 
@@ -640,8 +644,6 @@ section:target div.container {
     line-height: 1.5em;
     color: #ff3f19;
 }
-
-
 
 .dates {
     color: #888;
