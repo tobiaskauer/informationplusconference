@@ -3,7 +3,7 @@ function visualizeSessions(target) {
   //api = "http://localhost:3003/api/visitor";
   let updateInterval = 30000;
   let network = {};
-  let opacityScale = d3.scaleLinear().domain([0, 200]).range([1, 0]);
+  let opacityScale = d3.scaleLinear().domain([0, 100]).range([1, 0]);
   let colorScale = d3
     .scaleOrdinal()
     .domain(["practitioner", "educator", "researcher"])
@@ -165,23 +165,23 @@ function visualizeSessions(target) {
     const simulation = d3
       .forceSimulation(network.nodes)
       .alphaTarget(0.3) // stay hot
-      .velocityDecay(0.2)
-      .force("x", d3.forceX().strength(0.005))
-      .force("y", d3.forceY(height / 2).strength(0.02))
-      .force("center", d3.forceCenter(width / 2, height / 2).strength(0.1))
+      .velocityDecay(0.1)
+      .force("x", d3.forceX(width / 2).strength(0.001))
+      .force("y", d3.forceY(height / 2).strength(0.009))
+      //.force("center", d3.forceCenter(width / 2, height / 2).strength(1))
       .force(
         "collide",
         d3
           .forceCollide()
-          .radius((d, i) => (i ? d.radius : 100))
+          .radius((d, i) => (i ? d.radius : 80))
           .iterations(2)
-          .strength(1)
+          .strength(0.1)
       )
       /*.force(
         "charge",
         d3.forceManyBody().strength((d, i) => (i ? -1 : 0.1))
       )*/
-      .force("link", d3.forceLink().links(network.links).strength(0))
+      .force("link", d3.forceLink().links(network.links).strength(0.0))
 
       .on("tick", ticked);
 
@@ -207,17 +207,17 @@ function visualizeSessions(target) {
         d3
           .forceCollide()
           .radius((d, i) => (i ? d.radius : 200))
-          .iterations(2)
-          .strength(1)
+          .iterations(1)
+          .strength(0.11)
       );
       setTimeout(function () {
         simulation.force(
           "collide",
           d3
             .forceCollide()
-            .radius((d, i) => (i ? d.radius : 100))
+            .radius((d, i) => (i ? d.radius : 80))
             .iterations(2)
-            .strength(1)
+            .strength(0.1)
         );
       }, 200);
     }
@@ -231,18 +231,18 @@ function visualizeSessions(target) {
         .merge(u)
         .attr("transform", (d) => {
           let x = d.x;
-          if (d.x < buffer) {
+          /*if (d.x < buffer) {
             x = buffer;
           } else if (d.x >= width - buffer) {
             x = width - buffer;
-          }
+          }*/
 
           let y = d.y;
-          if (d.y < buffer) {
+          /*if (d.y < buffer) {
             y = buffer;
           } else if (d.y >= height - buffer) {
             y = height - buffer;
-          }
+          }*/
           return `translate(${x},${y}) rotate(${d.angle})`;
         })
         .attr("fill", (d) => d.color)
