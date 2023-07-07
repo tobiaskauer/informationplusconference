@@ -83,7 +83,6 @@ function visualizeSessions(target) {
         data = data.concat(data);
         data = data.concat(data);
         data.splice(0, 0, { category: null });
-        console.log(data.length);
         network = renderNetwork(data);
         renderVis();
       },
@@ -176,9 +175,9 @@ function visualizeSessions(target) {
         "collide",
         d3
           .forceCollide()
-          .radius((d, i) => (i ? d.radius : 80))
+          .radius((d, i) => (i ? d.radius : 60))
           .iterations(2)
-          .strength(0.1)
+          .strength(0.5)
       )
       /*.force(
         "charge",
