@@ -1,6 +1,6 @@
 function visualizeSessions(target) {
   let api = "https://viscussion.de:3003/api/visitor";
-  //api = "http://localhost:3003/api/visitor";
+  api = "http://localhost:3003/api/visitor";
   let updateInterval = 30000;
   let network = {};
   let opacityScale = d3.scaleLinear().domain([0, 100]).range([1, 0]);
@@ -79,8 +79,11 @@ function visualizeSessions(target) {
         console.log(
           `[success] Received ${data.length} visitor traces from server.`
         );
-        //let doublethefun = data.concat(data); //double number of sessions while collecting data
-        //network = renderNetwork(doublethefun);
+        data = data.filter((session) => session.category);
+        data = data.concat(data);
+        data = data.concat(data);
+        data.splice(0, 0, { category: null });
+        console.log(data.length);
         network = renderNetwork(data);
         renderVis();
       },
