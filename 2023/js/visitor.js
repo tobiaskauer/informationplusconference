@@ -1,6 +1,6 @@
 function visualizeSessions(target) {
   let api = "https://viscussion.de:3003/api/visitor";
-  api = "http://localhost:3003/api/visitor";
+  //api = "http://localhost:3003/api/visitor";
   let updateInterval = 30000;
   let network = {};
   let opacityScale = d3.scaleLinear().domain([0, 100]).range([1, 0]);
