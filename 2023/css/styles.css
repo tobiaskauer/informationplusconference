@@ -668,6 +668,7 @@ section:target div.container {
 #registration table{
     border: 1px solid gray;
     border-collapse: collapse;
+    padding: 5px;
 }
 
 .dates {
