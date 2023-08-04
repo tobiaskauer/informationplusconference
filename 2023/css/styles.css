@@ -538,6 +538,16 @@ margin-top: 1em;
     color: black;
 }
 
+#venue {
+    border-top: 1px solid var(--border);
+    color: black;
+    position: sticky;
+}
+
+#venue h3{
+    color: black;
+}
+
 #workshops {
     border-top: 1px solid var(--border);
     color: black;
