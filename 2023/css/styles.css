@@ -197,6 +197,11 @@ h1 {
       list-style-position: outside;
       margin: 0;
     }
+    #registration ul {
+      list-style-type: disc;
+      list-style-position: outside;
+      margin: 0;
+    }
 
     #gains ul li,
     #packages ul li,
