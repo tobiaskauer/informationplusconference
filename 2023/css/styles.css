@@ -1275,3 +1275,10 @@ button.userType#researcher:hover, button.userType#researcher.active { background
         display: none;
     }
   }
+
+
+
+#registration table{
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
