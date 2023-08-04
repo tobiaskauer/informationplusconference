@@ -208,7 +208,12 @@ h1 {
       margin: 0;
       font-size: 1em;
     }
-
+    #registration ul li {
+        padding: 0 0 2px 5px;
+        margin: 0;
+        font-size: 1em;
+      }
+  
     .sponsor-package {
         border: 1px dotted #af10ff;
         border-radius: 5px;
