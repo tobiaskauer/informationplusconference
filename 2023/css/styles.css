@@ -330,7 +330,7 @@ h1 {
     color:black;
 }
 
-
+/*
 .accordion {
     background-color: rgb(255, 252, 242);
     color: black;
@@ -343,7 +343,7 @@ h1 {
     text-align: left;
     padding: 15px 35px 15px 35px;
 position: relative;
-}
+}*/
 
 #contributions button:last-of-type{
     border-bottom: none;
@@ -355,7 +355,7 @@ position: relative;
         border-bottom:1px solid white;
         xborder:none;
     }
-
+/*
     .accordion:hover {
         background-color:white;
         border-bottom: 1px solidvar(--yellow);
@@ -368,6 +368,24 @@ position: relative;
 
     .accordion:hover h3{
         color: var(--yellow);
+    }*/
+
+    .accordion-button {
+        display: block;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background: var(--yellow);
+    }
+
+    .workshopTitle {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .card {
+    display: block;
     }
 
     .here-d3:hover a{
@@ -385,23 +403,6 @@ position: relative;
     }
 
 
-    .accordion:after {
-
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: inherit;
-    float: right;
-    transition: .5s all ease-out;
-    color:var(--yellow);
-
-position: absolute;
-right: 0.5rem;
-top: 50%;
-transform: translateY(-50%);
-}
-
-.accordion.active:after {
-content: "\2796";
-}
 
 .XXXactive .day:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
