@@ -3,6 +3,9 @@
     :root {
       --yellow: #ffce1e;
       --border: #ccc;
+      --teal: #89E8D0;
+      --magenta: #FE65F7;
+      --periwinkle: #7A92F7;
       --affiliation: #aaa;
 
       --researcher: 28, 245, 245;
@@ -1281,4 +1284,12 @@ button.userType#researcher:hover, button.userType#researcher.active { background
     .stickyForm {
         display: none;
     }
+  }
+
+  .unicorns {
+    background: none
+  }
+
+  .unicorns:hover {
+    background-color: var(--periwinkle);
   }
