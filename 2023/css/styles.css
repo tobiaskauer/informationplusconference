@@ -480,7 +480,7 @@ padding: 5px 10px 5px 10px;
 
 /* End Navabar */
 
-#exhibition, #cfp {
+#exhibition, #cfp, #program {
     border-top:1px solid var(--border);
 }
 
