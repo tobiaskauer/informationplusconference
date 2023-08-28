@@ -1293,3 +1293,67 @@ button.userType#researcher:hover, button.userType#researcher.active { background
   .unicorns:hover {
     background-color: var(--periwinkle);
   }
+
+  p.program-talk-title {
+    font-weight: bold;
+  }
+
+  .table {
+    --bs-table-bg: none;
+    --bs-table-border-color: transparent;
+  }
+
+  td.yellowTalks {
+    border-left-color:var(--yellow);
+    border-left-style:solid;
+    border-left-width:2px
+  }
+
+  td.periwinkleTalks {
+    border-left-color:var(--periwinkle);
+    border-left-style:solid;
+    border-left-width:2px
+  }
+
+  td.tealTalks {
+    border-left-color:var(--teal);
+    border-left-style:solid;
+    border-left-width:2px
+  }
+
+  td.magentaTalks {
+    border-left-color:var(--magenta);
+    border-left-style:solid;
+    border-left-width:2px
+  }
+
+
+  /* Program Accordian */
+  .accordion.program {
+    --bs-accordion-color: none;
+    --bs-accordion-bg: none;
+    --bs-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+    --bs-accordion-border-color: none;
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-btn-padding-x: 0;
+    --bs-accordion-btn-padding-y: 0;
+    --bs-accordion-body-padding-x: 0;
+    --bs-accordion-body-padding-y: 0;
+    --bs-accordion-active-color: black;
+  }
+
+  
+
+    .presenterProgram {
+        font-weight: bold;
+        
+    }
+
+    .time{
+        font-size: .9em;
+        word-wrap: break-word;
+        font-family: var(--bs-font-monospace);
+    }
+        
