@@ -354,7 +354,7 @@ position: relative;
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     .focus, .active, .accordion:hover {
-        background-color:white;
+        //background-color:white;
         border-bottom:1px solid white;
         xborder:none;
     }
