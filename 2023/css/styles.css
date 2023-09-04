@@ -1344,7 +1344,22 @@ button.userType#researcher:hover, button.userType#researcher.active { background
     --bs-accordion-active-color: black;
   }
 
+  .accordion-button.collapsed:hover {
+    color: var(--yellow);
+  }
+
+  .periwinkleTalks .accordion-button.collapsed:hover {
+    color: var(--periwinkle);
+  }
   
+  .tealTalks .accordion-button.collapsed:hover {
+    color: var(--teal);
+  }
+
+  .magentaTalks .accordion-button.collapsed:hover {
+    color: var(--magenta);
+  }
+
 
     .presenterProgram {
         font-weight: bold;
