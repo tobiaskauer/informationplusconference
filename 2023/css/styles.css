@@ -354,9 +354,9 @@ position: relative;
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     .focus, .active, .accordion:hover {
-        //background-color:white;
+        /* background-color:white; */
         border-bottom:1px solid white;
-        xborder:none;
+        xborder: none;
     }
 /*
     .accordion:hover {
@@ -633,7 +633,7 @@ section:target div.container {
     font-weight: 500;
     background: -webkit-linear-gradient(#888,#333);
     -webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
 }
 
 .gradient{
