@@ -1361,14 +1361,18 @@ button.userType#researcher:hover, button.userType#researcher.active { background
   }
 
 
-    .presenterProgram {
-        font-weight: bold;
-        
-    }
+.presenterProgram {
+    font-weight: bold;
+    
+}
 
-    .time{
-        font-size: .9em;
-        word-wrap: break-word;
-        font-family: var(--bs-font-monospace);
-    }
+.time{
+    font-size: .9em;
+    word-wrap: break-word;
+    font-family: var(--bs-font-monospace);
+}
         
+td.time {
+    padding-top: 8;
+    text-align: right;
+    }
