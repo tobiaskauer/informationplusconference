@@ -234,7 +234,7 @@ h1 {
       
     /* supporters page end */
 
-#timeZone{
+/* #timeZone{
     margin:20px 0 20px 0;
 }
 
@@ -268,7 +268,7 @@ h1 {
 .time {
     grid-row-start: 1;
     grid-row-end: 4;
-}
+} */
 
 .break{
     grid-row-start: 1;
@@ -1303,6 +1303,8 @@ button.userType#researcher:hover, button.userType#researcher.active { background
     --bs-table-border-color: transparent;
   }
 
+
+
   td.yellowTalks {
     border-left-color:var(--yellow);
     border-left-style:solid;
@@ -1325,6 +1327,11 @@ button.userType#researcher:hover, button.userType#researcher.active { background
     border-left-color:var(--magenta);
     border-left-style:solid;
     border-left-width:2px
+  }
+
+td.time {
+    padding-top: 8;
+    text-align: right;
   }
 
 
@@ -1372,3 +1379,4 @@ button.userType#researcher:hover, button.userType#researcher.active { background
         font-family: var(--bs-font-monospace);
     }
         
+
