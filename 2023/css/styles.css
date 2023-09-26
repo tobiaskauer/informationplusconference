@@ -488,6 +488,10 @@ padding: 5px 10px 5px 10px;
     background: #FEDFFE;
 }
 
+#exhibitionEntries .card-text {
+    font-weight: bold;
+}
+
 #codeofconduct {
     border-top: 1px solid var(--border);
     color: black;
