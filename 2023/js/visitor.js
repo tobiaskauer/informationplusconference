@@ -81,7 +81,6 @@ function visualizeSessions(target) {
         );
         data = data.filter((session) => session.category);
         data = data.concat(data);
-        //data = data.concat(data);
         data.splice(0, 0, { category: null });
         network = renderNetwork(data);
         renderVis();
