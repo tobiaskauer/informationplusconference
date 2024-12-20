@@ -1,0 +1,91 @@
+@import url('cabinet-grotesk.css');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overscroll-behavior: none;
+    margin: 0;
+    font-family: CabinetGrotesk-Variable;
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: 400;
+    background: 
+        url('../images/texture.png') repeat,
+        linear-gradient(
+            to bottom,
+            #CB4EC6 0px,
+            #CB4EC6 400px,
+            #FDF19C 700px,
+            #FDF19C 100%
+    );
+}
+
+#animation {
+}
+
+.content {
+    margin-top: -150px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 10px;
+    max-width: 30em;
+}
+
+h1 {
+    margin-bottom: 47px;
+    font-family: CabinetGrotesk-Variable;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 400;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 27px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+p.intro {
+    font-size: 27px;
+    line-height: 32px;
+}
+
+p a {
+    color: inherit;
+    text-decoration-color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2.5px;
+    word-break: break-word;
+}
+
+p a:hover {
+    color: #CB4EC6;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 0.625em;
+    list-style-type:'– ';
+}
+
+hr {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border: none;
+    height: 1px;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+span.inst {
+    opacity: 0.5;
+}
+
