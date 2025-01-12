@@ -34,24 +34,88 @@ body {
     max-width: 30em;
 }
 
+p{
+	font-size: 19px;
+	line-height: 27px;
+	font-weight: 400;
+}
+
 h1 {
-    margin-bottom: 47px;
     font-family: CabinetGrotesk-Variable;
     font-size: 40px;
     line-height: 47px;
     font-weight: 400;
     font-weight: 500;
+	margin: 0;
 }
 
 h2 {
     font-size: 27px;
-    line-height: 32px;
+    line-height: 1.3em;
     font-weight: 500;
 }
 
+h2.subtitle{
+	margin: 0;
+	margin-top: 1em;
+    font-weight: 300;
+}
+
+h2.date{
+	margin: 0;
+	font-weight: 500;
+}
+
 p.intro {
-    font-size: 27px;
-    line-height: 32px;
+    font-size: 19px;
+    line-height: 27px;
+	font-weight: 400;
+	
+}
+
+p.intro a{
+	font-weight: 500;
+}
+
+@keyframes weightAnimation {
+    0% {
+        font-variation-settings: 'wght' 720;
+    }
+    50% {
+        font-variation-settings: 'wght' 750;
+    }
+    100% {
+        font-variation-settings: 'wght' 720;
+    }
+}
+
+p.list a{
+	text-indent: 0.5em;
+	display: block;
+	font-variation-settings: 'wght' 720;
+	animation: weightAnimation 1.0s infinite;
+	
+}
+
+p.list em{
+	font-style: normal;
+	font-weight: 300;
+	text-indent: 0.5em;
+	display: block;
+}
+
+p .sc{
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 800;
+}
+
+p .sc2{
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
 }
 
 p a {
