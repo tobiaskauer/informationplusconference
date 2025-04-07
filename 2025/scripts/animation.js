@@ -114,7 +114,7 @@ function windowResized() {
     } else {
         scaleFactor = 1;
     }
-    resizeCanvas(windowWidth, sketchHeight);
+    resizeCanvas(windowWidth -20, sketchHeight);
 }
 
 
