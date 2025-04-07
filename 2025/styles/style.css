@@ -7,10 +7,24 @@
 body {
     overscroll-behavior: none;
     margin: 0;
+    padding-top: 240px;
+    padding-bottom: 80px;
     font-family: CabinetGrotesk-Variable;
     font-size: 19px;
     line-height: 27px;
     font-weight: 400;
+    background: 
+        url('../images/texture.png') repeat,
+        linear-gradient(
+            to bottom,
+            #CB4EC6 0px,
+            #FDF19C 260px,
+            #FDF19C 100%
+    );
+}
+
+.homeBody {
+    padding-top: 0;
     background: 
         url('../images/texture.png') repeat,
         linear-gradient(
@@ -54,7 +68,9 @@ p.intro {
     line-height: 32px;
 }
 
-p a {
+.content a:link,
+.content a:active,
+.content a:visited {
     color: inherit;
     text-decoration-color: inherit;
     text-decoration-thickness: 1px;
@@ -62,7 +78,7 @@ p a {
     word-break: break-word;
 }
 
-p a:hover {
+.content a:hover {
     color: #CB4EC6;
 }
 
@@ -74,6 +90,11 @@ ul {
     margin-top: 0;
     padding-left: 0.625em;
     list-style-type:'– ';
+}
+
+ul ul {
+   list-style-type:disc;
+   padding-left: 1.25em;
 }
 
 hr {
@@ -89,3 +110,56 @@ span.inst {
     opacity: 0.5;
 }
 
+.fixedNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #CB4EC6; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+
+.navStart,
+.navEnd {
+    display: flex;
+}
+
+.navLogo {
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navLink, 
+a.navLink:link, 
+a.navLink:active, 
+a.navLink:visited {
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+a.navLink:hover {
+    color: #CB4EC6;
+    background-color: #fff;
+}
+
+.btn,
+.btn:link,
+.btn:active,
+.btn:visited {
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #CB4EC6;
+}
+
+.btn:hover {
+    color: #CB4EC6 !important;
+    background-color: #fff;
+}

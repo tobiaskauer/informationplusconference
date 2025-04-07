@@ -15,7 +15,7 @@ function preload() {
 
 function setup() {
     describe('Information+ Conference 2025, Boston, MA.');
-    let canvas = createCanvas(windowWidth, sketchHeight, WEBGL);  // Create a canvas with the WEBGL renderer
+    let canvas = createCanvas(windowWidth - 20, sketchHeight, WEBGL);  // Create a canvas with the WEBGL renderer
     canvas.parent('animation');
     angleMode(DEGREES);
     rectMode(CORNER);
