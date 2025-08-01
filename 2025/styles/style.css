@@ -216,6 +216,10 @@ a.navLink:hover {
     background-color: #fff;
 }
 
+p .btn {
+    display: inline-block;
+}
+
 .btn,
 .btn:link,
 .btn:active,
@@ -230,3 +234,13 @@ a.navLink:hover {
     color: #CB4EC6 !important;
     background-color: #fff;
 }
+
+.btn.is-secondary {
+    color: #fff !important;
+    background-color: #2f7ce8 !important;
+}
+
+.btn.is-secondary:hover {
+    color: #2f7ce8 !important;
+   background-color: #fff !important;
+} 
