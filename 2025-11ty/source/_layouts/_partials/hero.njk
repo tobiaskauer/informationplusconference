@@ -1,0 +1,49 @@
+<section class="hero">
+  <div class="header-video">
+    <!-- poster image as background -->
+      <picture class="video-poster">
+        <source srcset="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.avif') | url }}" type="image/avif">
+        <source srcset="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.webp') | url }}" type="image/webp">
+        <img src="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.png') | url }}"
+            alt="Poster"
+            style="width: 100%; height: 100%; object-fit: cover;">
+      </picture>
+      <!-- vimeo embed -->
+      <iframe
+        src="https://player.vimeo.com/video/{{ header.vimeo_id }}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+      </iframe>
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-half" style="align-content: end;">
+          <div class="logo">
+          {% include "../../../source/images/logos/infoplus_logo_anim.svg" %}
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-half" style="align-content: end;">
+          <h4 class="eyebrow">{{ global.hero_intro.title }}</h4>
+          {{ global.hero_intro.text | markdownify | safe }}
+        </div>
+        <div class="column is-one-quarter" style="align-content: end;">
+          &nbsp;
+        </div>
+        <div class="column is-one-quarter content" style="align-content: end;">
+          {{ global.call_to_action | markdownify | safe }}
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-half medium-text content" style="align-content: end;">
+          {{ global.event_date | markdownify | safe }}
+        </div>
+        <div class="column">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+</section>

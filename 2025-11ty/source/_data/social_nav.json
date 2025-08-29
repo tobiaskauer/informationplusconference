@@ -1,0 +1,40 @@
+
+[
+    {
+        "url": "https://x.com/infoplusconf",
+        "title": "Information+ X",
+        "image": {
+            "file": "/images/social/icon_x.svg",
+            "width": 34,
+            "height": 34
+        }
+    },
+    {
+        "url": "https://vis.social/@InfoPlusConf",
+        "title": "Information+ Mastodon",
+        "image": {
+            "file": "/images/social/icon_mastodon.svg",
+            "width": 34,
+            "height": 34
+        }
+    },
+    {
+        "url": "https://bsky.app/profile/infoplusconf.bsky.social",
+        "title": "Information+ Bluesky",
+        "image": {
+            "file": "/images/social/icon_bluesky.svg",
+            "width": 34,
+            "height": 34
+        }
+    },
+    {
+        "url": "https://www.linkedin.com/company/information-plus-conference/",
+        "title": "Information+ LinkedIn",
+        "image": {
+            "file": "/images/social/icon_linkedin.svg",
+            "width": 34,
+            "height": 34
+        }
+    }
+]
+

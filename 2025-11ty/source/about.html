@@ -1,0 +1,48 @@
+---
+title: "About"
+layout: "layout_full_width.njk"
+primary_color: "blue"
+secondary_color: "black"
+header: 
+  image: "t1-blue-magenta"
+  vimeo_id: "1105940353"
+  
+---
+
+<p>Information+ 2023 is made possible through the help and support of many people and partnering organizations.</p>
+
+<p class="spacer"></p>
+
+<!-- chairs and advisors -->
+<div class="flow flow-3col">
+  {% for role, people in organizers %}
+    {% if role != "Program Committee" %}
+      <div class="role">
+      <h4>{{ role }}</h4>
+        {% for person in people %}
+        <p class="organizer">
+          {{ person.name }}<br>
+          <span class="small-text">{{ person.affiliation }}</span>
+        </p>
+        {% endfor %}
+      </div>        
+    {% endif %}
+  {% endfor %}
+</div>
+
+<p class="spacer"></p>
+
+<!-- program committee -->
+
+<h4>Program Committee</h4>
+
+<div class="flow flow-3col">
+  {% for person in organizers["Program Committee"] | sort(attribute="name") %}
+    <p class="organizer">
+      {{ person.name }}<br>
+      <span class="small-text">{{ person.affiliation }}</span>
+    </p>
+  {% endfor %}
+</div>
+
+<p class="spacer"></p>

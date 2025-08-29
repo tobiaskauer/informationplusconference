@@ -1,0 +1,52 @@
+{% set allowed_colors = ["magenta", "green", "red", "blue", "yellow", "black"] %}
+{% set safe_primary_color = primary_color if primary_color in allowed_colors else allowed_colors[0] %}
+{% set safe_secondary_color = secondary_color if secondary_color in allowed_colors else allowed_colors[5] %}
+<style>
+
+
+  .button:hover, 
+  .button.is-primary:hover {
+      outline-color: var(--color-{{ safe_primary_color }});
+  }
+  .has-background-primary,
+  .is-primary, 
+  .content .is-primary {
+    color: var(--color-white);
+    background-color: var(--color-{{ safe_primary_color }}) !important;
+  }
+
+  .button:hover, 
+  .button.is-secondary:hover {
+      outline-color: var(--color-{{ safe_secondary_color }});
+  }
+  .has-background-secondary,
+  .is-secondary, 
+  .content .is-secondary {
+    color: var(--color-white);
+    background-color: var(--color-{{ safe_secondary_color }}) !important;
+  }
+
+  .content a:hover {
+      outline-color: var(--color-{{ safe_primary_color }});
+      background: var(--color-{{ safe_primary_color }});
+  }
+
+  a.sponsor-link:hover svg rect, 
+  a.sponsor-link:hover svg circle, 
+  a.sponsor-link:hover svg ellipse, 
+  a.sponsor-link:hover svg polygon,
+  a.sponsor-link:hover svg path, 
+  a.sponsor-link:hover svg text {
+      fill: var(--color-{{ safe_primary_color }}); 
+  }
+
+  .footer-social a:hover svg rect, 
+  .footer-social a:hover svg circle, 
+  .footer-social a:hover svg ellipse, 
+  .footer-social a:hover svg polygon,
+  .footer-social a:hover svg path, 
+  .footer-social a:hover svg text {
+      fill: var(--color-{{ safe_primary_color }}); 
+  }
+
+</style>

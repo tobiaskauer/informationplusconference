@@ -1,0 +1,198 @@
+@use 'variables' as *;
+@use "../../node_modules/bulma/sass/utilities/mixins" as bulma;
+@use "../../node_modules/bulma/sass/utilities/initial-variables" as vars;
+
+
+// nav
+.navbar {}
+.navbar-brand .navbar-item {
+    font-weight: 800;
+}
+
+.navbar-menu {
+    background-color: inherit;
+}
+
+
+a.navbar-item:focus, 
+a.navbar-item:focus-within, 
+a.navbar-item:hover,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+.navbar-dropdown a.navbar-item:focus, 
+.navbar-dropdown a.navbar-item:focus-within, 
+.navbar-dropdown a.navbar-item:hover,
+.navbar-dropdown .navbar-link:focus,
+.navbar-dropdown .navbar-link:focus-within,
+.navbar-dropdown .navbar-link:hover {
+    color: $color-yellow !important;
+    background-color: rgba(0,0,0,0.08) !important;
+}
+
+.navbar-social {
+    svg rect, 
+    svg circle, 
+    svg ellipse, 
+    svg polygon,
+    svg path, 
+    svg text {
+        fill: $color-white; 
+    }
+}
+
+.navbar-social a {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+}
+
+
+// logo
+.logo {
+    width: 230px;
+    height: 120px;
+}
+
+// hero
+.hero {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    color: $color-white;
+}
+
+.hero strong, 
+.hero b {
+    color: $color-white;
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.header-video iframe,
+.header-video .video-poster  {
+   width: 100vw;
+   height: 56.25vw; 
+   @include bulma.from(vars.$tablet) {    
+     min-height: 100vh;
+     min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   }
+   @include bulma.until(vars.$tablet) {    
+     min-height: 150vh;
+     min-width: 286.67vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   }
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.full {
+    overflow: hidden;
+    margin-left: -20vw;
+    padding-left: 20vw;
+    margin-right: -20vw;
+    padding-right: 20vw;
+}
+
+
+// footer 
+
+.footer {
+}
+
+.footer p {
+    margin-bottom: $gap;
+}
+
+.footer .footer-contacts {
+    margin-bottom: $gap;
+}
+
+.footer .footer-social {
+    margin-bottom: $gap;
+    display: flex;
+}
+
+.footer-social a:hover {
+    svg rect, 
+    svg circle, 
+    svg ellipse, 
+    svg polygon,
+    svg path, 
+    svg text {
+        fill: $color-magenta; 
+    }
+}
+
+.footer .footer-social a {
+    display: block;
+    width: 2em;
+}
+
+
+// sponsors
+
+.sponsor-links {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.sponsor-link {
+    display: block;
+}
+
+a.sponsor-link:hover {
+    svg rect, 
+    svg circle, 
+    svg ellipse, 
+    svg polygon,
+    svg path, 
+    svg text {
+        fill: $color-magenta; 
+    }
+}
+
+
+// flow
+
+.flow {
+}
+
+.flow-3col {
+    @include bulma.from(vars.$tablet) {
+        column-count: 3;       /* Number of columns */
+        column-gap: $gap * 2;      /* Space between columns */
+    }
+}
+
+.flow-4col {
+    @include bulma.from(vars.$tablet) {
+        column-count: 4;       /* Number of columns */
+        column-gap: $gap * 2;      /* Space between columns */
+    }
+}
+
+
+.flow .role {
+  break-inside: avoid;           /* Modern property */
+  page-break-inside: avoid;      /* For print */
+  column-break-inside: avoid;    /* Legacy support */
+  display: inline-block;         /* Helps avoid breaking in some browsers */
+  width: 100%;                   /* Make it span full column width */
+}
+
+.flow .role {
+    margin-bottom: $gap * 2;
+}

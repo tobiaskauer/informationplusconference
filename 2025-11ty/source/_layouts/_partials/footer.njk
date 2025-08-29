@@ -1,0 +1,55 @@
+<footer class="footer">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-three-quarters">
+                <p class="small-text" style="max-width: 46em;">Information+ 2025 is made possible through the help and support of many
+                    people and partnering organizations.</p>
+                <div class="sponsor-links">
+                    {%- for link in supporters %}
+                        {% if link.level == "supporter" %}
+                            <a 
+                                class="sponsor-link" 
+                                href="{{ link.url | url }}" 
+                                style="display: block; width: {{ link.image.width * 0.5 }}px; height:{{ link.image.height * 0.5 }}px;">
+                                 {% include "../../../source/" + link.image.file %}
+                                {# <img src="{{ link.image.file }}" width="{{ link.image.width * 0.5 }}" height="{{ link.image.height * 0.5 }}" alt="{{ link.title }}"/> #}
+                            </a>
+                        {% endif %}
+                    {%- endfor %}
+                </div>
+                <p class="small-text">Partnering organizations</p>
+                <div class="sponsor-links">
+                    {%- for link in supporters %}
+                        {% if link.level == "partner" %}
+                            <a 
+                                class="sponsor-link" 
+                                href="{{ link.url | url }}" 
+                                style="display: block; width: {{ link.image.width * 0.5 }}px; height:{{ link.image.height * 0.5 }}px;">
+                                 {% include "../../../source/" + link.image.file %}
+                                {# <img src="{{ link.image.file }}" width="{{ link.image.width * 0.5 }}" height="{{ link.image.height * 0.5 }}" alt="{{ link.title }}"/> #}
+                            </a>
+                        {% endif %}
+                    {%- endfor %}
+                </div>
+            </div>
+            <div class="column is-one-quarter">
+                <div class="footer-social">
+                    {%- for link in social_nav %}
+                        <a class="" href="{{ link.url | url }}">
+                            {% include "../../../source/" + link.image.file %}
+                        </a>
+                        {%- endfor %}
+                    </div>
+                    <div class="footer-contacts content">
+                        {%- for link in contact_nav %}
+                            <p>
+                                <a class="" href="{{ link.url | url }}">
+                                    {{ link.title }}
+                                </a>
+                            </p>
+                        {%- endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>

@@ -1,0 +1,182 @@
+@use 'variables' as *;
+
+// mixins ---------------------------------------
+
+@font-face {
+  font-family: 'CabinetGrotesk-Variable';
+  src: url('fonts/CabinetGrotesk-Variable.woff2') format('woff2'),
+       url('fonts/CabinetGrotesk-Variable.woff') format('woff'),
+       url('fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+}
+
+@mixin cabinet-font {
+  font-family: CabinetGrotesk-Variable, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@mixin small-text {
+  @include cabinet-font;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin title-text {
+  @include cabinet-font;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+@mixin medium-text {
+  @include cabinet-font;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@mixin large-text {
+  @include cabinet-font;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+body {
+  @include cabinet-font;
+}
+
+
+// content --------------------------------------
+
+// .content {}
+
+.content a {
+  display: inline-block;
+  color: currentColor;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.125rem;
+}
+
+.content b,
+.content strong {
+  font-weight: 800;
+}
+
+.content a:hover {
+    text-decoration: none;
+    outline-width: 0.125em;
+    outline-style: solid;
+    outline-color: $color-magenta;
+    color: $color-white;
+    background: $color-magenta;
+}
+
+.content hr {
+  border-width: 1px 0 0 0;
+  border-style: solid; 
+  border-color: currentColor; /* Or your color */
+}
+
+.small-text {
+  @include small-text;
+  color: currentColor;
+  color: currentColor;
+}
+
+.medium-text {
+  @include medium-text;
+  color: currentColor;
+  color: currentColor;
+}
+
+.large-text {
+  @include large-text;
+  color: currentColor;
+}
+
+ul.list-condensed {
+  list-style: none;
+  padding: 0;
+}
+
+.spacer {
+  display: block;
+  height: $gap * 2;
+}
+
+
+// page-title -----------------------------------
+
+.page-title {
+  @include title-text;
+  color: currentColor;
+}
+
+
+// eyebrow --------------------------------------
+
+.eyebrow {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: currentColor; 
+  @include small-text;
+}
+
+
+// intro ----------------------------------------
+
+.intro {
+  @include cabinet-font;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: currentColor;
+}
+
+.intro > * {
+    margin-top: 0;
+}
+
+
+// conference-date ------------------------------
+
+.conference-date {
+  @include cabinet-font;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 800;
+  color: currentColor;
+}
+
+
+// button ---------------------------------------
+
+.content a.button {
+  text-decoration: none;
+}
+
+.button {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.button:hover, 
+.content .button:hover {
+  color: $color-yellow;
+}

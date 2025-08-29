@@ -1,0 +1,71 @@
+// variables
+
+// layout ---------------------------------------
+
+$gap: 18px;
+$nav-width: 120px;
+$quarter-width: 200px;
+$half-width: ($quarter-width * 2) + $gap;
+$theequarter-width: ($quarter-width * 3) + ($gap * 2);
+
+$min-width: 720px;
+$max-width: 
+    $gap + 
+    $nav-width + 
+    $gap + 
+    $theequarter-width + 
+    $gap + 
+    $quarter-width + 
+    $gap + 
+    $nav-width + 
+    $gap;
+$inner-width: 
+    $gap + 
+    $theequarter-width + 
+    $gap + 
+    $quarter-width + 
+    $gap;
+
+
+// colors ---------------------------------------
+
+$color-red: #F2400E;
+$color-orange: #fc5a18;
+$color-green: #01A64E;
+$color-yellow: #fef087;
+$color-magenta: #F441D6;
+$color-blue: #2f7ce8;
+$color-black: #000000;
+$color-grey: #cccccc;
+$color-darkgrey: #999999;
+$color-white: #ffffff;
+
+.page-red {
+    background-color: $color-red;
+    color: $color-black;
+}
+.page-green {
+    background-color: $color-green;
+    color: $color-black;
+}
+.page-yellow {
+    background-color: $color-yellow;
+    color: $color-black;
+}
+.page-magenta {
+    background-color: $color-magenta;
+    color: $color-black;
+}
+.page-blue {
+    background-color: $color-blue;
+    color: $color-black;
+}
+.page-grey {
+    background-color: $color-grey;
+    color: $color-black;
+}
+.page-white {
+    background-color: $color-white;
+    color: $color-black;
+}
+

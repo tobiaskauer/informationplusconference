@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    {% include "meta.njk" %}
+    <title>{{ title }}</title>
+    {% include "style.njk" %}
+    {% include "page_color.njk" %}
+  </head>
+  <body class="has-navbar-fixed-top">
+    {% include "nav.njk" %}
+    {% include "hero_small.njk" %}
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <h1 class="page-title">{{ title }}</h1>
+        </div>
+        <div class="columns">
+          <div class="column is-three-quarters content">
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "footer.njk" %}
+    {% include "scripts.njk" %}
+  </body>
+</html>

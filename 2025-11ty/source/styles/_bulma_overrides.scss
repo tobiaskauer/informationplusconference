@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+.footer {
+    background-color: transparent;
+}
+
+.has-background-primary {
+    color: $color-white !important;
+}
+
+.navbar.is-primary {
+    color: $color-white;
+}
+
+.navbar-dropdown {
+    border-width: 0;
+}
+
+.navbar-burger span {
+    background-color: $color-white;
+}
+
+.navbar-burger:hover {
+    background-color: transparent;
+}
+
+.navbar-divider {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 1px;
+}
+
+.navbar-item.is-active {
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.5rem;
+}
+
+.navbar-social {
+    padding: 1rem;
+}

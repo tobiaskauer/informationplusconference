@@ -1,0 +1,183 @@
+@use 'variables' as *;
+@use 'typography' as *;
+@use "../../node_modules/bulma/sass/utilities/mixins" as bulma;
+@use "../../node_modules/bulma/sass/utilities/initial-variables" as vars;
+
+
+// logo -----------------------------------------
+
+.logo {
+    @include bulma.until(vars.$tablet) {    
+        max-width: 8rem;
+    }
+}
+
+
+// tile -----------------------------------------
+
+.tile {
+    max-width: 300px;
+}
+
+a.tile {
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s ease, color 0.4s ease;
+}
+
+a.tile:hover {
+    color: $color-white;
+    background-color: $color-magenta;
+    outline: 12px solid $color-magenta;
+}
+
+.tile_image {
+  width: 100%;
+  background-color: currentColor; /* for visibility */
+}
+
+.tile_image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tile_title {
+    @include title-text;
+    margin-top: 0.75em;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.tile_info {
+    margin-top: 0.75em;
+    margin-bottom: 2em;
+    @include cabinet-font;
+    font-size: 0.625em;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    color: currentColor;
+}
+
+
+// frame ----------------------------------------
+
+$frame-border-size: 1rem;
+$frame-clip-size: 3rem;
+
+.frame {
+    border-width: $frame-border-size $frame-clip-size $frame-border-size $frame-border-size;
+    border-style: solid;
+    border-color: currentColor;
+    background: currentColor;
+    clip-path: polygon(
+        0% 0%,                            // top-left
+        calc(100% - $frame-clip-size) 0%, // top edge before cut
+        100% $frame-clip-size,             // diagonal cut 
+        100% 100%,                        // bottom-right
+        0% 100%                           // bottom-left
+    );    
+}
+
+.frame-red {
+    border-color: $color-red;
+    background: $color-red;
+}
+.frame-green {
+    border-color: $color-green;
+    background: $color-green;
+}
+.frame-yellow {
+    border-color: $color-yellow;
+    background: $color-yellow;
+}
+.frame-magenta {
+    border-color: $color-magenta;
+    background: $color-magenta;
+}
+.frame-blue {
+    border-color: $color-blue;
+    background: $color-blue;
+}
+.frame-black {
+    border-color: $color-black;
+    background: $color-black;
+}
+.frame-grey {
+    border-color: $color-grey;
+    background: $color-grey;
+}
+.frame-white {
+    border-color: $color-white;
+    background: $color-white;
+}
+
+
+// sponsors -------------------------------------
+
+.sponsors {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+.sponsor-link {
+    display: inline-block;
+}
+
+.sponsor-link img {
+    display: block;
+}
+
+
+// program --------------------------------------
+
+.program-events {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: ($gap * 0.5) $gap;
+    @include cabinet-font;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.event_day {
+  flex: 1;
+}
+
+.event + .event_day {
+    margin-top: $gap;
+}
+
+.event_time {
+  position: relative;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.event_info {
+  flex: 1;
+}
+
+.event_presenter {
+}
+
+.event_title {
+}
+
+.event_detail {
+    display: none;
+}
+
+
+// navbar ---------------------------------------
+

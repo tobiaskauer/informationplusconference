@@ -1,0 +1,21 @@
+<div class="content">
+    <h4>Past Events</h4>
+</div>
+<div class="columns is-mobile is-multiline">
+    {%- for link in past_events %}
+        <div class="column is-half-mobile is-one-quarter-desktop is-one-quarter-tablet">
+            <a class="tile" href="{{ link.url | url }}" style="display: block; ">
+                <div class="tile_image">
+                    <img src="{{ link.image.file | url }}" width="{{ link.image.width }}" height="{{ link.image.height }}" alt="{{ link.city }}"/>
+                </div>
+                <div class="tile_title">
+                    {{ link.city }}
+                </div>
+                <div class="tile_info">
+                    {{ link.year }} <br>
+                    {{ link.venue }} <br>
+                </div>
+            </a>
+        </div>
+    {%- endfor %}
+</div>

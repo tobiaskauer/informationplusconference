@@ -1,0 +1,428 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 231 119.2">
+  <defs>
+    <style>
+         #logopaths * {
+            fill: #ffffff;
+            stroke: #ffffff;
+            stroke-linejoin: bevel;
+        }
+    </style>
+  </defs>    
+  <g id="logopaths">
+  <polygon class="logoFragment" points="7.1 7 13.5 .6 13.5 13.4 7.1 7"/>
+  <polygon class="logoFragment" points=".6 .5 13.4 .5 7 6.9 .6 .5"/>
+  <polygon class="logoFragment" points=".6 13.5 7 7.1 13.4 13.5 .6 13.5"/>
+  <polygon class="logoFragment" points=".5 .6 6.9 7 .5 13.4 .5 .6"/>
+  <polygon class="logoFragment" points="20.3 7 26.7 .6 26.7 13.4 20.3 7"/>
+  <polygon class="logoFragment" points="13.8 .5 26.6 .5 20.2 6.9 13.8 .5"/>
+  <polygon class="logoFragment" points="13.8 13.5 20.2 7.1 26.6 13.5 13.8 13.5"/>
+  <polygon class="logoFragment" points="13.7 .6 20.1 7 13.7 13.4 13.7 .6"/>
+  <polygon class="logoFragment" points="33.4 7 39.8 .6 39.8 13.4 33.4 7"/>
+  <polygon class="logoFragment" points="26.9 .5 39.7 .5 33.3 6.9 26.9 .5"/>
+  <polygon class="logoFragment" points="26.9 13.5 33.3 7.1 39.7 13.5 26.9 13.5"/>
+  <polygon class="logoFragment" points="26.8 .6 33.2 7 26.8 13.4 26.8 .6"/>
+  <polygon class="logoFragment" points="20.3 20.2 26.7 13.8 26.7 26.6 20.3 20.2"/>
+  <polygon class="logoFragment" points="13.8 13.7 26.6 13.7 20.2 20.1 13.8 13.7"/>
+  <polygon class="logoFragment" points="13.8 26.7 20.2 20.3 26.6 26.7 13.8 26.7"/>
+  <polygon class="logoFragment" points="13.7 13.8 20.1 20.2 13.7 26.6 13.7 13.8"/>
+  <polygon class="logoFragment" points="33.4 20.2 39.8 13.8 39.8 26.6 33.4 20.2"/>
+  <polygon class="logoFragment" points="26.9 13.7 39.7 13.7 33.3 20.1 26.9 13.7"/>
+  <polygon class="logoFragment" points="26.9 26.7 33.3 20.3 39.7 26.7 26.9 26.7"/>
+  <polygon class="logoFragment" points="26.8 13.8 33.2 20.2 26.8 26.6 26.8 13.8"/>
+  <polygon class="logoFragment" points="46.6 7 53 .6 53 13.4 46.6 7"/>
+  <polygon class="logoFragment" points="40.1 .5 52.9 .5 46.5 6.9 40.1 .5"/>
+  <polygon class="logoFragment" points="40.1 13.5 46.5 7.1 52.9 13.5 40.1 13.5"/>
+  <polygon class="logoFragment" points="40 .6 46.4 7 40 13.4 40 .6"/>
+  <polygon class="logoFragment" points="7.1 46.5 13.5 40.1 13.5 52.9 7.1 46.5"/>
+  <polygon class="logoFragment" points=".6 53 7 46.6 13.4 53 .6 53"/>
+  <polygon class="logoFragment" points=".6 40 13.4 40 7 46.4 .6 40"/>
+  <polygon class="logoFragment" points=".5 40.1 6.9 46.5 .5 52.9 .5 40.1"/>
+  <polygon class="logoFragment" points="20.3 46.5 26.7 40.1 26.7 52.9 20.3 46.5"/>
+  <polygon class="logoFragment" points="13.8 53 20.2 46.6 26.6 53 13.8 53"/>
+  <polygon class="logoFragment" points="13.8 40 26.6 40 20.2 46.4 13.8 40"/>
+  <polygon class="logoFragment" points="13.7 40.1 20.1 46.5 13.7 52.9 13.7 40.1"/>
+  <polygon class="logoFragment" points="33.4 46.5 39.8 40.1 39.8 52.9 33.4 46.5"/>
+  <polygon class="logoFragment" points="26.9 53 33.3 46.6 39.7 53 26.9 53"/>
+  <polygon class="logoFragment" points="26.9 40 39.7 40 33.3 46.4 26.9 40"/>
+  <polygon class="logoFragment" points="26.8 40.1 33.2 46.5 26.8 52.9 26.8 40.1"/>
+  <polygon class="logoFragment" points="20.3 33.3 26.7 26.9 26.7 39.7 20.3 33.3"/>
+  <polygon class="logoFragment" points="13.8 39.8 20.2 33.4 26.6 39.8 13.8 39.8"/>
+  <polygon class="logoFragment" points="13.8 26.8 26.6 26.8 20.2 33.2 13.8 26.8"/>
+  <polygon class="logoFragment" points="13.7 26.9 20.1 33.3 13.7 39.7 13.7 26.9"/>
+  <polygon class="logoFragment" points="33.4 33.3 39.8 26.9 39.8 39.7 33.4 33.3"/>
+  <polygon class="logoFragment" points="26.9 39.8 33.3 33.4 39.7 39.8 26.9 39.8"/>
+  <polygon class="logoFragment" points="26.9 26.8 39.7 26.8 33.3 33.2 26.9 26.8"/>
+  <polygon class="logoFragment" points="26.8 26.9 33.2 33.3 26.8 39.7 26.8 26.9"/>
+  <polygon class="logoFragment" points="46.6 46.5 53 40.1 53 52.9 46.6 46.5"/>
+  <polygon class="logoFragment" points="40.1 53 46.5 46.6 52.9 53 40.1 53"/>
+  <polygon class="logoFragment" points="40.1 40 52.9 40 46.5 46.4 40.1 40"/>
+  <polygon class="logoFragment" points="40 40.1 46.4 46.5 40 52.9 40 40.1"/>
+  <polygon class="logoFragment" points="66.3 72.8 72.7 66.4 72.7 79.2 66.3 72.8"/>
+  <polygon class="logoFragment" points="59.8 66.3 72.6 66.3 66.2 72.7 59.8 66.3"/>
+  <polygon class="logoFragment" points="59.8 79.3 66.2 72.9 72.6 79.3 59.8 79.3"/>
+  <polygon class="logoFragment" points="59.7 66.4 66.1 72.8 59.7 79.2 59.7 66.4"/>
+  <polygon class="logoFragment" points="79.4 72.8 85.9 66.4 85.9 79.2 79.4 72.8"/>
+  <polygon class="logoFragment" points="72.9 66.3 85.8 66.3 79.3 72.7 72.9 66.3"/>
+  <polygon class="logoFragment" points="72.9 79.3 79.3 72.9 85.8 79.3 72.9 79.3"/>
+  <polygon class="logoFragment" points="72.8 66.4 79.2 72.8 72.8 79.2 72.8 66.4"/>
+  <polygon class="logoFragment" points="66.3 85.9 72.7 79.5 72.7 92.3 66.3 85.9"/>
+  <polygon class="logoFragment" points="59.8 79.4 72.6 79.4 66.2 85.8 59.8 79.4"/>
+  <polygon class="logoFragment" points="59.8 92.4 66.2 86 72.6 92.4 59.8 92.4"/>
+  <polygon class="logoFragment" points="59.7 79.5 66.1 85.9 59.7 92.3 59.7 79.5"/>
+  <polygon class="logoFragment" points="79.4 85.9 85.9 79.5 85.9 92.3 79.4 85.9"/>
+  <polygon class="logoFragment" points="72.9 79.4 85.8 79.4 79.3 85.8 72.9 79.4"/>
+  <polygon class="logoFragment" points="72.9 92.4 79.3 86 85.8 92.4 72.9 92.4"/>
+  <polygon class="logoFragment" points="72.8 79.5 79.2 85.9 72.8 92.3 72.8 79.5"/>
+  <polygon class="logoFragment" points="66.3 112.2 72.7 105.8 72.7 118.6 66.3 112.2"/>
+  <polygon class="logoFragment" points="59.8 118.7 66.2 112.3 72.6 118.7 59.8 118.7"/>
+  <polygon class="logoFragment" points="59.8 105.7 72.6 105.7 66.2 112.1 59.8 105.7"/>
+  <polygon class="logoFragment" points="59.7 105.8 66.1 112.2 59.7 118.6 59.7 105.8"/>
+  <polygon class="logoFragment" points="79.4 112.2 85.9 105.8 85.9 118.6 79.4 112.2"/>
+  <polygon class="logoFragment" points="72.9 118.7 79.3 112.3 85.8 118.7 72.9 118.7"/>
+  <polygon class="logoFragment" points="72.9 105.7 85.8 105.7 79.3 112.1 72.9 105.7"/>
+  <polygon class="logoFragment" points="72.8 105.8 79.2 112.2 72.8 118.6 72.8 105.8"/>
+  <polygon class="logoFragment" points="92.6 112.2 99 105.8 99 118.6 92.6 112.2"/>
+  <polygon class="logoFragment" points="86.1 118.7 92.5 112.3 98.9 118.7 86.1 118.7"/>
+  <polygon class="logoFragment" points="86.1 105.7 98.9 105.7 92.5 112.1 86.1 105.7"/>
+  <polygon class="logoFragment" points="86 105.8 92.4 112.2 86 118.6 86 105.8"/>
+  <polygon class="logoFragment" points="66.3 99.1 72.7 92.7 72.7 105.5 66.3 99.1"/>
+  <polygon class="logoFragment" points="59.8 105.6 66.2 99.2 72.6 105.6 59.8 105.6"/>
+  <polygon class="logoFragment" points="59.8 92.6 72.6 92.6 66.2 99 59.8 92.6"/>
+  <polygon class="logoFragment" points="59.7 92.7 66.1 99.1 59.7 105.5 59.7 92.7"/>
+  <polygon class="logoFragment" points="79.4 99.1 85.9 92.7 85.9 105.5 79.4 99.1"/>
+  <polygon class="logoFragment" points="72.9 105.6 79.3 99.2 85.8 105.6 72.9 105.6"/>
+  <polygon class="logoFragment" points="72.9 92.6 85.8 92.6 79.3 99 72.9 92.6"/>
+  <polygon class="logoFragment" points="72.8 92.7 79.2 99.1 72.8 105.5 72.8 92.7"/>
+  <polygon class="logoFragment" points="105.7 112.2 112.2 105.8 112.2 118.6 105.7 112.2"/>
+  <polygon class="logoFragment" points="99.2 118.7 105.6 112.3 112.1 118.7 99.2 118.7"/>
+  <polygon class="logoFragment" points="99.2 105.7 112.1 105.7 105.6 112.1 99.2 105.7"/>
+  <polygon class="logoFragment" points="99.1 105.8 105.5 112.2 99.1 118.6 99.1 105.8"/>
+  <polygon class="logoFragment" points="125.5 72.8 131.9 66.4 131.9 79.2 125.5 72.8"/>
+  <polygon class="logoFragment" points="119 66.3 131.8 66.3 125.4 72.7 119 66.3"/>
+  <polygon class="logoFragment" points="119 79.3 125.4 72.9 131.8 79.3 119 79.3"/>
+  <polygon class="logoFragment" points="118.9 66.4 125.3 72.8 118.9 79.2 118.9 66.4"/>
+  <polygon class="logoFragment" points="138.6 72.8 145 66.4 145 79.2 138.6 72.8"/>
+  <polygon class="logoFragment" points="132.1 66.3 144.9 66.3 138.5 72.7 132.1 66.3"/>
+  <polygon class="logoFragment" points="132.1 79.3 138.5 72.9 144.9 79.3 132.1 79.3"/>
+  <polygon class="logoFragment" points="132 66.4 138.4 72.8 132 79.2 132 66.4"/>
+  <polygon class="logoFragment" points="125.5 85.9 131.9 79.5 131.9 92.3 125.5 85.9"/>
+  <polygon class="logoFragment" points="119 79.4 131.8 79.4 125.4 85.8 119 79.4"/>
+  <polygon class="logoFragment" points="119 92.4 125.4 86 131.8 92.4 119 92.4"/>
+  <polygon class="logoFragment" points="118.9 79.5 125.3 85.9 118.9 92.3 118.9 79.5"/>
+  <polygon class="logoFragment" points="138.6 85.9 145 79.5 145 92.3 138.6 85.9"/>
+  <polygon class="logoFragment" points="132.1 79.4 144.9 79.4 138.5 85.8 132.1 79.4"/>
+  <polygon class="logoFragment" points="132.1 92.4 138.5 86 144.9 92.4 132.1 92.4"/>
+  <polygon class="logoFragment" points="132 79.5 138.4 85.9 132 92.3 132 79.5"/>
+  <polygon class="logoFragment" points="125.5 112.2 131.9 105.8 131.9 118.6 125.5 112.2"/>
+  <polygon class="logoFragment" points="119 105.7 131.8 105.7 125.4 112.1 119 105.7"/>
+  <polygon class="logoFragment" points="138.6 112.2 145 105.8 145 118.6 138.6 112.2"/>
+  <polygon class="logoFragment" points="132.1 118.7 138.5 112.3 144.9 118.7 132.1 118.7"/>
+  <polygon class="logoFragment" points="132.1 105.7 144.9 105.7 138.5 112.1 132.1 105.7"/>
+  <polygon class="logoFragment" points="132 105.8 138.4 112.2 132 118.6 132 105.8"/>
+  <polygon class="logoFragment" points="151.8 112.2 158.2 105.8 158.2 118.6 151.8 112.2"/>
+  <polygon class="logoFragment" points="145.3 118.7 151.7 112.3 158.1 118.7 145.3 118.7"/>
+  <polygon class="logoFragment" points="145.3 105.7 158.1 105.7 151.7 112.1 145.3 105.7"/>
+  <polygon class="logoFragment" points="145.2 105.8 151.6 112.2 145.2 118.6 145.2 105.8"/>
+  <polygon class="logoFragment" points="125.5 99.1 131.9 92.7 131.9 105.5 125.5 99.1"/>
+  <polygon class="logoFragment" points="119 105.6 125.4 99.2 131.8 105.6 119 105.6"/>
+  <polygon class="logoFragment" points="119 92.6 131.8 92.6 125.4 99 119 92.6"/>
+  <polygon class="logoFragment" points="118.9 92.7 125.3 99.1 118.9 105.5 118.9 92.7"/>
+  <polygon class="logoFragment" points="164.9 72.8 171.3 66.4 171.3 79.2 164.9 72.8"/>
+  <polygon class="logoFragment" points="158.4 66.3 171.2 66.3 164.8 72.7 158.4 66.3"/>
+  <polygon class="logoFragment" points="158.4 79.3 164.8 72.9 171.2 79.3 158.4 79.3"/>
+  <polygon class="logoFragment" points="158.3 66.4 164.7 72.8 158.3 79.2 158.3 66.4"/>
+  <polygon class="logoFragment" points="164.9 85.9 171.3 79.5 171.3 92.3 164.9 85.9"/>
+  <polygon class="logoFragment" points="158.4 79.4 171.2 79.4 164.8 85.8 158.4 79.4"/>
+  <polygon class="logoFragment" points="158.4 92.4 164.8 86 171.2 92.4 158.4 92.4"/>
+  <polygon class="logoFragment" points="158.3 79.5 164.7 85.9 158.3 92.3 158.3 79.5"/>
+  <polygon class="logoFragment" points="164.9 99.1 171.3 92.7 171.3 105.5 164.9 99.1"/>
+  <polygon class="logoFragment" points="158.4 105.6 164.8 99.2 171.2 105.6 158.4 105.6"/>
+  <polygon class="logoFragment" points="158.4 92.6 171.2 92.6 164.8 99 158.4 92.6"/>
+  <polygon class="logoFragment" points="158.3 92.7 164.7 99.1 158.3 105.5 158.3 92.7"/>
+  <polygon class="logoFragment" points="138.6 99.1 145 92.7 145 105.5 138.6 99.1"/>
+  <polygon class="logoFragment" points="132.1 105.6 138.5 99.2 144.9 105.6 132.1 105.6"/>
+  <polygon class="logoFragment" points="132.1 92.6 144.9 92.6 138.5 99 132.1 92.6"/>
+  <polygon class="logoFragment" points="132 92.7 138.4 99.1 132 105.5 132 92.7"/>
+  <polygon class="logoFragment" points="158.4 105.7 171.2 105.7 164.8 112.1 158.4 105.7"/>
+  <polygon class="logoFragment" points="158.3 105.8 164.7 112.2 158.3 118.6 158.3 105.8"/>
+  <polygon class="logoFragment" points="184.6 72.8 191.1 66.4 191.1 79.2 184.6 72.8"/>
+  <polygon class="logoFragment" points="178.1 79.3 184.5 72.9 191 79.3 178.1 79.3"/>
+  <polygon class="logoFragment" points="197.8 72.8 204.2 66.4 204.2 79.2 197.8 72.8"/>
+  <polygon class="logoFragment" points="191.3 66.3 204.1 66.3 197.7 72.7 191.3 66.3"/>
+  <polygon class="logoFragment" points="191.3 79.3 197.7 72.9 204.1 79.3 191.3 79.3"/>
+  <polygon class="logoFragment" points="191.2 66.4 197.6 72.8 191.2 79.2 191.2 66.4"/>
+  <polygon class="logoFragment" points="210.9 72.8 217.4 66.4 217.4 79.2 210.9 72.8"/>
+  <polygon class="logoFragment" points="204.4 79.3 210.8 72.9 217.3 79.3 204.4 79.3"/>
+  <polygon class="logoFragment" points="204.4 66.3 217.3 66.3 210.8 72.7 204.4 66.3"/>
+  <polygon class="logoFragment" points="204.3 66.4 210.7 72.8 204.3 79.2 204.3 66.4"/>
+  <polygon class="logoFragment" points="224.1 72.8 230.5 66.4 230.5 79.2 224.1 72.8"/>
+  <polygon class="logoFragment" points="217.6 66.3 230.4 66.3 224 72.7 217.6 66.3"/>
+  <polygon class="logoFragment" points="217.6 79.3 224 72.9 230.4 79.3 217.6 79.3"/>
+  <polygon class="logoFragment" points="217.5 66.4 223.9 72.8 217.5 79.2 217.5 66.4"/>
+  <polygon class="logoFragment" points="224.1 92.5 230.5 86.1 230.5 98.9 224.1 92.5"/>
+  <polygon class="logoFragment" points="217.6 99 224 92.6 230.4 99 217.6 99"/>
+  <polygon class="logoFragment" points="217.6 86 230.4 86 224 92.4 217.6 86"/>
+  <polygon class="logoFragment" points="217.5 86.1 223.9 92.5 217.5 98.9 217.5 86.1"/>
+  <polygon class="logoFragment" points="210.9 92.5 217.4 86.1 217.4 98.9 210.9 92.5"/>
+  <polygon class="logoFragment" points="204.4 99 210.8 92.6 217.3 99 204.4 99"/>
+  <polygon class="logoFragment" points="204.4 86 217.3 86 210.8 92.4 204.4 86"/>
+  <polygon class="logoFragment" points="204.3 86.1 210.7 92.5 204.3 98.9 204.3 86.1"/>
+  <polygon class="logoFragment" points="197.8 92.5 204.2 86.1 204.2 98.9 197.8 92.5"/>
+  <polygon class="logoFragment" points="191.3 99 197.7 92.6 204.1 99 191.3 99"/>
+  <polygon class="logoFragment" points="191.3 86 204.1 86 197.7 92.4 191.3 86"/>
+  <polygon class="logoFragment" points="191.2 86.1 197.6 92.5 191.2 98.9 191.2 86.1"/>
+  <polygon class="logoFragment" points="184.6 92.5 191.1 86.1 191.1 98.9 184.6 92.5"/>
+  <polygon class="logoFragment" points="178.1 99 184.5 92.6 191 99 178.1 99"/>
+  <polygon class="logoFragment" points="178.1 86 191 86 184.5 92.4 178.1 86"/>
+  <polygon class="logoFragment" points="178 86.1 184.4 92.5 178 98.9 178 86.1"/>
+  <polygon class="logoFragment" points="210.9 112.2 217.4 105.8 217.4 118.6 210.9 112.2"/>
+  <polygon class="logoFragment" points="204.4 118.7 210.8 112.3 217.3 118.7 204.4 118.7"/>
+  <polygon class="logoFragment" points="204.4 105.7 217.3 105.7 210.8 112.1 204.4 105.7"/>
+  <polygon class="logoFragment" points="204.3 105.8 210.7 112.2 204.3 118.6 204.3 105.8"/>
+  <polygon class="logoFragment" points="197.8 112.2 204.2 105.8 204.2 118.6 197.8 112.2"/>
+  <polygon class="logoFragment" points="191.3 118.7 197.7 112.3 204.1 118.7 191.3 118.7"/>
+  <polygon class="logoFragment" points="191.3 105.7 204.1 105.7 197.7 112.1 191.3 105.7"/>
+  <polygon class="logoFragment" points="191.2 105.8 197.6 112.2 191.2 118.6 191.2 105.8"/>
+  <polygon class="logoFragment" points="184.6 112.2 191.1 105.8 191.1 118.6 184.6 112.2"/>
+  <polygon class="logoFragment" points="178.1 118.7 184.5 112.3 191 118.7 178.1 118.7"/>
+  <polygon class="logoFragment" points="178.1 105.7 191 105.7 184.5 112.1 178.1 105.7"/>
+  <polygon class="logoFragment" points="178 105.8 184.4 112.2 178 118.6 178 105.8"/>
+  <polygon class="logoFragment" points="217.6 105.7 230.4 105.7 224 112.1 217.6 105.7"/>
+  <polygon class="logoFragment" points="217.5 105.8 223.9 112.2 217.5 118.6 217.5 105.8"/>
+  <polygon class="logoFragment" points="7.1 72.8 13.5 66.4 13.5 79.2 7.1 72.8"/>
+  <polygon class="logoFragment" points=".6 66.3 13.4 66.3 7 72.7 .6 66.3"/>
+  <polygon class="logoFragment" points=".6 79.3 7 72.9 13.4 79.3 .6 79.3"/>
+  <polygon class="logoFragment" points=".5 66.4 6.9 72.8 .5 79.2 .5 66.4"/>
+  <polygon class="logoFragment" points="20.3 72.8 26.7 66.4 26.7 79.2 20.3 72.8"/>
+  <polygon class="logoFragment" points="13.8 66.3 26.6 66.3 20.2 72.7 13.8 66.3"/>
+  <polygon class="logoFragment" points="13.8 79.3 20.2 72.9 26.6 79.3 13.8 79.3"/>
+  <polygon class="logoFragment" points="13.7 66.4 20.1 72.8 13.7 79.2 13.7 66.4"/>
+  <polygon class="logoFragment" points="33.4 72.8 39.8 66.4 39.8 79.2 33.4 72.8"/>
+  <polygon class="logoFragment" points="26.9 66.3 39.7 66.3 33.3 72.7 26.9 66.3"/>
+  <polygon class="logoFragment" points="26.9 79.3 33.3 72.9 39.7 79.3 26.9 79.3"/>
+  <polygon class="logoFragment" points="26.8 66.4 33.2 72.8 26.8 79.2 26.8 66.4"/>
+  <polygon class="logoFragment" points="7.1 85.9 13.5 79.5 13.5 92.3 7.1 85.9"/>
+  <polygon class="logoFragment" points=".6 79.4 13.4 79.4 7 85.8 .6 79.4"/>
+  <polygon class="logoFragment" points=".6 92.4 7 86 13.4 92.4 .6 92.4"/>
+  <polygon class="logoFragment" points=".5 79.5 6.9 85.9 .5 92.3 .5 79.5"/>
+  <polygon class="logoFragment" points="20.3 85.9 26.7 79.5 26.7 92.3 20.3 85.9"/>
+  <polygon class="logoFragment" points="13.8 79.4 26.6 79.4 20.2 85.8 13.8 79.4"/>
+  <polygon class="logoFragment" points="13.8 92.4 20.2 86 26.6 92.4 13.8 92.4"/>
+  <polygon class="logoFragment" points="13.7 79.5 20.1 85.9 13.7 92.3 13.7 79.5"/>
+  <polygon class="logoFragment" points="40.1 79.3 46.5 72.9 52.9 79.3 40.1 79.3"/>
+  <polygon class="logoFragment" points="40 66.4 46.4 72.8 40 79.2 40 66.4"/>
+  <polygon class="logoFragment" points="7.1 112.2 13.5 105.8 13.5 118.6 7.1 112.2"/>
+  <polygon class="logoFragment" points=".6 118.7 7 112.3 13.4 118.7 .6 118.7"/>
+  <polygon class="logoFragment" points=".6 105.7 13.4 105.7 7 112.1 .6 105.7"/>
+  <polygon class="logoFragment" points=".5 105.8 6.9 112.2 .5 118.6 .5 105.8"/>
+  <polygon class="logoFragment" points="20.3 112.2 26.7 105.8 26.7 118.6 20.3 112.2"/>
+  <polygon class="logoFragment" points="13.8 118.7 20.2 112.3 26.6 118.7 13.8 118.7"/>
+  <polygon class="logoFragment" points="13.8 105.7 26.6 105.7 20.2 112.1 13.8 105.7"/>
+  <polygon class="logoFragment" points="13.7 105.8 20.1 112.2 13.7 118.6 13.7 105.8"/>
+  <polygon class="logoFragment" points="33.4 85.9 39.8 79.5 39.8 92.3 33.4 85.9"/>
+  <polygon class="logoFragment" points="26.9 79.4 39.7 79.4 33.3 85.8 26.9 79.4"/>
+  <polygon class="logoFragment" points="7.1 99.1 13.5 92.7 13.5 105.5 7.1 99.1"/>
+  <polygon class="logoFragment" points=".6 105.6 7 99.2 13.4 105.6 .6 105.6"/>
+  <polygon class="logoFragment" points=".6 92.6 13.4 92.6 7 99 .6 92.6"/>
+  <polygon class="logoFragment" points=".5 92.7 6.9 99.1 .5 105.5 .5 92.7"/>
+  <polygon class="logoFragment" points="20.3 99.1 26.7 92.7 26.7 105.5 20.3 99.1"/>
+  <polygon class="logoFragment" points="13.8 105.6 20.2 99.2 26.6 105.6 13.8 105.6"/>
+  <polygon class="logoFragment" points="13.8 92.6 26.6 92.6 20.2 99 13.8 92.6"/>
+  <polygon class="logoFragment" points="13.7 92.7 20.1 99.1 13.7 105.5 13.7 92.7"/>
+  <polygon class="logoFragment" points="46.6 85.9 53 79.5 53 92.3 46.6 85.9"/>
+  <polygon class="logoFragment" points="40.1 92.4 46.5 86 52.9 92.4 40.1 92.4"/>
+  <polygon class="logoFragment" points="40.1 79.4 52.9 79.4 46.5 85.8 40.1 79.4"/>
+  <polygon class="logoFragment" points="40 79.5 46.4 85.9 40 92.3 40 79.5"/>
+  <polygon class="logoFragment" points="33.4 99.1 39.8 92.7 39.8 105.5 33.4 99.1"/>
+  <polygon class="logoFragment" points="26.9 105.6 33.3 99.2 39.7 105.6 26.9 105.6"/>
+  <polygon class="logoFragment" points="26.9 92.6 39.7 92.6 33.3 99 26.9 92.6"/>
+  <polygon class="logoFragment" points="26.8 92.7 33.2 99.1 26.8 105.5 26.8 92.7"/>
+  <polygon class="logoFragment" points="40.1 92.6 52.9 92.6 46.5 99 40.1 92.6"/>
+  <polygon class="logoFragment" points="40 92.7 46.4 99.1 40 105.5 40 92.7"/>
+  <polygon class="logoFragment" points="125.5 7 131.9 .6 131.9 13.4 125.5 7"/>
+  <polygon class="logoFragment" points="119 .5 131.8 .5 125.4 6.9 119 .5"/>
+  <polygon class="logoFragment" points="119 13.5 125.4 7.1 131.8 13.5 119 13.5"/>
+  <polygon class="logoFragment" points="118.9 .6 125.3 7 118.9 13.4 118.9 .6"/>
+  <polygon class="logoFragment" points="138.6 7 145 .6 145 13.4 138.6 7"/>
+  <polygon class="logoFragment" points="132.1 .5 144.9 .5 138.5 6.9 132.1 .5"/>
+  <polygon class="logoFragment" points="132.1 13.5 138.5 7.1 144.9 13.5 132.1 13.5"/>
+  <polygon class="logoFragment" points="132 .6 138.4 7 132 13.4 132 .6"/>
+  <polygon class="logoFragment" points="151.8 7 158.2 .6 158.2 13.4 151.8 7"/>
+  <polygon class="logoFragment" points="145.3 .5 158.1 .5 151.7 6.9 145.3 .5"/>
+  <polygon class="logoFragment" points="145.3 13.5 151.7 7.1 158.1 13.5 145.3 13.5"/>
+  <polygon class="logoFragment" points="145.2 .6 151.6 7 145.2 13.4 145.2 .6"/>
+  <polygon class="logoFragment" points="125.5 20.2 131.9 13.8 131.9 26.6 125.5 20.2"/>
+  <polygon class="logoFragment" points="119 13.7 131.8 13.7 125.4 20.1 119 13.7"/>
+  <polygon class="logoFragment" points="119 26.7 125.4 20.3 131.8 26.7 119 26.7"/>
+  <polygon class="logoFragment" points="118.9 13.8 125.3 20.2 118.9 26.6 118.9 13.8"/>
+  <polygon class="logoFragment" points="138.6 20.2 145 13.8 145 26.6 138.6 20.2"/>
+  <polygon class="logoFragment" points="132.1 13.7 144.9 13.7 138.5 20.1 132.1 13.7"/>
+  <polygon class="logoFragment" points="132.1 26.7 138.5 20.3 144.9 26.7 132.1 26.7"/>
+  <polygon class="logoFragment" points="132 13.8 138.4 20.2 132 26.6 132 13.8"/>
+  <polygon class="logoFragment" points="164.9 7 171.3 .6 171.3 13.4 164.9 7"/>
+  <polygon class="logoFragment" points="158.4 .5 171.2 .5 164.8 6.9 158.4 .5"/>
+  <polygon class="logoFragment" points="158.4 13.5 164.8 7.1 171.2 13.5 158.4 13.5"/>
+  <polygon class="logoFragment" points="158.3 .6 164.7 7 158.3 13.4 158.3 .6"/>
+  <polygon class="logoFragment" points="125.5 46.5 131.9 40.1 131.9 52.9 125.5 46.5"/>
+  <polygon class="logoFragment" points="119 53 125.4 46.6 131.8 53 119 53"/>
+  <polygon class="logoFragment" points="119 40 131.8 40 125.4 46.4 119 40"/>
+  <polygon class="logoFragment" points="118.9 40.1 125.3 46.5 118.9 52.9 118.9 40.1"/>
+  <polygon class="logoFragment" points="138.6 46.5 145 40.1 145 52.9 138.6 46.5"/>
+  <polygon class="logoFragment" points="132.1 53 138.5 46.6 144.9 53 132.1 53"/>
+  <polygon class="logoFragment" points="132.1 40 144.9 40 138.5 46.4 132.1 40"/>
+  <polygon class="logoFragment" points="132 40.1 138.4 46.5 132 52.9 132 40.1"/>
+  <polygon class="logoFragment" points="151.8 33.3 158.2 26.9 158.2 39.7 151.8 33.3"/>
+  <polygon class="logoFragment" points="145.3 39.8 151.7 33.4 158.1 39.8 145.3 39.8"/>
+  <polygon class="logoFragment" points="145.3 26.8 158.1 26.8 151.7 33.2 145.3 26.8"/>
+  <polygon class="logoFragment" points="145.2 26.9 151.6 33.3 145.2 39.7 145.2 26.9"/>
+  <polygon class="logoFragment" points="125.5 33.3 131.9 26.9 131.9 39.7 125.5 33.3"/>
+  <polygon class="logoFragment" points="119 39.8 125.4 33.4 131.8 39.8 119 39.8"/>
+  <polygon class="logoFragment" points="119 26.8 131.8 26.8 125.4 33.2 119 26.8"/>
+  <polygon class="logoFragment" points="118.9 26.9 125.3 33.3 118.9 39.7 118.9 26.9"/>
+  <polygon class="logoFragment" points="138.6 33.3 145 26.9 145 39.7 138.6 33.3"/>
+  <polygon class="logoFragment" points="132.1 39.8 138.5 33.4 144.9 39.8 132.1 39.8"/>
+  <polygon class="logoFragment" points="132.1 26.8 144.9 26.8 138.5 33.2 132.1 26.8"/>
+  <polygon class="logoFragment" points="132 26.9 138.4 33.3 132 39.7 132 26.9"/>
+  <polygon class="logoFragment" points="184.6 7 191.1 .6 191.1 13.4 184.6 7"/>
+  <polygon class="logoFragment" points="178.1 13.5 184.5 7.1 191 13.5 178.1 13.5"/>
+  <polygon class="logoFragment" points="197.8 7 204.2 .6 204.2 13.4 197.8 7"/>
+  <polygon class="logoFragment" points="191.3 .5 204.1 .5 197.7 6.9 191.3 .5"/>
+  <polygon class="logoFragment" points="191.3 13.5 197.7 7.1 204.1 13.5 191.3 13.5"/>
+  <polygon class="logoFragment" points="191.2 .6 197.6 7 191.2 13.4 191.2 .6"/>
+  <polygon class="logoFragment" points="184.6 20.2 191.1 13.8 191.1 26.6 184.6 20.2"/>
+  <polygon class="logoFragment" points="178.1 13.7 191 13.7 184.5 20.1 178.1 13.7"/>
+  <polygon class="logoFragment" points="178.1 26.7 184.5 20.3 191 26.7 178.1 26.7"/>
+  <polygon class="logoFragment" points="178 13.8 184.4 20.2 178 26.6 178 13.8"/>
+  <polygon class="logoFragment" points="191.3 13.7 204.1 13.7 197.7 20.1 191.3 13.7"/>
+  <polygon class="logoFragment" points="191.2 13.8 197.6 20.2 191.2 26.6 191.2 13.8"/>
+  <polygon class="logoFragment" points="184.6 46.5 191.1 40.1 191.1 52.9 184.6 46.5"/>
+  <polygon class="logoFragment" points="178.1 40 191 40 184.5 46.4 178.1 40"/>
+  <polygon class="logoFragment" points="197.8 46.5 204.2 40.1 204.2 52.9 197.8 46.5"/>
+  <polygon class="logoFragment" points="191.3 53 197.7 46.6 204.1 53 191.3 53"/>
+  <polygon class="logoFragment" points="191.3 40 204.1 40 197.7 46.4 191.3 40"/>
+  <polygon class="logoFragment" points="191.2 40.1 197.6 46.5 191.2 52.9 191.2 40.1"/>
+  <polygon class="logoFragment" points="184.6 33.3 191.1 26.9 191.1 39.7 184.6 33.3"/>
+  <polygon class="logoFragment" points="178.1 39.8 184.5 33.4 191 39.8 178.1 39.8"/>
+  <polygon class="logoFragment" points="178.1 26.8 191 26.8 184.5 33.2 178.1 26.8"/>
+  <polygon class="logoFragment" points="178 26.9 184.4 33.3 178 39.7 178 26.9"/>
+  <polygon class="logoFragment" points="210.9 7 217.4 .6 217.4 13.4 210.9 7"/>
+  <polygon class="logoFragment" points="204.4 .5 217.3 .5 210.8 6.9 204.4 .5"/>
+  <polygon class="logoFragment" points="204.4 13.5 210.8 7.1 217.3 13.5 204.4 13.5"/>
+  <polygon class="logoFragment" points="204.3 .6 210.7 7 204.3 13.4 204.3 .6"/>
+  <polygon class="logoFragment" points="217.6 13.5 224 7.1 230.4 13.5 217.6 13.5"/>
+  <polygon class="logoFragment" points="217.5 .6 223.9 7 217.5 13.4 217.5 .6"/>
+  <polygon class="logoFragment" points="210.9 20.2 217.4 13.8 217.4 26.6 210.9 20.2"/>
+  <polygon class="logoFragment" points="204.4 13.7 217.3 13.7 210.8 20.1 204.4 13.7"/>
+  <polygon class="logoFragment" points="191.3 39.8 197.7 33.4 204.1 39.8 191.3 39.8"/>
+  <polygon class="logoFragment" points="191.2 26.9 197.6 33.3 191.2 39.7 191.2 26.9"/>
+  <polygon class="logoFragment" points="224.1 20.2 230.5 13.8 230.5 26.6 224.1 20.2"/>
+  <polygon class="logoFragment" points="217.6 13.7 230.4 13.7 224 20.1 217.6 13.7"/>
+  <polygon class="logoFragment" points="217.6 26.7 224 20.3 230.4 26.7 217.6 26.7"/>
+  <polygon class="logoFragment" points="217.5 13.8 223.9 20.2 217.5 26.6 217.5 13.8"/>
+  <polygon class="logoFragment" points="210.9 46.5 217.4 40.1 217.4 52.9 210.9 46.5"/>
+  <polygon class="logoFragment" points="204.4 53 210.8 46.6 217.3 53 204.4 53"/>
+  <polygon class="logoFragment" points="204.4 40 217.3 40 210.8 46.4 204.4 40"/>
+  <polygon class="logoFragment" points="204.3 40.1 210.7 46.5 204.3 52.9 204.3 40.1"/>
+  <polygon class="logoFragment" points="217.6 40 230.4 40 224 46.4 217.6 40"/>
+  <polygon class="logoFragment" points="217.5 40.1 223.9 46.5 217.5 52.9 217.5 40.1"/>
+  <polygon class="logoFragment" points="210.9 33.3 217.4 26.9 217.4 39.7 210.9 33.3"/>
+  <polygon class="logoFragment" points="204.4 39.8 210.8 33.4 217.3 39.8 204.4 39.8"/>
+  <polygon class="logoFragment" points="224.1 33.3 230.5 26.9 230.5 39.7 224.1 33.3"/>
+  <polygon class="logoFragment" points="217.6 39.8 224 33.4 230.4 39.8 217.6 39.8"/>
+  <polygon class="logoFragment" points="217.6 26.8 230.4 26.8 224 33.2 217.6 26.8"/>
+  <polygon class="logoFragment" points="217.5 26.9 223.9 33.3 217.5 39.7 217.5 26.9"/>
+  <polygon class="logoFragment" points="164.9 33.3 171.3 26.9 171.3 39.7 164.9 33.3"/>
+  <polygon class="logoFragment" points="158.4 39.8 164.8 33.4 171.2 39.8 158.4 39.8"/>
+  <polygon class="logoFragment" points="158.4 26.8 171.2 26.8 164.8 33.2 158.4 26.8"/>
+  <polygon class="logoFragment" points="158.3 26.9 164.7 33.3 158.3 39.7 158.3 26.9"/>
+  <polygon class="logoFragment" points="66.3 7 72.7 .6 72.7 13.4 66.3 7"/>
+  <polygon class="logoFragment" points="59.8 .5 72.6 .5 66.2 6.9 59.8 .5"/>
+  <polygon class="logoFragment" points="59.8 13.5 66.2 7.1 72.6 13.5 59.8 13.5"/>
+  <polygon class="logoFragment" points="59.7 .6 66.1 7 59.7 13.4 59.7 .6"/>
+  <polygon class="logoFragment" points="66.3 20.2 72.7 13.8 72.7 26.6 66.3 20.2"/>
+  <polygon class="logoFragment" points="59.8 13.7 72.6 13.7 66.2 20.1 59.8 13.7"/>
+  <polygon class="logoFragment" points="59.8 26.7 66.2 20.3 72.6 26.7 59.8 26.7"/>
+  <polygon class="logoFragment" points="59.7 13.8 66.1 20.2 59.7 26.6 59.7 13.8"/>
+  <polygon class="logoFragment" points="66.3 46.5 72.7 40.1 72.7 52.9 66.3 46.5"/>
+  <polygon class="logoFragment" points="59.8 53 66.2 46.6 72.6 53 59.8 53"/>
+  <polygon class="logoFragment" points="59.8 40 72.6 40 66.2 46.4 59.8 40"/>
+  <polygon class="logoFragment" points="59.7 40.1 66.1 46.5 59.7 52.9 59.7 40.1"/>
+  <polygon class="logoFragment" points="66.3 33.3 72.7 26.9 72.7 39.7 66.3 33.3"/>
+  <polygon class="logoFragment" points="59.8 39.8 66.2 33.4 72.6 39.8 59.8 39.8"/>
+  <polygon class="logoFragment" points="59.8 26.8 72.6 26.8 66.2 33.2 59.8 26.8"/>
+  <polygon class="logoFragment" points="59.7 26.9 66.1 33.3 59.7 39.7 59.7 26.9"/>
+  <polygon class="logoFragment" points="72.9 13.5 79.3 7.1 85.8 13.5 72.9 13.5"/>
+  <polygon class="logoFragment" points="72.8 .6 79.2 7 72.8 13.4 72.8 .6"/>
+  <polygon class="logoFragment" points="79.4 20.2 85.9 13.8 85.9 26.6 79.4 20.2"/>
+  <polygon class="logoFragment" points="72.9 13.7 85.8 13.7 79.3 20.1 72.9 13.7"/>
+  <polygon class="logoFragment" points="72.9 26.7 79.3 20.3 85.8 26.7 72.9 26.7"/>
+  <polygon class="logoFragment" points="72.8 13.8 79.2 20.2 72.8 26.6 72.8 13.8"/>
+  <polygon class="logoFragment" points="79.4 33.3 85.9 26.9 85.9 39.7 79.4 33.3"/>
+  <polygon class="logoFragment" points="72.9 26.8 85.8 26.8 79.3 33.2 72.9 26.8"/>
+  <polygon class="logoFragment" points="86.1 26.7 92.5 20.3 98.9 26.7 86.1 26.7"/>
+  <polygon class="logoFragment" points="86 13.8 92.4 20.2 86 26.6 86 13.8"/>
+  <polygon class="logoFragment" points="92.6 46.5 99 40.1 99 52.9 92.6 46.5"/>
+  <polygon class="logoFragment" points="86.1 40 98.9 40 92.5 46.4 86.1 40"/>
+  <polygon class="logoFragment" points="92.6 33.3 99 26.9 99 39.7 92.6 33.3"/>
+  <polygon class="logoFragment" points="86.1 39.8 92.5 33.4 98.9 39.8 86.1 39.8"/>
+  <polygon class="logoFragment" points="86.1 26.8 98.9 26.8 92.5 33.2 86.1 26.8"/>
+  <polygon class="logoFragment" points="86 26.9 92.4 33.3 86 39.7 86 26.9"/>
+  <polygon class="logoFragment" points="105.7 7 112.2 .6 112.2 13.4 105.7 7"/>
+  <polygon class="logoFragment" points="99.2 .5 112.1 .5 105.6 6.9 99.2 .5"/>
+  <polygon class="logoFragment" points="99.2 13.5 105.6 7.1 112.1 13.5 99.2 13.5"/>
+  <polygon class="logoFragment" points="99.1 .6 105.5 7 99.1 13.4 99.1 .6"/>
+  <polygon class="logoFragment" points="105.7 20.2 112.2 13.8 112.2 26.6 105.7 20.2"/>
+  <polygon class="logoFragment" points="99.2 13.7 112.1 13.7 105.6 20.1 99.2 13.7"/>
+  <polygon class="logoFragment" points="99.2 26.7 105.6 20.3 112.1 26.7 99.2 26.7"/>
+  <polygon class="logoFragment" points="99.1 13.8 105.5 20.2 99.1 26.6 99.1 13.8"/>
+  <polygon class="logoFragment" points="105.7 46.5 112.2 40.1 112.2 52.9 105.7 46.5"/>
+  <polygon class="logoFragment" points="99.2 53 105.6 46.6 112.1 53 99.2 53"/>
+  <polygon class="logoFragment" points="99.2 40 112.1 40 105.6 46.4 99.2 40"/>
+  <polygon class="logoFragment" points="99.1 40.1 105.5 46.5 99.1 52.9 99.1 40.1"/>
+  <polygon class="logoFragment" points="105.7 33.3 112.2 26.9 112.2 39.7 105.7 33.3"/>
+  <polygon class="logoFragment" points="99.2 39.8 105.6 33.4 112.1 39.8 99.2 39.8"/>
+  <polygon class="logoFragment" points="99.2 26.8 112.1 26.8 105.6 33.2 99.2 26.8"/>
+  <polygon class="logoFragment" points="99.1 26.9 105.5 33.3 99.1 39.7 99.1 26.9"/>
+  <rect class="logoFragment" x="178" y="79.4" width="13" height="6.4"/>
+  <rect class="logoFragment" x="217.5" y="99.1" width="13" height="6.4"/>
+  </g>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const logoFragments = Array.from(document.querySelectorAll(".logoFragment"));
+
+  // Set initial opacity to 0
+  logoFragments.forEach(el => {
+    el.style.opacity = 0;
+  });
+
+  // Shuffle arrays for random order
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  shuffle(logoFragments);
+
+  // Animate logoFragments quickly — show x%
+  const targetLogoCount = Math.ceil(logoFragments.length * 0.95);
+  let logoShown = 0;
+  const logoInterval = setInterval(() => {
+    if (logoShown >= targetLogoCount) {
+      clearInterval(logoInterval);
+      return;
+    }
+    const el = logoFragments.shift();
+    if (el) {
+      el.style.opacity = 1;
+      logoShown++;
+    }
+  }, 5); // fastest rate
+
+});
+
+</script>  
+</svg>

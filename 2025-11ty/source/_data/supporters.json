@@ -1,0 +1,62 @@
+[
+    {
+        "url": "https://camd.northeastern.edu/",
+        "title": "Northeastern University College of Arts, Media and Design",
+        "level": "supporter",
+        "image": {
+            "file": "/images/supporters/logo_camd.svg",
+            "width": 350,
+            "height": 125
+        }
+    },
+    {
+        "url": "https://lcau.mit.edu/",
+        "title": "Norman B. Leventhal Center for Advanced Urbanism (LCAU)",
+        "level": "supporter",
+        "image": {
+            "file": "/images/supporters/logo_lcau.svg",
+            "width": 200,
+            "height": 200
+        }
+    },
+    {
+        "url": "https://design.mit.edu/about/mit-mad",
+        "title": "MIT Morningside Academy for Design",
+        "level": "supporter",
+        "image": {
+            "file": "/images/supporters/logo_mad.svg",
+            "width": 400,
+            "height": 125
+        }
+    },
+    {
+        "url": "https://camd.northeastern.edu/center-for-design/",
+        "title": "Center for Design",
+        "level": "supporter",
+        "image": {
+            "file": "/images/supporters/logo_cfd.svg",
+            "width": 125,
+            "height": 200
+        }
+    },
+    {
+        "url": "https://www.iiid.net/",
+        "title": "The International Institute for Information Design (IIID)",
+        "level": "partner",
+        "image": {
+            "file": "/images/supporters/logo_iiid.svg",
+            "width": 240,
+            "height": 125
+        }
+    },
+    {
+        "url": "https://www.journalovi.org/",
+        "title": "The Journal of Visualization and Interaction (JoVI)",
+        "level": "partner",
+        "image": {
+            "file": "/images/supporters/logo_jovi.svg",
+            "width": 400,
+            "height": 125
+        }
+    }
+]
