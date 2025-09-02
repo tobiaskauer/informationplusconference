@@ -250,38 +250,3 @@ Update when the program data is complete
   <p class="presenters">Zan Armstrong</p>
 </div>
 
-<!--
-Data-driven catalog
--->
-
-<!-- <div class="row">
-  <div class="col col_1of2">
-    <div class="program-events">
-      {% set lastDate = "" %}
-      {% for event in program | sortByDateTime %}
-        {# Format the date to something like "Friday, November 14" #}
-        {% set eventDate = event.date %}
-        {% if eventDate != lastDate %}
-          <div class="event_day eyebrow">{{ eventDate | dateDisplay }}</div>
-          {% set lastDate = eventDate %}
-        {% endif %}
-        {% set time = event.start_time %}
-        <div class="event">
-          <div class="event_time">{{ time | timeDisplay }}</div>
-          <div class="event_info">
-            {% if event.presentation_title %}
-              {% if event.presenters %}
-                <div class="event_presenter">{{ event.presenters }}</div>
-              {% endif %}
-              <div class="event_title">{{ event.presentation_title }}</div>
-            {% elif event.session_title %}
-              <div class="event_title">{{ event.session_title }}</div>
-            {% else %}
-              <div class="event_title">Event</div>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div> -->
