@@ -8,6 +8,10 @@
         "title": "Program"
     },
     {
+        "url": "/venue/",
+        "title": "Venue"
+    },
+    {
         "url": "/about/",
         "title": "About"
     }
