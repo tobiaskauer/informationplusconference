@@ -15,6 +15,11 @@
     background-color: var(--color-{{ safe_primary_color }}) !important;
   }
 
+  .content h1.is-primary, .content h2.is-primary, .content h3.is-primary, .content h4.is-primary {
+    color: var(--color-{{ safe_primary_color }}) !important;
+    background-color: transparent !important;
+  }
+
   .button:hover, 
   .button.is-secondary:hover {
       outline-color: var(--color-{{ safe_secondary_color }});

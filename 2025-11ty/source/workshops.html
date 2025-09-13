@@ -1,0 +1,29 @@
+---
+title: "Workshops"
+layout: "layout_default.njk"
+primary_color: "blue"
+header: 
+  image: "t1-blue-magenta"
+  vimeo_id: "1105940353"
+
+---
+
+
+{% for group in workshops %}
+  <h3 class="is-primary">{{ group.date | dateDisplay}} &mdash; {{ group.session }}</h3>
+  {% for w in group.workshops %}
+    <div class="workshop">
+      <h4 class="workshop_title">{{ w.workshop_title }}</h4>
+      <div class="time">{{ w.start_time }}–{{ w.end_time }}, {{ w.date | dateDisplay }}</div>
+      <div class="workshop_presenters">{{ w.workshop_presenters }}</div>
+      <div class="workshop_venue">{{ w.workshop_venue }}</div>
+      <div class="limit">Participants : {{ w.participant_limit }}</div>
+      <div class="workshop_description">
+        {{ w.workshop_description | safe }}
+        <div>
+          <a class="button is-primary" href="https://submissions.infoplus.team/event/9/registrations/8/">Register for Workshops</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endfor %}

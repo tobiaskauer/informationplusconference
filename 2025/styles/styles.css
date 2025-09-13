@@ -20082,6 +20082,32 @@ figcaption.caption-bottom {
   pointer-events: none;
 }
 
+.workshop + .workshop {
+  margin-top: 54px;
+}
+
+.workshop .workshop_title {
+  margin-bottom: 0;
+}
+
+.workshop .workshop_presenters {
+  margin-bottom: 0.75em;
+  text-transform: uppercase;
+}
+
+.workshop .limit {
+  margin-bottom: 0.75em;
+}
+
+.workshop .workshop_description {
+  margin-left: 36px;
+}
+
+.workshop .button {
+  margin-top: 0.75em;
+  display: inline-block;
+}
+
 .navbar-brand .navbar-item {
   font-weight: 800;
 }
