@@ -245,6 +245,22 @@ figcaption.caption-bottom {
 }
 
 .workshop .button {
-    margin-top: 0.75em;
+    margin-top: 1.5em;
     display: inline-block;
+}
+
+
+
+// presentations --------------------------------
+
+.presentation + .presentation {
+    margin-top: $gap * 2;
+}
+
+.presentation .presentation_title {
+    margin-bottom: 0;
+}
+
+.presentation .presentation_presenters {
+    text-transform: uppercase;
 }
