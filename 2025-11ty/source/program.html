@@ -1,21 +1,48 @@
 ---
-title: "Accepted Talks"
+title: "Schedule & Program"
 layout: "layout_default.njk"
 primary_color: "green"
 secondary_color: "black"
-header: 
-  image: "f1-green-yellow"
-  vimeo_id: "1105940284"
+header:
+image: "f1-green-yellow"
+vimeo_id: "1105940284"
 
 ---
 
 
+
+
+
+<table class="program schedule-table">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>MIT (Fri)</th>
+      <th>NEU (Sat)</th>
+      <th>NEU (Sun)</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in conference_schedule_simple %}
+    <tr>
+      <td>{{ row.time | default('') }}</td>
+      <td>{{ row.mit_fri | default('') }}</td>
+      <td>{{ row.neu_sat | default('') }}</td>
+      <td>{{ row.neu_sun | default('') }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+<h2>Accepted talks</h2>
 {% for group in program %}
-  <h3 class="is-primary">{{ group.type }}</h3>
-  {% for p in group.presentations %}
-    <div class="presentation">
-      <h4 class="presentation_title">{{ p.title }}</h4>
-      <div class="presentation_presenters">{{ p.presenters }}</div>
-    </div>
-  {% endfor %}
+<h3 class="is-primary">{{ group.type }}</h3>
+{% for p in group.presentations %}
+<div class="presentation">
+  <h4 class="presentation_title">{{ p.title }}</h4>
+  <div class="presentation_presenters">{{ p.presenters }}</div>
+</div>
+{% endfor %}
 {% endfor %}

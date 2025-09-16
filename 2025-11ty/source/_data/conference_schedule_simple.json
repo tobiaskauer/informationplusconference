@@ -1,0 +1,110 @@
+[
+  {
+    "time":"08:00:00",
+    "mit_fri":"Registration MIT",
+    "neu_sat":"Registration Northeastern",
+    "neu_sun":null
+  },
+  {
+    "time":"08:00:00",
+    "mit_fri":null,
+    "neu_sat":null,
+    "neu_sun":"Registration Northeastern"
+  },
+  {
+    "time":"08:40:00",
+    "mit_fri":"Workshops",
+    "neu_sat":null,
+    "neu_sun":null
+  },
+  {
+    "time":"09:00:00",
+    "mit_fri":null,
+    "neu_sat":"Welcome",
+    "neu_sun":"Presentations"
+  },
+  {
+    "time":"09:00:00",
+    "mit_fri":null,
+    "neu_sat":"Keynote -- Lauren Klein",
+    "neu_sun":null
+  },
+  {
+    "time":"10:00:00",
+    "mit_fri":"Coffee break",
+    "neu_sat":"Coffee break",
+    "neu_sun":"Coffee break"
+  },
+  {
+    "time":"10:40:00",
+    "mit_fri":"Workshops",
+    "neu_sat":"Presentations",
+    "neu_sun":"Presentations"
+  },
+  {
+    "time":"12:00:00",
+    "mit_fri":"Lunch",
+    "neu_sat":"Lunch",
+    "neu_sun":"Lunch"
+  },
+  {
+    "time":"13:40:00",
+    "mit_fri":"Workshops",
+    "neu_sat":"Presentations",
+    "neu_sun":"Presentations"
+  },
+  {
+    "time":"15:00:00",
+    "mit_fri":"Coffee break",
+    "neu_sat":"Coffee break",
+    "neu_sun":"Coffee break"
+  },
+  {
+    "time":"15:20:00",
+    "mit_fri":null,
+    "neu_sat":"Presentations",
+    "neu_sun":null
+  },
+  {
+    "time":"15:40:00",
+    "mit_fri":"Workshops",
+    "neu_sat":null,
+    "neu_sun":"Keynote -- Kennedy Elliot"
+  },
+  {
+    "time":"15:40:00",
+    "mit_fri":null,
+    "neu_sat":"Coffee break",
+    "neu_sun":null
+  },
+  {
+    "time":"16:20:00",
+    "mit_fri":null,
+    "neu_sat":"Presentations",
+    "neu_sun":null
+  },
+  {
+    "time":"16:20:00",
+    "mit_fri":null,
+    "neu_sat":null,
+    "neu_sun":"Closing"
+  },
+  {
+    "time":"17:30:00",
+    "mit_fri":"Keynote - Bronwen Robertson",
+    "neu_sat":null,
+    "neu_sun":null
+  },
+  {
+    "time":"18:00:00",
+    "mit_fri":null,
+    "neu_sat":"Social dinner",
+    "neu_sun":null
+  },
+  {
+    "time":"18:30:00",
+    "mit_fri":"Exhibition reception",
+    "neu_sat":null,
+    "neu_sun":null
+  }
+]
