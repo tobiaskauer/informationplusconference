@@ -11,14 +11,19 @@
     {% include "hero.njk" %}
     <section class="section">
       <div class="container">
-        {% include "past_events.njk" %}
-      </div>
+        {% include "keynote_speakers.njk" %}
+      </div>     
+      <br/>
       <div class="container">
         <div class="columns">
           <div class="column is-three-quarters content">
             {{ content | safe }}
+            <br/>
           </div>
         </div>
+      </div>
+      <div class="container">
+        {% include "past_events.njk" %}
       </div>
     </section>
     {% include "footer.njk" %}

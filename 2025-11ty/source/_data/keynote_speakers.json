@@ -1,0 +1,28 @@
+[
+    {
+        "url": "https://informationplusconference.com/2025/program/#keynote-speakers",
+        "bio": "Bronwen Robertson is one of the co-founders of Data4Change. For more than a decade she has worked alongside human rights organisations worldwide, developing community-led approaches to data and storytelling that resist extractive practices. With a background spanning research, technology, and advocacy, she has published widely on the role of culture and creativity in social change. Bronwen is committed to equity, collaboration, and to building data practices that centre the people too often excluded from data yet most affected by the decisions it drives.",
+        "name": "Bronwen Robertson",
+        "affiliation": "Data4Change",
+        "title": "",
+        "abstract": "",
+        "image": {
+            "file": "/images/infoplus2025-keynote-roberston.jpg",
+            "width": 100,
+            "height": 100
+        }
+    },
+    {
+        "url": "https://informationplusconference.com/2025/program/#keynote-speakers",
+        "bio": "Kennedy joins us from The New York Times, where she is an editor on the Graphics desk focusing on political coverage. She previously worked at National Geographic, where she led a team of visual journalists who created digital graphics, and The Washington Post, where she was a graphics editor. Her work centers on explanatory visual journalism: designing charts, maps and other graphics that help readers make sense of complex political and social issues. Over the past decade, she has guided coverage ranging from U.S. elections and the administration to environmental and scientific topics. Kennedy is passionate about the role of visuals in public understanding and about editing as a craft of clarity, collaboration and informational storytelling.",
+        "name": "Kennedy Eliott",
+        "affiliation": "The New York Times",
+        "title": "",
+        "abstract": "",
+        "image": {
+            "file": "/images/infoplus2025-keynote-eliott-rw.jpg",
+            "width": 100,
+            "height": 100
+        }
+    }
+]

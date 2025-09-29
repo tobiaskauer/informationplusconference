@@ -28,27 +28,3 @@ through the [Leventhal Center for Advanced Urbanism
 interdisciplinary approaches to teaching and research in information
 design, data visualization, and related fields.
 
-This in-person event seeks to significantly foster community building
-and interdisciplinary exchange. Info+ 2025 continues the effort from
-previous convenings.
-
-**[Information+ 2016](https://informationplusconference.com/2016/)**  
-_Emily Carr University of Art + Design, Vancouver_
-
-**[Information+ 2018](https://informationplusconference.com/2018/)**  
-_University of Applied Sciences Potsdam_
-
-**[Information+ 2021](https://informationplusconference.com/2021/)**  
-_Virtual_
-
-**[Information+ 2023](https://informationplusconference.com/2023/)**  
-_University of Edinburgh_
-
-Info+ 2025 seeks submissions that embrace critical insights,
-provocations, theories, practices, and experiences within information
-design and data visualization and their applications. Design
-practitioners are encouraged to submit, alongside contributors from the
-humanities, sciences, and other interdisciplinary fields, representing
-both academic and non-academic perspectives. Information+ encompasses a
-series of Presentations, Workshops and an Exhibition.
-

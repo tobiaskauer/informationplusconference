@@ -9,9 +9,44 @@ vimeo_id: "1105940284"
 
 ---
 
+<div class="content">
+    <h4>Keynote Speakers</h4>
+</div>
+div class="columns is-mobile is-multiline">
+    {%- for speaker in keynote_speakers %}
+        <div class="column is-half-mobile is-one-quarter-desktop is-one-quarter-tablet">
+            <a class="tile" href="{{ speaker.url | url }}" style="display: block; ">
+                <div class="tile_image">
+                    <img src="{{ speaker.image.file | url }}" width="{{ speaker.image.width }}" height="{{ speaker.image.height }}" alt="{{ speaker.name }}"/>
+                </div>
+                <div class="tile_title">
+                    {{ speaker.name }}
+                </div>
+                <div class="tile_info">
+                    {{ speaker.affiliation }} <br>
+                </div>
+            </a>
+        </div>
+    {%- endfor %}
+<div class="columns is-mobile is-multiline">
+    {%- for speaker in keynote_speakers %}
+        <div class="column is-half-mobile is-one-quarter-desktop is-one-quarter-tablet">
+            <a class="tile" href="{{ speaker.url | url }}" style="display: block; ">
+                <div class="tile_image">
+                    <img src="{{ speaker.image.file | url }}" width="{{ speaker.image.width }}" height="{{ speaker.image.height }}" alt="{{ speaker.name }}"/>
+                </div>
+                <div class="tile_title">
+                    {{ speaker.name }}
+                </div>
+                <div class="tile_info">
+                    {{ speaker.affiliation }} <br>
+                </div>
+            </a>
+        </div>
+    {%- endfor %}
+</div>
 
-
-
+<br/>
 
 <table class="program schedule-table">
   <thead>
