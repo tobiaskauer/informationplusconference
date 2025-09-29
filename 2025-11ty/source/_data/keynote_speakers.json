@@ -24,5 +24,20 @@
             "width": 100,
             "height": 100
         }
+    },
+    {
+        "url": "https://informationplusconference.com/2025/program/#keynote-speakers",
+        "bio": "Lauren Klein is Professor of Data & Decision Sciences and English at Emory University, where she directs the Digital Humanities Lab and the Atlanta Interdisciplinary AI Network. Her research bridges data science, AI ethics, and American literature and culture, with attention to questions of gender and race. She is the author of Data Feminism (MIT Press, 2020, with Catherine D’Ignazio) and An Archive of Taste (Minnesota, 2020). Her forthcoming book, co-authored with Tanvi Sharma, retells the history of data visualization alongside the histories of colonialism and slavery. Tanvi Sharma Tanvi is a designer working at the intersection of data, design, and the humanities. She previously worked at Pentagram, Spotify and Public Policy Lab.",
+        "name": "Lauren Klein and Tanvi Sharma",
+        "affiliation": "Emory University",
+        "title": "",
+        "abstract": "",
+        "image": {
+            "file": "/images/infoplus2025-keynote-duo.jpg",
+            "width": 100,
+            "height": 100
+        }
     }
+   
+    
 ]

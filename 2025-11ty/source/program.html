@@ -13,22 +13,23 @@ vimeo_id: "1105940284"
     <h4>Keynote Speakers</h4>
 </div>
 
-<div class="columns is-mobile is-multiline">
-    <a href="#keynote-speakers"></a></a>
+<div class="presentation" id="keynote-speakers">
     {%- for speaker in keynote_speakers %}
-        <div class="column is-half-mobile is-one-quarter-desktop is-one-quarter-tablet">
-            <a class="tile" href="{{ speaker.url | url }}" style="display: block; ">
-                <div class="tile_image">
-                    <img src="{{ speaker.image.file | url }}" width="{{ speaker.image.width }}" height="{{ speaker.image.height }}" alt="{{ speaker.name }}"/>
-                </div>
+        <div>
+           
+        
+                <img src="{{ speaker.image.file | url }}" width="33%" alt="{{ speaker.name }}"/>
+                
                 <div class="tile_title">
                     {{ speaker.name }}
                 </div>
                 <div class="tile_info">
                     {{ speaker.affiliation }} <br>
                 </div>
-            </a>
+                <div>{{ speaker.bio}}</div>
+
         </div>
+        <br/><br/>
     {%- endfor %}
 </div>
 
