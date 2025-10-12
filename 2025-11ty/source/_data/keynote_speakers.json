@@ -27,13 +27,26 @@
     },
     {
         "url": "https://informationplusconference.com/2025/program/#keynote-speakers",
-        "bio": "Lauren Klein is Professor of Data & Decision Sciences and English at Emory University, where she directs the Digital Humanities Lab and the Atlanta Interdisciplinary AI Network. Her research bridges data science, AI ethics, and American literature and culture, with attention to questions of gender and race. She is the author of Data Feminism (MIT Press, 2020, with Catherine D’Ignazio) and An Archive of Taste (Minnesota, 2020). Her forthcoming book, co-authored with Tanvi Sharma, retells the history of data visualization alongside the histories of colonialism and slavery. Tanvi Sharma Tanvi is a designer working at the intersection of data, design, and the humanities. She previously worked at Pentagram, Spotify and Public Policy Lab.",
-        "name": "Lauren Klein and Tanvi Sharma",
+        "bio": "Lauren Klein is Professor of Data & Decision Sciences and English at Emory University where she directs the Digital Humanities Lab and the Atlanta Interdisciplinary AI Network. Her research bridges data science, AI ethics, and American literature and culture, with attention to questions of gender and race. She is the author of Data Feminism (MIT Press, 2020, with Catherine D’Ignazio) and An Archive of Taste (Minnesota, 2020). Her forthcoming book, co-authored with Tanvi Sharma, retells the history of data visualization alongside the histories of colonialism and slavery.",
+        "name": "Lauren Klein",
         "affiliation": "Emory University",
         "title": "",
         "abstract": "",
         "image": {
-            "file": "/images/infoplus2025-keynote-duo.jpg",
+            "file": "/images/infoplus2025-keynote-klein.jpg",
+            "width": 100,
+            "height": 100
+        }
+    },
+    {
+        "url": "https://informationplusconference.com/2025/program/#keynote-speakers",
+        "bio": "Tanvi is a design technologist working at the intersection of data, aesthetics, and the humanities. She is a Designer at Emory University's Atlanta Interdisciplinary AI Network, a Visiting Professor at Pratt Institute, and co-author of Data by Design: A History in Five Charts (MIT Press, 2026). Previously, she worked at  Pentagram, Public Policy Lab, and Spotify.She is based in Brooklyn with her two cats.",
+        "name": "Tanvi Sharma",
+        "affiliation": "Designer",
+        "title": "",
+        "abstract": "",
+        "image": {
+            "file": "/images/infoplus2025-keynote-sharma.jpg",
             "width": 100,
             "height": 100
         }
