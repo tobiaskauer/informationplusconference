@@ -15,25 +15,26 @@ vimeo_id: "1105940284"
 
 <div class="presentation" id="keynote-speakers">
     {%- for speaker in keynote_speakers %}
-        <div>
-           
-        
-                <img src="{{ speaker.image.file | url }}" width="33%" alt="{{ speaker.name }}"/>
-                
-                <div class="tile_title">
-                    {{ speaker.name }}
-                </div>
-                <div class="tile_info">
-                    {{ speaker.affiliation }} <br>
-                </div>
-                <div>{{ speaker.bio}}</div>
-
+      <div class="columns">
+        <!-- Photo: 1/4 width -->
+        <div class="column is-one-third tile_title">
+            <img src="{{ speaker.image.file | url }}" alt="{{ speaker.name }}">
         </div>
-        <br/><br/>
+        <!-- Bio: 3/4 width -->
+        <div class="column is-three-quarters">
+          <div class="tile_title">
+              {{ speaker.name }}
+          </div>
+          <div class="tile_info">
+              {{ speaker.affiliation }} <br>
+          </div>
+          <div>{{ speaker.bio}}</div>
+        </div>
+    </div>
     {%- endfor %}
 </div>
 
-<br/>
+<p class="spacer">&nbsp;</p>
 
 <table class="program schedule-table">
   <thead>
