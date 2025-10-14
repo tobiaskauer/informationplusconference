@@ -18,6 +18,7 @@
 @use 'typography' as *;
 @use 'modules' as *;
 @use 'layout' as *;
+@use 'exhibition' as *;
 // css variables for use in page-level overrides
 :root {
     --color-red: #{$color-red};

@@ -11,9 +11,20 @@ module.exports = function (eleventyConfig) {
   let markdownLib = markdownIt(options).use(markdownItAttrs);
   eleventyConfig.setLibrary("md", markdownLib);
 
-  // Collection for exhibits in the exhibition
-  eleventyConfig.addCollection("exhibition", function(collectionApi) {
-    return collectionApi.getFilteredByTag("exhibit");
+  // Create a collection called "exhibition"
+  eleventyConfig.addCollection("exhibition", function (collectionApi) {
+    const exhibitions = collectionApi.getFilteredByGlob("source/exhibition_items/*.md");
+
+    // Optional: sort by date or frontmatter field
+    exhibitions.sort((a, b) => (a.date > b.date ? 1 : -1));
+
+    // Add next and previous references
+    for (let i = 0; i < exhibitions.length; i++) {
+      exhibitions[i].data.previous = exhibitions[i - 1];
+      exhibitions[i].data.next = exhibitions[i + 1];
+    }
+
+    return exhibitions;
   });
 
   // Layout alias

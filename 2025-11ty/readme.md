@@ -49,6 +49,61 @@ Data files are in `2025-11ty/source/_data`
 - supporters.json = supporter links and logos
 
 
+### Exhibitions
+
+This is example of the meta data for exhibition items.
+
+Items are sorted by the date column.
+
+Layout is affected by adding the optional `class` attribute to images.
+The classes are Bulma.css column classes. Valid options are:
+- is-three-quarters
+- is-two-thirds
+- is-half
+- is-one-third
+- is-one-quarter
+- is-full
+- is-four-fifths
+- is-three-fifths
+- is-two-fifths
+- is-one-fifth
+
+```
+---
+title: "Exhibition Title"
+layout: "exhibition_item.njk"
+date: 2025-01-10
+thumb: "/images/exhibition/_rembrandt_thumb.jpg"
+contributors: 
+- name: "Rembrandt van Rijn"
+  bio: "Bio goes here ..."
+images:
+- src: /images/exhibition/_rembrandt_selfportrait.jpg
+  alt: "Self Portrait"
+  class: "is-one-third"
+- src: /images/exhibition/_rembrandt_touch.jpg
+  alt: "Touch"
+  class: "is-one-third"
+- src: /images/exhibition/_rembrandt_goodsamaritan.jpg
+  alt: "The Good Samiritan"
+  class: "is-one-third"
+- src: /images/exhibition/_rembrandt_interior.jpg
+  alt: "Interior"
+  class: "is-two-thirds"
+
+---
+```
+
+To add an exhibition link to `main_nav.json` add this to the JSON:
+
+```
+    {
+        "url": "/exhibition/",
+        "title": "Exhibition"
+    },
+```
+
+
 ### Future work
 
 1. Create data file and output for the program

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    {% include "meta.njk" %}
+    <title>{{ title }}</title>
+    {% include "style.njk" %}
+    {% include "page_color.njk" %}
+  </head>
+  <body class="has-navbar-fixed-top exhibit">
+    {% include "nav.njk" %}
+    <section class="section">
+          <nav class="postnav">
+            {% if previous %}
+              <a href="{{ previous.url | url }}" class="postnav_prev">{{ previous.data.title }}</a>
+            {% endif %}
+            {% if next %}
+              <a href="{{ next.url | url }}" class="postnav_next">{{ next.data.title }}</a>
+            {% endif %}
+          </nav>
+      <div class="container">
+        <div class="content">
+          <h1 class="page-title">{{ title }}</h1>
+        </div>
+          <div class="columns is-multiline">
+            {% for image in images %}
+              <div class="column {% if image.class %}{{ image.class }}{% else %}is-one-quarter{% endif %}">
+                <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+              </div>
+            {% endfor %}
+          </div>
+          <div class="columns">
+          <div class="column is-three-quarters content">
+            {{ content | safe }}
+            <p>&nbsp;</p>
+            {% for contributor in contributors %}
+              <strong>{{ contributor.name }}</strong> {{ contributor.bio }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "footer.njk" %}
+    {% include "scripts.njk" %}
+</body>
+</html>

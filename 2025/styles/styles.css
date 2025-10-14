@@ -20280,6 +20280,38 @@ a.sponsor-link:hover svg text {
   margin-bottom: 36px;
 }
 
+.postnav .postnav_prev,
+.postnav .postnav_next {
+  position: fixed;
+  top: 50vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 3em;
+  height: 3em;
+  border-width: 1.5em;
+  border-style: solid;
+  border-color: transparent;
+  z-index: 9;
+}
+
+.postnav .postnav_prev {
+  left: -1em;
+  border-right-color: currentColor;
+}
+
+.postnav .postnav_prev:hover {
+  border-right-color: #000000;
+}
+
+.postnav .postnav_next {
+  right: -1em;
+  border-left-color: currentColor;
+}
+
+.postnav .postnav_next:hover {
+  border-left-color: #000000;
+}
+
 :root {
   --color-red: #F2400E;
   --color-orange: #fc5a18;

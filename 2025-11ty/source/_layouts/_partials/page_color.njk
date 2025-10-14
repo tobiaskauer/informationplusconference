@@ -15,6 +15,10 @@
     background-color: var(--color-{{ safe_primary_color }}) !important;
   }
 
+  a.is-primary {
+    color: var(--color-{{ safe_primary_color }});
+  }
+
   .content h1.is-primary, .content h2.is-primary, .content h3.is-primary, .content h4.is-primary {
     color: var(--color-{{ safe_primary_color }}) !important;
     background-color: transparent !important;
@@ -52,6 +56,10 @@
   .footer-social a:hover svg path, 
   .footer-social a:hover svg text {
       fill: var(--color-{{ safe_primary_color }}); 
+  }
+
+  .postnav a {
+    color: var(--color-{{ safe_primary_color }});
   }
 
 </style>

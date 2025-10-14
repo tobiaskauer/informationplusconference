@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.exhibit {
+}
+
+// .postnav {
+    // padding: 0.5em;
+    // top: 4em;
+    // left: 0;
+    // right: 0;
+    // display: flex;
+    // justify-content: space-between;
+    // width: 100%;
+// }
+
+// .postnav:has(.postnav_next):not(:has(.postnav_prev)) {
+//     justify-content: flex-end;
+// }
+
+$navsize: 3em;
+
+.postnav .postnav_prev,
+.postnav .postnav_next {
+    position: fixed;
+    top: 50vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: $navsize;
+    height: $navsize;
+    border-width: calc($navsize/2);
+    border-style: solid;
+    border-color: transparent; 
+    z-index: +9;
+}
+
+.postnav .postnav_prev {
+    left: -1em;
+    border-right-color: currentColor; 
+}
+.postnav .postnav_prev:hover {
+    border-right-color: $color-black; 
+}
+
+.postnav .postnav_next {
+    right: -1em;
+    border-left-color: currentColor; 
+}
+.postnav .postnav_next:hover {
+    border-left-color: $color-black; 
+}
