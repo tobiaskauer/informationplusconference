@@ -1,0 +1,2131 @@
+{
+  "days": [
+    {
+      "date": "2025-11-14",
+      "sessions": [
+        {
+          "id": "s113",
+          "category": "General",
+          "name": "Registration opens at MIT",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "08:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "08:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s114",
+          "category": "General",
+          "name": "Workshops",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "08:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b119",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "10:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s115",
+          "category": "General",
+          "name": "Workshops",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "10:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b121",
+          "category": "Break",
+          "name": "Lunch",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s116",
+          "category": "General",
+          "name": "Workshops",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "15:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b120",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "15:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "15:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s122",
+          "category": "General",
+          "name": "Workshops",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "15:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "17:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s123",
+          "category": "General",
+          "name": "Opening",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "17:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "17:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Sarah Williams"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "s117",
+          "category": "Keynote",
+          "name": "Keynote: Bronwen Robertson",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "17:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "18:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Moderated by Sarah Williams"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "s118",
+          "category": "General",
+          "name": "Exhibition opening and reception",
+          "startDate": {
+            "date": "2025-11-14",
+            "time": "18:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-14",
+            "time": "20:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        }
+      ]
+    },
+    {
+      "date": "2025-11-15",
+      "sessions": [
+        {
+          "id": "s92",
+          "category": "General",
+          "name": "Registration opens at Northeastern University",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "08:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "09:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s91",
+          "category": "General",
+          "name": "Opening",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "09:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "09:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Dean of the Collge of Arts, Media and Design, Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Ben Knapp"
+              ],
+              "email": "c.casler@northeastern.edu",
+              "emailHash": "0ef2ef69fcf11abae8fc2418ee75503a",
+              "familyName": "Knapp",
+              "firstName": "Ben",
+              "name": "Ben Knapp"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "s90",
+          "category": "Keynote",
+          "name": "CAMD's Dean Distinguished Lecturer: Lauren Klein and Tanvi Sharma",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "09:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Pedro M. Cruz"
+              ],
+              "email": "pedro@infoplus.team",
+              "emailHash": "daa135e4012d03bbb905317c175ce16f",
+              "familyName": "Cruz",
+              "firstName": "Pedro M.",
+              "name": "Moderated by Pedro M. Cruz"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "b98",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "10:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s33",
+          "category": "Session",
+          "name": "Critical Data Visualization",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "10:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "11:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Catherine D'Ignazio"
+              ],
+              "email": "catherine@infoplus.team",
+              "emailHash": "65d5db1916c3d19028ce650a050b773c",
+              "familyName": "D'Ignazio",
+              "firstName": "Catherine",
+              "name": "Moderated by Catherine D'Ignazio"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c34",
+              "title": "Pluriversal Civic Encounters: experimental practices of participatory data visualisation from the local",
+              "description": "Fifty years ago, Project Cybersyn—a unique Latin American experiment—combined technology and worker participation to support fairer, more horizontal, and situated responses. It advocated a radically bottom-up approach to managing the Chilean economy, ensuring that data was legible and accessible for collective decision-making.\r\n\r\nInspired by Cybersyn’s lessons and responding to increasingly centralised data shaped by dominant interests, this presentation introduces an experimental model for \"*Pluriversal Civic Encounters.*\" In these collaborative design research workshops, community members translate their lived experiences into novel and critical data visualisations through participatory diagrams, collages, and annotations—transforming data towards a situated and pluriversal practice of knowledge generation.\r\n\r\nThis presentation outlines visual tools that aim to empower communities to diagnose their territories, identify patterns of exclusion or resistance, and deepen dialogue around issues that matter to them. The goal: to develop an experimental practice of data visualisation that leverages the democratic potential of data through accessible, participatory methods.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "10:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "10:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/115/",
+              "pdf": "/event/2/contributions/115/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Barbara Urrutia-Badilla",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "University of Leeds"
+                }
+              ]
+            },
+            {
+              "id": "c35",
+              "title": "Timeline Architectures: Platform Temporalities and the Design of Online Attention",
+              "description": "This paper examines how social media platforms, particularly Twitter/X, function as infrastructures that design communication—structuring how text is produced, visualized, and read. Drawing on Mark Aakhus’s concept of communication as design and Cristina Rivera Garza’s idea of Twitter as a “laboratory of contemporary textuality,” I argue that interfaces shape not only content but also temporal experience: what is seen, when, and by whom. Tracing the shift from chronological to algorithmic timelines, the paper shows how platforms replace public rhythm with predictive sequencing optimized for engagement. Visualization no longer reflects activity—it orchestrates attention. Building on Orit Halpern’s Beautiful Data, I place this within a broader history of cybernetic aesthetics that promise to rationalize uncertainty. Data visualizations—timelines, trends, prompts—become temporal infrastructures that condition how publics emerge. What we read and when is no longer a shared temporality, but a form of calculated circulation. Platforms modulate textual time and reconfigure historical awareness.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "10:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "11:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/88/",
+              "pdf": "/event/2/contributions/88/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Oliver Arellano-Padilla",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "University of Massachusetts"
+                }
+              ]
+            },
+            {
+              "id": "c36",
+              "title": "Visualizing Salary Inequity: Data as a Catalyst for Institutional Change in Higher Education",
+              "description": "What does it mean when data doesn’t just describe an institution—but challenges it? This presentation explores how data visualization can be a critical and artistic tool for exposing inequities in higher education. As a Faculty Senate Fellow at Texas State University, I visualized institutional and national datasets to highlight salary compression, inversion, and disparities disproportionately affecting senior lecturers, faculty of color, and full professors. These visualizations became advocacy tools, contributing to salary increases for faculty earning below 90% of national medians. The project also visualized faculty narratives to reveal the emotional toll of economic inequity, prompting campus-wide dialogue. This talk demonstrates how data, when mobilized through design, can move beyond metrics to cultivate empathy, critique systems, and drive institutional change. It asks how designers might use aesthetics to confront injustice—and reimagine what is possible from within.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "11:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "11:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/75/",
+              "pdf": "/event/2/contributions/75/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "MiHyun Kim",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Texas State University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s83",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "11:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "11:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s37",
+          "category": "Session",
+          "name": "Invisible to Visible",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "11:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "11:50:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Skye Morét"
+              ],
+              "email": "skye@infoplus.team",
+              "emailHash": "19bd1c9d349ac1693957221f23e014c6",
+              "familyName": "Morét",
+              "firstName": "Skye",
+              "name": "Moderated by Skye Morét"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c55",
+              "title": "The Atlas of Popular Transport: Subverting the Atlas as a Tool of Collective Intelligence",
+              "description": "The Atlas of Popular Transport is a manifesto in collective intelligence—the convergence of human insight, technological tools, and imagination to create data against limitations. It shows that the knowledge to transform our cities already exists in the hands of those who move through them. The Atlas documents transport systems that move the majority of people in the world’s fastest-growing cities through the eyes of those who built essential data to know them. Drawing on sixteen mapping efforts from Africa, Asia, and Latin America, it curates and visualizes how informal transport systems move millions daily. Animated data, interviews, large-format streetscape projections, and an interactive analog-digital exhibition weave together locally generated knowledge and open-source tools into a transcalar, multimedia experience. The Atlas repositions the medium, once used to define borders and assert control, to center the voices, data, and mobility practices of those excluded from official narratives.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "11:20:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "11:30:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/23/",
+              "pdf": "/event/2/contributions/23/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Alberto Meouchi",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Massachusetts Institute of Technology"
+                }
+              ]
+            },
+            {
+              "id": "c56",
+              "title": "In Plain Sight",
+              "description": "On July 19, 2024, the International Court of Justice issued an Advisory Opinion declaring the Israeli occupation of the West Bank unlawful. In collaboration with legal scholars, geoscientists, and human rights practitioners, SITU Research developed a machine learning model using remote sensing data to visualize systematic land dispossession in the West Bank. Harnessing four decades of Landsat imagery and high-resolution aerial photography, our model maps the transition of Palestinian olive groves to Israeli vineyards through NDVI analysis, creating a temporal and spatial record of dispossession. Our aim is to create a repository of visual evidence for future litigation by addressing a central question: how can we leverage the perceived objectivity of scientific method and the machine-eye to legitimize the copious testimony of Palestinian farmers routinely dismissed by Israeli courts? This presentation will explore how interdisciplinary collaboration can amplify geospatial visualizations to challenge systemic injustices and open new paths to accountability.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "11:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "11:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/22/",
+              "pdf": "/event/2/contributions/22/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Gauri Bahuguna",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "SITU Research"
+                }
+              ]
+            },
+            {
+              "id": "c57",
+              "title": "Emotional Geographies of the Mediterranean",
+              "description": "\"Emotional Geographies of the Mediterranean\" explores the connection between space, emotions, and memory in coastal areas. Positioned to critically investigate the connections between geographies and human responses, it proposes a methodological and conceptual shift—from fixed spatial representations toward the dynamic and affective dimensions of place. \r\n\r\nThe emotional mapping is based on datasets from geo-located photographs and social media posts, selected and processed using open-source machine learning models. It builds upon recent discourses in digital geographies, which consider how digital technologies mediate spatial perception and affective engagement. The emotional atlas that emerges challenges the Cartesian logic of urbanism, suggesting cities are shaped as much through feeling as through form.\r\n\r\nBy rendering visible the intangible layers of affect and perception, Emotive Geographies of the Mediterranean, currently exhibited at the 19th Venice Architecture Biennale, advocates for an expanded design methodology—one that incorporates emotional intelligence, cultural specificity, and participatory data into spatial planning.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "11:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "11:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/110/",
+              "pdf": "/event/2/contributions/110/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Marcella Del Signore",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "New York Institute of Technology"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s84",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "11:50:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b99",
+          "category": "Break",
+          "name": "Lunch",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s38",
+          "category": "Session",
+          "name": "Visualization and Feminism",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "14:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Catherine D'Ignazio"
+              ],
+              "email": "catherine@infoplus.team",
+              "emailHash": "65d5db1916c3d19028ce650a050b773c",
+              "familyName": "D'Ignazio",
+              "firstName": "Catherine",
+              "name": "Moderated by Catherine D'Ignazio"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c41",
+              "title": "Data feminism in action: mapping Urban Belonging in Copenhagen with experimental visualization and participatory GIS",
+              "description": "This presentation explores how data feminist principles can reshape data visualization practices in participatory urban planning. Building on critiques from Cultural Geography, Critical Cartography, and feminist GIS, it reflects on the Urban Belonging Project—a participatory GIS initiative involving 32 marginalized participants (including lgbt+, deaf, disabled, ethnic minorities, internationals, and unhoused individuals) in mapping experiences of belonging in Copenhagen. Through speculative visualization experiments, the project reimagines how intersectionality, subjectivity, and power can be made visible in urban data through mapmaking. It offers three provocations: crafting techniques to visualize intersectionality; challenging official spatial boundaries to reflect lived experience; and using participatory mapping to reveal bias among urban planners. The project demonstrates how data visualization can contest dominant narratives and act as a critical tool for inclusion and reflection. It contributes a practical blueprint for applying data feminism in visualization design, while addressing the tensions and dilemmas that emerge in doing so.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "13:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "13:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/80/",
+              "pdf": "/event/2/contributions/80/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Sofie Burgos-Thorsen",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Institute for Wicked Problems"
+                }
+              ]
+            },
+            {
+              "id": "c39",
+              "title": "Soft Sites: Textiles as Feminist Praxis",
+              "description": "Textiles are a traditional site of feminist storytelling (Rosner, 2018). They bridge global feminist craft traditions from contemporary artist Faith Ringgold’s quilt series, Paj Ntaub story cloths, and Chilean Arpillera resistance quilts. Building on these traditions and layering them on top of site representation techniques, this research develops a methodological innovation of tufted textiles as landscape models. This presentation will present case studies to explore novel outcomes of textiles as an emergent feminist design method. Each case study begins with traditional design skills, beginning with site analysis through GIS, aerial photography, and long-term climate projections, and results in layering the data into maps. Each project translates this data into a tufted textile. The resulting landscape fiber models serve to map dynamic and soft ecological systems. In case studies, the haptic textiles as site model increases the available experiences of analysis and representation through multi-sensory perception (Driver and Spence, 1998).",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "13:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "14:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/41/",
+              "pdf": "/event/2/contributions/41/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Sophie Chien",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "University of Colorado Boulder"
+                }
+              ]
+            },
+            {
+              "id": "c40",
+              "title": "Lost in Transliteration: Visualizing the Algorithmic Misreadings of Chinese Names",
+              "description": "“Lost in Transliteration” is a multi-part project that explores how Chinese names are transformed and often misread by Western-centric systems of transliteration—processes that often flatten cultural nuance and lead to misclassification or erasure.\r\nThe project includes two interactive tools: [Not My Name][1], which reveals transliteration ambiguities, and the upcoming Not My Gender, which critiques gender inference systems and their binary assumptions. Complementing these is Names in Shadow, an art installation with both physical and web-based components that tell Misreading Name Stories, drawn from a dataset of 81,177 Chinese scholar names. This dataset also supports a scientific research study on disambiguation and gender inference algorithms.\r\nThis talk examines how data science, visualization, and artistic practice can work together to critique algorithmic bias and challenge assumptions of neutrality in data. By revealing, reframing, and resisting these biases, we aim to protect the cultural integrity of names—and the people they represent.\r\n\r\n\r\n  [1]: https://vis.csh.ac.at/notmyname/",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "14:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "14:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/77/",
+              "pdf": "/event/2/contributions/77/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Liuhuaying Yang",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Complexity Science Hub"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s82",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "14:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "14:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s42",
+          "category": "Session",
+          "name": "Data Visualization, Collaboration, and Latin America",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "14:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "14:50:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Pedro M. Cruz"
+              ],
+              "email": "pedro@infoplus.team",
+              "emailHash": "daa135e4012d03bbb905317c175ce16f",
+              "familyName": "Cruz",
+              "firstName": "Pedro M.",
+              "name": "Moderated by Pedro M. Cruz"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c45",
+              "title": "Distance Unknown: Visualizing the Costs and Risks of Migration in the Americas",
+              "description": "Distance Unknown brings policy data into the public realm, transforming unread reports on migration issues into accessible, multisensory visualizations that catalyze real-world conversations that had the effect of changing US policy. Based on over 7,000 household migrant surveys collected by the World Food Programme across Central America and the Darien Gap, the project visualizes three drivers of migration—food insecurity, violence, and climate impact—through interactive maps and a handwoven tapestry made from “migrant money.” Presented to UN ambassadors and national officials, Distance Unknown moved executive discussions out of closed boardrooms into open, trust-building spaces where ambassadors engaged with the data through a new lens demonstrating how design can break down boundaries when sharing data for policy impact. This approach fostered dialogue, reduced confrontation, and helped mobilize resources. Combining physical artifacts, personal stories, and real-time exploration, Distance Unknown reframes migration as a shared regional challenge—one understood through empathy, not just policy.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "14:20:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "14:30:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/113/",
+              "pdf": "/event/2/contributions/113/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Sarah Williams",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Massachusetts Institute of Technology"
+                }
+              ]
+            },
+            {
+              "id": "c43",
+              "title": "Sparkling conversations with data to empowering communities in Latinoamerica",
+              "description": "How can we make data more accessible in a region where nearly half of the population lacks internet access and many people still live without electricity? In Latin America, information gaps are not bridged simply by publishing databases on websites or technical reports. \r\n\r\nThis talk is about the exploration we have done the past 3 years on participatory data interventions to bring data related with food inflation and food waste (both very technical and complex topics) closer to communities in Colombia and Panamá, using playfulness as a tool to spark conversations in public space. I will share how playfulness can transform data into accessible experiences, generating dialogue, and provoking changes in how communities approach, use information and make better decisions. \r\n\r\nAdditionally I will share the challenges on collecting data from citizens through these participatory data interventions using projects we designed in Mexico and Spain the past year as examples.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "14:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "14:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/54/",
+              "pdf": "/event/2/contributions/54/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Jose Duarte",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Easydataviz"
+                }
+              ]
+            },
+            {
+              "id": "c44",
+              "title": "Mapping Shelter, Modeling Care: Participatory Spatial Data from Migrants in Transit",
+              "description": "Migration through the Americas is a humanitarian crisis shaped by geopolitical pressures and infrastructural deficiencies. This presentation introduces a participatory design initiative that uses data visualization and machine learning to analyze spatial preferences of migrants in northern Mexico. In collaboration with Casa Monarca in Monterrey, migrants designed ideal support spaces using modular board game kits. Each configuration, documented and processed through segmentation algorithms and spatial analysis, serves as both narrative and data.\r\nThe project visualizes findings through adjacency modeling, and statistical correlation, revealing how migrants prioritize different functions. By embedding migrant agency into computational models, the research challenges top-down humanitarian design and proposes more responsive, inclusive spatial strategies. It repositions information design as a critical tool for confronting forced displacement, not through abstraction, but through evidence and engagement. This work contributes to interdisciplinary dialogues on the political and ethical dimensions of visual communication in contexts of social justice through design.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "14:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "14:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/79/",
+              "pdf": "/event/2/contributions/79/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Marcos Escamilla-Guerrero",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Cornell AAP"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s85",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "14:50:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "15:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b100",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "15:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "15:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s51",
+          "category": "Session",
+          "name": "The Philosophy of Data and Design",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "15:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "15:50:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Crystal Lee"
+              ],
+              "email": "crystal@infoplus.team",
+              "emailHash": "3cef0c78e57f08f6b20b8715a4855277",
+              "familyName": "Lee",
+              "firstName": "Crystal",
+              "name": "Moderated by Crystal Lee"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c53",
+              "title": "Theories of change in visualization",
+              "description": "Both practitioners and researchers of visualization often hold stereotypical assumptions about the role of data and visualization in effecting change in the world: revealing a state of affairs, providing evidence of harm, providing insights for better policy. But as critics have pointed out, evidence of harm can also stigmatize without achieving change, leading to worse outcomes. As policy scholar Carol Weiss points out, assumed theories of change often turn out to be wrong.\r\n\r\nMy presentation will examine common misconceptions about how data and visualization lead to change, focusing on issues of representation, accuracy, and agency. It provides a blueprint for a methodologically open approach that is not tied to a single theory of change, but calls for exploring and triangulating multiple hypothetical perspectives.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "15:20:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "15:30:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/52/",
+              "pdf": "/event/2/contributions/52/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Dietmar Offenhuber",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Northeastern University"
+                }
+              ]
+            },
+            {
+              "id": "c52",
+              "title": "Books that describe the world through the eyes",
+              "description": "As part of my research on the history of information design, I have been focusing on the study of visualization systems in entire books rather than individual visualizations. I would like to propose a new category for information design study: books that describe the world through the eyes. \r\n\r\nTheir common attributes are:\r\nThe response to a cultural need to visualize the entire world\r\nThe reliance on multiple information design strategies  \r\nThe finest production methods to combine visualizations and text \r\nThe development of a coherent design systems\r\nThe combination of past and current sources \r\nThe organization of information into pages\r\n\r\nThe concepts and details of the world are communicated through the eyes by any and all means available with fluid boundaries between text, illustration, diagram, and map. Examples are drawn from 800 years of manuscript and printed books in many languages and cultures.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "15:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "15:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/24/",
+              "pdf": "/event/2/contributions/24/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Paul Kahn",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": null
+                }
+              ]
+            },
+            {
+              "id": "c54",
+              "title": "Echoes of Knowing: Toward an Acoustic Epistemology of Information",
+              "description": "This presentation explores how sound-based art practices offer alternative ways of engaging with information—beyond legibility and the visual. Information is felt as much as its understood. In contrast to dominant frameworks of data representation and visualization, which often prioritize static, visual clarity, sound carries knowledge within a spatiotemporal realm— sound shapes perception through  an embodied resonance. It does not seek to clarify or decode, but to attune. Drawing on my sound installation Tower of Babel, which sonifies bureaucratic language and border spaces, I reflect on how sound can expose the affective weight and infrastructural violence of administrative systems. The installation renders fragmentation and delay audible—inviting listeners to experience information as dissonance, friction, and relational texture. I argue that sonic practices foreground embodied, situated ways of knowing. Sound does not merely represent information—it unsettles it, reframes it, and invites not just comprehension, but attention and presence of our surroundings.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "15:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "15:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/117/",
+              "pdf": "/event/2/contributions/117/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Paula Martin Rivero",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Northeastern University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s87",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "15:50:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "16:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b101",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "16:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "16:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s46",
+          "category": "Session",
+          "name": "Data Visualization for Civics",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "16:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "17:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Moderated by Sarah Williams"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c48",
+              "title": "Visualizing Environmental Justice: Shaping Urban Policy",
+              "description": "Data is an environmental justice issue. This presentation will feature recent work to visualize environmental (in)justice in New York City to shape municipal policy priorities. \r\n\r\nHow can compelling visualization be used to steer municipal environmental policy and resources towards creative and effective solutions? How might data visualization approaches engage with the ways that data availability reflects histories of inequality and environmental racism? How might data-driven methods be brought into better alignment with lived experiences and situated knowledges?  \r\n\r\nThe team behind information visualizations for PlaNYC, the NYC Environmental Justice Report and Plan, and the NYC Urban Forest Plan will share approaches to analysis and public communication of information related to climate justice in New York City.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "16:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "16:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/96/",
+              "pdf": "/event/2/contributions/96/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Dare Brawley",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "WXY Studio"
+                },
+                {
+                  "name": "Mario Giampieri",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "WXY architecture + urban design"
+                }
+              ]
+            },
+            {
+              "id": "c47",
+              "title": "Designing While Furious",
+              "description": "How do you visualize data on the active dissolution of your own rights? How do you do so in a way that actually brings joy, catharsis, and a refresh of your own creative practice? You need good partners, a firm grasp of \"just the facts, ma'am,\" a strong metaphor, and a clear narrative. To visualize the impacts of restricting abortion rights on women, children, families, and communities in the USA, these were my tools. In this talk I show my process of creating [\"Four Flags\"].[1] I partnered with researchers much smarter than I to find the right data amongst 70+ sources, converged on the metaphor of the American flag, and centered narratives of women's stories paired with American legislative history and evolving public health trends. Through humor and frank process talk, I'll inspire others to clearly and cathartically represent the often-infuriating reality of our rights in flux. \r\n\r\n\r\n  [1]: https://www.ongraymatters.com/four-flags",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "16:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "16:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/58/",
+              "pdf": "/event/2/contributions/58/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Dana Ragouzeos",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "San Jose State University"
+                }
+              ]
+            },
+            {
+              "id": "c49",
+              "title": "Overcoming Epistemic Barriers in Data Advocacy: A Framework for Inclusive Information Design",
+              "description": "In recent years, an abundance of projects meant to support data advocacy have revealed new challenges for information designers. This research focuses on understanding the “epistemic barriers” that can arise within data advocacy projects, such as self-censorship, disengagement, and feelings of diminished agency among participants. We introduce an analytical framework that designers can use to identify and address such barriers. This work, based on a long-term, cross-institutional project, explores how underprivileged youth use data to advocate for their climate-threatened communities. Working with a team of researchers and educators, we developed, facilitated, and analyzed a series of collaborative map-making workshops for middle-school-aged youth. We present two epistemic barriers that emerged from our qualitative studies of the workshops: 1) uncertainty about civic knowledge, 2) ambiguity about civic roles. Our presentation will provide information designers with practical strategies to overcome these barriers, fostering projects that embrace diverse ways of knowing in society.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "16:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "17:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/108/",
+              "pdf": "/event/2/contributions/108/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Mohsin Yousufi",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Georgia Institute of Technology"
+                }
+              ]
+            },
+            {
+              "id": "c50",
+              "title": "From Data to Impact: Strengthening Pro-Democracy Work Through Design",
+              "description": "As threats to democratic institutions grow, clear and accessible data storytelling is vital. This session draws on Memaro Studio’s work with leading civic organizations dedicated to digital voter engagement, mobilizing underrepresented communities around reproductive rights, and increasing transparency in political funding—focused on telling compelling impact stories to build public trust and strengthen support for the institutions that uphold democratic participation, equity, and accountability. We’ll share strategies for embedding narrative into information design, adapting our design approach to different organizational needs, and leveraging the perspective as external designers to spot accessible stories that resonate with broader audiences. We’ll also explore how effective storytelling can engage both funders and the public—clarifying complex political issues and illuminating the vital work these organizations do to protect rights and strengthen democratic participation. Join us to discuss actionable design techniques that can amplify the reach and sustainability of pro-democracy initiatives.",
+              "startDate": {
+                "date": "2025-11-15",
+                "time": "17:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-15",
+                "time": "17:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/123/",
+              "pdf": "/event/2/contributions/123/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Meaghan Barry",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Memaro Studio"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s86",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "17:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "17:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s93",
+          "category": "General",
+          "name": "Closing",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "17:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "17:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Pedro M. Cruz"
+              ],
+              "email": "pedro@infoplus.team",
+              "emailHash": "daa135e4012d03bbb905317c175ce16f",
+              "familyName": "Cruz",
+              "firstName": "Pedro M.",
+              "name": "Pedro M. Cruz"
+            },
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Sarah Williams"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "b102",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "17:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "18:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s94",
+          "category": "General",
+          "name": "Social dinner",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "18:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "20:30:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        }
+      ]
+    },
+    {
+      "date": "2025-11-16",
+      "sessions": [
+        {
+          "id": "s95",
+          "category": "General",
+          "name": "Registrations at Northeastern University",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "08:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "09:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s58",
+          "category": "Session",
+          "name": "Data in Practice",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "09:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "09:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Arvind Satyanarayan"
+              ],
+              "email": "arvind@infoplus.team",
+              "emailHash": "51b59f537da35facb95a7a544c3deb67",
+              "familyName": "Satyanarayan",
+              "firstName": "Arvind",
+              "name": "Moderated by Arvind Satyanarayan"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c60",
+              "title": "Explaining Geopolitics Through Data and Geography: The Financial Times’ Visual Storytelling Approach",
+              "description": "Visual journalism combines traditional information design with multimedia, UX design, and other technologies to tell complex stories. As relationships between countries grow more tense, infographics and data visualizations displaying geopolitical dynamics become increasingly challenging to design and explain. How can we clearly represent conflicts through data, while preserving the journalistic value of objectivity? How can we create an accessible design that does not lose sight of the human side of the events amid polarization and disinformation?\r\n\r\nThis talk will show how the Financial Times uses journalistic visual storytelling to explain evolving events. The presentation will highlight two projects that explain tensions between China and Taiwan and suspected sabotage incidents in the Baltic Sea. Through these visual stories, I will outline design strategies that combine cartographic techniques, narrative pacing, and spatial data to help readers understand conflicts and shifting power structures.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "09:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "09:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/71/",
+              "pdf": "/event/2/contributions/71/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Irene de la Torre Arenas",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Financial Times"
+                }
+              ]
+            },
+            {
+              "id": "c62",
+              "title": "What it takes to design visual stories in local journalism",
+              "description": "In an age of polarization and information fatigue, visual journalism has the power to cut through, especially when it’s rooted in place. This presentation shares how our small teams at the Minnesota Star Tribune collaborate across reporting, design, and development to create award-winning visuals that make complex information personal and impactful for local readers. Through projects exploring Minnesota’s shifting political spectrum, extreme weather, and inequality, I’ll show how we translate data into clear, compelling narratives — choosing the visual form that best fits each story, whether through graphics, animation, or visual explainers.\r\n\r\nI’ll walk through how we identify visual opportunities, develop custom solutions when needed, and balance editorial depth with accessibility and trust. While timelines vary, our approach prioritizes thoughtfulness over speed, especially when the stakes are high. This presentation offers insights into crafting visual stories that are rigorous, emotionally grounded, and deeply connected to the communities they serve.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "09:10:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "09:20:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/95/",
+              "pdf": "/event/2/contributions/95/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Yuqing Liu",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": null
+                }
+              ]
+            },
+            {
+              "id": "c59",
+              "title": "The Design Work You Don’t See: How Practitioners Frame Problems Before Visualizing Anything",
+              "description": "What happens before the first chart or encoding? In data visualization practice, some of the most important design work is also the least visible: figuring out what the real problem is. This talk draws on a multi-phase study with professional visualization practitioners to explore how they frame problems before anything is visualized. Rather than simply responding to briefs or requests, designers clarify goals, surface hidden needs, and redefine what success means. These early decisions often shape the entire project but rarely appear in formal methods or models. I will discuss how framing emerges through conversation, constraint, and negotiation. I’ll highlight common patterns practitioners face — from vague prompts to shifting priorities — and invite reflection on the quiet decisions that shape visualization success.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "09:20:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "09:30:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/59/",
+              "pdf": "/event/2/contributions/59/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Paul Parsons",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Purdue University"
+                }
+              ]
+            },
+            {
+              "id": "c61",
+              "title": "\"Do This Instead\": 4 Powerful (and Empowering) Alternatives to Common Charts",
+              "description": "Even in typical \"good\" charts it's often easy to miss, or misinterpret, what's going on in the data. Moreover, \"best practices\" like continuous color scales, equally spaced grid lines, and aggregating data to the week or month leave critical leaps from numbers to meaning up to visual perception or unexamined assumptions. \r\n\r\nI'll share 4 specific well-defined \"before/after\" replacements. For example, by transforming continuous values into meaningful discrete categories we can make several small charts (one for each category) instead of relying on color perception. Moreover, by explicitly defining what values are \"high\" we create a shared definition; a definition that can be debated.\r\n\r\nThe alternative charts are both more useful for data analysis, and also make meaning-making explicit. Moreover, domain experts can immediately employ these powerful solutions using standard tools (Excel, etc).",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "09:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "09:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/78/",
+              "pdf": "/event/2/contributions/78/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Zan Armstrong",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s97",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "09:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b103",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "10:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "10:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s63",
+          "category": "Session",
+          "name": "Data and the Environment",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "10:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "11:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Skye Morét"
+              ],
+              "email": "skye@infoplus.team",
+              "emailHash": "19bd1c9d349ac1693957221f23e014c6",
+              "familyName": "Morét",
+              "firstName": "Skye",
+              "name": "Moderated by Skye Morét"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c64",
+              "title": "Deep Sea Literacy: Cartographic Activations for Planetary Hydro-Commons",
+              "description": "This presentation shares the work of Coastliner Lab, a transdisciplinary mapping initiative that engages with disrupted ecologies and contested waters in planetary critical zones. It asks: how can data entangle with watery bodies—interweaving cartographic, scientific, and communal knowledge related to deep sea and hydraulic energies—to shape participatory and activist mapmaking practices? Through community-generated mapping workshops, practices of deep listening, and the cultivation of planetary data literacy, the Lab produces counter-cartographic works that visualize the relational dynamics of hydro-commons across human and more-than-human worlds. The presentation will focus on two recent works: Coastline Atlas: Deep Listening Deep Mapping in Marmara Sea and Moratoria: Mapping Deep-Sea Mining in the Caribbean. It will layer the Lab’s methodologies—including participatory drawing, situated geospatial data generation, sonic sensing, and web-based interactive cartographies—and reflect on how information design can serve as a tool for co-creating more livable futures with planetary hydro-commons.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "10:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "10:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/34/",
+              "pdf": "/event/2/contributions/34/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Gokcen Erkilic",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": null
+                }
+              ]
+            },
+            {
+              "id": "c65",
+              "title": "Fragile Frontlines: An Atlas of Loss and Damage in the Third Pole",
+              "description": "Fragile Frontlines is a critical investigation of the Hindu Kush Himalayas, a vital ecosystem supporting over two billion people. The region faces unprecedented climatic challenges from melting glaciers to shifting weather patterns, escalating risks for frontline communities. \r\n \r\nThe Atlas serves as a climate advocacy tool for a cryosphere in crisis, documenting cascading climate catastrophes to build a baseline model for fragility, vulnerability and risk, while compiling a nuanced evidence base for climate change attribution and assessment of Loss and Damage under the UNFCCC. Our multidimensional analysis integrates satellite data, in-situ analysis, earth observation foundational models and deep learning methods. A collaborative endeavor that transcends boundaries, embodying a unified approach to climate justice. \r\n\r\nLaunched on World Day for Glaciers at UNESCO in Paris, the Atlas calls for action as the Fund for Responding to Loss and Damage (FRLD) becomes operational, laying the groundwork to tackle cryospheric challenges in the Third Pole.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "10:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "11:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/43/",
+              "pdf": "/event/2/contributions/43/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Madeeha Merchant",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Urban Justice League"
+                }
+              ]
+            },
+            {
+              "id": "c66",
+              "title": "The Vital Aesthetics of Biodiversity Data: Reconnecting Ecological Relations within Digital Systems",
+              "description": "Human and more-than-human experiences with digital biodiversity data are deeply intertwined with taste, poetics, cultural relations, meaning-making, physical encounters, loss, and other aesthetic dimensions. However, rapidly evolving digital biodiversity data platforms prioritize technoscientific advancements, futuristic visual design, and quantitative output over integrating other crucial aesthetic experiences of environmental change. Grounded in Science and Technology Studies, this presentation shares findings from a four-year Design Research project that explored creative data practices with an ecological community in the Netherlands and held workshops with sustainability officers working with biodiversity data at large US corporations. Together, these efforts articulated new design recommendations that could attend to ecological relations and broader aesthetic dimensions in biodiversity data representations. We found that, to align with user experiences and encourage ecological relations with environmental data, biodiversity platforms can create more resonant digital interactions by engaging the full aesthetic spectrum embedded in biodiversity data.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "11:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "11:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/62/",
+              "pdf": "/event/2/contributions/62/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Michelle Westerlaken",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Massachusetts Institute of Technology"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s96",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "11:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "11:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s67",
+          "category": "Session",
+          "name": "Accessibility and Disability",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "11:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "11:50:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Arvind Satyanarayan"
+              ],
+              "email": "arvind@infoplus.team",
+              "emailHash": "51b59f537da35facb95a7a544c3deb67",
+              "familyName": "Satyanarayan",
+              "firstName": "Arvind",
+              "name": "Moderated by Arvind Satyanarayan"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c70",
+              "title": "Beyond the Visual: Creating multimodal displays for maximizing ocean science engagement",
+              "description": "Scientific data has tremendous potential to engage the public in environmental issues, but for communication to be successful, the datasets must be presented in ways that are accessible to a wide variety of non-expert public users. Visual presentations of data aid audiences in identifying trends and making inferences but can require significant graph literacy skills to interpret correctly and are especially difficult for learners with print-related disabilities or who identify as blind or low vision. This presentation will describe our research developing multimodal data representations – visual, auditory, and tactile displays – to create interactive experiences that teach the public about oceanographic concepts. Building off our past work designing auditory displays of ocean data, we are exploring how to design tangible interactions and auditory feedback to engage learners with local coastal issues.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "11:20:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "11:30:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/109/",
+              "pdf": "/event/2/contributions/109/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Jessica Roberts",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Georgia Tech"
+                }
+              ]
+            },
+            {
+              "id": "c69",
+              "title": "Decentering Vision in Accessible Visualization",
+              "description": "As we increasingly rely on visualization to communicate about data, lack of equitable information access for blind and low vision (BLV) people can exclude people from important conversations. But what does it mean to successfully make a visualization accessible? In this talk, I reflect on lessons learned from 5 years of accessible visualization research. The idea of decentering the visual modality has emerged as an important frame in my work for understanding needs and guiding design. Decentering vision reframes the design of accessible representations away from repurposing existing charts, toward interactive multimodal authoring and reading experiences. Decentering vision also encourages us to think about the goals of BLV people in socio-technical terms of participation and collaboration, beyond mere individual access. Finally, decentering vision suggests alternate ways the visualization community might think about the process of giving sensory form to data.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "11:30:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "11:40:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/97/",
+              "pdf": "/event/2/contributions/97/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Jonathan Zong",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "University of Colorado Boulder"
+                }
+              ]
+            },
+            {
+              "id": "c68",
+              "title": "Reimagining Research: Gaming, Data + Research Integration",
+              "description": "Asking students to “solve a problem” is an effective method for exploring content. This approach, known as problem-based learning (PBL), promotes active learning, critical thinking, and the application of knowledge to real-world scenarios. It aids in developing essential skills such as research, collaboration, and problem-solving. During the panel discussion “Towards a Public Pathway for Careers in Gaming: NYC Youth and Agency” at Games 4 Change, students showed a strong interest in engaging with new content through a gaming lens (Joseph, 2024). Building on this insight, this presentation will highlight projects that reimagine academic research data analysis and dissemination by immersing undergraduate students, working in interdisciplinary teams, in dissecting and understanding the concepts and context of research. The goal is to analyze data, visualize data, and create audience-centered experience design (game development, interactive experiences). Through these collaborations, students transition from passive consumers of information to active producers of knowledge (Smith-Shank, 2014).",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "11:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "11:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/87/",
+              "pdf": "/event/2/contributions/87/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Cary Staples",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "University of Tennessee"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s108",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "11:50:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b107",
+          "category": "Break",
+          "name": "Lunch",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "12:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s71",
+          "category": "Session",
+          "name": "Pedagogy and Experiments",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "13:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "14:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Crystal Lee"
+              ],
+              "email": "crystal@infoplus.team",
+              "emailHash": "3cef0c78e57f08f6b20b8715a4855277",
+              "familyName": "Lee",
+              "firstName": "Crystal",
+              "name": "Moderated by Crystal Lee"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c75",
+              "title": "Microbial Interfaces",
+              "description": "Microbes are foundational to nearly every ecosystem on Earth, including our bodies—yet they remain largely invisible and underappreciated in technological design. The human microbiome plays a crucial role in health and well-being, while environmental microbiomes influence a range of factors, including soil fertility and indoor air quality. This presentation will explore how we engage with this “invisible majority” to create tangible, living, and expressive informational interfaces. We design embroidered biosensing interfaces on textile that can detect and visualize physiological (internal) and environmental (external) data through visible microbial feedback. Sweat-responsive patches could be placed in high-perspiration regions to track cortisol, lactate, or environmental toxin exposure, turning sweat into an interface with the microbial world. A biosensing lactation bra or patch could monitor specific biomarkers in breast milk to detect inflammation or nutrient content. Cervical fluid–monitoring undergarments could offer non-invasive insights into menstrual cycles, ovulation timing, or shifts in vaginal microbiome health.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "13:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "13:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/129/",
+              "pdf": "/event/2/contributions/129/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Katia Zolotovsky",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "BioInteractive Design Lab, Northeastern University"
+                }
+              ]
+            },
+            {
+              "id": "c73",
+              "title": "Does visualization help AI understand data?",
+              "description": "Charts and graphs help people analyze data—but can they also be useful to AI systems? To investigate this question, we perform a series of experiments with two commercial vision-language models: GPT 4.1 and Claude 3.5. Across three representative analysis tasks, the two systems describe synthetic data sets more precisely and accurately when raw data is accompanied by a scatterplot, especially as datasets grow in complexity. Comparison with two baselines -- providing a blank chart and a chart with mismatched data -- shows that the improved performance is due to the content of the charts. We provide initial evidence that AI systems, like humans, can benefit from visualization.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "13:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "14:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/81/",
+              "pdf": "/event/2/contributions/81/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Johnathan Sun",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Harvard"
+                },
+                {
+                  "name": "Victoria Li",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Harvard"
+                }
+              ]
+            },
+            {
+              "id": "c72",
+              "title": "Pedagogies of Practice: Teaching Information Design in an Eco-Social Context",
+              "description": "At 28, I began teaching Information Design in the Master in Eco-Social Design at Bozen-Bolzano, Italy — my first academic role after years as a freelance designer. With no prior experience in teaching, I entered the classroom full of questions: How can data visualization support ecological and social change? How should we teach it meaningfully?\r\n\r\nThis talk is not just about what I taught, but what I learned. My students responded with powerful, experimental projects that used physical and emotional forms of data representation to explore urgent contemporary issues. Their work taught me that data can be more than information — it can be care, critique, and resistance.\r\n\r\nWhat emerged was a pedagogy grounded in listening, vulnerability, and shared discovery. This presentation is a reflection on the learning that happens when we teach with openness — and on the transformative potential of design when guided by context, curiosity, and community.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "14:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "14:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/44/",
+              "pdf": "/event/2/contributions/44/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Alessia Musio",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Freelance Information Designer"
+                }
+              ]
+            },
+            {
+              "id": "c74",
+              "title": "Flow States:  Designing visually fluid visualisation and interface tools to support humanistic-centred enquiry and discovery.",
+              "description": "Humanistic datasets increasingly include new levels of nuance and complexity, capturing something of the multi-faceted and systemic nature of human experience. These datascapes enable new kinds of exploratory investigation and suggest the sharable record of use, which traverse diverse semantic contexts (spatial, temporal, conceptual) at zoomable scale. With such data often modelled as complex entangled knowledge graphs, novel interface design approaches are needed that render informational richness legible to the user by means of lenticular and graphical distillation.\r\nWe present ‘Flow States,’ interactive visualisation prototypes designed to address this challenge by adopting and adapting techniques from sequential graphical narrative to preserve complexity, resist reduction, support multiple viewpoints  and encourage discovery and knowledge-making. Through worked examples developed from a range of historical datasets – including census records, oral history recordings, social history archives, we demonstrate the generalisability of this approach in revealing the interplay of mobilities, sociabilities, cultural imaginaries and identity.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "14:10:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "14:20:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/90/",
+              "pdf": "/event/2/contributions/90/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Andrew Richardson",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "Northumbria University"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s109",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "14:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "14:40:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s76",
+          "category": "Session",
+          "name": "Politics and Democracy",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "14:40:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "15:10:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Moderated by Sarah Williams"
+            }
+          ],
+          "contributions": [
+            {
+              "id": "c77",
+              "title": "Visualizing Political Infrastructures of Inequality: A Radical Atlas",
+              "description": "An introduction to the critical cartographic approaches of *Radical Atlas of Ferguson USA* (Belt, 2024) a book that spatializes political systems of structural inequality, told through the lens of Ferguson, Missouri. Ferguson is where a Black teenager named Michael Brown was killed by a white police officer in 2014—and where the movement for Black Lives radiated in the weeks after. In over one-hundred maps the atlas reveals contemporary tools of exploitation and disenfranchisement in the built environment that underscore the events ten years ago and show why little has changed today.  \r\n\r\nMaps draw from across interdisciplinary urban theories and data/design sources to visualize contradictions of municipal politics—in tax structures, corporate incentives, housing, franchise models, even landscape—that do not improve life for residents but exacerbate erosion of their democratic rights.\r\n\r\nThe presentation highlights how to depict the city as a contested political economic space.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "14:40:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "14:50:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/26/",
+              "pdf": "/event/2/contributions/26/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Patty Heyda",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": null
+                }
+              ]
+            },
+            {
+              "id": "c78",
+              "title": "The New Necro-Nominalism",
+              "description": "This presentation examines the rise of necro-nominalism: the practice of systematically inscribing the names of the dead. This expanded the franchise of memory, building on advances in bureaucracy, record-keeping, and design to create comprehensive registers that ground memorials. \r\n\r\nNaming the dead has military antecedents; Menin Gate, in Belgium, one of the best known WWI memorials, revolutionized commemorative practice. It used a specially-designed typeface to list the names of over 50,000 Commonwealth soldiers with no known grave. Nearly a century later, designers working on the 9/11 Memorial employed algorithms to create “meaningful adjacencies” among victims’ names who, like the WWI dead, often lacked physical remains. \r\n\r\nContemporary memorialization remains stubbornly tactile, relying on impervious stone and bronze, but new technologies are always deployed to track, record, and present names in these individual, and collective, sites of memory. Here, I explore how data visualization has served the deeply human need to commemorate loss.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "14:50:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "15:00:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/84/",
+              "pdf": "/event/2/contributions/84/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Samuel Holleran",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "RMIT University, Melbourne, Australia"
+                }
+              ]
+            },
+            {
+              "id": "c79",
+              "title": "Data resistance: counter data practices against state-led urban redevelopment in Seoul’s urban manufacturing district",
+              "description": "Under contested urban redevelopment processes, counter-data practices challenge state narratives of decline and deterioration that justify the displacement of marginalized communities and the erasure of the urban fabric the have fostered. This study examines counter-data practices by community organizations, activists, researchers, and artists in the Sewoon District in Seoul, South Korea. The projects emerged to resist a state-sanctioned profit-driven redevelopment plan and protect a predominantly renter, urban manufacturing businesses in the electronics, metal, woodwork, and printing industry. Diverse data projects problematized official surveys using maps, visualizations, business inventory platforms, digital twins, sensors, surveys, point-cloud archives, collections of physical objects, and documentaries between 2016 and 2021. Through interviews and ethnographic fieldwork, this study sheds light on the exclusionary nature of official data practices elucidated through counter-data, and the opportunities that counter-data practices open for pluralist urban visions in and outside of the official decision-making processes.",
+              "startDate": {
+                "date": "2025-11-16",
+                "time": "15:00:00",
+                "tz": "US/Eastern"
+              },
+              "endDate": {
+                "date": "2025-11-16",
+                "time": "15:10:00",
+                "tz": "US/Eastern"
+              },
+              "url": "/event/2/contributions/85/",
+              "pdf": "/event/2/contributions/85/contribution.pdf",
+              "presenters": [
+                {
+                  "name": "Chaewon Ahn",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": "National University of Singapore"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s110",
+          "category": "Session",
+          "name": "Q&A",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "15:10:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "15:20:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "b105",
+          "category": "Break",
+          "name": "Coffee break",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "15:20:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "16:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [],
+          "contributions": []
+        },
+        {
+          "id": "s112",
+          "category": "Keynote",
+          "name": "Keynote: Kennedy Elliott",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "16:00:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "16:50:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Pedro M. Cruz"
+              ],
+              "email": "pedro@infoplus.team",
+              "emailHash": "daa135e4012d03bbb905317c175ce16f",
+              "familyName": "Cruz",
+              "firstName": "Pedro M.",
+              "name": "Moderated by Pedro M. Cruz"
+            }
+          ],
+          "contributions": []
+        },
+        {
+          "id": "s111",
+          "category": "General",
+          "name": "Closing",
+          "startDate": {
+            "date": "2025-11-16",
+            "time": "16:50:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-16",
+            "time": "17:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "",
+          "room": "",
+          "conveners": [
+            {
+              "affiliation": "Northeastern University",
+              "displayOrderKey": [
+                0,
+                "Pedro M. Cruz"
+              ],
+              "email": "pedro@infoplus.team",
+              "emailHash": "daa135e4012d03bbb905317c175ce16f",
+              "familyName": "Cruz",
+              "firstName": "Pedro M.",
+              "name": "Pedro M. Cruz"
+            },
+            {
+              "affiliation": "Massachusetts Institute of Technology",
+              "displayOrderKey": [
+                0,
+                "Sarah Williams"
+              ],
+              "email": "sarah@infoplus.team",
+              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
+              "familyName": "Williams",
+              "firstName": "Sarah",
+              "name": "Sarah Williams"
+            }
+          ],
+          "contributions": []
+        }
+      ]
+    }
+  ]
+}
