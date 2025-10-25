@@ -11,7 +11,7 @@ header:
 
 <div class="columns is-multiline">
   {% for item in collections.exhibition %}
-    <div class="column is-half-mobile is-one-quarter-desktop is-one-quarter-tablet">
+    <div class="column is-one-third">
     <a class="tile" href="{{ item.url | url }}" style="display: block; ">
       <div class="tile_image"><img src="{{ item.data.thumb | url }}" width="" height="" alt=""></div>
       <div class="tile_title">{{ item.data.title }}</div>
