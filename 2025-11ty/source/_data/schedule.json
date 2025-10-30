@@ -521,7 +521,7 @@
               "pdf": "/event/2/contributions/23/contribution.pdf",
               "presenters": [
                 {
-                  "name": "Alberto Meouchi",
+                  "name": "Sarah Williams",
                   "firstName": null,
                   "familyName": null,
                   "affiliation": "Massachusetts Institute of Technology"
@@ -721,6 +721,12 @@
                   "firstName": null,
                   "familyName": null,
                   "affiliation": "Complexity Science Hub"
+                },
+                {
+                  "name": "Melinda Sipos",
+                  "firstName": null,
+                  "familyName": null,
+                  "affiliation": null
                 }
               ]
             }
