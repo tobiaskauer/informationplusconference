@@ -1282,6 +1282,34 @@
           "room": "",
           "conveners": [],
           "contributions": []
+        },
+        {
+          "id": "ppp",
+          "category": "General",
+          "name": "Performance — \"The Numbers\"",
+          "description": "This theatre piece examines the many ways we interact with data in our lives: how it reflects the things we know and fear, how it can be a tool for us to help repair a broken world, and how it can be manipulated whether or not we are paying attention.",
+          "startDate": {
+            "date": "2025-11-15",
+            "time": "19:30:00",
+            "tz": "US/Eastern"
+          },
+          "endDate": {
+            "date": "2025-11-15",
+            "time": "21:00:00",
+            "tz": "US/Eastern"
+          },
+          "location": "Curry Student Center",
+          "room": "Theatre Studio",
+          "conveners": [],
+          "contributions": [
+            {
+              "title": "Location: Studio Theatre in Curry Student Center at Northeastern University."
+            },
+            {
+              "title": "Attendance is limited. Buy your tickets here in advance.",
+              "url": "https://eventregistration.northeastern.edu/event/9fc99682-85db-4699-beec-fe5cae232821/summary?RefId=EML-PNL"
+            }
+          ]
         }
       ]
     },

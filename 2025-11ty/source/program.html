@@ -169,9 +169,10 @@ vimeo_id: "1105940284"
 
               <td class="title">
                 <strong>{{ s.name or s.title }}</strong>
-
+                
                 {# session presenters: prefer presenters, fall back to conveners #}
                 <span class="presenter-names">
+                {{s.description}}
                   {% if s.presenters and s.presenters | length %}
                     {% for p in s.presenters %}
                       {{ p.name or ((p.firstName or '') ~ ' ' ~ (p.familyName or '')) | trim }}{% if p.affiliation %} — {{ p.affiliation }}{% endif %}{% if not loop.last %}, {% endif %}
@@ -203,8 +204,6 @@ vimeo_id: "1105940284"
                             {% for p in c.presenters %}
                               {{ p.name or ((p.firstName or '') ~ ' ' ~ (p.familyName or '')) | trim }}{% if p.affiliation %} — {{ p.affiliation }}{% endif %}{% if not loop.last %}, {% endif %}
                             {% endfor %}
-                          {% else %}
-                            <em class="presenter-absent">No presenters</em>
                           {% endif %}
                         </span>
                       </li>
