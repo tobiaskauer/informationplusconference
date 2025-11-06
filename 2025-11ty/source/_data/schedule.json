@@ -1154,31 +1154,6 @@
                   "affiliation": "Georgia Institute of Technology"
                 }
               ]
-            },
-            {
-              "id": "c50",
-              "title": "From Data to Impact: Strengthening Pro-Democracy Work Through Design",
-              "description": "As threats to democratic institutions grow, clear and accessible data storytelling is vital. This session draws on Memaro Studio’s work with leading civic organizations dedicated to digital voter engagement, mobilizing underrepresented communities around reproductive rights, and increasing transparency in political funding—focused on telling compelling impact stories to build public trust and strengthen support for the institutions that uphold democratic participation, equity, and accountability. We’ll share strategies for embedding narrative into information design, adapting our design approach to different organizational needs, and leveraging the perspective as external designers to spot accessible stories that resonate with broader audiences. We’ll also explore how effective storytelling can engage both funders and the public—clarifying complex political issues and illuminating the vital work these organizations do to protect rights and strengthen democratic participation. Join us to discuss actionable design techniques that can amplify the reach and sustainability of pro-democracy initiatives.",
-              "startDate": {
-                "date": "2025-11-15",
-                "time": "17:00:00",
-                "tz": "US/Eastern"
-              },
-              "endDate": {
-                "date": "2025-11-15",
-                "time": "17:10:00",
-                "tz": "US/Eastern"
-              },
-              "url": "/event/2/contributions/123/",
-              "pdf": "/event/2/contributions/123/contribution.pdf",
-              "presenters": [
-                {
-                  "name": "Meaghan Barry",
-                  "firstName": null,
-                  "familyName": null,
-                  "affiliation": "Memaro Studio"
-                }
-              ]
             }
           ]
         },
