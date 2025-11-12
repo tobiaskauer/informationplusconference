@@ -1259,10 +1259,13 @@
           "conveners": [],
           "contributions": [
             {
-              "title": "Location: Studio Theatre in Curry Student Center at Northeastern University."
+              "title": "Location: Studio Theatre in Curry Student Center at Northeastern University. Attendance is limited. Buy your tickets in advance."
             },
             {
-              "title": "Attendance is limited. Buy your tickets here in advance.",
+              "title": "Select the Tues. Nov 15 @ 7:30pm performance. Select a General Admission ticket. At checkout, enter the code INFO+ for 20% the general admission ticket price. General admission is $10 and students pay $5."
+            },
+            {
+              "title": "Buy your tickets at this link",
               "url": "https://eventregistration.northeastern.edu/event/9fc99682-85db-4699-beec-fe5cae232821/summary?RefId=EML-PNL"
             }
           ]
