@@ -1,0 +1,248 @@
+---
+title: ""
+layout: "layout_default.njk"
+primary_color: "green"
+secondary_color: "black"
+header:
+image: "f1-green-yellow"
+vimeo_id: "1105940284"
+
+---
+
+
+
+
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<style>
+  /* Ensure program table cells use normal weight/size (override any heading styles) */
+  .program-day .program-table,
+  .program-day .program-table tbody,
+  .program-day .program-table tr,
+  .program-day .program-table td {
+    all: unset;
+  }
+
+  .program-day {
+    margin-bottom: 1.75rem;
+    /* extra space between day sections */
+  }
+
+  .program-day .program-table {
+    display: table;
+    width: 100%;
+    /* switch to separate so we can add vertical spacing between rows */
+    border-collapse: separate;
+    border-spacing: 0 0.6rem;
+    /* vertical gap between rows */
+    font-family: inherit;
+    box-sizing: border-box;
+    /* ensure widths include padding */
+    table-layout: fixed;
+    /* respect explicit column widths */
+  }
+
+  .program-day .program-table p {
+    padding: 0.45rem 0;
+    /* slightly increased vertical padding for breathing room */
+    vertical-align: top;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: inherit;
+    box-sizing: border-box;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  /* Time column: fixed width, never wraps */
+  .program-day .time {
+    width: 8rem;
+    min-width: 8rem;
+    white-space: nowrap;
+    padding-right: 1rem;
+    text-align: left;
+    color: var(--muted-color, #333);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  }
+
+  .program-day .title {
+    padding-left: 0;
+    /* allow title column to grow and wrap normally */
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .program-day .contrib-list {
+    margin: 0.35rem 0 0;
+    padding-left: 1.9rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    list-style: none;
+  }
+
+  .program-day .contrib-list li {
+    position: relative;
+    margin: 0.25rem 0;
+  }
+
+  /* replace default bullet with an em-dash for table lists */
+  .program-day .contrib-list li::before {
+    content: '—';
+    position: absolute;
+    left: -1rem;
+    color: var(--muted-color, #666);
+    font-weight: 600;
+  }
+
+  .program-day .presenter-names {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted-color, #666);
+    margin-top: 0.25rem;
+    font-weight: 400;
+  }
+
+  .program-day .presenter-absent {
+    color: #9a9a9a;
+    font-style: italic;
+    font-weight: 400;
+  }
+</style>
+
+{% if schedule and schedule.days %}{% for day in schedule.days %}
+{% if day.date == "2025-11-14" %}
+{% set display = "Friday, November 14, 2025 (MIT)" %}
+{% elif day.date == "2025-11-15" %}
+{% set display = "Saturday, November 15, 2025 (Northeastern)" %}
+{% elif day.date == "2025-11-16" %}
+{% set display = "Sunday, November 16, 2025 (Northeastern)" %}
+{% else %}
+{% set display = day.date %}
+{% endif %}
+
+<section class="program-day" aria-labelledby="day-{{ loop.index }}">
+  <h2 id="day-{{ loop.index }}">{{ display }}</h2>
+
+  <div class="program-table">
+
+    {% for s in day.sessions %}
+
+
+
+    <p class="title">
+      <strong>{{ s.name or s.title }}</strong>
+
+      {# session presenters: prefer presenters, fall back to conveners #}
+      <span class="presenter-names">
+        {{s.description}}
+        {% if s.presenters and s.presenters | length %}
+        {% for p in s.presenters %}
+        {{ p.name or ((p.firstName or '') ~ ' ' ~ (p.familyName or '')) | trim }}{% if p.affiliation %} — {{
+        p.affiliation }}{% endif %}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% elif s.conveners and s.conveners | length %}
+        {% for p in s.conveners %}
+        {{ p.name or ((p.firstName or '') ~ ' ' ~ (p.familyName or '')) | trim }}{% if p.affiliation %} — {{
+        p.affiliation }}{% endif %}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% endif %}
+      </span>
+
+      {# contributions (talks) inside the session; use c.presenters as in schedule.json #}
+      {% if s.contributions and s.contributions | length %}
+    <ul class="contrib-list">
+      {% for c in s.contributions %}
+      <li>
+        {%- if c.url %}
+        {%- if 'http' in c.url %}
+        {%- set full_url = c.url %}
+        {%- else %}
+        {%- set full_url = 'https://submissions.infoplus.team/' ~ c.url %}
+        {%- endif %}
+        <a href="{{ full_url }}" target="_blank" rel="noopener noreferrer">{{ c.title }}</a>
+        {%- else %}
+        {{ c.title }}
+        {%- endif %}
+        <span class="presenter-names">
+          {% if c.presenters and c.presenters | length %}
+          {% for p in c.presenters %}
+          {{ p.name or ((p.firstName or '') ~ ' ' ~ (p.familyName or '')) | trim }}{% if p.affiliation %} — {{
+          p.affiliation }}{% endif %}{% if not loop.last %}, {% endif %}
+          {% endfor %}
+          {% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+
+
+    {% endif %}
+    {% if s.video %}
+     <div style="margin-left: 1em;padding:56.25% 0% 0 0;position:relative;"><iframe
+        src="https://player.vimeo.com/video/{{ s.video }}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+    {% endif  %}
+    </p>
+   
+
+
+
+    {% endfor %}
+
+
+</section>
+{% endfor %}
+
+<script>
+  (function () {
+    function fmt(t) {
+      if (!t) return '';
+      var m = t.match(/^(\d{1,2}):(\d{2})(?::\d{2})?$/);
+      if (!m) return t;
+      var hh = parseInt(m[1], 10), mm = m[2], ampm = hh >= 12 ? 'pm' : 'am';
+      hh = hh % 12; if (hh === 0) hh = 12;
+      return hh + ':' + mm + ' ' + ampm;
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-time]').forEach(function (el) {
+        el.textContent = fmt(el.getAttribute('data-time') || '');
+      });
+    });
+  })();
+</script>
+
+{% else %}
+<p>No program available.</p>
+{% endif %}
+
+<p class="spacer">&nbsp;</p>
+
+<p class="spacer">&nbsp;</p>
+
+<div class="content">
+  <h4>Keynote Speakers</h4>
+</div>
+
+<div class="presentation" id="keynote-speakers">
+  {%- for speaker in keynote_speakers %}
+  <div class="columns">
+    <!-- Photo: 1/4 width -->
+    <div class="column is-one-third tile_title">
+      <img src="{{ speaker.image.file | url }}" alt="{{ speaker.name }}">
+    </div>
+    <!-- Bio: 3/4 width -->
+    <div class="column is-three-quarters">
+      <div class="tile_title">
+        {{ speaker.name }}
+      </div>
+      <div class="tile_info">
+        {{ speaker.affiliation }} <br>
+      </div>
+      <div>{{ speaker.bio}}</div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>

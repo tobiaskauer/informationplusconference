@@ -4,192 +4,9 @@
       "date": "2025-11-14",
       "sessions": [
         {
-          "id": "s113",
-          "category": "General",
-          "name": "Registration opens at MIT",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "08:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "08:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s114",
-          "category": "General",
-          "name": "Workshops",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "08:40:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "10:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b119",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "10:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "10:30:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s115",
-          "category": "General",
-          "name": "Workshops",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "10:30:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b121",
-          "category": "Break",
-          "name": "Lunch",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "13:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s116",
-          "category": "General",
-          "name": "Workshops",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "13:40:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "15:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b120",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "15:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "15:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s122",
-          "category": "General",
-          "name": "Workshops",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "15:40:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "17:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s123",
-          "category": "General",
-          "name": "Opening",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "17:30:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "17:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [
-            {
-              "affiliation": "Massachusetts Institute of Technology",
-              "displayOrderKey": [
-                0,
-                "Sarah Williams"
-              ],
-              "email": "sarah@infoplus.team",
-              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
-              "familyName": "Williams",
-              "firstName": "Sarah",
-              "name": "Sarah Williams"
-            }
-          ],
-          "contributions": []
-        },
-        {
           "id": "s117",
           "category": "Keynote",
+          "video": "1139123341",
           "name": "Keynote: Bronwen Robertson",
           "startDate": {
             "date": "2025-11-14",
@@ -218,25 +35,6 @@
             }
           ],
           "contributions": []
-        },
-        {
-          "id": "s118",
-          "category": "General",
-          "name": "Exhibition opening and reception",
-          "startDate": {
-            "date": "2025-11-14",
-            "time": "18:30:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-14",
-            "time": "20:30:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
         }
       ]
     },
@@ -244,28 +42,10 @@
       "date": "2025-11-15",
       "sessions": [
         {
-          "id": "s92",
-          "category": "General",
-          "name": "Registration opens at Northeastern University",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "08:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "09:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s91",
           "category": "General",
-          "name": "Opening",
+          "name": "Graphic design identity",
+          "video": "1139123429",
           "startDate": {
             "date": "2025-11-15",
             "time": "09:00:00",
@@ -280,16 +60,12 @@
           "room": "",
           "conveners": [
             {
-              "affiliation": "Dean of the Collge of Arts, Media and Design, Northeastern University",
-              "displayOrderKey": [
-                0,
-                "Ben Knapp"
-              ],
-              "email": "c.casler@northeastern.edu",
-              "emailHash": "0ef2ef69fcf11abae8fc2418ee75503a",
-              "familyName": "Knapp",
-              "firstName": "Ben",
-              "name": "Ben Knapp"
+              "affiliation": "Northeastern University",
+              "name": "Todd Linkner"
+            },
+            {
+              "affiliation": "Boston University",
+              "name": "Brockett Horne"
             }
           ],
           "contributions": []
@@ -298,6 +74,7 @@
           "id": "s90",
           "category": "Keynote",
           "name": "CAMD's Dean Distinguished Lecturer: Lauren Klein and Tanvi Sharma",
+          "video": "1139123400",
           "startDate": {
             "date": "2025-11-15",
             "time": "09:10:00",
@@ -321,34 +98,16 @@
               "emailHash": "daa135e4012d03bbb905317c175ce16f",
               "familyName": "Cruz",
               "firstName": "Pedro M.",
-              "name": "Moderated by Pedro M. Cruz"
+              "name": "Introduced by Ben Knapp, Dean of the College of Arts, Media and Design; moderated by Pedro M. Cruz"
             }
           ],
-          "contributions": []
-        },
-        {
-          "id": "b98",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "10:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "10:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
           "contributions": []
         },
         {
           "id": "s33",
           "category": "Session",
           "name": "Critical Data Visualization",
+          "video": "1139123380",
           "startDate": {
             "date": "2025-11-15",
             "time": "10:40:00",
@@ -454,28 +213,10 @@
           ]
         },
         {
-          "id": "s83",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "11:10:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "11:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s37",
           "category": "Session",
           "name": "Invisible to Visible",
+          "video": "1139123355",
           "startDate": {
             "date": "2025-11-15",
             "time": "11:20:00",
@@ -581,47 +322,10 @@
           ]
         },
         {
-          "id": "s84",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "11:50:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b99",
-          "category": "Break",
-          "name": "Lunch",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "13:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s38",
           "category": "Session",
           "name": "Visualization and Feminism",
+          "video": "1139123433",
           "startDate": {
             "date": "2025-11-15",
             "time": "13:40:00",
@@ -733,28 +437,10 @@
           ]
         },
         {
-          "id": "s82",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "14:10:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "14:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s42",
           "category": "Session",
           "name": "Data Visualization, Collaboration, and Latin America",
+          "video": "1139123390",
           "startDate": {
             "date": "2025-11-15",
             "time": "14:20:00",
@@ -860,47 +546,10 @@
           ]
         },
         {
-          "id": "s85",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "14:50:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "15:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b100",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "15:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "15:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s51",
           "category": "Session",
           "name": "The Philosophy of Data and Design",
+          "video": "1139123334",
           "startDate": {
             "date": "2025-11-15",
             "time": "15:20:00",
@@ -1006,47 +655,10 @@
           ]
         },
         {
-          "id": "s87",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "15:50:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "16:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b101",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "16:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "16:30:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s46",
           "category": "Session",
           "name": "Data Visualization for Civics",
+          "video": "1139123348",
           "startDate": {
             "date": "2025-11-15",
             "time": "16:30:00",
@@ -1164,88 +776,6 @@
           ]
         },
         {
-          "id": "s86",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "17:10:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "17:30:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "s93",
-          "category": "General",
-          "name": "Closing",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "17:30:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "17:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [
-            {
-              "affiliation": "Northeastern University",
-              "displayOrderKey": [
-                0,
-                "Pedro M. Cruz"
-              ],
-              "email": "pedro@infoplus.team",
-              "emailHash": "daa135e4012d03bbb905317c175ce16f",
-              "familyName": "Cruz",
-              "firstName": "Pedro M.",
-              "name": "Pedro M. Cruz"
-            },
-            {
-              "affiliation": "Massachusetts Institute of Technology",
-              "displayOrderKey": [
-                0,
-                "Sarah Williams"
-              ],
-              "email": "sarah@infoplus.team",
-              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
-              "familyName": "Williams",
-              "firstName": "Sarah",
-              "name": "Sarah Williams"
-            }
-          ],
-          "contributions": []
-        },
-        {
-          "id": "s94",
-          "category": "General",
-          "name": "Social dinner",
-          "startDate": {
-            "date": "2025-11-15",
-            "time": "18:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-15",
-            "time": "20:30:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "ppp",
           "category": "General",
           "name": "Performance — \"The Numbers\"",
@@ -1261,20 +791,7 @@
             "tz": "US/Eastern"
           },
           "location": "Curry Student Center",
-          "room": "Theatre Studio",
-          "conveners": [],
-          "contributions": [
-            {
-              "title": "Location: Studio Theatre in Curry Student Center at Northeastern University. Attendance is limited. Buy your tickets in advance."
-            },
-            {
-              "title": "Select the Tues. Nov 15 @ 7:30pm performance. Select a General Admission ticket. At checkout, enter the code INFO+ for 20% the general admission ticket price. General admission is $10 and students pay $5."
-            },
-            {
-              "title": "Buy your tickets at this link",
-              "url": "https://eventregistration.northeastern.edu/event/9fc99682-85db-4699-beec-fe5cae232821/summary?RefId=EML-PNL"
-            }
-          ]
+          "room": "Theatre Studio"
         }
       ]
     },
@@ -1282,28 +799,10 @@
       "date": "2025-11-16",
       "sessions": [
         {
-          "id": "s95",
-          "category": "General",
-          "name": "Registrations at Northeastern University",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "08:20:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "09:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s58",
           "category": "Session",
           "name": "Data in Practice",
+          "video": "1139123406",
           "startDate": {
             "date": "2025-11-16",
             "time": "09:00:00",
@@ -1434,47 +933,10 @@
           ]
         },
         {
-          "id": "s97",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "09:40:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "10:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b103",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "10:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "10:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s63",
           "category": "Session",
           "name": "Data and the Environment",
+          "video": "1139123373",
           "startDate": {
             "date": "2025-11-16",
             "time": "10:40:00",
@@ -1555,28 +1017,10 @@
           ]
         },
         {
-          "id": "s96",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "11:10:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "11:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s67",
           "category": "Session",
           "name": "Accessibility and Disability",
+          "video": "1139123359",
           "startDate": {
             "date": "2025-11-16",
             "time": "11:20:00",
@@ -1682,47 +1126,10 @@
           ]
         },
         {
-          "id": "s108",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "11:50:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b107",
-          "category": "Break",
-          "name": "Lunch",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "12:00:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "13:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s71",
           "category": "Session",
           "name": "Pedagogy and Experiments",
+          "video": "1139123412",
           "startDate": {
             "date": "2025-11-16",
             "time": "13:40:00",
@@ -1859,28 +1266,10 @@
           ]
         },
         {
-          "id": "s109",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "14:20:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "14:40:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s76",
           "category": "Session",
           "name": "Politics and Democracy",
+          "video": "1139123385",
           "startDate": {
             "date": "2025-11-16",
             "time": "14:40:00",
@@ -1986,47 +1375,10 @@
           ]
         },
         {
-          "id": "s110",
-          "category": "Session",
-          "name": "Q&A",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "15:10:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "15:20:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
-          "id": "b105",
-          "category": "Break",
-          "name": "Coffee break",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "15:20:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "16:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [],
-          "contributions": []
-        },
-        {
           "id": "s112",
           "category": "Keynote",
           "name": "Keynote: Kennedy Elliott",
+          "video": "1139123363",
           "startDate": {
             "date": "2025-11-16",
             "time": "16:00:00",
@@ -2051,50 +1403,6 @@
               "familyName": "Cruz",
               "firstName": "Pedro M.",
               "name": "Moderated by Pedro M. Cruz"
-            }
-          ],
-          "contributions": []
-        },
-        {
-          "id": "s111",
-          "category": "General",
-          "name": "Closing",
-          "startDate": {
-            "date": "2025-11-16",
-            "time": "16:50:00",
-            "tz": "US/Eastern"
-          },
-          "endDate": {
-            "date": "2025-11-16",
-            "time": "17:00:00",
-            "tz": "US/Eastern"
-          },
-          "location": "",
-          "room": "",
-          "conveners": [
-            {
-              "affiliation": "Northeastern University",
-              "displayOrderKey": [
-                0,
-                "Pedro M. Cruz"
-              ],
-              "email": "pedro@infoplus.team",
-              "emailHash": "daa135e4012d03bbb905317c175ce16f",
-              "familyName": "Cruz",
-              "firstName": "Pedro M.",
-              "name": "Pedro M. Cruz"
-            },
-            {
-              "affiliation": "Massachusetts Institute of Technology",
-              "displayOrderKey": [
-                0,
-                "Sarah Williams"
-              ],
-              "email": "sarah@infoplus.team",
-              "emailHash": "ad66a6f7a46f81bdaec5bce945f285e2",
-              "familyName": "Williams",
-              "firstName": "Sarah",
-              "name": "Sarah Williams"
             }
           ],
           "contributions": []

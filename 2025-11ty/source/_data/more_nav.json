@@ -1,5 +1,9 @@
 [
     {
+        "url": "/venue/",
+        "title": "Venue"
+    },
+    {
         "url": "/call_for_submissions/call_for_presentations/",
         "title": "Call for presentations"
     },

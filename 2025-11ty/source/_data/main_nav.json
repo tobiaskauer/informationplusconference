@@ -4,8 +4,8 @@
         "title": "Home"
     },
     {
-        "url": "/program/",
-        "title": "Program"
+        "url": "/talks/",
+        "title": "Talks"
     },
     {
         "url": "/exhibition/",
@@ -14,10 +14,6 @@
     {
         "url": "/workshops/",
         "title": "Workshops"
-    },
-    {
-        "url": "/venue/",
-        "title": "Venue"
     },
     {
         "url": "/about/",
