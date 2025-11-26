@@ -4,10 +4,20 @@ layout: "exhibition_item.njk"
 date: 2025-02-04
 thumb: "/images/exhibition/bio_thumb.jpg"
 contributors:
-- name: Yinan Dong 
-  bio: MIT, Data Visualization and Exhibition Designer
+- name: Yinan Dong
+  bio: Design, Visualization, and Development Lead, MIT Senseable City Lab
+- name: Oyinkan Ifidon-Ola
+  bio: Icon Design and Web Development, University of Michigan
 - name: Houjiang Liu
-  bio: UT Austin, School of Information, researcher 
+  bio: Web Development, University of Texas at Austin
+- name: Kee Moon Jang
+  bio: Research Lead, MIT Senseable City Lab
+- name: Deniz Aydemir
+  bio: Backend Development Contributor, MIT Senseable City Lab
+- name: Fábio Duarte
+  bio: Project and Design Manager, MIT Senseable City Lab
+- name: Carlo Ratti
+  bio: Director, MIT Senseable City Lab
 images:
 - src: /images/exhibition/bio_2.jpg
   alt: ""
