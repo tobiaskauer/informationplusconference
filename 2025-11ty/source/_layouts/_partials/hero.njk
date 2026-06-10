@@ -1,21 +1,27 @@
+{% set header_image = header.image | default('t2-blue-magenta') %}
+{% set hero_video_src = header.media_url or hero_videos[header.vimeo_id] or hero_videos['1106005730'] %}
 <section class="hero">
   <div class="header-video">
     <!-- poster image as background -->
       <picture class="video-poster">
-        <source srcset="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.avif') | url }}" type="image/avif">
-        <source srcset="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.webp') | url }}" type="image/webp">
-        <img src="{{ ('/images/headers/' ~ (header.image | default('t2-blue-magenta')) ~ '.png') | url }}"
+        <source srcset="{{ ('/images/headers/' ~ header_image ~ '.avif') | url }}" type="image/avif">
+        <source srcset="{{ ('/images/headers/' ~ header_image ~ '.webp') | url }}" type="image/webp">
+        <img src="{{ ('/images/headers/' ~ header_image ~ '.png') | url }}"
             alt="Poster"
             style="width: 100%; height: 100%; object-fit: cover;">
       </picture>
-      <!-- vimeo embed -->
-      <iframe
-        src="https://player.vimeo.com/video/{{ header.vimeo_id }}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-        frameborder="0"
-        webkitallowfullscreen
-        mozallowfullscreen
-        allowfullscreen>
-      </iframe>
+      <!-- MediaCMS-hosted hero background video -->
+      <video
+        class="hero-background-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="metadata"
+        poster="{{ ('/images/headers/' ~ header_image ~ '.png') | url }}"
+        aria-hidden="true">
+        <source src="{{ hero_video_src }}" type="video/mp4">
+      </video>
   </div>
   <div class="hero-body">
     <div class="container">
