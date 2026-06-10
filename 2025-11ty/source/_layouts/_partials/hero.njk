@@ -1,5 +1,5 @@
 {% set header_image = header.image | default('t2-blue-magenta') %}
-{% set hero_media_id = header.media_id or hero_videos[header.vimeo_id] or hero_videos['1106005730'] %}
+{% set hero_media_id = header.media_id or hero_videos[header.vimeo_id] or hero_videos[header_image] or hero_videos['1106005730'] %}
 <section class="hero">
   <div class="header-video">
     <!-- poster image as background -->
