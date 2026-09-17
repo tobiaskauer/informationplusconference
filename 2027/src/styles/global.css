@@ -1,0 +1,1321 @@
+/* Redaction (self-hosted) ---------------------------------------------------
+   The Redaction typeface ships as 7 static "gradation" families (0,10,20,35,
+   50,70,100) — higher = more pixelated/redacted. Each has Regular/Bold/Italic.
+   Relative url() paths let Vite fingerprint them and apply the GitHub Pages
+   `base` path automatically. The size -> gradation mapping is in "Redaction
+   ramp" below — that's the part to tweak. */
+
+/* gradation 0 */
+@font-face{font-family:"Redaction";src:url("../fonts/Redaction-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction";src:url("../fonts/Redaction-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction";src:url("../fonts/Redaction-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 10 */
+@font-face{font-family:"Redaction 10";src:url("../fonts/Redaction_10-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 10";src:url("../fonts/Redaction_10-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 10";src:url("../fonts/Redaction_10-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 20 */
+@font-face{font-family:"Redaction 20";src:url("../fonts/Redaction_20-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 20";src:url("../fonts/Redaction_20-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 20";src:url("../fonts/Redaction_20-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 35 */
+@font-face{font-family:"Redaction 35";src:url("../fonts/Redaction_35-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 35";src:url("../fonts/Redaction_35-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 35";src:url("../fonts/Redaction_35-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 50 */
+@font-face{font-family:"Redaction 50";src:url("../fonts/Redaction_50-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 50";src:url("../fonts/Redaction_50-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 50";src:url("../fonts/Redaction_50-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 70 */
+@font-face{font-family:"Redaction 70";src:url("../fonts/Redaction_70-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 70";src:url("../fonts/Redaction_70-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 70";src:url("../fonts/Redaction_70-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+/* gradation 100 */
+@font-face{font-family:"Redaction 100";src:url("../fonts/Redaction_100-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 100";src:url("../fonts/Redaction_100-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Redaction 100";src:url("../fonts/Redaction_100-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+
+:root {
+  /* Blue scale (oklch) ----------------------------------------------------- */
+  --blue-50: oklch(97.17% 0.01 244.69);
+  --blue-100: oklch(93.68% 0.03 245.28);
+  --blue-200: oklch(89.09% 0.06 244.46);
+  --blue-300: oklch(82.41% 0.10 243.20);
+  --blue-400: oklch(74.17% 0.14 247.20);
+  --blue-500: oklch(64.75% 0.19 255.16);
+  --blue-600: oklch(58.16% 0.21 259.55);
+  --blue-700: oklch(52.06% 0.21 261.61);
+  --blue-800: oklch(44.83% 0.18 262.58);
+  --blue-900: oklch(39.87% 0.14 261.51);
+  --blue-950: oklch(29.27% 0.09 263.49);
+
+  /* Semantic colors — near-black, blue-tinted, nerdy. Backgrounds and neutrals
+     are derived from the same blue hue (~270) so everything reads as one cool,
+     dark family; accents come straight from the scale. */
+  /* The dark chrome shares one hue so bg/surfaces/border/text read as a family.
+     --bg-hue is the prototyping knob: each accent palette re-points it (below)
+     so the whole background tints toward the chosen accent, not always blue. */
+  --bg-hue: 350;
+  --bg: oklch(15% 0.022 var(--bg-hue));       /* almost black, faint accent tint */
+  --surface: oklch(19.5% 0.035 var(--bg-hue)); /* panels / cards */
+  --surface-2: oklch(24% 0.045 var(--bg-hue)); /* pills / hovered cards */
+  --border: oklch(31% 0.05 var(--bg-hue));
+  --text: oklch(96.5% 0.008 var(--bg-hue));   /* cool near-white */
+  --muted: oklch(73% 0.05 var(--bg-hue));     /* low-contrast tinted gray */
+  /* Dither highlights are dimmer than --text so hero copy and controls remain
+     the brightest, most readable foreground layer over the moving video. */
+  --hero-dither-foreground: color-mix(in oklab, var(--text) 52%, var(--bg));
+  /* --- Accent tokens (the prototyping knob) -------------------------------
+     Everything colored on the site reads from these seven variables. The
+     defaults below are the magenta palette; the `[data-accent="…"]` blocks after
+     :root override them for other palettes (swap via the ~ dev panel or by
+     setting data-accent on <html>). To retire prototyping, keep just these
+     defaults and delete the override blocks. */
+  --accent: oklch(70% 0.20 350);       /* links, icons, markers — vivid, pops */
+  --accent-hover: oklch(78% 0.18 352); /* lightens on hover */
+  --accent-strong: oklch(62% 0.22 352); /* buttons */
+  --accent-strong-hover: oklch(55% 0.21 353); /* buttons on hover */
+  --on-accent: var(--blue-50);         /* text on accent fills */
+  --accent-duotone: oklch(48% 0.15 353); /* speaker-photo tint overlay */
+  --accent-outline: var(--blue-50);    /* resting border on ghost/back buttons */
+
+  --max: 100%; /* full-width layout — content spans the whole viewport */
+  --gutter: clamp(24px, 3vw, 56px);
+  --grid-line: color-mix(in srgb, var(--text) 7%, transparent);
+  --radius: 0; /* sharp corners everywhere — matches the pixelated typeface */
+
+  /* System monospace — the "nerdy" voice for metadata, labels and nav. */
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  /* Redaction gradations, keyed by grade. --rd-0 is the clean reading face;
+     each higher grade is more pixelated. All fall back to the clean face while
+     loading, then to a plain serif. */
+  --rd-0: "Redaction", Georgia, "Times New Roman", serif;
+  --rd-10: "Redaction 10", var(--rd-0);
+  --rd-20: "Redaction 20", var(--rd-0);
+  --rd-35: "Redaction 35", var(--rd-0);
+  --rd-50: "Redaction 50", var(--rd-0);
+  --rd-70: "Redaction 70", var(--rd-0);
+  --rd-100: "Redaction 100", var(--rd-0);
+
+  --font: var(--rd-0); /* body / default: clean and legible */
+}
+
+/* Accent palettes ----------------------------------------------------------
+   Prototyping only: each block re-points the accent tokens for one palette.
+   `<html data-accent="neutral">` (etc.) selects it; no data-accent = magenta
+   (the :root defaults above). Backgrounds, surfaces and text follow the
+   palette hue so we can audition color without touching layout. The
+   ~ panel (see Base.astro) toggles these live and remembers the choice.
+
+   neutral = "cool gray": accents desaturate into the same blue-gray hue as the
+   background family, so the whole page reads neutral while keeping its warmth.
+   Use this to preview the "no accent yet, color comes later" direction. */
+[data-accent="blue"] {
+  --bg-hue: 271;
+  --accent: var(--blue-500);
+  --accent-hover: var(--blue-400);
+  --accent-strong: var(--blue-600);
+  --accent-strong-hover: var(--blue-700);
+  --on-accent: var(--blue-50);
+  --accent-duotone: var(--blue-700);
+  --accent-outline: var(--blue-50);
+}
+[data-accent="neutral"] {
+  --bg-hue: 265;
+  --accent: oklch(76% 0.022 262);
+  --accent-hover: oklch(85% 0.02 262);
+  --accent-strong: oklch(52% 0.025 262);
+  --accent-strong-hover: oklch(45% 0.025 262);
+  --on-accent: var(--blue-50);
+  --accent-duotone: oklch(48% 0.03 262);
+  --accent-outline: var(--blue-50);
+}
+[data-accent="amber"] {
+  --bg-hue: 75;
+  --accent: oklch(80% 0.15 75);
+  --accent-hover: oklch(87% 0.13 78);
+  --accent-strong: oklch(72% 0.16 70);
+  --accent-strong-hover: oklch(65% 0.15 65);
+  --on-accent: oklch(20% 0.03 70);     /* dark text on bright amber fills */
+  --accent-duotone: oklch(55% 0.12 65);
+  --accent-outline: var(--blue-50);
+}
+[data-accent="green"] {
+  --bg-hue: 150;
+  --accent: oklch(75% 0.16 155);
+  --accent-hover: oklch(83% 0.15 158);
+  --accent-strong: oklch(66% 0.16 152);
+  --accent-strong-hover: oklch(58% 0.15 150);
+  --on-accent: oklch(20% 0.03 150);
+  --accent-duotone: oklch(48% 0.12 150);
+  --accent-outline: var(--blue-50);
+}
+/* custom = pick-any-color: the whole palette is derived from a single base
+   color the ~ panel's color input writes to --accent-custom (on <html>). The
+   hover/strong/duotone variants are mixed here; --accent-custom-on (the legible
+   text color for fills) is set by JS from the base color's luminance. */
+[data-accent="custom"] {
+  --bg-hue: var(--accent-custom-hue, 350); /* hue of the picked color, set by JS */
+  --accent: var(--accent-custom, oklch(70% 0.20 350));
+  --accent-hover: color-mix(in oklab, var(--accent-custom, oklch(70% 0.20 350)) 80%, white);
+  --accent-strong: color-mix(in oklab, var(--accent-custom, oklch(70% 0.20 350)) 86%, black);
+  --accent-strong-hover: color-mix(in oklab, var(--accent-custom, oklch(70% 0.20 350)) 72%, black);
+  --on-accent: var(--accent-custom-on, var(--blue-50));
+  --accent-duotone: color-mix(in oklab, var(--accent-custom, oklch(70% 0.20 350)) 62%, black);
+  --accent-outline: var(--blue-50);
+}
+
+* { box-sizing: border-box; }
+
+/* Keep selected copy on-brand and readable across every accent palette. */
+::selection {
+  background: var(--accent-strong);
+  color: var(--on-accent);
+  text-shadow: none;
+}
+
+/* Custom pixel cursors. The PNGs live in public/cursors/; their URLs (with the
+   GitHub Pages base applied) are injected as --cur-* properties on <html> in
+   Base.astro. Each falls back to its matching native cursor. */
+body { cursor: var(--cur-default, auto); }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+dt,
+dd,
+blockquote,
+figcaption,
+caption,
+th,
+td,
+pre,
+code,
+span,
+strong,
+em,
+small,
+time,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
+[contenteditable="true"] {
+  cursor: var(--cur-text, text);
+}
+a,
+a *,
+button,
+button *,
+label,
+label *,
+summary,
+summary *,
+select,
+[role="button"],
+[role="button"] *,
+.btn,
+.btn *,
+.nav-toggle {
+  cursor: var(--cur-pointer, pointer);
+}
+:disabled,
+:disabled *,
+fieldset:disabled,
+fieldset:disabled * {
+  cursor: var(--cur-disabled, not-allowed);
+}
+
+/* pixelarticons render crisp at any size and sit nicely on the text baseline.
+   Icon sizes are set here in px and overridden per-context below. */
+.pa-icon { flex: none; vertical-align: -0.15em; width: 24px; height: 24px; }
+
+html {
+  /* Safari also samples the root background for its top and overscroll areas. */
+  background: var(--bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: clamp(17px, 16px + 0.4vw, 20px);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Twelve subtle Swiss-grid guides, aligned to the site content gutters. */
+body::before {
+  --guide-columns: 12;
+  content: "";
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--grid-line) 0 1px,
+    transparent 1px calc(100% / var(--guide-columns))
+  );
+  /* repeating gradients omit the terminal edge; this is the 13th line. */
+  box-shadow: inset -1px 0 var(--grid-line);
+  pointer-events: none;
+}
+html[data-grid="off"] body::before { display: none; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+h1, h2, h3 {
+  line-height: 0.98;
+  font-weight: 700;
+  text-wrap: balance;
+  overflow-wrap: break-word; /* never let a long word overflow on narrow screens */
+  margin: 0 0 20px;
+}
+
+/* Big, fluid display scale (px bounds, vw for fluidity) — typography is the
+   loudest thing on the page. */
+h1 { font-size: clamp(44px, 24px + 6vw, 80px); }
+h2 { font-size: clamp(32px, 22px + 3vw, 52px); }
+h3 { font-size: clamp(20px, 17px + 1vw, 26px); margin-bottom: 12px; }
+
+/* "Eyebrow" — small uppercase accent label above big headings. */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.eyebrow::before { content: "// "; opacity: 0.6; }
+
+/* Redaction ramp -----------------------------------------------------------
+   Bigger text = more redacted. This is the single place to tune the effect:
+   reassign any selector to a different --rd-* grade. Body stays --rd-0 (clean).
+   Utility classes .rd-0 … .rd-100 let you test any grade on any element. */
+h3            { font-family: var(--rd-20); }
+h2,
+.section-title,
+.day-heading  { font-family: var(--rd-50); }
+h1            { font-family: var(--rd-70); }
+.hero h1      { font-family: var(--rd-70); }
+
+.rd-0   { font-family: var(--rd-0); }
+.rd-10  { font-family: var(--rd-10); }
+.rd-20  { font-family: var(--rd-20); }
+.rd-35  { font-family: var(--rd-35); }
+.rd-50  { font-family: var(--rd-50); }
+.rd-70  { font-family: var(--rd-70); }
+.rd-100 { font-family: var(--rd-100); }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter); /* gutters scale a little, layout stays wide */
+}
+
+/* Header / nav */
+.site-header {
+  border-bottom: 0;
+  background: color-mix(in srgb, var(--bg) 85%, transparent); /* translucent, follows --bg-hue */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header-home {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  transition: background 0.3s ease, -webkit-backdrop-filter 0.3s ease, backdrop-filter 0.3s ease;
+}
+.site-header-home.is-scrolled,
+.site-header-home.nav-open {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.brand {
+  font-family: var(--rd-50); /* more redacted than body — it's the wordmark */
+  font-weight: 700;
+  color: var(--text);
+  font-size: 26px;
+}
+.brand:hover { text-decoration: none; }
+/* Per-letter wordmark: on hover each letter "lights up" to accent, one at a
+   time. The order is the step index --i (set randomly per hover by a script in
+   Base.astro; falls back to left-to-right positional order without JS). */
+.brand span { color: var(--text); transition: color 0.06s ease; }
+.brand .brand-grade-10 { font-family: var(--rd-10); }
+.brand .brand-grade-20 { font-family: var(--rd-20); }
+.brand .brand-grade-35 { font-family: var(--rd-35); }
+.brand .brand-grade-50 { font-family: var(--rd-50); }
+.brand .brand-grade-70 { font-family: var(--rd-70); }
+.brand .brand-grade-100 { font-family: var(--rd-100); }
+.brand:hover span { color: var(--accent); transition-delay: calc(var(--i) * 28ms); }
+.nav { display: flex; gap: 32px; }
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
+}
+/* Keep navigation legible while the transparent homepage header sits directly
+   over the moving hero. The regular muted color returns with its backdrop. */
+.site-header-home:not(.is-scrolled):not(.nav-open) .nav a { color: var(--text); }
+.nav a:hover { color: var(--accent); text-decoration: none; }
+.nav .pa-icon { width: 22px; height: 22px; transition: transform 0.15s ease; }
+.nav a:hover .pa-icon { transform: translateY(-2px); }
+
+/* Hamburger toggle — hidden on desktop, shown on mobile. */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: var(--cur-pointer, pointer);
+  padding: 8px;
+  margin-right: -8px;
+}
+.nav-toggle:hover { color: var(--accent); }
+.nav-toggle .pa-icon { width: 28px; height: 28px; }
+.nav-toggle-close { display: none; }
+
+/* Responsive nav: below 640px the links collapse into a hamburger menu that
+   slides down from the header. Built to scale — add nav links freely. */
+@media (max-width: 640px) {
+  .container { padding: 0 16px; } /* tighter site margins on mobile */
+  .site-header {
+    /* With viewport-fit=cover, this padding becomes part of the header's own
+       backdrop and masks content scrolling behind the iPhone status area.
+       Keep the treatment always active on mobile so the safe area and navbar
+       cannot fall into different transparent/scrolled states. */
+    padding-top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 0;
+  }
+  .site-header .container { height: 64px; }
+  .brand { font-size: 22px; }
+  .nav-toggle { display: inline-flex; }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+    /* closed */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  }
+  .site-header.nav-open .nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .nav a {
+    gap: 14px;
+    padding: 14px 16px; /* align with the 16px mobile container margin */
+    font-size: 15px;
+  }
+  .nav a:hover { background: var(--surface); }
+  .nav a:hover .pa-icon { transform: none; }
+
+  /* menu <-> close icon swap */
+  .site-header.nav-open .nav-toggle-open { display: none; }
+  .site-header.nav-open .nav-toggle-close { display: block; }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  margin-top: 112px;
+  padding: 56px 0;
+  font-family: var(--mono);
+  font-size: 14px;
+}
+/* Footer top: about blurb (left) + social links (right). */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px 48px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.footer-about {
+  font-family: var(--rd-0);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 58ch;
+  margin: 0;
+}
+.footer-social-block {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+  margin-left: auto;
+  text-align: right;
+}
+.footer-social-intro { margin: 0; font-weight: 700; color: var(--text); }
+.footer-social { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+.footer-social-hashtag { margin: 0; }
+.footer-social a,
+.footer-social-placeholder { display: inline-flex; padding: 4px; margin: -4px; color: var(--muted); } /* padding enlarges the tap target */
+.footer-social a:hover { color: var(--accent); }
+.footer-social-placeholder { opacity: 0.45; }
+.footer-social-hidden { display: none; }
+.site-footer .footer-social .pa-icon { width: 24px; height: 24px; } /* beat the generic .site-footer .pa-icon (18px) */
+/* Bottom bar, separated from the about section by a hairline. */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+.site-footer .pa-icon { width: 18px; height: 18px; }
+/* Credit sits at the right end of the footer row (wraps below on narrow). */
+/* All footer items: icon inline on the (first) line, text wraps beneath it. */
+.footer-item .pa-icon { vertical-align: middle; margin-right: 8px; }
+.footer-credit { margin-left: auto; max-width: 100%; }
+.footer-credit .pa-icon { color: var(--accent); }
+
+main { padding: 72px 0; min-height: 60vh; }
+main.main-flush-top { padding-top: 0; }
+
+/* Hero */
+.hero-scene {
+  /* Lower this percentage to begin fading the media into the page sooner. */
+  --hero-fade-start: 60%;
+  position: relative;
+  isolation: isolate;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: var(--bg);
+  /* Dragging belongs to the dither interaction, not browser text selection. */
+  -webkit-user-select: none;
+  user-select: none;
+}
+.hero-media {
+  position: sticky;
+  z-index: 0;
+  top: 80px;
+  width: 100%;
+  height: calc(100svh - 80px);
+  overflow: hidden;
+  background: transparent;
+}
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100svh - 80px);
+  margin-top: calc(-100svh + 80px);
+  overflow: hidden;
+}
+/* On the homepage the fixed transparent navbar overlays the video instead of
+   occupying a separate page-background strip above it. */
+.home-page .hero-media {
+  top: 0;
+  height: 100svh;
+}
+.home-page .hero {
+  min-height: 100svh;
+  margin-top: -100svh;
+}
+.hero-video,
+.hero-dither-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* A deliberately simple, static fade into the real page background. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 var(--hero-fade-start), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 var(--hero-fade-start), transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.hero-video { object-fit: cover; }
+.hero-dither-canvas {
+  z-index: 1;
+  display: block;
+  visibility: hidden;
+  background: var(--bg);
+  image-rendering: pixelated;
+}
+.hero-media.is-dither-active .hero-video { opacity: 0; }
+.hero-media.is-dither-active .hero-dither-canvas { visibility: visible; }
+.hero-media::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  /* A readability veil: keep the dither clearly visible while giving the
+     hero copy a little more separation from bright frames in the video. */
+  background: rgb(0 0 0 / 40%);
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 var(--hero-fade-start), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 var(--hero-fade-start), transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.hero-content {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr) auto;
+  row-gap: 56px;
+  width: 100%;
+  padding: clamp(40px, 6vw, 104px) var(--gutter) 0;
+}
+.hero-main {
+  grid-column: 1 / span 8;
+  align-self: end;
+  padding-right: 32px;
+}
+.hero-intro {
+  grid-column: 9 / -1;
+  align-self: end;
+  max-width: none;
+  padding: 0;
+  font-size: clamp(16px, 14px + 0.35vw, 19px);
+  line-height: 1.5;
+}
+.hero-intro > :first-child { margin-top: 0; }
+.hero-intro > :last-child { margin-bottom: 0; }
+.hero-bar {
+  position: relative;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  min-height: 96px;
+  padding-top: 32px;
+  padding-bottom: calc(var(--gutter) + 8px);
+}
+.hero-bar-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+  transform-origin: left center;
+  pointer-events: none;
+}
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .hero-bar-line {
+    animation: hero-line-draw 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+@keyframes hero-line-draw {
+  from { width: 40%; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+.hero-date { grid-column: 1 / span 2; }
+.hero-bar .hero-location {
+  grid-column: 3 / span 4;
+  align-items: flex-start;
+}
+.hero-location .pa-icon {
+  /* Anchor the icon to the first line when a long venue wraps. The optical
+     nudge matches the treatment used by section-title icons below. */
+  margin-top: calc((1.65em - 24px) / 2);
+  transform: translateY(-0.12em);
+}
+.hero-location > span { min-width: 0; }
+.hero-bar .meta-item { white-space: nowrap; }
+.hero-bar .hero-actions {
+  grid-column: 9 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+}
+.hero-bar .btn {
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.hero-bar .btn > span {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 28px;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+/* Keep all three hero-bar groups on one row until the mobile layout takes over.
+   The venue may wrap within its columns, and a lone CTA uses both of the button
+   area's internal columns. */
+@media (min-width: 641px) and (max-width: 1280px) {
+  .hero-date { grid-column: 1 / span 3; }
+  .hero-bar .hero-location {
+    grid-column: 4 / span 5;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  .hero-location .pa-icon { margin-top: calc((1.35em - 24px) / 2); }
+  .hero-bar .hero-actions { grid-column: 9 / -1; }
+  .hero-bar .hero-actions > .btn:only-child { grid-column: 1 / -1; }
+}
+
+/* Near the mobile breakpoint, an even split gives the date enough room without
+   sacrificing the button. The venue is expected to use multiple lines here. */
+@media (min-width: 641px) and (max-width: 760px) {
+  .hero-date { grid-column: 1 / span 4; }
+  .hero-bar .hero-location {
+    grid-column: 5 / span 4;
+  }
+}
+
+/* Homepage intro: GSAP fades the hero content and later sections upward. Gated
+   to JS-on + motion-allowed so no-JS and reduced-motion users see everything. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .hero [data-reveal] { opacity: 0; transform: translateY(14px); }
+}
+.hero .tagline {
+  color: var(--text);
+  font-size: clamp(34px, 26px + 2.35vw, 64px);
+  line-height: 1.12;
+  max-width: 760px;
+  margin: 16px 0 0;
+}
+/* Hero meta (date / location) — borderless info, NOT button-like chips. */
+/* Metadata rows (date / time / location / building…) — plain icon + text, not
+   button-like badges. Used in the hero and on detail pages. */
+.meta-list { display: flex; flex-wrap: wrap; gap: 28px; margin: 24px 0 36px; }
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--text);
+}
+.meta-item .pa-icon { color: var(--accent); width: 24px; height: 24px; }
+/* Interactive meta items (e.g. a session's room link) are underlined so they're
+   distinguishable from static meta without relying on color alone. The label is
+   wrapped in a span because text-decoration doesn't apply to the inline-flex. */
+a.meta-item span { text-decoration: underline; text-underline-offset: 4px; }
+/* Underline lives on the span; keep the anchor itself from adding a second one
+   (the global a:hover underline) on hover. */
+a.meta-item:hover { color: var(--accent); text-decoration: none; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--accent-strong);
+  color: var(--on-accent);
+  border: 2px solid transparent; /* matches .btn-ghost's height */
+  font-family: var(--rd-0);
+  font-weight: 700;
+  font-size: 19px;
+  padding: 16px 30px;
+  border-radius: var(--radius);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
+}
+.btn:not(:disabled):hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  color: var(--on-accent);
+  background: var(--accent-strong-hover);
+}
+
+/* Secondary / ghost button */
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--accent-outline);
+}
+.btn-ghost:not(:disabled):hover {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent-strong);
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; }
+
+.btn .pa-icon { width: 28px; height: 28px; transition: transform .12s ease; }
+.btn:not(:disabled):hover .pa-icon { transform: translateX(4px); }
+
+/* Cards & grids */
+.grid { display: grid; gap: 24px; }
+.grid.cols-2 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+}
+.grid.cols-2 > .card { grid-column: span 2; }
+.grid.cols-3 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+@media (max-width: 1499px) {
+  .grid.cols-2 > .card { grid-column: span 3; }
+}
+@media (max-width: 999px) {
+  .grid.cols-2 > .card { grid-column: span 4; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  color: var(--text);
+  transition: transform .14s ease, border-color .14s ease, background .14s ease;
+}
+a.card:hover {
+  border-color: var(--accent-strong);
+  background: var(--surface);
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+/* Looser internal rhythm so card titles/subtitles aren't cramped. */
+.card h3 { margin: 0; line-height: 1.25; }
+/* Spacing lives on the meta row that follows the title, so a card with no
+   speaker/room/subtitle isn't left top-heavy by a dangling h3 margin. */
+.card h3 + .sub { margin-top: 12px; }
+.card .sub { color: var(--muted); font-size: 16px; line-height: 1.5; }
+.card .sub .pa-icon { width: 20px; height: 20px; }
+
+/* Room cards: horizontal rows — name on the left, metadata on the right —
+   so they use the available width instead of wrapping. */
+.room-card { gap: 12px; } /* title on top, meta below it (column from .card) */
+.room-meta { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px 22px; }
+.room-meta-item { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 16px; }
+.room-meta-item .pa-icon { width: 20px; height: 20px; } /* inherit muted, like schedule cards */
+
+/* Speaker card: square photo on top, inset equally by the card padding
+   (left/top/right), with the name + role below. */
+/* Speaker card meta: role and company on their own lines, no separator. */
+.speaker-meta { display: flex; flex-direction: column; gap: 2px; }
+
+.speaker-photo {
+  position: relative;
+  isolation: isolate; /* keep the blend contained to this box */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--surface-2);
+  margin-bottom: 16px;
+}
+.speaker-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+}
+/* Duotone: the active accent in "screen" blend tints the image's shadows while
+   highlights stay light. Only applied over an actual photo. */
+.speaker-photo:has(img)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent-duotone);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Ghost teaser decorations — both use the most pixelated Redaction grade so
+   they read as censored. .redacted = title text; .blocks = █ bars for hidden
+   metadata. Decorative only (paired with aria-hidden in markup). */
+.redacted,
+.blocks {
+  font-family: var(--rd-100);
+  color: var(--muted);
+  user-select: none;
+}
+
+/* Ghost teaser card: fully redacted (title + metadata), dimmed and faded out to
+   imply the schedule continues beyond the few shown. */
+.session-ghost {
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
+}
+.session-ghost .redacted,
+.session-ghost .blocks { opacity: 0.4; } /* extra-faint, harder to read */
+.session-ghost:hover { transform: none; } /* stays put — it's a placeholder */
+
+/* Section titles — softer title case, with an accent icon before the text. */
+.section-title {
+  margin: 88px 0 36px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+/* Center against the first line box rather than the full text block, then nudge
+   toward the cap height so wrapped titles keep the same alignment as one line. */
+.section-title .pa-icon {
+  color: var(--accent);
+  width: 34px;
+  height: 34px;
+  margin-top: calc((0.98em - 34px) / 2);
+  transform: translateY(-0.06em);
+}
+
+/* Homepage introduction — CMS-authored rich text moved out of the hero so it
+   can grow naturally without competing with the event metadata and CTAs. */
+.home-intro {
+  padding: clamp(72px, 9vw, 144px) 0 clamp(64px, 6vw, 96px);
+}
+.home-intro .prose {
+  max-width: 62ch;
+  font-family: var(--rd-50);
+  font-size: clamp(24px, 19px + 1vw, 36px);
+  line-height: 1.5;
+  text-align: left;
+}
+.accent-emphasis,
+.home-intro .prose strong {
+  color: var(--accent);
+  font-family: var(--rd-70);
+  font-weight: 700;
+}
+.home-intro-word {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform, opacity, filter;
+  transform-origin: 0% 100%;
+  backface-visibility: hidden;
+}
+.home-intro .prose > :first-child { margin-top: 0; }
+.home-intro .prose > :last-child { margin-bottom: 0; }
+
+/* Conference organizers — grouped, nested CMS data presented as a simple
+   typographic roster. The group and person levels remain independently easy
+   to restyle without coupling them to speaker cards. */
+.organizers { padding-bottom: clamp(64px, 6vw, 96px); }
+.organizers .section-title { margin-bottom: 20px; }
+.organizer-description {
+  max-width: 62ch;
+  margin: 0 0 48px;
+  color: var(--muted);
+  font-size: clamp(20px, 18px + 0.4vw, 24px);
+  line-height: 1.5;
+}
+.organizer-groups {
+  columns: 2;
+  column-gap: 0;
+}
+.organizer-group {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 48px;
+  padding-right: clamp(24px, 4vw, 72px);
+  break-inside: avoid;
+}
+.organizer-group h3 {
+  margin: 0 0 18px;
+  font-size: clamp(24px, 20px + 0.7vw, 32px);
+}
+.organizer-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.organizer-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 6px 0;
+}
+.organizer-person p {
+  margin: 0;
+  line-height: 1.45;
+}
+.organizer-organization { color: var(--muted); }
+.organizer-links {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 12px;
+}
+.organizer-links a {
+  display: inline-flex;
+  padding: 4px;
+  margin: -4px;
+  color: var(--muted);
+}
+.organizer-links a:hover { color: var(--accent); }
+.organizer-links .pa-icon { width: 20px; height: 20px; }
+
+/* Detail-page title — extra top margin to separate it from the tag above,
+   and looser line-height so multi-line titles don't cramp. */
+.detail-title { margin: 28px 0 16px; line-height: 1.1; }
+
+.more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.more-link .pa-icon { width: 20px; height: 20px; transition: transform .12s ease; }
+.more-link:hover { text-decoration: none; }
+.more-link:hover .pa-icon { transform: translateX(4px); }
+
+/* Speaker avatar — square to match the sharp, pixelated aesthetic. */
+.avatar {
+  width: 80px; height: 80px;
+  object-fit: cover; background: var(--surface-2); flex: none;
+}
+.avatar.lg { width: 190px; height: 190px; }
+
+/* Speaker detail header: photo + (name / bio / links) side by side. */
+.speaker-header { display: flex; gap: 24px; align-items: flex-start; margin: 24px 0 36px; }
+.speaker-socials { display: flex; flex-wrap: wrap; gap: 24px; margin: 14px 0; }
+
+/* Tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+}
+.tag .pa-icon { width: 16px; height: 16px; }
+
+/* Schedule */
+.day-heading {
+  margin: 80px 0 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+  font-size: clamp(32px, 22px + 2.5vw, 48px);
+}
+.session-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 16px;
+}
+.session-time .pa-icon { width: 22px; height: 22px; }
+
+/* Prose (rendered markdown bodies) */
+.prose { max-width: 700px; }
+.prose :is(h2, h3) { margin-top: 28px; }
+.prose a { text-decoration: underline; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.back-link .pa-icon { width: 20px; height: 20px; }
+.back-link:hover { color: var(--accent); text-decoration: none; }
+
+/* Breadcrumbs — minimal, mono, chevron separators. */
+/* Back button — sits above the title on detail pages, always on its own row
+   (never sharing a line with a following tag). */
+.back-btn {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--accent-outline);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.back-btn:hover { border-color: var(--accent-strong); color: var(--accent); text-decoration: none; }
+.back-btn .pa-icon { width: 18px; height: 18px; }
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+.breadcrumbs a { color: var(--text); } /* clickable parent pages stand out */
+.breadcrumbs a:hover { color: var(--accent); text-decoration: none; }
+.breadcrumbs [aria-current="page"] { color: var(--muted); } /* current page recedes */
+.breadcrumbs .bc-sep { width: 14px; height: 14px; color: var(--muted); opacity: 0.55; }
+
+/* Getting there (directions) */
+.gt-campus {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+.gt-campus span { display: block; }
+.gt-address {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+/* "Open in Google Maps" — a smaller ghost button than the hero CTAs. */
+.gt-maps-btn { font-size: 15px; padding: 12px 18px; gap: 10px; }
+.gt-maps-btn .pa-icon { width: 20px; height: 20px; }
+/* Transit modes as a two-column spec sheet on larger screens. */
+.gt-modes {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin: 32px 0 0;
+}
+.gt-mode {
+  display: block;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.gt-mode:nth-child(odd) { grid-column: 1 / span 5; }
+.gt-mode:nth-child(even) { grid-column: 7 / span 5; }
+.gt-mode-label {
+  display: block;
+  margin: 0 0 10px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+/* Inline (not flex) icon so the label's text baseline drives the row's baseline
+   alignment and sits level with the description. */
+.gt-mode-label .pa-icon { width: 26px; height: 26px; vertical-align: middle; margin-right: 10px; }
+.gt-mode-text { margin: 0; color: var(--text); font-size: 17px; line-height: 1.5; }
+.gt-mode-text a { text-decoration: underline; text-underline-offset: 3px; }
+.gt-external-link { position: relative; padding-right: 27px; white-space: nowrap; }
+.gt-external-link .pa-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 640px) {
+  .gt-modes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .gt-mode { grid-column: 1 / -1; padding: 18px 0; }
+}
+
+/* Previous editions — outbound link cards. */
+.editions {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.editions li {
+  grid-column: span 3;
+  display: flex;
+} /* let each card fill its grid-aligned cell */
+
+@media (max-width: 999px) {
+  .editions li { grid-column: span 6; }
+}
+.edition {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 22px 24px;
+  color: var(--text);
+  transition: border-color .14s ease, background .14s ease, transform .14s ease;
+}
+a.edition:hover {
+  border-color: var(--accent-strong);
+  background: var(--surface);
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+.edition-year { font-family: var(--rd-20); font-size: 28px; font-weight: 700; line-height: 1; }
+.edition-place { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+.edition-venue { font-family: var(--mono); font-size: 13px; color: var(--muted); opacity: 0.75; }
+/* Call to action, pinned to the bottom so all cards align regardless of content. */
+.edition-cta {
+  margin-top: auto;
+  padding-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.edition-cta .pa-icon { width: 18px; height: 18px; }
+a.edition:hover .edition-cta { color: var(--accent-hover); }
+
+/* Mobile layout fixes -------------------------------------------------------- */
+@media (max-width: 640px) {
+  /* Less dead space between the navbar and the page content. */
+  :root { --gutter: 16px; }
+  body::before { --guide-columns: 4; }
+  main { padding-top: 24px; }
+  /* The mobile hero places nearly all copy directly over the moving image, so
+     use a slightly stronger veil here without changing the desktop treatment. */
+  .home-page .hero-media::after { background: rgb(0 0 0 / 55%); }
+  .hero-media {
+    top: 64px;
+    height: calc(100svh - 64px);
+  }
+  .hero { min-height: calc(100svh - 64px); }
+  .hero { margin-top: calc(-100svh + 64px); }
+  .hero-content {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: none;
+    grid-auto-rows: max-content;
+    align-content: end;
+    row-gap: 24px;
+    padding: 88px var(--gutter) 24px;
+  }
+  .hero-main,
+  .hero-intro,
+  .hero-bar { grid-column: 1 / -1; }
+  .hero-main,
+  .hero-intro { padding: 0; }
+  .hero .tagline { margin-top: 4px; }
+  .hero-bar {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px 0;
+    padding: 24px 0 0;
+  }
+  .hero-date,
+  .hero-bar .hero-location,
+  .hero-bar .hero-actions { grid-column: 1 / -1; }
+  .hero-bar .meta-item { white-space: normal; }
+  .hero-bar .hero-location {
+    min-width: 0;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+  .hero-location .pa-icon { margin-top: calc((1.35em - 24px) / 2); }
+  .hero-bar .hero-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .grid.cols-2 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid.cols-2 > .card,
+  .editions li { grid-column: 1 / -1; }
+
+  .home-intro { padding-top: 72px; }
+  .organizer-groups { columns: 1; }
+  .organizer-group { padding-right: 0; }
+
+  /* Speaker cards: compact horizontal layout (small photo left, text right)
+     so the 1:1 image doesn't make the card huge. */
+  .speaker-card { flex-direction: row; align-items: center; gap: 16px; }
+  .speaker-card .speaker-photo {
+    width: 84px;
+    height: 84px;
+    flex: none;
+    margin: 0;
+  }
+  .speaker-card .speaker-body { min-width: 0; }
+
+  /* Footer: stack rows, let the credit wrap instead of overflowing. */
+  .footer-social-block {
+    justify-items: start;
+    margin-left: 0;
+    text-align: left;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer-credit { margin-left: 0; }
+
+  /* Speaker detail: photo on top, info below; one social link per row. */
+  .speaker-header { flex-direction: column; gap: 20px; }
+  .speaker-socials { flex-direction: column; gap: 12px; align-items: flex-start; }
+
+  /* Hero CTAs: stack full-width. */
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  /* Tighter cards on mobile (session / speaker / room / ghost). */
+  .card { padding: 20px; }
+}

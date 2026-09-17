@@ -1,0 +1,82 @@
+---
+import { VENUE } from '../lib/venue';
+import Icon from './Icon.astro';
+
+// Hardcoded, reusable directions block (shown on /venue and each room page).
+const modes = [
+  {
+    icon: 'directions',
+    label: 'By train',
+    text: 'Take a train to Milano Bovisa Politecnico station, then walk for approximately 6 minutes towards Via Durando.',
+    links: [
+      { label: 'Trenord', href: 'https://www.trenord.it/en/' },
+      { label: 'Trenitalia', href: 'https://www.trenitalia.com/en.html' },
+    ],
+  },
+  {
+    icon: 'bus-front',
+    label: 'By bus or tram',
+    text: 'Take bus line 92 or 82, or tram line 2, and get off at Piazza Bausan. From there, walk for approximately 3 minutes towards Via Durando.',
+    links: [{ label: 'ATM', href: 'https://www.atm.it/en/Pages/default.aspx' }],
+  },
+  {
+    icon: 'directions',
+    label: 'By metro',
+    text: 'The nearest metro station to the campus is Dergano, on the yellow line (M3). It is approximately 2 km from the campus and a 15-minute walk away.',
+    links: [{ label: 'ATM', href: 'https://www.atm.it/en/Pages/default.aspx' }],
+  },
+  {
+    icon: 'car',
+    label: 'By car',
+    text: 'Park in the car park outside Milano Bovisa Politecnico station, then walk for approximately 6 minutes towards Via Durando.',
+  },
+] as const;
+---
+
+<section class="getting-there">
+  <h2 class="section-title"><Icon name="map-pin" />Getting there</h2>
+
+  <p class="prose gt-intro">
+    The Department of Design of Politecnico di Milano is located in the Bovisa area. The Durando
+    campus is easily accessible by car, train, or via the urban public transport system.
+  </p>
+
+  <p class="gt-campus">{VENUE.campus.map((line) => <span>{line}</span>)}</p>
+  <p class="gt-address">
+    {VENUE.addressLines.map((line) => (
+      <span style="display:block">{line}</span>
+    ))}
+  </p>
+  <a
+    class="btn btn-ghost gt-maps-btn"
+    href={VENUE.mapsUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open in Google Maps <Icon name="external-link" />
+  </a>
+
+  <dl class="gt-modes">
+    {modes.map((mode) => (
+      <div class="gt-mode">
+        <dt class="gt-mode-label"><Icon name={mode.icon} /><span>{mode.label}</span></dt>
+        <dd class="gt-mode-text">
+          {mode.text}
+          {'links' in mode && (
+            <>
+              {' '}For further information, visit the{' '}
+              {mode.links.map((link, index) => (
+                <>
+                  {index > 0 && (index === mode.links.length - 1 ? ' and ' : ', ')}
+                  <a class="gt-external-link" href={link.href} target="_blank" rel="noopener noreferrer">
+                    {link.label}<Icon name="external-link" />
+                  </a>
+                </>
+              ))}{' '}{mode.links.length === 1 ? 'website.' : 'websites.'}
+            </>
+          )}
+        </dd>
+      </div>
+    ))}
+  </dl>
+</section>

@@ -1,0 +1,79 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SessionCard from '../../components/SessionCard.astro';
+import { withBase } from '../../lib/url';
+import { sessionsForSpeaker } from '../../lib/refs';
+import Icon from '../../components/Icon.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BackButton from '../../components/BackButton.astro';
+
+export const getStaticPaths = (async () => {
+  // These detail pages are generated once per CMS entry; there is no runtime server.
+  const speakers = await getCollection('speakers');
+  return speakers.map((speaker) => ({
+    params: { slug: speaker.id },
+    props: { speaker },
+  }));
+}) satisfies GetStaticPaths;
+
+const { speaker } = Astro.props;
+const { name, role, company, photo, socials } = speaker.data;
+const { Content } = await render(speaker);
+const sessions = await sessionsForSpeaker(speaker.id);
+const subtitle = [role, company].filter(Boolean).join(' · ');
+
+// Build a compact list without leaving false placeholders for missing profiles.
+const socialLinks = [
+  socials?.website && { label: 'Website', url: socials.website, icon: 'globe' },
+  socials?.twitter && { label: 'Twitter / X', url: socials.twitter, icon: 'x-solid' },
+  socials?.linkedin && { label: 'LinkedIn', url: socials.linkedin, icon: 'linkedin-2-solid' },
+].filter(Boolean) as { label: string; url: string; icon: string }[];
+---
+
+<Base title={name} description={subtitle || `Speaker at the conference`}>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Speakers', href: '/speakers' },
+      { label: name },
+    ]}
+  />
+
+  <BackButton href="/speakers" label="Back to speakers" />
+
+  <div class="speaker-header">
+    {photo ? (
+      <img class="avatar lg" src={withBase(photo)} alt={name} />
+    ) : (
+      <div class="avatar lg" aria-hidden="true"></div>
+    )}
+    <div>
+      <h1 style="margin:4px 0;">{name}</h1>
+      {subtitle && <p class="sub" style="margin:6px 0;">{subtitle}</p>}
+      {socialLinks.length > 0 && (
+        <p class="speaker-socials">
+          {socialLinks.map((link) => (
+            <a class="more-link" href={link.url} target="_blank" rel="noopener noreferrer">
+              <Icon name={link.icon} />{link.label}
+            </a>
+          ))}
+        </p>
+      )}
+    </div>
+  </div>
+
+  <div class="prose">
+    <Content />
+  </div>
+
+  {sessions.length > 0 && (
+    <section>
+      <h2 class="section-title"><Icon name="presentation" />Sessions</h2>
+      <div class="grid">
+        {sessions.map((session) => <SessionCard session={session} />)}
+      </div>
+    </section>
+  )}
+</Base>

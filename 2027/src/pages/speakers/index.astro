@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SpeakerCard from '../../components/SpeakerCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const speakers = (await getCollection('speakers')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+---
+
+<Base title="Speakers" description="Meet the conference speakers.">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Speakers' }]} />
+  <span class="eyebrow">The line-up</span>
+  <h1>Speakers</h1>
+
+  {speakers.length === 0 && (
+    <p class="sub">No speakers yet. Add some in the local editor at <code>/admin</code>.</p>
+  )}
+
+  <div class="grid cols-2">
+    {speakers.map((speaker) => <SpeakerCard speaker={speaker} />)}
+  </div>
+</Base>

@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+  speaker: CollectionEntry<'speakers'>;
+}
+
+const { speaker } = Astro.props;
+const { name, role, company, photo } = speaker.data;
+---
+
+<a class="card speaker-card" href={withBase(`/speakers/${speaker.id}`)}>
+  <!-- Keep the photo wrapper when no image exists so every card aligns. -->
+  <div class="speaker-photo">
+    {photo && <img src={withBase(photo)} alt={name} loading="lazy" />}
+  </div>
+  <div class="speaker-body">
+    <h3>{name}</h3>
+    {(role || company) && (
+      <div class="sub speaker-meta">
+        {role && <span>{role}</span>}
+        {company && <span>{company}</span>}
+      </div>
+    )}
+  </div>
+</a>

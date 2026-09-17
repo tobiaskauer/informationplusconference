@@ -1,0 +1,65 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import GettingThere from '../../components/GettingThere.astro';
+import SessionCard from '../../components/SessionCard.astro';
+import Icon from '../../components/Icon.astro';
+import BackButton from '../../components/BackButton.astro';
+import { VENUE_DETAILS_ARE_PUBLIC, VENUE } from '../../lib/venue';
+import { sessionsForRoom } from '../../lib/refs';
+
+export const getStaticPaths = (async () => {
+  // Returning no paths keeps room URLs out of the static build until venue
+  // details are made public through the single flag in lib/venue.ts.
+  if (!VENUE_DETAILS_ARE_PUBLIC) return [];
+
+  const rooms = await getCollection('rooms');
+  return rooms.map((room) => ({
+    params: { slug: room.id },
+    props: { room },
+  }));
+}) satisfies GetStaticPaths;
+
+const { room } = Astro.props;
+const { name, building, floor, roomNumber } = room.data;
+const { Content } = await render(room);
+const sessions = await sessionsForRoom(room.id);
+---
+
+<Base title={name} description={`${name} — ${VENUE.address}`}>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Venue', href: '/venue' },
+      { label: name },
+    ]}
+  />
+
+  <BackButton href="/venue" label="Back to venue" />
+
+  <h1 class="detail-title">{name}</h1>
+
+  <div class="meta-list">
+    <span class="meta-item"><Icon name="map-pin-home" />Building {building}</span>
+    <span class="meta-item"><Icon name="chevron-up" />Floor {floor}</span>
+    {roomNumber && <span class="meta-item"><Icon name="door-closed" />Room {roomNumber}</span>}
+    <span class="meta-item"><Icon name="map-pin" />{VENUE.address}</span>
+  </div>
+
+  <div class="prose">
+    <Content />
+  </div>
+
+  {sessions.length > 0 && (
+    <section>
+      <h2 class="section-title"><Icon name="calendar" />Sessions here</h2>
+      <div class="grid">
+        {sessions.map((session) => <SessionCard session={session} />)}
+      </div>
+    </section>
+  )}
+
+  <GettingThere />
+</Base>

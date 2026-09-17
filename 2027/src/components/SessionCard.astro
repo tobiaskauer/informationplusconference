@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+import { resolveSpeakers, resolveRoom } from '../lib/refs';
+import { trackIcon } from '../lib/tracks';
+import Icon from './Icon.astro';
+
+interface Props {
+  session: CollectionEntry<'sessions'>;
+}
+
+const { session } = Astro.props;
+const { title, startTime, endTime, track } = session.data;
+// References are resolved during the static build. Missing CMS targets are
+// intentionally omitted by the helpers so one stale reference cannot break a card.
+const speakers = await resolveSpeakers(session);
+const room = await resolveRoom(session);
+const timeRange = endTime ? `${startTime}–${endTime}` : startTime;
+const speakerNames = speakers.map((s) => s.data.name).join(', ');
+const speakerIcon = speakers.length === 1 ? 'user' : 'users';
+const tagIcon = trackIcon(track, title);
+---
+
+<a class="card" href={withBase(`/sessions/${session.id}`)}>
+  <div class="sub" style="display:flex; gap:12px; align-items:center; margin-bottom:12px;">
+    <span class="session-time"><Icon name="clock" />{timeRange}</span>
+    {track && <span class="tag">{tagIcon && <Icon name={tagIcon} />}{track}</span>}
+  </div>
+  <h3>{title}</h3>
+  {(speakerNames || room) && (
+    <div class="sub" style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+      {speakerNames && (
+        <span style="display:inline-flex; align-items:center; gap:8px;"><Icon name={speakerIcon} />{speakerNames}</span>
+      )}
+      {room && (
+        <span style="display:inline-flex; align-items:center; gap:8px;"><Icon name="map-pin" />{room.data.name}</span>
+      )}
+    </div>
+  )}
+</a>

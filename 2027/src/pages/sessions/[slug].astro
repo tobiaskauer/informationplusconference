@@ -1,0 +1,66 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SpeakerCard from '../../components/SpeakerCard.astro';
+import { withBase } from '../../lib/url';
+import { resolveSpeakers, resolveRoom } from '../../lib/refs';
+import { trackIcon } from '../../lib/tracks';
+import { formatDay } from '../../lib/format';
+import Icon from '../../components/Icon.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BackButton from '../../components/BackButton.astro';
+
+export const getStaticPaths = (async () => {
+  // These detail pages are generated once per CMS entry; there is no runtime server.
+  const sessions = await getCollection('sessions');
+  return sessions.map((session) => ({
+    params: { slug: session.id },
+    props: { session },
+  }));
+}) satisfies GetStaticPaths;
+
+const { session } = Astro.props;
+const { title, date, startTime, endTime, track } = session.data;
+const speakers = await resolveSpeakers(session);
+const room = await resolveRoom(session);
+const { Content } = await render(session);
+const timeRange = endTime ? `${startTime}–${endTime}` : startTime;
+const tagIcon = trackIcon(track, title);
+---
+
+<Base title={title} description={`${formatDay(date)}, ${timeRange}`}>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Schedule', href: '/schedule' },
+      { label: title },
+    ]}
+  />
+
+  <BackButton href="/schedule" label="Back to schedule" />
+
+  {track && <span class="tag">{tagIcon && <Icon name={tagIcon} />}{track}</span>}
+  <h1 class="detail-title">{title}</h1>
+
+  <div class="meta-list">
+    <span class="meta-item"><Icon name="calendar" />{formatDay(date)}</span>
+    <span class="meta-item"><Icon name="clock" />{timeRange}</span>
+    {room && (
+      <a class="meta-item" href={withBase(`/venue/${room.id}`)}><Icon name="map-pin" /><span>{room.data.name}</span></a>
+    )}
+  </div>
+
+  <div class="prose">
+    <Content />
+  </div>
+
+  {speakers.length > 0 && (
+    <section>
+      <h2 class="section-title"><Icon name="megaphone" />{speakers.length > 1 ? 'Speakers' : 'Speaker'}</h2>
+      <div class="grid cols-2">
+        {speakers.map((speaker) => <SpeakerCard speaker={speaker} />)}
+      </div>
+    </section>
+  )}
+</Base>

@@ -1,0 +1,364 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SpeakerCard from '../components/SpeakerCard.astro';
+import SessionCard from '../components/SessionCard.astro';
+import { withBase, resolveHref, isExternal } from '../lib/url';
+import { compareSessions } from '../lib/refs';
+import { formatDateRange } from '../lib/format';
+import Icon from '../components/Icon.astro';
+import { marked } from 'marked';
+
+const settings = await getEntry('settings', 'home');
+const homepageLayout = await getEntry('homepageLayout', 'main');
+
+const speakers = await getCollection('speakers');
+const featured = speakers.filter((s) => s.data.featured);
+const speakerShowcase = (featured.length ? featured : speakers).slice(0, 6);
+
+const sessions = (await getCollection('sessions')).sort(compareSessions);
+const upcoming = sessions.slice(0, 4);
+
+const data = settings?.data;
+const hero = homepageLayout?.data.hero;
+
+// This HTML comes only from the repository-backed Tina content. If content ever
+// becomes public/user-authored, sanitize it before passing it to `set:html`.
+const renderRichText = (content?: string) => {
+  const html = marked.parse(content ?? '', { async: false });
+  return typeof html === 'string' ? html : '';
+};
+
+const heroIntroHtml = renderRichText(hero?.intro);
+
+// Previous editions come from the CMS (the Previous editions collection).
+const previousEditions = (await getCollection('editions')).sort(
+  (a, b) => Number(b.data.year) - Number(a.data.year)
+);
+
+// Hero CTAs come from the CMS. Primary falls back to the schedule; the
+// secondary is shown only when both its label and link are set.
+const primaryCta = {
+  label: hero?.primaryCta?.label?.trim() || 'View the schedule',
+  href: hero?.primaryCta?.href?.trim() || '/schedule',
+};
+const primaryIsCalendar = primaryCta.href.endsWith('.ics');
+const secondaryLabel = hero?.secondaryCta?.label?.trim();
+const secondaryHref = hero?.secondaryCta?.href?.trim();
+const secondaryCta = secondaryLabel && secondaryHref
+  ? { label: secondaryLabel, href: secondaryHref }
+  : null;
+
+const dateLabel = data?.startDate
+  ? formatDateRange(data.startDate, data.endDate)
+  : null;
+
+// The CMS list controls every section after the permanent hero. Keep only the
+// first enabled instance of each section so accidental duplicates are harmless.
+const seenHomepageSections = new Set<string>();
+const homepageSections = (homepageLayout?.data.sections ?? []).filter(
+  (item) => {
+    if (item.enabled === false || seenHomepageSections.has(item._template)) return false;
+    seenHomepageSections.add(item._template);
+    return true;
+  }
+);
+
+---
+
+<Base description={hero?.tagline} flushTop animateBrand>
+  <div class="hero-scene">
+    <div class="hero-media" aria-hidden="true">
+      <video
+        class="hero-video"
+        data-dither-source
+        src={withBase('/videos/home-hero.mp4')}
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        tabindex="-1"
+      ></video>
+      <canvas class="hero-dither-canvas" data-dither-canvas></canvas>
+    </div>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-main">
+          <span class="eyebrow" data-reveal>The conference</span>
+          {hero?.tagline && <h1 class="tagline" data-reveal>{hero.tagline}</h1>}
+        </div>
+        {heroIntroHtml && (
+          <div class="hero-intro prose" data-reveal set:html={heroIntroHtml} />
+        )}
+        <div class="hero-bar">
+          <span class="hero-bar-line" aria-hidden="true"></span>
+          {dateLabel && <span class="meta-item hero-date" data-reveal><Icon name="calendar" />{dateLabel}</span>}
+          {data?.venue && (
+            <span class="meta-item hero-location" data-reveal>
+              <Icon name="map-pin" />
+              <span>{data.venue}{data.city ? `, ${data.city}` : ''}</span>
+            </span>
+          )}
+          <div class="hero-actions" data-reveal>
+            <a
+              class="btn"
+              href={resolveHref(primaryCta.href)}
+              {...(isExternal(primaryCta.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              {...(primaryIsCalendar ? { download: 'information-plus-2027.ics' } : {})}
+            >
+              <span>{primaryCta.label}</span>
+              <Icon name={primaryIsCalendar ? 'calendar' : 'arrow-right'} />
+            </a>
+            {secondaryCta && (
+              <a
+                class="btn btn-ghost"
+                href={resolveHref(secondaryCta.href)}
+                {...(isExternal(secondaryCta.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <span>{secondaryCta.label}</span>
+                <Icon name="arrow-right" />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {homepageSections.map((section) => (
+    <>
+      {section._template === 'introduction' && section.content && (
+        <section class="home-intro" aria-label="Conference introduction" data-intro-animate>
+          <div class="prose" set:html={renderRichText(section.content)} />
+        </section>
+      )}
+
+      {section._template === 'organizers' && section.groups.length > 0 && (
+        <section class="organizers" data-reveal-section>
+          <h2 class="section-title"><Icon name="users" />{section.heading}</h2>
+          {section.description && (
+            <p class="organizer-description">{section.description}</p>
+          )}
+          <div class="organizer-groups">
+            {section.groups.map((group) => (
+              <section class="organizer-group">
+                <h3>{group.title}</h3>
+                <ul>
+                  {group.people.map((person) => (
+                    <li class="organizer-person">
+                      <p>
+                        <span class="organizer-name">{person.name}</span>
+                        <span class="organizer-separator" aria-hidden="true">, </span>
+                        <span class="organizer-organization">{person.organization}</span>
+                      </p>
+                      {(person.linkedin || person.website) && (
+                        <span class="organizer-links">
+                          {person.linkedin && (
+                            <a
+                              href={person.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`${person.name} on LinkedIn`}
+                            >
+                              <Icon name="linkedin" />
+                            </a>
+                          )}
+                          {person.website && (
+                            <a
+                              href={person.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`${person.name}'s website`}
+                            >
+                              <Icon name="external-link" />
+                            </a>
+                          )}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {section._template === 'speakers' && speakerShowcase.length > 0 && (
+        <section data-reveal-section>
+          <h2 class="section-title"><Icon name="megaphone" />{featured.length ? 'Featured speakers' : 'Speakers'}</h2>
+          <div class="grid cols-2">
+            {speakerShowcase.map((speaker) => <SpeakerCard speaker={speaker} />)}
+          </div>
+          <p style="margin-top:24px;"><a class="more-link" href={withBase('/speakers')}>All speakers <Icon name="chevron-right" /></a></p>
+        </section>
+      )}
+
+      {section._template === 'schedule' && upcoming.length > 0 && (
+        <section data-reveal-section>
+          <h2 class="section-title"><Icon name="calendar" />Up next</h2>
+          <div class="grid">
+            {upcoming.map((session) => <SessionCard session={session} />)}
+            {sessions.length > upcoming.length && (
+              <a class="card session-ghost" href={withBase('/schedule')} aria-label="More sessions — see the full schedule">
+                <div class="sub" style="display:flex; gap:12px; align-items:center; margin-bottom:12px;" aria-hidden="true">
+                  <span class="session-time"><Icon name="clock" /><span class="blocks">██:██</span></span>
+                  <span class="tag"><span class="blocks">████</span></span>
+                </div>
+                <h3 class="redacted" aria-hidden="true">Information that outlives its tooling</h3>
+                <div class="sub" style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;" aria-hidden="true">
+                  <span style="display:inline-flex; align-items:center; gap:8px;"><Icon name="users" /><span class="blocks">███████████</span></span>
+                  <span>·</span>
+                  <span style="display:inline-flex; align-items:center; gap:8px;"><Icon name="map-pin" /><span class="blocks">██████</span></span>
+                </div>
+              </a>
+            )}
+          </div>
+          <p style="margin-top:24px;"><a class="more-link" href={withBase('/schedule')}>Full schedule <Icon name="chevron-right" /></a></p>
+        </section>
+      )}
+
+      {section._template === 'editions' && previousEditions.length > 0 && (
+        <section data-reveal-section>
+          <h2 class="section-title"><Icon name="archive" />Previous editions</h2>
+          <ul class="editions">
+            {previousEditions.map((ed) => {
+              const { year, city, country, venue, url } = ed.data;
+              const location = [city, country].filter(Boolean).join(', ');
+              const Tag = url ? 'a' : 'div';
+              return (
+                <li>
+                  <Tag
+                    class="edition"
+                    {...(url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
+                    <span class="edition-year">{year}</span>
+                    {location && <span class="edition-place">{location}</span>}
+                    {venue && <span class="edition-venue">{venue}</span>}
+                    {url && (
+                      <span class="edition-cta">Visit site <Icon name="external-link" /></span>
+                    )}
+                  </Tag>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+    </>
+  ))}
+</Base>
+
+<script>
+  import { HERO_DITHER_SETTINGS } from '../lib/heroDither';
+  import { initMediaDither } from '../lib/mediaDither';
+  // Fade the streamlined hero up in sequence. Later sections render normally
+  // so the sticky transition cannot interfere with their visibility.
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import { SplitText } from 'gsap/SplitText';
+
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  const heroMedia = document.querySelector<HTMLElement>('.hero-media');
+  const heroScene = document.querySelector<HTMLElement>('.hero-scene');
+  if (heroMedia && heroScene) {
+    // Keep the established homepage treatment exactly as tuned above. The
+    // shared renderer adds only pointer interaction; these values preserve the
+    // video's idle crop, palette, dither density, brightness, and contrast.
+    initMediaDither(heroMedia, {
+      macroCellSize: HERO_DITHER_SETTINGS.macroCellSize,
+      brightness: HERO_DITHER_SETTINGS.videoBrightness,
+      contrast: HERO_DITHER_SETTINGS.videoContrast,
+      accentTint: 0,
+      scale: 1,
+      positionX: 0.5,
+      positionY: 0.5,
+      interactive: true,
+      interactionTarget: heroScene,
+    });
+  }
+
+  const reveal = gsap.utils.toArray<HTMLElement>('.hero [data-reveal]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduce) {
+    gsap.set(reveal, { opacity: 1, y: 0 });
+  } else {
+    // Wait briefly for Redaction to avoid revealing the fallback font first.
+    Promise.race([
+      document.fonts?.ready ?? Promise.resolve(),
+      new Promise((resolve) => setTimeout(resolve, 1500)),
+    ]).then(() => {
+      gsap.to(reveal, {
+        opacity: 1,
+        y: 0,
+        duration: 0.55,
+        stagger: 0.07,
+        ease: 'power2.out',
+      });
+    });
+
+    const setupIntroAnimation = () => {
+      const intro = document.querySelector<HTMLElement>('[data-intro-animate]');
+      const introProse = intro?.querySelector<HTMLElement>('.prose');
+      const introBlocks = introProse
+        ? Array.from(introProse.querySelectorAll<HTMLElement>(':scope > *'))
+        : [];
+
+      if (!intro || !introProse || !introBlocks.length) return;
+
+      // The Prato in Fiera treatment is word-based, not character-based.
+      // Keeping each word intact preserves normal line wrapping.
+      const wordGroups = introBlocks.map((block) =>
+        SplitText.create(block, {
+          type: 'words',
+          wordsClass: 'home-intro-word',
+          aria: 'none',
+        }).words
+      );
+      const words = wordGroups.flat();
+
+      gsap.set(words, {
+        autoAlpha: 0,
+        yPercent: 120,
+        rotateX: -84,
+        filter: 'blur(10px)',
+      });
+
+      const addWordReveal = (timeline: gsap.core.Timeline) => {
+        wordGroups.forEach((group, index) => {
+          timeline.to(
+            group,
+            {
+              autoAlpha: 1,
+              yPercent: 0,
+              rotateX: 0,
+              filter: 'blur(0px)',
+              stagger: 0.045,
+            },
+            index === 0 ? 0 : '>-=0.16'
+          );
+        });
+      };
+
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: intro,
+          start: 'top 88%',
+          end: 'bottom 35%',
+          scrub: 0.3,
+          invalidateOnRefresh: true,
+        },
+        defaults: { duration: 0.9, ease: 'power2.out' },
+      });
+
+      addWordReveal(timeline);
+      ScrollTrigger.refresh();
+    };
+
+    (document.fonts?.ready ?? Promise.resolve()).then(setupIntroAnimation);
+  }
+
+</script>

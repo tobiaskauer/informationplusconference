@@ -1,0 +1,691 @@
+---
+import '../styles/global.css';
+import { getEntry } from 'astro:content';
+import { isExternal, resolveHref, withBase } from '../lib/url';
+import Icon from '../components/Icon.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  flushTop?: boolean;
+  animateBrand?: boolean;
+  noindex?: boolean;
+}
+
+const { title, description, flushTop = false, animateBrand = false, noindex = false } = Astro.props;
+const settings = await getEntry('settings', 'home');
+const navigation = await getEntry('navigation', 'main');
+const navigationItems = (navigation?.data.items ?? []).filter(
+  (item) => item.enabled !== false
+);
+const confName = settings?.data.name ?? 'Conference';
+const brandName = confName;
+const pageTitle = title ? `${title} · ${confName}` : confName;
+const footerLocation = 'Politecnico di Milano, Department of Design - Milan, Italy';
+
+const aboutText =
+  'Information+ is an interdisciplinary conference bringing together researchers, ' +
+  'educators, and practitioners in information design and data visualization.';
+
+const socials = [
+  { label: 'Email', icon: 'mail', href: 'mailto:general@infoplus.team' },
+  { label: 'Mastodon', icon: 'mastodon', href: 'https://vis.social/@InfoPlusConf' },
+  { label: 'X', icon: 'x', href: 'https://x.com/infoplusconf' },
+  { label: 'Instagram', icon: 'instagram' },
+  {
+    label: 'LinkedIn',
+    icon: 'linkedin',
+    href: 'https://www.linkedin.com/company/information-plus-conference/',
+    hidden: true,
+  },
+  {
+    label: 'Bluesky',
+    icon: 'bluesky',
+    href: 'https://bsky.app/profile/infoplusconf.bsky.social',
+    hidden: true,
+  },
+];
+
+// Keep this false while the public site should not expose the prototype panel.
+// Change it to true if you want to bring back both the accent picker and grid
+// overlay controls later. Saved prototype choices are ignored while it is false.
+const PROTOTYPE_PANEL_ENABLED = false;
+
+// Prototyping accent palettes for the - dev panel. `id` maps to the
+// data-accent value read by src/styles/global.css; `swatch` is a representative
+// color for the panel dot. Add a palette here + a matching block in global.css.
+const ACCENTS = [
+  { id: 'magenta', label: 'Magenta', swatch: 'oklch(70% 0.20 350)' },
+  { id: 'blue', label: 'Blue', swatch: 'oklch(64.75% 0.19 255.16)' },
+  { id: 'neutral', label: 'Neutral', swatch: 'oklch(76% 0.022 262)' },
+  { id: 'amber', label: 'Amber', swatch: 'oklch(80% 0.15 75)' },
+  { id: 'green', label: 'Green', swatch: 'oklch(75% 0.16 155)' },
+];
+---
+
+<!doctype html>
+<html
+  lang="en"
+  style={`--cur-default: url("${withBase('/cursors/svg/default-dark.svg')}") 4 1, url("${withBase('/cursors/png/default-dark.png')}") 4 1, auto; --cur-pointer: url("${withBase('/cursors/svg/pointer.svg')}") 4 1, url("${withBase('/cursors/png/pointer.png')}") 4 1, pointer; --cur-text: url("${withBase('/cursors/svg/text.svg')}") 16 16, url("${withBase('/cursors/png/text.png')}") 16 16, text; --cur-disabled: url("${withBase('/cursors/svg/not-allowed.svg')}") 4 1, url("${withBase('/cursors/png/not-allowed.png')}") 4 1, not-allowed; --cur-grab: url("${withBase('/cursors/svg/grab.svg')}") 16 16, url("${withBase('/cursors/png/grab.png')}") 16 16, grab; --cur-grabbing: url("${withBase('/cursors/svg/grabbing.svg')}") 16 16, url("${withBase('/cursors/png/grabbing.png')}") 16 16, grabbing;`}
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Safari uses theme-color for the status/overscroll area around the Dynamic Island.
+         Keep this hex value in sync with the default --bg color in global.css. -->
+    <meta name="theme-color" content="#12070c" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={pageTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <link rel="icon" href={withBase('/favicon.svg')} />
+    <script is:inline define:vars={{ prototypePanelEnabled: PROTOTYPE_PANEL_ENABLED }}>
+      // Only restore prototype preferences when their panel is enabled. With it
+      // disabled, the default accent and grid display always win.
+      try {
+        if (prototypePanelEnabled) {
+          var a = localStorage.getItem('proto-accent');
+          if (a && a !== 'magenta') {
+            document.documentElement.setAttribute('data-accent', a);
+            if (a === 'custom') {
+              var c = localStorage.getItem('proto-custom');
+              var on = localStorage.getItem('proto-custom-on');
+              var hue = localStorage.getItem('proto-custom-hue');
+              if (c) document.documentElement.style.setProperty('--accent-custom', c);
+              if (on) document.documentElement.style.setProperty('--accent-custom-on', on);
+              if (hue) document.documentElement.style.setProperty('--accent-custom-hue', hue);
+            }
+          }
+          if (localStorage.getItem('proto-grid') === 'off') {
+            document.documentElement.setAttribute('data-grid', 'off');
+          }
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body class:list={{ 'home-page': flushTop }}>
+    <header class:list={['site-header', { 'site-header-home': flushTop }]}>
+      <div class="container">
+        <a
+          class="brand"
+          href={withBase('/')}
+          aria-label={brandName}
+          data-brand-intro={animateBrand ? '' : undefined}
+        >
+          {brandName.split('').map((ch, i) => (
+            <span style={`--i:${i}`} aria-hidden="true">{ch === ' ' ? ' ' : ch}</span>
+          ))}
+        </a>
+        {navigationItems.length > 0 && (
+          <>
+            <nav class="nav" id="site-nav" aria-label="Main navigation">
+              {navigationItems.map((item) => (
+                <a
+                  href={resolveHref(item.href)}
+                  {...(isExternal(item.href)
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                >
+                  <Icon name={item.icon} />
+                  <span class="nav-label">{item.label}</span>
+                </a>
+              ))}
+            </nav>
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-label="Menu"
+              aria-expanded="false"
+              aria-controls="site-nav"
+            >
+              <Icon name="menu" class="nav-toggle-open" />
+              <Icon name="close" class="nav-toggle-close" />
+            </button>
+          </>
+        )}
+      </div>
+    </header>
+
+    <main class:list={{ 'main-flush-top': flushTop }}>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <script>
+      // Mobile nav: toggle the hamburger menu. Closes on link click, Escape,
+      // outside click, and when resized back up to desktop.
+      const header = document.querySelector('.site-header');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (header && toggle && nav) {
+        const setOpen = (open: boolean) => {
+          header.classList.toggle('nav-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        };
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          setOpen(!header.classList.contains('nav-open'));
+        });
+        nav.addEventListener('click', (e) => {
+          if ((e.target as Element).closest('a')) setOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') setOpen(false);
+        });
+        document.addEventListener('click', (e) => {
+          if (header.classList.contains('nav-open') && !header.contains(e.target as Node)) {
+            setOpen(false);
+          }
+        });
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 640) setOpen(false);
+        });
+      }
+
+      // The homepage header begins transparent over the hero and gains its
+      // regular tinted backdrop as soon as the visitor starts scrolling.
+      if (header?.classList.contains('site-header-home')) {
+        const syncHeaderBackdrop = () => {
+          header.classList.toggle('is-scrolled', window.scrollY > 20);
+        };
+        syncHeaderBackdrop();
+        window.addEventListener('scroll', syncHeaderBackdrop, { passive: true });
+      }
+    </script>
+
+    <script>
+      // "Light bulbs on": on each hover, light the wordmark's letters one at a
+      // time. The first letter is the one under the cursor on entry (gives the
+      // burst an origin); the rest follow in a random order, avoiding adjacent
+      // letters back-to-back.
+      function lightUp(brand: Element, startIndex: number | null) {
+        const spans = Array.from(brand.querySelectorAll('span'));
+        const remaining = spans.map((_, i) => i);
+        let last = -2;
+        let step = 0;
+        while (remaining.length) {
+          let pick: number;
+          if (step === 0 && startIndex !== null && remaining.includes(startIndex)) {
+            pick = startIndex;
+          } else {
+            let candidates = remaining.filter((p) => Math.abs(p - last) !== 1);
+            if (candidates.length === 0) candidates = remaining;
+            pick = candidates[Math.floor(Math.random() * candidates.length)];
+          }
+          spans[pick].style.setProperty('--i', String(step++));
+          remaining.splice(remaining.indexOf(pick), 1);
+          last = pick;
+        }
+      }
+      document.querySelectorAll<HTMLElement>('.brand').forEach((brand) => {
+        const spans = Array.from(brand.querySelectorAll('span'));
+        let active = false;
+        // mouseover bubbles, so its target is the exact letter the pointer first
+        // touched. Latch with `active` so moving across letters doesn't restart;
+        // mouseleave (fires once, on exit) re-arms it for the next entry.
+        brand.addEventListener('mouseover', (e) => {
+          if (active) return;
+          active = true;
+          const target = e.target instanceof Element ? e.target.closest('span') : null;
+          const start = target && spans.includes(target) ? spans.indexOf(target) : null;
+          lightUp(brand, start);
+        });
+        brand.addEventListener('mouseleave', () => {
+          active = false;
+        });
+      });
+    </script>
+
+    <script>
+      // GSAP ScrambleText: any element with [data-scramble] scrambles into its
+      // own text when it first scrolls into view. Add data-scramble to use it.
+      import { gsap } from 'gsap';
+      import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+
+      gsap.registerPlugin(ScrambleTextPlugin);
+
+      // Give every visible brand character a distinct Redaction grade. The
+      // grade remains fixed for its entire visit, including the logo intro.
+      const brandFontGrades = [
+        'brand-grade-35',
+        'brand-grade-50',
+        'brand-grade-70',
+        'brand-grade-100',
+      ];
+      document.querySelectorAll<HTMLElement>('.brand span').forEach((letter) => {
+        if (!letter.textContent?.trim()) return;
+        const grade = brandFontGrades[Math.floor(Math.random() * brandFontGrades.length)];
+        letter.classList.add(grade);
+      });
+
+      // Resolve the navbar wordmark from random glyphs on every page load.
+      // Animate its existing per-letter spans so the hover behaviour remains
+      // intact after the intro finishes.
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const uppercaseAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/*?#';
+        const lowercaseAlphabet = 'abcdefghijklmnopqrstuvwxyz0123456789+/*?#';
+        const brandLetters = Array.from(
+          document.querySelectorAll<HTMLElement>('.brand[data-brand-intro] span')
+        )
+          .map((letter, index) => ({
+            letter,
+            final: letter.textContent ?? '',
+            alphabet: index === 0 ? uppercaseAlphabet : lowercaseAlphabet,
+          }))
+          .filter(({ final }) => final.trim().length > 0);
+
+        gsap.set(brandLetters.map(({ letter }) => letter), { opacity: 0 });
+        brandLetters.forEach(({ letter, alphabet }) => {
+          letter.textContent = alphabet[Math.floor(Math.random() * alphabet.length)];
+        });
+
+        const brandIntro = gsap.timeline({ delay: 0.06 });
+        brandLetters.forEach(({ letter, final, alphabet }, index) => {
+          const at = index * 0.028;
+          brandIntro.set(letter, { opacity: 1 }, at);
+          brandIntro.to(
+            letter,
+            {
+              duration: 0.72,
+              ease: 'none',
+              scrambleText: {
+                text: final,
+                chars: alphabet,
+                speed: 0.7,
+                revealDelay: 0.32,
+              },
+            },
+            at
+          );
+        });
+      }
+
+      const targets = document.querySelectorAll<HTMLElement>('[data-scramble]');
+      if (targets.length) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              const el = entry.target as HTMLElement;
+              io.unobserve(el);
+              gsap.to(el, {
+                duration: 1.1,
+                ease: 'none',
+                scrambleText: {
+                  text: el.textContent ?? '',
+                  chars: 'upperCase',
+                  speed: 1.2,
+                  revealDelay: 0.25,
+                },
+              });
+            }
+          },
+          { threshold: 0.35 }
+        );
+        targets.forEach((el) => io.observe(el));
+      }
+    </script>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <p class="footer-about">{aboutText}</p>
+          <div class="footer-social-block">
+            <p class="footer-social-intro">
+              Help us spread the word!<br />
+              Find us on:
+            </p>
+            <ul class="footer-social" aria-label="Social links">
+              {socials.map((s) => (
+                <li class:list={{ 'footer-social-hidden': s.hidden }}>
+                  {s.href ? (
+                    <a
+                      href={s.href}
+                      {...(s.href.startsWith('mailto:')
+                        ? {}
+                        : { target: '_blank', rel: 'noopener noreferrer' })}
+                      aria-label={s.label}
+                    >
+                      <Icon name={s.icon} label={s.label} />
+                    </a>
+                  ) : (
+                    <span
+                      class="footer-social-placeholder"
+                      aria-label={`${s.label} — coming soon`}
+                      title={`${s.label} — coming soon`}
+                    >
+                      <Icon name={s.icon} />
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <p class="footer-social-hashtag">Use the hashtag #infoplus2027 for mentions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-inner">
+        <span class="footer-item">
+          <Icon name="copyright" label="Copyright" />{new Date().getFullYear()} {confName}
+        </span>
+        <span class="footer-item">
+          <Icon name="map-pin" />{footerLocation}
+        </span>
+        <span class="footer-item footer-credit">
+          <Icon name="brackets-angle" />Design and code by <a href="https://giovannimalausa.com" target="_blank" rel="noopener noreferrer">Giovanni Malausa</a>
+        </span>
+      </div>
+    </footer>
+
+    {/* The complete prototype panel stays here for later, but is omitted from
+        the public build while PROTOTYPE_PANEL_ENABLED is false. */}
+    {PROTOTYPE_PANEL_ENABLED && (
+      <>
+        <aside class="proto-panel" id="proto-panel" hidden aria-label="Prototype settings">
+          <button class="proto-close" type="button" aria-label="Close options">
+            <Icon name="close" />
+          </button>
+          <p class="proto-title">Accent</p>
+          <div class="proto-accents" role="radiogroup" aria-label="Accent color">
+            {ACCENTS.map((a) => (
+              <button type="button" class="proto-accent" data-accent-id={a.id} role="radio" aria-checked="false">
+                <span class="proto-swatch" style={`background:${a.swatch}`} aria-hidden="true"></span>
+                {a.label}
+              </button>
+            ))}
+            {/* Custom: the native color input IS the swatch — pick any color and
+                it applies live. Selecting a color implicitly switches to this row. */}
+            <label class="proto-accent proto-custom" data-accent-id="custom" role="radio" aria-checked="false">
+              <input type="color" class="proto-picker" value="#3b82f6" aria-label="Custom accent color" />
+              Custom
+            </label>
+          </div>
+          <p class="proto-title proto-display-title">Display</p>
+          <label class="proto-switch">
+            <input type="checkbox" id="proto-grid-toggle" checked />
+            <span class="proto-switch-track" aria-hidden="true"><span></span></span>
+            Grid overlay
+          </label>
+          <p class="proto-hint">press <kbd>-</kbd> to hide</p>
+        </aside>
+        <p class="proto-launch-hint">Press <kbd>-</kbd> for options</p>
+      </>
+    )}
+
+    <script>
+      // Prototyping accent switcher. The chosen palette maps to data-accent on
+      // <html> (see the accent blocks in global.css); the head script applies a
+      // saved choice before paint, this wires the panel and toggle.
+      (() => {
+        const KEY = 'proto-accent';
+        const GRID_KEY = 'proto-grid';
+        const panel = document.getElementById('proto-panel');
+        if (!panel) return;
+        const root = document.documentElement;
+        const rows = Array.from(
+          panel.querySelectorAll<HTMLElement>('.proto-accent')
+        );
+        const buttons = Array.from(
+          panel.querySelectorAll<HTMLButtonElement>('button.proto-accent')
+        );
+        const picker = panel.querySelector<HTMLInputElement>('.proto-picker');
+        const gridToggle = panel.querySelector<HTMLInputElement>('#proto-grid-toggle');
+        const closeButton = panel.querySelector<HTMLButtonElement>('.proto-close');
+
+        const current = () => root.getAttribute('data-accent') || 'magenta';
+
+        const sync = () => {
+          const cur = current();
+          for (const r of rows) {
+            r.setAttribute('aria-checked', String(r.dataset.accentId === cur));
+          }
+        };
+
+        const apply = (id: string) => {
+          if (id === 'magenta') root.removeAttribute('data-accent');
+          else root.setAttribute('data-accent', id);
+          try { localStorage.setItem(KEY, id); } catch (e) {}
+          sync();
+        };
+
+        const srgbToLinear = (c: number) => {
+          const s = c / 255;
+          return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+        };
+
+        // Perceived luminance (WCAG relative) → legible text color on a fill.
+        const onColor = (hex: string) => {
+          const n = parseInt(hex.slice(1), 16);
+          const lin = (c: number) => {
+            const s = c / 255;
+            return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+          };
+          const lum =
+            0.2126 * lin((n >> 16) & 255) +
+            0.7152 * lin((n >> 8) & 255) +
+            0.0722 * lin(n & 255);
+          return lum > 0.4 ? 'var(--bg)' : 'var(--blue-50)';
+        };
+
+        // OKLCH hue (degrees) of the picked color, so the dark chrome can tint
+        // toward it. Near-gray picks have no meaningful hue → keep the default.
+        const hueOf = (hex: string) => {
+          const n = parseInt(hex.slice(1), 16);
+          const r = srgbToLinear((n >> 16) & 255);
+          const g = srgbToLinear((n >> 8) & 255);
+          const b = srgbToLinear(n & 255);
+          const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
+          const m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
+          const s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+          const oa = 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s;
+          const ob = 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s;
+          if (Math.hypot(oa, ob) < 0.01) return null; // effectively gray
+          const h = (Math.atan2(ob, oa) * 180) / Math.PI;
+          return h < 0 ? h + 360 : h;
+        };
+
+        const applyCustom = (hex: string) => {
+          const on = onColor(hex);
+          const hue = hueOf(hex);
+          const hueStr = hue === null ? '265' : String(Math.round(hue));
+          root.style.setProperty('--accent-custom', hex);
+          root.style.setProperty('--accent-custom-on', on);
+          root.style.setProperty('--accent-custom-hue', hueStr);
+          root.setAttribute('data-accent', 'custom');
+          try {
+            localStorage.setItem(KEY, 'custom');
+            localStorage.setItem('proto-custom', hex);
+            localStorage.setItem('proto-custom-on', on);
+            localStorage.setItem('proto-custom-hue', hueStr);
+          } catch (e) {}
+          sync();
+        };
+
+        for (const b of buttons) {
+          b.addEventListener('click', () => apply(b.dataset.accentId || 'magenta'));
+        }
+        if (picker) {
+          const saved = (() => { try { return localStorage.getItem('proto-custom'); } catch (e) { return null; } })();
+          if (saved) picker.value = saved;
+          picker.addEventListener('input', () => applyCustom(picker.value));
+        }
+        if (gridToggle) {
+          gridToggle.checked = root.getAttribute('data-grid') !== 'off';
+          gridToggle.addEventListener('change', () => {
+            if (gridToggle.checked) root.removeAttribute('data-grid');
+            else root.setAttribute('data-grid', 'off');
+            try { localStorage.setItem(GRID_KEY, gridToggle.checked ? 'on' : 'off'); } catch (e) {}
+          });
+        }
+        closeButton?.addEventListener('click', () => {
+          panel.hidden = true;
+        });
+        sync();
+
+        // - toggles the panel, unless you're typing in a field.
+        document.addEventListener('keydown', (e) => {
+          if (e.key !== '-' || e.repeat) return;
+          const t = e.target as HTMLElement | null;
+          if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+          e.preventDefault();
+          panel.hidden = !panel.hidden;
+        });
+      })();
+    </script>
+
+    <style>
+      /* Prototyping panel — intentionally utilitarian, themed with the site
+         tokens so it reads as part of the family while auditioning them. */
+      .proto-panel {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 14px 16px;
+        font-family: var(--mono);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+      }
+      .proto-panel[hidden] { display: none; }
+      .proto-close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        color: var(--muted);
+        cursor: var(--cur-pointer, pointer);
+      }
+      .proto-close:hover { color: var(--accent); }
+      .proto-close:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
+      .proto-close .pa-icon { width: 20px; height: 20px; }
+      .proto-title {
+        padding-right: 28px;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+      .proto-accents { display: flex; flex-direction: column; gap: 2px; }
+      .proto-accent {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: none;
+        border: 0;
+        padding: 6px 8px;
+        margin: 0 -8px;
+        font: inherit;
+        font-size: 13px;
+        color: var(--text);
+        text-align: left;
+      }
+      .proto-accent:hover { background: var(--surface-2); }
+      .proto-accent[aria-checked='true'] { color: var(--accent); }
+      .proto-swatch {
+        width: 16px;
+        height: 16px;
+        flex: none;
+        border: 1px solid var(--border);
+      }
+      .proto-accent[aria-checked='true'] .proto-swatch { border-color: var(--accent); }
+      /* Native color input styled as a 16px swatch to match the palette dots. */
+      .proto-picker {
+        width: 16px;
+        height: 16px;
+        flex: none;
+        padding: 0;
+        background: none;
+        border: 1px solid var(--border);
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: var(--cur-pointer, pointer);
+      }
+      .proto-picker::-webkit-color-swatch-wrapper { padding: 0; }
+      .proto-picker::-webkit-color-swatch { border: none; }
+      .proto-picker::-moz-color-swatch { border: none; }
+      .proto-accent[aria-checked='true'] .proto-picker { border-color: var(--accent); }
+      .proto-display-title {
+        border-top: 1px solid var(--border);
+        margin-top: 2px;
+        padding-top: 12px;
+      }
+      .proto-switch {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: var(--text);
+        cursor: var(--cur-pointer, pointer);
+      }
+      .proto-switch input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .proto-switch-track {
+        width: 28px;
+        height: 16px;
+        flex: none;
+        padding: 2px;
+        border: 1px solid var(--border);
+      }
+      .proto-switch-track span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: var(--muted);
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .proto-switch input:checked + .proto-switch-track span {
+        background: var(--accent);
+        transform: translateX(12px);
+      }
+      .proto-switch input:focus-visible + .proto-switch-track {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      .proto-hint { margin: 0; font-size: 11px; color: var(--muted); opacity: 0.8; }
+      .proto-hint kbd,
+      .proto-launch-hint kbd {
+        font: inherit;
+        border: 1px solid var(--border);
+        padding: 0 4px;
+      }
+      .proto-launch-hint {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 100;
+        margin: 0;
+        padding: 7px 10px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        color: var(--muted);
+        font-family: var(--mono);
+        font-size: 11px;
+        line-height: 1.4;
+        box-shadow: 0 5px 20px rgb(0 0 0 / 28%);
+        pointer-events: none;
+      }
+      .proto-panel:not([hidden]) + .proto-launch-hint { display: none; }
+    </style>
+  </body>
+</html>

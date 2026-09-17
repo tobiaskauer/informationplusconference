@@ -1,0 +1,29 @@
+---
+import Icon from './Icon.astro';
+import { withBase } from '../lib/url';
+
+interface Crumb {
+  label: string;
+  /** Root-relative path, e.g. "/schedule". Omit for the current page. */
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  {items.map((item, i) => (
+    <Fragment>
+      {item.href ? (
+        <a href={withBase(item.href)}>{item.label}</a>
+      ) : (
+        <span aria-current="page">{item.label}</span>
+      )}
+      {i < items.length - 1 && <Icon name="chevron-right" class="bc-sep" />}
+    </Fragment>
+  ))}
+</nav>

@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import SessionCard from '../../components/SessionCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { compareSessions } from '../../lib/refs';
+import { formatDay, dayKey } from '../../lib/format';
+
+const sessions = (await getCollection('sessions')).sort(compareSessions);
+
+// Group sessions by day, preserving chronological order.
+const days = new Map<string, { date: Date; items: typeof sessions }>();
+for (const session of sessions) {
+  const key = dayKey(session.data.date);
+  if (!days.has(key)) days.set(key, { date: session.data.date, items: [] });
+  days.get(key)!.items.push(session);
+}
+---
+
+<Base title="Schedule" description="Full conference schedule.">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Schedule' }]} />
+  <span class="eyebrow">Two stages · three days</span>
+  <h1>Schedule</h1>
+
+  {sessions.length === 0 && (
+    <p class="sub">No sessions yet. Add some in the local editor at <code>/admin</code>.</p>
+  )}
+
+  {[...days.values()].map(({ date, items }) => (
+    <section>
+      <h2 class="day-heading">{formatDay(date)}</h2>
+      <div class="grid">
+        {items.map((session) => <SessionCard session={session} />)}
+      </div>
+    </section>
+  ))}
+</Base>

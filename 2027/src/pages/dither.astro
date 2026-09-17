@@ -1,0 +1,825 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { HERO_DITHER_SETTINGS } from '../lib/heroDither';
+import { IMAGE_OUTPUT_PRESETS } from '../lib/stillDither';
+---
+
+<Base
+  title="Dither studio"
+  description="Turn an image into the Information+ dither style."
+  noindex
+>
+  <header class="tool-intro">
+    <span class="eyebrow">Image tool</span>
+    <h1>Dither studio</h1>
+    <p>Give any image the visual treatment used by Information+.</p>
+  </header>
+
+  <div class="dither-app" data-state="empty">
+    <aside class="controls" aria-label="Image controls">
+      <div class="source-status">
+        <span class="control-heading">Source image</span>
+        <p id="file-details" class="file-details">No image selected.</p>
+      </div>
+
+      <fieldset id="image-controls" disabled>
+        <div class="control-group">
+          <span class="control-heading" id="output-format-label">Output format</span>
+          <div class="format-options" role="group" aria-labelledby="output-format-label">
+            {IMAGE_OUTPUT_PRESETS.map((preset) => (
+              <button
+                class="format-option"
+                class:list={{ 'is-selected': preset.id === 'original' }}
+                type="button"
+                data-format={preset.id}
+                aria-pressed={preset.id === 'original' ? 'true' : 'false'}
+              >
+                <span>{preset.label}</span>
+                <small>{preset.width && preset.height ? `${preset.width}×${preset.height}` : 'max 2400 px'}</small>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div class="control-group range-control">
+          <div class="control-label">
+            <label for="accent-tint"><Icon name="fill-half-solid" />Tint</label>
+            <output id="accent-tint-value" for="accent-tint">Default</output>
+          </div>
+          <input
+            id="accent-tint"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="0"
+            aria-valuetext="Default"
+          />
+        </div>
+
+        <div class="control-group range-control">
+          <div class="control-label">
+            <label for="cell-size"><Icon name="ratio-solid" />Pattern size</label>
+            <output id="cell-size-value" for="cell-size">{HERO_DITHER_SETTINGS.macroCellSize}</output>
+          </div>
+          <input id="cell-size" type="range" min="6" max="30" step="1" value={HERO_DITHER_SETTINGS.macroCellSize} />
+        </div>
+
+        <div class="control-group range-control">
+          <div class="control-label">
+            <label for="brightness"><Icon name="sun" />Brightness</label>
+            <output id="brightness-value" for="brightness">{HERO_DITHER_SETTINGS.videoBrightness.toFixed(2)}</output>
+          </div>
+          <input id="brightness" type="range" min="0.2" max="1.5" step="0.05" value={HERO_DITHER_SETTINGS.videoBrightness} />
+        </div>
+
+        <div class="control-group range-control">
+          <div class="control-label">
+            <label for="contrast"><Icon name="invert" />Contrast</label>
+            <output id="contrast-value" for="contrast">{HERO_DITHER_SETTINGS.videoContrast.toFixed(2)}</output>
+          </div>
+          <input id="contrast" type="range" min="0.5" max="2" step="0.05" value={HERO_DITHER_SETTINGS.videoContrast} />
+        </div>
+
+        <div class="control-group range-control framing-control">
+          <div class="control-label">
+            <label for="scale"><Icon name="arrows-scale" />Scale</label>
+            <output id="scale-value" for="scale">100%</output>
+          </div>
+          <input id="scale" type="range" min="100" max="300" step="1" value="100" />
+        </div>
+
+        <div class="control-group range-control framing-control">
+          <div class="control-label">
+            <label for="position-x"><Icon name="arrows-horizontal" />Horizontal framing</label>
+            <output id="position-x-value" for="position-x">50%</output>
+          </div>
+          <input id="position-x" type="range" min="0" max="100" step="1" value="50" />
+        </div>
+
+        <div class="control-group range-control framing-control">
+          <div class="control-label">
+            <label for="position-y"><Icon name="arrows-vertical" />Vertical framing</label>
+            <output id="position-y-value" for="position-y">50%</output>
+          </div>
+          <input id="position-y" type="range" min="0" max="100" step="1" value="50" />
+        </div>
+
+        <div class="control-actions">
+          <button class="btn btn-ghost reset-button" id="reset-button" type="button">
+            <Icon name="refresh" />Reset
+          </button>
+          <button class="btn download-button" id="download-button" type="button">
+            <Icon name="download" />Save PNG
+          </button>
+          <button class="btn download-button" id="download-svg-button" type="button">
+            <Icon name="download" />Save SVG
+          </button>
+        </div>
+      </fieldset>
+    </aside>
+
+    <section class="preview-panel" id="drop-zone" aria-label="Image preview">
+      <input id="image-input" type="file" accept="image/*" />
+      <div class="drop-prompt" id="drop-prompt">
+        <div class="drop-instructions">
+          <Icon name="drag-and-drop" class="drop-icon" />
+          <strong>Drop an image here</strong>
+          <span>or</span>
+        </div>
+        <label class="btn upload-button" for="image-input">
+          <Icon name="upload" />
+          <span class="choose-label">Choose an image</span>
+          <span class="change-label">Change image</span>
+        </label>
+        <small class="accepted-formats">JPG, PNG, WebP, GIF, or any format your browser can open.</small>
+      </div>
+      <div class="rendering-indicator" id="rendering-indicator" hidden>
+        <span aria-hidden="true"></span>Rendering
+      </div>
+      <canvas id="output-canvas" hidden aria-label="Processed image preview"></canvas>
+      <p class="preview-meta" id="preview-meta" hidden></p>
+    </section>
+  </div>
+
+</Base>
+
+<script>
+  import {
+    createStillDitherSvg,
+    IMAGE_OUTPUT_PRESETS,
+    renderStillDither,
+    type ImageOutputPresetId,
+    type StillDitherRenderResult,
+  } from '../lib/stillDither';
+
+  const input = document.querySelector<HTMLInputElement>('#image-input');
+  const ditherApp = document.querySelector<HTMLElement>('.dither-app');
+  const controlPanel = document.querySelector<HTMLElement>('.controls');
+  const controls = document.querySelector<HTMLFieldSetElement>('#image-controls');
+  const formatButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>('.format-option')
+  );
+  const accentTint = document.querySelector<HTMLInputElement>('#accent-tint');
+  const cellSize = document.querySelector<HTMLInputElement>('#cell-size');
+  const brightness = document.querySelector<HTMLInputElement>('#brightness');
+  const contrast = document.querySelector<HTMLInputElement>('#contrast');
+  const scale = document.querySelector<HTMLInputElement>('#scale');
+  const positionX = document.querySelector<HTMLInputElement>('#position-x');
+  const positionY = document.querySelector<HTMLInputElement>('#position-y');
+  const resetButton = document.querySelector<HTMLButtonElement>('#reset-button');
+  const downloadButton = document.querySelector<HTMLButtonElement>('#download-button');
+  const downloadSvgButton = document.querySelector<HTMLButtonElement>('#download-svg-button');
+  const canvas = document.querySelector<HTMLCanvasElement>('#output-canvas');
+  const dropZone = document.querySelector<HTMLElement>('#drop-zone');
+  const renderingIndicator = document.querySelector<HTMLElement>('#rendering-indicator');
+  const fileDetails = document.querySelector<HTMLElement>('#file-details');
+  const previewMeta = document.querySelector<HTMLElement>('#preview-meta');
+
+  // Astro renders these controls together. Guarding the initializer makes a
+  // partial/template edit fail inertly instead of throwing on every page load.
+  const requiredElements = [
+    input,
+    ditherApp,
+    controlPanel,
+    controls,
+    accentTint,
+    cellSize,
+    brightness,
+    contrast,
+    scale,
+    positionX,
+    positionY,
+    resetButton,
+    downloadButton,
+    downloadSvgButton,
+    canvas,
+    dropZone,
+    renderingIndicator,
+    fileDetails,
+    previewMeta,
+  ];
+
+  if (requiredElements.every(Boolean) && formatButtons.length > 0) {
+    const imageInput = input!;
+    const tool = ditherApp!;
+    const sidebar = controlPanel!;
+    const fieldset = controls!;
+    const accentTintInput = accentTint!;
+    const patternInput = cellSize!;
+    const brightnessInput = brightness!;
+    const contrastInput = contrast!;
+    const scaleInput = scale!;
+    const xInput = positionX!;
+    const yInput = positionY!;
+    const reset = resetButton!;
+    const download = downloadButton!;
+    const downloadSvg = downloadSvgButton!;
+    const outputCanvas = canvas!;
+    const dropTarget = dropZone!;
+    const busyIndicator = renderingIndicator!;
+    const details = fileDetails!;
+    const dimensions = previewMeta!;
+
+    let sourceImage: HTMLImageElement | null = null;
+    let sourceFilename = 'information-plus-image';
+    let objectUrl: string | null = null;
+    let renderFrame = 0;
+    let gridFrame = 0;
+    let selectedFormat: ImageOutputPresetId = 'original';
+    let latestRender: StillDitherRenderResult | null = null;
+
+    const syncToolGrid = () => {
+      gridFrame = 0;
+      const guideColumns = window.innerWidth <= 640 ? 4 : 12;
+      const guideColumnWidth = tool.getBoundingClientRect().width / guideColumns;
+      const subdivisions = Math.max(1, Math.round(guideColumnWidth / 24));
+      const gridUnit = guideColumnWidth / subdivisions;
+      tool.style.setProperty('--tool-grid-unit', `${gridUnit}px`);
+
+      if (window.innerWidth <= 900) {
+        tool.style.removeProperty('min-height');
+        return;
+      }
+
+      // The app spans the same gutter-to-gutter width as the site's 12-column
+      // guides. Each guide column is divided into an integer number of roughly
+      // 24px cells, so the reticulate remains fine-grained while each complete
+      // group lands exactly on a site guide. Its height is rounded to a
+      // whole cell so the final row ends cleanly at the panel boundary.
+      tool.style.minHeight = '0px';
+      const contentHeight = Math.max(sidebar.scrollHeight, dropTarget.scrollHeight);
+      const rows = Math.max(1, Math.ceil(contentHeight / gridUnit));
+      tool.style.setProperty('--tool-grid-unit', `${gridUnit}px`);
+      tool.style.minHeight = `${rows * gridUnit}px`;
+    };
+
+    const scheduleToolGridSync = () => {
+      if (gridFrame) cancelAnimationFrame(gridFrame);
+      gridFrame = requestAnimationFrame(syncToolGrid);
+    };
+
+    const rangePairs = [
+      [accentTintInput, document.querySelector<HTMLOutputElement>('#accent-tint-value'), (value: number) => {
+        const amount = Math.round(value);
+        if (amount === 0) return 'Default';
+        if (amount === 100) return 'Accent';
+        return `${amount}% accent`;
+      }],
+      [patternInput, document.querySelector<HTMLOutputElement>('#cell-size-value'), (value: number) => String(Math.round(value))],
+      [brightnessInput, document.querySelector<HTMLOutputElement>('#brightness-value'), (value: number) => value.toFixed(2)],
+      [contrastInput, document.querySelector<HTMLOutputElement>('#contrast-value'), (value: number) => value.toFixed(2)],
+      [scaleInput, document.querySelector<HTMLOutputElement>('#scale-value'), (value: number) => `${Math.round(value)}%`],
+      [xInput, document.querySelector<HTMLOutputElement>('#position-x-value'), (value: number) => `${Math.round(value)}%`],
+      [yInput, document.querySelector<HTMLOutputElement>('#position-y-value'), (value: number) => `${Math.round(value)}%`],
+    ] as const;
+
+    const syncRangeProgress = (range: HTMLInputElement) => {
+      const min = Number(range.min);
+      const max = Number(range.max);
+      const progress = max > min ? ((Number(range.value) - min) / (max - min)) * 100 : 0;
+      range.style.setProperty('--range-progress', `${Math.min(100, Math.max(0, progress))}%`);
+    };
+
+    const resetRange = (
+      range: HTMLInputElement,
+      output: HTMLOutputElement | null,
+      formatValue: (value: number) => string
+    ) => {
+      range.value = range.defaultValue;
+      const formattedValue = formatValue(Number(range.value));
+      if (output) output.value = formattedValue;
+      if (range === accentTintInput) range.setAttribute('aria-valuetext', formattedValue);
+      syncRangeProgress(range);
+      scheduleRender();
+    };
+
+    for (const [range] of rangePairs) syncRangeProgress(range);
+
+    const outputSize = () => {
+      const preset = IMAGE_OUTPUT_PRESETS.find(
+        (item) => item.id === selectedFormat
+      ) ?? IMAGE_OUTPUT_PRESETS[0];
+
+      if (preset.width && preset.height) return { width: preset.width, height: preset.height };
+      if (!sourceImage) return { width: 1080, height: 1350 };
+      const scale = Math.min(1, 2400 / Math.max(sourceImage.naturalWidth, sourceImage.naturalHeight));
+      return {
+        width: Math.max(1, Math.round(sourceImage.naturalWidth * scale)),
+        height: Math.max(1, Math.round(sourceImage.naturalHeight * scale)),
+      };
+    };
+
+    const setStatus = (message: string, isError = false) => {
+      details.textContent = message;
+      details.classList.toggle('is-error', isError);
+    };
+
+    const render = () => {
+      renderFrame = 0;
+      if (!sourceImage) return;
+      busyIndicator.hidden = false;
+      download.disabled = true;
+      downloadSvg.disabled = true;
+      latestRender = null;
+
+      requestAnimationFrame(() => {
+        try {
+          const size = outputSize();
+          latestRender = renderStillDither({
+            source: sourceImage!,
+            sourceWidth: sourceImage!.naturalWidth,
+            sourceHeight: sourceImage!.naturalHeight,
+            canvas: outputCanvas,
+            width: size.width,
+            height: size.height,
+            positionX: Number(xInput.value) / 100,
+            positionY: Number(yInput.value) / 100,
+            scale: Number(scaleInput.value) / 100,
+            macroCellSize: Number(patternInput.value),
+            brightness: Number(brightnessInput.value),
+            contrast: Number(contrastInput.value),
+            accentTint: Number(accentTintInput.value) / 100,
+          });
+          outputCanvas.hidden = false;
+          dimensions.hidden = false;
+          dimensions.textContent = `${size.width} × ${size.height} px · PNG / SVG`;
+          setStatus(`${sourceFilename} · ${sourceImage!.naturalWidth} × ${sourceImage!.naturalHeight} px`);
+        } catch (error) {
+          setStatus(
+            error instanceof Error ? error.message : 'This image could not be processed.',
+            true
+          );
+        } finally {
+          busyIndicator.hidden = true;
+          download.disabled = !latestRender;
+          downloadSvg.disabled = !latestRender;
+          scheduleToolGridSync();
+        }
+      });
+    };
+
+    const scheduleRender = () => {
+      // Range inputs can fire faster than the canvas can render. Coalesce them
+      // into one render per animation frame and always use the latest values.
+      if (!sourceImage || renderFrame) return;
+      renderFrame = requestAnimationFrame(render);
+    };
+
+    const selectFormat = (id: ImageOutputPresetId) => {
+      selectedFormat = id;
+      for (const button of formatButtons) {
+        const selected = button.dataset.format === id;
+        button.classList.toggle('is-selected', selected);
+        button.setAttribute('aria-pressed', String(selected));
+      }
+    };
+
+    const loadFile = (file?: File) => {
+      if (!file) return;
+      if (!file.type.startsWith('image/')) {
+        setStatus('Please choose an image file.', true);
+        return;
+      }
+
+      setStatus('Opening image…');
+      const nextUrl = URL.createObjectURL(file);
+      const nextImage = new Image();
+      nextImage.decoding = 'async';
+      nextImage.onload = () => {
+        // Keep the previous URL alive until the replacement has decoded; this
+        // avoids blanking the preview when a new file fails to open.
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
+        objectUrl = nextUrl;
+        sourceImage = nextImage;
+        sourceFilename = file.name.replace(/\.[^.]+$/, '') || 'information-plus-image';
+        fieldset.disabled = false;
+        tool.dataset.state = 'ready';
+        render();
+      };
+      nextImage.onerror = () => {
+        URL.revokeObjectURL(nextUrl);
+        setStatus('Your browser could not open this image format.', true);
+      };
+      nextImage.src = nextUrl;
+    };
+
+    imageInput.addEventListener('click', () => {
+      // Clearing first also lets someone deliberately choose the same file again.
+      imageInput.value = '';
+    });
+    imageInput.addEventListener('change', () => loadFile(imageInput.files?.[0]));
+
+    for (const [range, output, formatValue] of rangePairs) {
+      range.addEventListener('input', () => {
+        const formattedValue = formatValue(Number(range.value));
+        if (output) output.value = formattedValue;
+        if (range === accentTintInput) range.setAttribute('aria-valuetext', formattedValue);
+        syncRangeProgress(range);
+        scheduleRender();
+      });
+
+      range.closest<HTMLElement>('.range-control')?.addEventListener('dblclick', (event) => {
+        event.preventDefault();
+        resetRange(range, output, formatValue);
+      });
+    }
+
+    for (const button of formatButtons) {
+      button.addEventListener('click', () => {
+        selectFormat((button.dataset.format || 'original') as ImageOutputPresetId);
+        scheduleRender();
+      });
+    }
+
+    reset.addEventListener('click', () => {
+      selectFormat('original');
+      for (const [range, output, formatValue] of rangePairs) {
+        resetRange(range, output, formatValue);
+      }
+    });
+
+    download.addEventListener('click', () => {
+      outputCanvas.toBlob((blob) => {
+        if (!blob) {
+          setStatus('The PNG could not be created. Please try again.', true);
+          return;
+        }
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${sourceFilename}-dither-${outputCanvas.width}x${outputCanvas.height}.png`;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }, 'image/png');
+    });
+
+    downloadSvg.addEventListener('click', () => {
+      if (!latestRender) return;
+
+      try {
+        // Reuse the colors captured during the matching render so a palette
+        // change cannot make the SVG disagree with the visible canvas.
+        const svg = createStillDitherSvg(outputCanvas, latestRender);
+        const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${sourceFilename}-dither-${outputCanvas.width}x${outputCanvas.height}.svg`;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      } catch (error) {
+        setStatus(
+          error instanceof Error ? error.message : 'The SVG could not be created. Please try again.',
+          true
+        );
+      }
+    });
+
+    for (const eventName of ['dragenter', 'dragover']) {
+      dropTarget.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropTarget.classList.add('is-dragging');
+      });
+    }
+    for (const eventName of ['dragleave', 'drop']) {
+      dropTarget.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropTarget.classList.remove('is-dragging');
+      });
+    }
+    dropTarget.addEventListener('drop', (event) => loadFile(event.dataTransfer?.files[0]));
+
+    window.addEventListener('pagehide', () => {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    });
+    window.addEventListener('resize', scheduleToolGridSync, { passive: true });
+    scheduleToolGridSync();
+    document.fonts?.ready.then(scheduleToolGridSync);
+  }
+</script>
+
+<style>
+  .tool-intro {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin-bottom: clamp(40px, 6vw, 80px);
+  }
+  .tool-intro .eyebrow,
+  .tool-intro h1 { grid-column: 1 / -1; }
+  .tool-intro p {
+    grid-column: 1 / span 7;
+    max-width: 760px;
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: clamp(18px, 1.5vw, 24px);
+  }
+  .dither-app {
+    --tool-grid-unit: calc((100vw - (2 * var(--gutter))) / 60);
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    outline: 1px solid var(--border);
+    outline-offset: -1px;
+    background: var(--bg);
+    min-height: 680px;
+  }
+  .controls {
+    padding: clamp(24px, 2.5vw, 40px);
+    border-right: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface) 58%, var(--bg));
+  }
+  .source-status {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  #image-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .upload-button {
+    justify-content: center;
+  }
+  .file-details {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  .file-details.is-error { color: var(--accent); }
+  fieldset {
+    min-width: 0;
+    padding: 28px 0 0;
+    margin: 0;
+    border: 0;
+  }
+  fieldset:disabled { opacity: 0.38; }
+  .control-group + .control-group { margin-top: 24px; }
+  .control-group > label,
+  .control-heading,
+  .control-label label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+  }
+  .control-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .control-label label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .control-label label .pa-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+  }
+  output {
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .format-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .format-option {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 11px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font: 12px/1.35 var(--mono);
+    text-align: left;
+  }
+  .format-option:not(.is-selected):hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--surface-2);
+  }
+  .format-option.is-selected {
+    border-color: var(--accent-strong);
+    background: var(--accent-strong);
+    color: var(--on-accent);
+  }
+  .format-option.is-selected:not(:disabled),
+  .format-option.is-selected:not(:disabled) * {
+    cursor: var(--cur-default, auto);
+  }
+  .format-option small {
+    color: inherit;
+    font: inherit;
+    opacity: 0.68;
+  }
+  input[type='range'] {
+    --range-progress: 50%;
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(
+      to right,
+      var(--accent) 0 var(--range-progress),
+      var(--surface-2) var(--range-progress) 100%
+    );
+  }
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+    border: 1px solid var(--bg);
+    border-radius: 0;
+    background: var(--accent);
+  }
+  input[type='range']::-moz-range-track {
+    height: 6px;
+    border: 0;
+    background: linear-gradient(
+      to right,
+      var(--accent) 0 var(--range-progress),
+      var(--surface-2) var(--range-progress) 100%
+    );
+  }
+  input[type='range']::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--bg);
+    border-radius: 0;
+    background: var(--accent);
+  }
+  input[type='range']:not(:disabled) { cursor: var(--cur-grab, grab); }
+  input[type='range']:not(:disabled):active { cursor: var(--cur-grabbing, grabbing); }
+  .control-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .control-actions .reset-button { grid-column: 1 / -1; }
+  .control-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  .control-actions .pa-icon,
+  .upload-button .pa-icon { width: 21px; height: 21px; }
+  .preview-panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: clamp(24px, 4vw, 64px);
+    overflow: hidden;
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: var(--tool-grid-unit) var(--tool-grid-unit);
+    transition: background-color 0.15s ease, outline-color 0.15s ease;
+    outline: 1px solid var(--border);
+    outline-offset: -1px;
+  }
+  .preview-panel.is-dragging {
+    background-color: var(--surface);
+    outline-color: var(--accent);
+  }
+  .drop-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .drop-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .drop-instructions .drop-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+    color: var(--accent);
+  }
+  .drop-instructions strong {
+    margin-bottom: 4px;
+    color: var(--text);
+    font-family: var(--rd-20);
+    font-size: 24px;
+  }
+  .drop-prompt .upload-button { margin-top: 14px; }
+  .accepted-formats {
+    max-width: 340px;
+    margin-top: 12px;
+    color: var(--muted);
+    font: 11px/1.5 var(--mono);
+  }
+  .change-label { display: none; }
+  .dither-app[data-state='ready'] .drop-prompt {
+    position: absolute;
+    z-index: 3;
+    top: 16px;
+    right: 16px;
+  }
+  .dither-app[data-state='ready'] .drop-instructions,
+  .dither-app[data-state='ready'] .accepted-formats,
+  .dither-app[data-state='ready'] .choose-label {
+    display: none;
+  }
+  .dither-app[data-state='ready'] .change-label { display: inline; }
+  .dither-app[data-state='ready'] .upload-button {
+    margin-top: 0;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  #output-canvas {
+    display: block;
+    max-width: 100%;
+    max-height: 720px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    box-shadow: 0 18px 60px rgb(0 0 0 / 38%);
+    image-rendering: pixelated;
+  }
+  #output-canvas[hidden] { display: none; }
+  .preview-meta {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    margin: 0;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .rendering-indicator {
+    position: absolute;
+    z-index: 2;
+    top: 16px;
+    left: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: var(--surface);
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .rendering-indicator[hidden] { display: none; }
+  .rendering-indicator span {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    animation: render-pulse 0.7s steps(2, end) infinite;
+  }
+  @keyframes render-pulse { 50% { opacity: 0.25; } }
+
+  @media (max-width: 900px) {
+    .tool-intro p { grid-column: 1 / -1; }
+    .dither-app {
+      --tool-grid-unit: calc((100vw - (2 * var(--gutter))) / 36);
+      grid-template-columns: 1fr;
+    }
+    .controls { border-right: 0; border-bottom: 1px solid var(--border); }
+    .preview-panel { min-height: calc(var(--tool-grid-unit) * 7); }
+  }
+
+  @media (max-width: 640px) {
+    .dither-app { --tool-grid-unit: calc((100vw - (2 * var(--gutter))) / 24); }
+    .preview-panel { min-height: calc(var(--tool-grid-unit) * 4); }
+  }
+
+  @media (max-width: 560px) {
+    .dither-app { min-height: 0; }
+    .preview-panel { padding: 20px; }
+    #output-canvas { max-height: 560px; }
+  }
+</style>

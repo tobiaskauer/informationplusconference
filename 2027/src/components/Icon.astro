@@ -1,0 +1,47 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+interface Props {
+  /** pixelarticons name, e.g. "calendar", "map-pin", "arrow-right" */
+  name: string;
+  /** Any CSS length in px. Default 24px; most sizes are set in CSS via .pa-icon. */
+  size?: string;
+  class?: string;
+  label?: string;
+}
+
+const { name, size = '24px', class: className, label } = Astro.props;
+
+// pixelarticons are plain SVGs on a 24x24 grid with fill="currentColor". We read
+// the file at build time (SSG runs in Node) and inline just the inner markup so
+// the icon inherits color and can be sized freely. Resolve from the project root
+// so it works after Astro bundles this component into a chunk.
+//
+// Prefer the vendored full set in src/icons/ (version-controlled), then fall back
+// to the npm package's free set for anything not vendored yet.
+const sources = [
+  join(process.cwd(), 'src/icons', `${name}.svg`),
+  join(process.cwd(), 'node_modules/pixelarticons/svg', `${name}.svg`),
+];
+const svgPath = sources.find((p) => existsSync(p));
+if (!svgPath) throw new Error(`Icon "${name}" not found in src/icons/ or pixelarticons`);
+const raw = readFileSync(svgPath, 'utf-8');
+const inner = raw
+  .replace(/^[\s\S]*?<svg[^>]*>/, '')
+  .replace(/<\/svg>\s*$/, '')
+  .trim();
+---
+
+<svg
+  class:list={['pa-icon', className]}
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  shape-rendering="crispEdges"
+  role={label ? 'img' : 'presentation'}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  set:html={inner}
+/>

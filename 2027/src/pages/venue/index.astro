@@ -1,0 +1,188 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import GettingThere from '../../components/GettingThere.astro';
+import RoomCard from '../../components/RoomCard.astro';
+import Icon from '../../components/Icon.astro';
+import { VENUE_DETAILS_ARE_PUBLIC } from '../../lib/venue';
+import { withBase } from '../../lib/url';
+
+// `main.md` is the singleton page record edited in Tina. Normalizing its
+// optional values here keeps the template and browser initializer straightforward.
+const venuePage = await getEntry('venuePage', 'main');
+const heroImage = venuePage?.data.heroImage?.trim();
+const heroImageAlt = venuePage?.data.heroImageAlt?.trim() ?? '';
+const venueDither = venuePage?.data.dither;
+const ditherSettings = {
+  enabled: venueDither?.enabled ?? true,
+  tint: venueDither?.tint ?? 0,
+  patternSize: venueDither?.patternSize ?? 12,
+  brightness: venueDither?.brightness ?? 0.6,
+  contrast: venueDither?.contrast ?? 1,
+  scale: venueDither?.scale ?? 100,
+  positionX: venueDither?.positionX ?? 50,
+  positionY: venueDither?.positionY ?? 50,
+};
+
+const rooms = (VENUE_DETAILS_ARE_PUBLIC ? await getCollection('rooms') : []).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+
+// Group rooms by building.
+const byBuilding = new Map<string, typeof rooms>();
+for (const room of rooms) {
+  const key = room.data.building;
+  if (!byBuilding.has(key)) byBuilding.set(key, []);
+  byBuilding.get(key)!.push(room);
+}
+const buildings = [...byBuilding.keys()].sort();
+---
+
+<Base title="Venue" description="Where the conference takes place and how to get there.">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Venue' }]} />
+  <span class="eyebrow">Where it happens</span>
+  <h1>Venue</h1>
+
+  <div class:list={['venue-overview', { 'has-image': Boolean(heroImage) }]}>
+    {heroImage && (
+      <figure
+        class:list={['venue-hero', { 'has-live-dither': ditherSettings.enabled }]}
+        data-media-dither={ditherSettings.enabled ? '' : undefined}
+        data-dither-tint={ditherSettings.tint}
+        data-dither-pattern-size={ditherSettings.patternSize}
+        data-dither-brightness={ditherSettings.brightness}
+        data-dither-contrast={ditherSettings.contrast}
+        data-dither-scale={ditherSettings.scale}
+        data-dither-position-x={ditherSettings.positionX}
+        data-dither-position-y={ditherSettings.positionY}
+      >
+        <img
+          src={withBase(heroImage)}
+          alt={heroImageAlt}
+          decoding="async"
+          fetchpriority="high"
+          draggable="false"
+          data-dither-source={ditherSettings.enabled ? '' : undefined}
+        />
+        {ditherSettings.enabled && <canvas data-dither-canvas aria-hidden="true"></canvas>}
+      </figure>
+    )}
+
+    <div class="prose venue-intro">
+      <p>
+        Information+ 2027 is hosted by <strong class="accent-emphasis">Politecnico di Milano</strong>, in Italy.
+      </p>
+      <p>
+        Founded in 1863, Politecnico di Milano is Italy’s largest technical university and one of Europe’s leading institutions in the fields of engineering, architecture, and design.
+      </p>
+      <p>
+        Information+ 2027 takes place at the <strong class="accent-emphasis">Department of Design of Politecnico di Milano</strong>, on the Bovisa Campus.
+      </p>
+      <p>
+        The Department of Design is Italy’s main centre for scientific research in the field of design. Rooted in Italian design culture, it explores new disciplinary frontiers and places design at the service of contemporary challenges.
+      </p>
+    </div>
+  </div>
+
+  {VENUE_DETAILS_ARE_PUBLIC && <GettingThere />}
+
+  {VENUE_DETAILS_ARE_PUBLIC && rooms.length === 0 && (
+    <p class="sub">No rooms yet. Add some in the local editor at <code>/admin</code>.</p>
+  )}
+
+  {buildings.map((building) => (
+    <section>
+      <h2 class="section-title"><Icon name="map-pin-home" />Building {building}</h2>
+      <div class="grid">
+        {byBuilding.get(building)!.map((room) => <RoomCard room={room} />)}
+      </div>
+    </section>
+  ))}
+</Base>
+
+<script>
+  import { initMediaDither } from '../../lib/mediaDither';
+
+  // The data attributes are also a useful no-JS fallback boundary: the source
+  // image stays visible until initMediaDither completes its first frame.
+  for (const root of document.querySelectorAll<HTMLElement>('[data-media-dither]')) {
+    const numberSetting = (name: keyof DOMStringMap, fallback: number) => {
+      const value = Number(root.dataset[name]);
+      return Number.isFinite(value) ? value : fallback;
+    };
+
+    initMediaDither(root, {
+      accentTint: numberSetting('ditherTint', 0) / 100,
+      macroCellSize: numberSetting('ditherPatternSize', 12),
+      brightness: numberSetting('ditherBrightness', 0.6),
+      contrast: numberSetting('ditherContrast', 1),
+      scale: numberSetting('ditherScale', 100) / 100,
+      positionX: numberSetting('ditherPositionX', 50) / 100,
+      positionY: numberSetting('ditherPositionY', 50) / 100,
+      interactive: true,
+    });
+  }
+</script>
+
+<style>
+  .venue-overview:not(.has-image) {
+    display: contents;
+  }
+  .venue-overview.has-image {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: stretch;
+    margin: 36px 0 clamp(48px, 6vw, 80px);
+  }
+  .venue-hero {
+    position: relative;
+    grid-column: 1 / span 5;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .venue-hero img,
+  .venue-hero canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    max-height: 640px;
+  }
+  .venue-hero img {
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+  .venue-hero canvas {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    pointer-events: none;
+    image-rendering: pixelated;
+  }
+  .venue-hero.is-dither-active img { opacity: 0; }
+  .venue-hero.is-dither-active canvas { visibility: visible; }
+  .venue-overview.has-image .venue-intro {
+    grid-column: 7 / -1;
+  }
+  .venue-overview.has-image .venue-intro > :first-child { margin-top: 0; }
+  .venue-overview.has-image .venue-intro > :last-child { margin-bottom: 0; }
+
+  @media (max-width: 900px) {
+    .venue-overview.has-image {
+      display: block;
+    }
+    .venue-hero {
+      margin-bottom: 32px;
+    }
+    .venue-hero img,
+    .venue-hero canvas {
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>

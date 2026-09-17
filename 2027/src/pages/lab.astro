@@ -1,0 +1,699 @@
+---
+// Visual sandbox — a scratch page for prototyping the hero animation.
+// Standalone (no nav/footer) so it's a clean canvas. Not linked anywhere;
+// reach it at /lab. Once a visual is "dope", lift the markup + script into a
+// component and drop it in the home hero.
+import '../styles/global.css';
+import { withBase } from '../lib/url';
+import Icon from '../components/Icon.astro';
+
+const confName = 'Information+';
+
+// Design / data-viz icons sprinkled across the field. Edit freely — any name
+// from src/icons (the vendored pixelarticons set) works.
+const designIcons = [
+  'arrows-scale',
+  'at-sign',
+  'brackets-angle',
+  'brackets',
+  'brackets-content',
+  'brush',
+  'bullseye',
+  'calculator',
+  'camera',
+  'chart',
+  'chart-bar',
+  'circle',
+  'circle-square',
+  'code',
+  'colors-swatch',
+  'cpu',
+  'crop',
+  'dashboard',
+  'database',
+  'drop',
+  'edit',
+  'eye',
+  'fill-half',
+  'frame',
+  'git-branch',
+  'hash',
+  'hexagon',
+  'image',
+  'layout',
+  'lasso',
+  'move',
+  'paint-bucket',
+  'percent',
+  'pipette',
+  'robot-face-smile',
+  'ruler-dimension',
+  'scissors',
+  'section',
+  'shapes',
+  'sliders',
+  'spray',
+  'square',
+  'sticker',
+  'terminal',
+  'trending-up',
+  'triangle',
+  'zoom-in',
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab · pixel field</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href={withBase('/favicon.svg')} />
+  </head>
+  <body class="lab-body">
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href={withBase('/')} aria-label={confName}>
+          {confName.split('').map((ch, i) => (
+            <span style={`--i:${i}`} aria-hidden="true">{ch === ' ' ? ' ' : ch}</span>
+          ))}
+        </a>
+        <nav class="nav" id="site-nav">
+          <a href={withBase('/schedule')}><Icon name="calendar" /><span class="nav-label">Schedule</span></a>
+          <a href={withBase('/speakers')}><Icon name="users" /><span class="nav-label">Speakers</span></a>
+          <a href={withBase('/venue')}><Icon name="map-pin" /><span class="nav-label">Venue</span></a>
+        </nav>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <Icon name="menu" class="nav-toggle-open" />
+          <Icon name="close" class="nav-toggle-close" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO: the pixel-life field is scoped to this section only. -->
+      <section class="hero-stage">
+        <!-- The pixel grid is generated in the script from COLS × ROWS. -->
+        <div class="pixel-field" id="field" aria-hidden="true"></div>
+
+        <!-- Icon pool: rendered once (hidden), cloned into cells by the script. -->
+        <template id="icon-pool">
+          {designIcons.map((n) => <Icon name={n} />)}
+        </template>
+
+        <!-- Real home-hero markup. Each [data-quiet] element carves the dead
+             zone behind it, so the silhouette follows the content shape. -->
+        <div class="container">
+          <section class="hero">
+            <span class="eyebrow" data-quiet>The conference</span>
+            <h1>
+              <span class="hero-line" data-quiet>Information+</span>
+              <span class="hero-line" data-quiet>2026</span>
+            </h1>
+            <p class="tagline" data-quiet>
+              An interdisciplinary conference on information design and data visualization.
+            </p>
+            <div class="meta-list" data-quiet>
+              <span class="meta-item"><Icon name="calendar" />Sep 15 – Sep 17</span>
+              <span class="meta-item"><Icon name="map-pin" />Politecnico di Milano, Milano</span>
+            </div>
+            <div class="prose" data-quiet>
+              <p>
+                Information+ brings together researchers, educators, and practitioners in
+                information design and data visualization to share the questions of these
+                fast-moving fields.
+              </p>
+            </div>
+            <div class="hero-actions" data-quiet>
+              <a class="btn" href="#">View the schedule <Icon name="arrow-right" /></a>
+              <a class="btn btn-ghost" href="#">Speakers <Icon name="arrow-right" /></a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- A normal section below the hero — NO pixel-life here. -->
+      <div class="container">
+        <section class="mock-below">
+          <h2 class="section-title"><Icon name="megaphone" />Featured speakers</h2>
+          <div class="grid cols-2">
+            <div class="card"><h3>Ada Lovelace</h3><p class="sub">Analyst · Note G</p></div>
+            <div class="card"><h3>Edward Tufte</h3><p class="sub">Author · The Visual Display</p></div>
+            <div class="card"><h3>Stefanie Posavec</h3><p class="sub">Designer · Dear Data</p></div>
+            <div class="card"><h3>Giorgia Lupi</h3><p class="sub">Designer · Pentagram</p></div>
+          </div>
+        </section>
+      </div>
+
+      <a class="lab-back" href={withBase('/')}>← back to site</a>
+    </main>
+
+    <script>
+      import { gsap } from 'gsap';
+
+      // --- Config -----------------------------------------------------------
+      // Tweak these freely while prototyping.
+      const COLS = 48;
+      const ROWS = 27;
+      const GAP = 3; // px between cells
+      const ICON_COUNT = 10; // # of unique icons to scatter; 0 = whole pool (each shown once)
+      const INTRO_DUR = 0.8; // s — fade-in time of each cell (plus appears smoothly)
+      const INTRO_SPREAD = 0.07; // s — extra delay per cell-step out from centre
+      // Game of Life
+      const PLUS_PERIOD = 8; // cell pitch of the tiled 3×3 "+" pattern (3 wide + gap)
+      const HOLD_MS = 2200; // how long the logotype holds before it dissolves
+      const DISSOLVE_MS = 4600; // window over which the logotype melts into the sim
+      const STEP_MS = 420; // ms between generations (lower = faster)
+      const ICON_BIRTH_PROB = 0.05; // chance a newly-born cell is an icon (kept for its whole life)
+      const MIN_POP = 0.03; // keep-alive kicks in only below this fraction (rare)
+      const RESEED_EVERY = 8; // min generations between keep-alive injections
+      const BRUSH = 0; // cursor brush radius in cells (0 = just the cell under it)
+      const RISE = 0.08; // how gently a cell brightens when it's born (lower = softer)
+      const FALL = 0.05; // how slowly a dead cell fades out (→ glowing trails)
+      const DEAD_LEVEL = 0.05; // faint resting brightness, so the grid stays visible
+      // Rugged bottom edge: per-column count of bottom cells hidden, via a random
+      // walk so the edge reads like an organic coastline (not a straight line).
+      const EDGE_MIN = 0;
+      const EDGE_MAX = 7;
+
+      const field = document.getElementById('field')!;
+      field.style.setProperty('--cols', String(COLS));
+      field.style.setProperty('--rows', String(ROWS));
+      field.style.setProperty('--gap', `${GAP}px`);
+      let cellPx = 20; // current integer cell size, kept in sync by layout()
+
+      // Icons rendered (hidden) in the <template>, cloned into cells below.
+      const iconPool = Array.from(
+        (document.getElementById('icon-pool') as HTMLTemplateElement).content.querySelectorAll('svg')
+      );
+
+      // --- Build the grid ---------------------------------------------------
+      type Cell = { el: HTMLElement; col: number; row: number; cx: number; cy: number; iconEl: SVGElement | null; forbidden: boolean; hidden: boolean; delay: number };
+      const cells: Cell[] = [];
+      const frag = document.createDocumentFragment();
+      const midC = (COLS - 1) / 2;
+      const midR = (ROWS - 1) / 2;
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const el = document.createElement('div');
+          el.className = 'px';
+          el.style.opacity = '0'; // hidden until the intro envelope fades it in
+          frag.appendChild(el);
+          // Reveal radiates from the grid centre.
+          const delay = Math.hypot(c - midC, r - midR) * INTRO_SPREAD;
+          cells.push({ el, col: c, row: r, cx: 0, cy: 0, iconEl: null, forbidden: false, hidden: false, delay });
+        }
+      }
+      field.appendChild(frag);
+
+      // A cell is "blocked" (ignored by the sim, undrawable) if it's in the quiet
+      // zone or below the rugged bottom edge.
+      const blocked = (i: number) => cells[i].forbidden || cells[i].hidden;
+
+      // Rugged bottom edge: hide a jagged number of bottom cells per column. A
+      // random walk across columns gives an organic coastline; hidden cells stay
+      // in the grid (so tracks don't collapse) but never light up.
+      (function computeEdge() {
+        let cut = Math.round((EDGE_MIN + EDGE_MAX) / 2);
+        for (let c = 0; c < COLS; c++) {
+          cut += ((Math.random() * 3) | 0) - 1; // -1, 0, or +1
+          if (cut < EDGE_MIN) cut = EDGE_MIN;
+          if (cut > EDGE_MAX) cut = EDGE_MAX;
+          for (let k = 0; k < cut; k++) cells[(ROWS - 1 - k) * COLS + c].hidden = true;
+        }
+      })();
+
+      function shuffle<T>(arr: T[]): T[] {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // Integer cell size that covers the WIDTH (full-bleed; only the L/R edge
+      // columns crop). Then set the hero to an EXACT whole number of rows tall,
+      // so the grid fits vertically with no clipped/partial rows.
+      const stage = field.parentElement as HTMLElement;
+      function layout() {
+        const w = stage.clientWidth || window.innerWidth;
+        cellPx = Math.ceil((w - (COLS - 1) * GAP) / COLS);
+        field.style.setProperty('--cell', `${cellPx}px`);
+        stage.style.height = `${ROWS * cellPx + (ROWS - 1) * GAP}px`;
+      }
+
+      // Cache each cell's centre (in field-local px) for the cursor seeding.
+      function measure() {
+        const fr = field.getBoundingClientRect();
+        for (const cell of cells) {
+          const r = cell.el.getBoundingClientRect();
+          cell.cx = r.left - fr.left + r.width / 2;
+          cell.cy = r.top - fr.top + r.height / 2;
+        }
+      }
+
+      // Forbidden / "quiet" cells: any cell whose centre falls under a
+      // [data-quiet] element is marked dead-forever. The union of the content
+      // lines/buttons carves a content-SHAPED negative space (not a rectangle) —
+      // these cells are never born, can't be drawn, and hold no icons, so nothing
+      // bright ever happens behind the text. Only sets flags; step()/draw()/etc.
+      // enforce the deadness, so this is safe to call before the sim state exists.
+      const QUIET_PAD_CELLS = 1; // extra ring of dead cells around the content (~1 cell)
+      function computeQuiet() {
+        const fr = field.getBoundingClientRect();
+        const pad = QUIET_PAD_CELLS * (cellPx + GAP); // breathing room ≈ N cells
+        // Measure the TIGHT rendered rects of each element's actual content via a
+        // Range (per-line boxes), not the block box — otherwise block/flex
+        // elements (h1, meta-list, …) would carve full-width dead stripes.
+        const rects: { x0: number; y0: number; x1: number; y1: number }[] = [];
+        for (const el of document.querySelectorAll('[data-quiet]')) {
+          const range = document.createRange();
+          range.selectNodeContents(el);
+          const list = range.getClientRects();
+          const src = list.length ? Array.from(list) : [el.getBoundingClientRect()];
+          for (const r of src) {
+            if (r.width === 0 || r.height === 0) continue;
+            rects.push({
+              x0: r.left - fr.left - pad,
+              y0: r.top - fr.top - pad,
+              x1: r.right - fr.left + pad,
+              y1: r.bottom - fr.top + pad,
+            });
+          }
+        }
+        for (const cell of cells) {
+          cell.forbidden = rects.some(
+            (rc) => cell.cx >= rc.x0 && cell.cx <= rc.x1 && cell.cy >= rc.y0 && cell.cy <= rc.y1
+          );
+        }
+      }
+
+      layout();
+      measure();
+      computeQuiet();
+      window.addEventListener('resize', () => {
+        layout();
+        measure();
+        computeQuiet();
+      });
+
+      // Pool of reusable icon elements. An icon is attached to a cell when it's
+      // BORN (icon-at-birth), stays for the cell's whole life, and returns to the
+      // pool when the cell dies — so a cell never changes its look mid-life, and
+      // at most one of each icon is on screen at a time.
+      const iconCount = ICON_COUNT > 0 ? Math.min(ICON_COUNT, iconPool.length) : iconPool.length;
+      const freeIcons: SVGElement[] = shuffle(iconPool.slice())
+        .slice(0, iconCount)
+        .map((svg) => svg.cloneNode(true) as SVGElement);
+
+      // --- Pointer tracking -------------------------------------------------
+      // Track the cursor in field-local coords; -Infinity parks it off-grid.
+      // The brush draws live cells under the cursor; holding the button erases.
+      const pointer = { x: -Infinity, y: -Infinity, down: false };
+      const track = (e: PointerEvent) => {
+        const fr = field.getBoundingClientRect();
+        pointer.x = e.clientX - fr.left;
+        pointer.y = e.clientY - fr.top;
+      };
+      field.addEventListener('pointermove', track);
+      field.addEventListener('pointerdown', (e) => {
+        track(e);
+        pointer.down = true;
+      });
+      window.addEventListener('pointerup', () => {
+        pointer.down = false;
+      });
+      field.addEventListener('pointerleave', () => {
+        pointer.x = -Infinity;
+        pointer.y = -Infinity;
+      });
+
+      // --- Game of Life -----------------------------------------------------
+      // Conway's Life on a toroidal grid (edges wrap, so gliders never get
+      // stuck). cells[i] maps to index i = row * COLS + col. Generations step
+      // every STEP_MS; between steps each cell's brightness eases toward its
+      // alive(1)/dead(DEAD_LEVEL) target with a fast rise + slow fall, leaving
+      // glowing trails. The cursor seeds fresh life.
+      const N = COLS * ROWS;
+      let stateArr = new Uint8Array(N);
+      let nextArr = new Uint8Array(N);
+      const disp = new Float32Array(N); // eased display brightness per cell
+      // Per-cell release time (s). Logo cells stay pinned alive until this time,
+      // so the "+" melts into the sim cell-by-cell in random order (smooth, not
+      // an all-at-once switch). 0 = no hold (obeys the rules from the first step).
+      const release = new Float32Array(N);
+
+      // Keep-alive: drip a single glider (5 cells, one of 4 directions) at a
+      // random spot. Tiny and self-propelling, so life re-enters smoothly — no
+      // blobs popping in. Skips if it would land on the quiet zone.
+      const GLIDERS = [
+        [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]], // SE
+        [[1, 0], [0, 1], [0, 2], [1, 2], [2, 2]], // SW
+        [[0, 0], [1, 0], [2, 0], [0, 1], [1, 2]], // NE
+        [[0, 0], [1, 0], [2, 0], [2, 1], [1, 2]], // NW
+      ];
+      function injectGlider() {
+        const g = GLIDERS[(Math.random() * GLIDERS.length) | 0];
+        const c0 = (Math.random() * (COLS - 3)) | 0;
+        const r0 = (Math.random() * (ROWS - 3)) | 0;
+        for (const [dc, dr] of g) {
+          if (blocked((r0 + dr) * COLS + (c0 + dc))) return; // don't seed the quiet zone / edge
+        }
+        for (const [dc, dr] of g) stateArr[(r0 + dr) * COLS + (c0 + dc)] = 1;
+      }
+      // Opening pattern: a centred tiling of small 3×3 "+" signs. Each plus's
+      // cells hold, then dissolve into the sim at a random per-cell time. Far
+      // calmer than a single solid logotype (fewer, evenly-spaced live cells).
+      const PLUS = [[1, 0], [0, 1], [1, 1], [2, 1], [1, 2]]; // (col, row) within a 3×3 tile
+      function stampLogo() {
+        stateArr.fill(0);
+        release.fill(0);
+        const p = PLUS_PERIOD;
+        const nx = Math.floor(COLS / p);
+        const ny = Math.floor(ROWS / p);
+        const offX = Math.floor((COLS - nx * p) / 2) + Math.floor((p - 3) / 2);
+        const offY = Math.floor((ROWS - ny * p) / 2) + Math.floor((p - 3) / 2);
+        for (let j = 0; j < ny; j++) {
+          for (let i = 0; i < nx; i++) {
+            for (const [dc, dr] of PLUS) {
+              const c = offX + i * p + dc;
+              const r = offY + j * p + dr;
+              if (c < 0 || c >= COLS || r < 0 || r >= ROWS) continue;
+              const idx = r * COLS + c;
+              if (blocked(idx)) continue;
+              stateArr[idx] = 1;
+              // Stagger each cell's release across the dissolve window.
+              release[idx] = (HOLD_MS + Math.random() * DISSOLVE_MS) / 1000;
+            }
+          }
+        }
+      }
+
+      function step(elapsed: number) {
+        let pop = 0;
+        for (let r = 0; r < ROWS; r++) {
+          const up = ((r - 1 + ROWS) % ROWS) * COLS;
+          const mid = r * COLS;
+          const dn = ((r + 1) % ROWS) * COLS;
+          for (let c = 0; c < COLS; c++) {
+            const l = (c - 1 + COLS) % COLS;
+            const rt = (c + 1) % COLS;
+            const n =
+              stateArr[up + l] + stateArr[up + c] + stateArr[up + rt] +
+              stateArr[mid + l] + stateArr[mid + rt] +
+              stateArr[dn + l] + stateArr[dn + c] + stateArr[dn + rt];
+            let next = stateArr[mid + c] ? (n === 2 || n === 3 ? 1 : 0) : n === 3 ? 1 : 0;
+            if (blocked(mid + c)) next = 0; // quiet zone / rugged edge stays dead
+            else if (release[mid + c] > elapsed) next = 1; // logo cell still held → dissolves later
+            nextArr[mid + c] = next;
+            pop += next;
+          }
+        }
+        const tmp = stateArr;
+        stateArr = nextArr;
+        nextArr = tmp;
+        // Keep it alive: only when nearly dead, and at most once per RESEED_EVERY
+        // generations, drip in a single glider — subtle, no blobs.
+        sinceReseed++;
+        if (pop < N * MIN_POP && sinceReseed >= RESEED_EVERY) {
+          injectGlider();
+          sinceReseed = 0;
+        }
+      }
+      let sinceReseed = 0;
+
+      // Icon-at-birth: reconcile icons against the live state. On a birth, a cell
+      // may (rarely) take a free icon and keep it for its whole life; on death it
+      // returns its icon to the pool. A surviving cell never changes — so a filled
+      // cell can't suddenly turn into an icon.
+      const prevAlive = new Uint8Array(N);
+      function syncIcons() {
+        for (let i = 0; i < N; i++) {
+          const alive = stateArr[i];
+          if (alive === prevAlive[i]) continue;
+          const cell = cells[i];
+          if (alive) {
+            if (!cell.iconEl && freeIcons.length && Math.random() < ICON_BIRTH_PROB) {
+              const el = freeIcons.pop()!;
+              cell.el.appendChild(el);
+              cell.el.classList.add('px--icon');
+              cell.iconEl = el;
+            }
+          } else if (cell.iconEl) {
+            cell.el.classList.remove('px--icon');
+            cell.el.removeChild(cell.iconEl);
+            freeIcons.push(cell.iconEl);
+            cell.iconEl = null;
+          }
+          prevAlive[i] = alive;
+        }
+      }
+
+      // Brush: directly set the cells AT the cursor — alive on hover/move, dead
+      // while the button is held (erase). Radius is BRUSH cells around the spot.
+      function applyBrush() {
+        if (!isFinite(pointer.x)) return;
+        const rad = (BRUSH + 0.5) * (cellPx + GAP);
+        const r2 = rad * rad;
+        const val = pointer.down ? 0 : 1;
+        for (let i = 0; i < N; i++) {
+          if (blocked(i)) continue; // can't draw in the quiet zone / edge
+          const dx = cells[i].cx - pointer.x;
+          const dy = cells[i].cy - pointer.y;
+          if (dx * dx + dy * dy <= r2) stateArr[i] = val;
+        }
+      }
+
+      // Draw: ease each cell toward its target and apply the intro envelope.
+      function draw(elapsed: number) {
+        for (let i = 0; i < N; i++) {
+          const cell = cells[i];
+          if (cell.hidden) {
+            cell.el.style.opacity = '0'; // rugged edge: stays invisible
+            continue;
+          }
+          let intro = (elapsed - cell.delay) / INTRO_DUR;
+          intro = intro <= 0 ? 0 : intro >= 1 ? 1 : 1 - (1 - intro) * (1 - intro);
+          if (intro === 0) {
+            cell.el.style.opacity = '0';
+            continue;
+          }
+          const target = stateArr[i] ? 1 : DEAD_LEVEL;
+          const cur = disp[i];
+          disp[i] = cur + (target - cur) * (target > cur ? RISE : FALL);
+          // Icons fade exactly like any other cell — visible only when alive.
+          cell.el.style.opacity = String(disp[i] * intro);
+        }
+      }
+
+      // --- Loop -------------------------------------------------------------
+      // Stamp the logotype, hold it, then advance generations on a fixed STEP_MS
+      // cadence (decoupled from frame rate). The ticker draws every frame.
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      (async () => {
+        stampLogo();
+
+        if (reduce) {
+          // Static: show the logotype composed of cells, no dissolve.
+          for (let i = 0; i < N; i++) {
+            cells[i].el.style.opacity = cells[i].hidden ? '0' : String(stateArr[i] ? 1 : DEAD_LEVEL);
+          }
+          return;
+        }
+
+        let startTime = 0;
+        let lastStep = 0;
+        gsap.ticker.add((time) => {
+          if (!startTime) {
+            startTime = time;
+            lastStep = time + HOLD_MS / 1000; // hold the logotype before dissolving
+          }
+          if (time - lastStep > 0.5) lastStep = time; // resync after tab was hidden
+          while ((time - lastStep) * 1000 >= STEP_MS) {
+            step(lastStep - startTime); // the simulated time of this generation
+            lastStep += STEP_MS / 1000;
+          }
+          applyBrush(); // after stepping, so the cursor's cells stay this frame
+          syncIcons(); // attach/detach icons on births/deaths (incl. brush edits)
+          draw(time - startTime);
+        });
+      })();
+    </script>
+
+    <script>
+      // Mobile nav: toggle the hamburger menu (copied from Base.astro).
+      const header = document.querySelector('.site-header');
+      const toggle = header?.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-nav');
+      if (header && toggle && nav) {
+        const setOpen = (open: boolean) => {
+          header.classList.toggle('nav-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        };
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          setOpen(!header.classList.contains('nav-open'));
+        });
+        nav.addEventListener('click', (e) => {
+          if ((e.target as Element).closest('a')) setOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') setOpen(false);
+        });
+        document.addEventListener('click', (e) => {
+          if (header.classList.contains('nav-open') && !header.contains(e.target as Node)) {
+            setOpen(false);
+          }
+        });
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 640) setOpen(false);
+        });
+      }
+    </script>
+
+    <script>
+      // Brand "light bulbs on" hover (copied from Base.astro).
+      function lightUp(brand: Element, startIndex: number | null) {
+        const spans = Array.from(brand.querySelectorAll('span'));
+        const remaining = spans.map((_, i) => i);
+        let last = -2;
+        let step = 0;
+        while (remaining.length) {
+          let pick: number;
+          if (step === 0 && startIndex !== null && remaining.includes(startIndex)) {
+            pick = startIndex;
+          } else {
+            let candidates = remaining.filter((p) => Math.abs(p - last) !== 1);
+            if (candidates.length === 0) candidates = remaining;
+            pick = candidates[Math.floor(Math.random() * candidates.length)];
+          }
+          spans[pick].style.setProperty('--i', String(step++));
+          remaining.splice(remaining.indexOf(pick), 1);
+          last = pick;
+        }
+      }
+      document.querySelectorAll<HTMLElement>('.brand').forEach((brand) => {
+        const spans = Array.from(brand.querySelectorAll('span'));
+        let active = false;
+        brand.addEventListener('mouseover', (e) => {
+          if (active) return;
+          active = true;
+          const target = e.target instanceof Element ? e.target.closest('span') : null;
+          const start = target && spans.includes(target) ? spans.indexOf(target) : null;
+          lightUp(brand, start);
+        });
+        brand.addEventListener('mouseleave', () => {
+          active = false;
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .lab-body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* HERO stage: the pixel-life field is absolute behind the content and cropped
+     here, so the simulation is limited to the hero. Height comes from the
+     in-flow .container/.hero content. */
+  /* Height is set from JS to an exact multiple of the cell pitch (no partial
+     rows). A fallback min-height avoids a flash before the script runs. */
+  .hero-stage {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+  }
+
+  /* Every track is the SAME integer-px size (set from JS), so cells are exact,
+     identical squares. The grid is centred and overflows the hero edges, which
+     .hero-stage overflow:hidden crops. */
+  .pixel-field {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--cell, 20px));
+    grid-template-rows: repeat(var(--rows), var(--cell, 20px));
+    gap: var(--gap);
+    place-content: center;
+  }
+
+  /* Hero content sits above the field. The container ignores the pointer so the
+     brush stays live in hero whitespace; only links/buttons are clickable. */
+  .hero-stage > .container {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* top-align: hero can be taller than the viewport */
+    pointer-events: none;
+  }
+  .hero-stage a,
+  .hero-stage button {
+    pointer-events: auto;
+  }
+
+  /* The copied hero is static (no intro script), so un-hide the lines that
+     global.css hides for the home-page reveal animation. */
+  .hero-stage .hero .hero-line,
+  .hero-stage .hero [data-reveal] {
+    opacity: 1;
+  }
+
+  /* Cells are created in JS, so Astro's <style> scoping (a data-astro-* attr
+     added to template elements) never reaches them. Mark the rule :global so
+     it matches the dynamically-generated nodes. */
+  .pixel-field :global(.px) {
+    background: var(--accent);
+    will-change: opacity, transform;
+    /* sharp pixels, no radius — matches the site's redacted aesthetic */
+    border-radius: 0;
+  }
+
+  /* Icon cells: no solid fill, the icon itself carries the colour. */
+  .pixel-field :global(.px--icon) {
+    background: transparent;
+    color: var(--blue-100);
+    display: grid;
+    place-items: center;
+  }
+  .pixel-field :global(.px--icon svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    shape-rendering: crispEdges;
+  }
+
+  /* Normal page section below the hero — no pixel-life here. */
+  .mock-below {
+    padding: 64px 0;
+  }
+
+  .lab-back {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 5;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--blue-200);
+    text-decoration: none;
+  }
+  .lab-back:hover { color: var(--accent); text-decoration: underline; }
+</style>

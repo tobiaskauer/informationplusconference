@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import { withBase } from '../lib/url';
+
+interface Props {
+  /** Root-relative path to return to, e.g. "/schedule". */
+  href: string;
+  label?: string;
+}
+
+const { href, label = 'Back' } = Astro.props;
+---
+
+<a class="back-btn" href={withBase(href)}>
+  <Icon name="square-chevron-left-solid" />{label}
+</a>

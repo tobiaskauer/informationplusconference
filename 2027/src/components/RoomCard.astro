@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+import Icon from './Icon.astro';
+
+interface Props {
+  room: CollectionEntry<'rooms'>;
+}
+
+const { room } = Astro.props;
+const { name, building, floor, roomNumber } = room.data;
+---
+
+<a class="card room-card" href={withBase(`/venue/${room.id}`)}>
+  <h3>{name}</h3>
+  <span class="room-meta">
+    <span class="room-meta-item"><Icon name="map-pin-home" />Building {building}</span>
+    <span class="room-meta-item"><Icon name="chevron-up" />Floor {floor}</span>
+    {roomNumber && <span class="room-meta-item"><Icon name="door-closed" />Room {roomNumber}</span>}
+  </span>
+</a>
