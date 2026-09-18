@@ -57,6 +57,14 @@ sections:
         people:
           - name: Umberto Tolino
             organization: Politecnico di Milano
+      - title: Advisors
+        people:
+          - name: Pedro Cruz
+            organization: Northeastern University
+          - name: Sarah Williams
+            organization: Massachusetts Institute of Technology
+          - name: Isabel Meirelles
+            organization: ' OCAD University'
     _template: organizers
   - enabled: false
     _template: speakers
@@ -65,3 +73,4 @@ sections:
   - enabled: true
     _template: editions
 ---
+
