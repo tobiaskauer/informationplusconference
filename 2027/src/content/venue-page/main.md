@@ -1,10 +1,10 @@
 ---
 name: Venue page
-heroImage: /uploads/2000px_LabFoto225716.jpg
+heroImage: /uploads/Politecnico.webp
 dither:
   enabled: true
   tint: 40
-  patternSize: 12
+  patternSize: 10
   brightness: 0.6
   contrast: 1
   scale: 100
