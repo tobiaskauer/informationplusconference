@@ -57,6 +57,11 @@ sections:
         people:
           - name: Umberto Tolino
             organization: Politecnico di Milano
+      - title: Supporters Chairs
+        people:
+          - name: Paolo Guadagni
+            organization: vizforbiz
+            website: 'https://vizforbiz.netlify.app/'
       - title: Advisors
         people:
           - name: Pedro Cruz
