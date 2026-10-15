@@ -10,7 +10,7 @@ keyDates:
   - label: Call opens
     date: 16 October 2026
   - label: Abstract submission deadline
-    date: '16 November 2026, 23:59 Anywhere on Earth'
+    date: '13 November 2026, 23:59 Anywhere on Earth'
   - label: Full proposal deadline
     date: '22 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
@@ -56,7 +56,7 @@ Accepted submissions will be presented in person at the conference in a single-t
 
 Submissions follow a **two-stage process**: an initial abstract submission, followed by a full proposal for those invited to proceed.
 
-### **Stage 1: Abstract Submission**
+### Stage 1: Abstract Submission
 
 The abstract is an expression of interest, intended to give us a clear understanding of what you would like to present. At this stage, we ask for a title and a short abstract (max. 150 words) outlining the topic, main ideas, and intended focus of your presentation.
 
@@ -64,7 +64,7 @@ Abstracts will undergo an initial screening by the organizing team to check thei
 
 Authors whose abstracts pass the initial screening will be invited to submit their full proposal immediately, without having to wait for the abstract submission deadline.  Please check your spam or junk folder in case our reply is filtered.
 
-### **Stage 2: Full Proposal Submission**
+### Stage 2: Full Proposal Submission
 
 The full proposal is the basis for the actual **peer-review process**.
 
@@ -81,7 +81,7 @@ Full proposals will undergo a single-blind peer review by members of our interna
 
 ## Important dates
 
-16/11/2026 23:59 (Anywhere on Earth):Abstract submission deadline
+13/11/2026 23:59 (Anywhere on Earth):Abstract submission deadline
 
 22/11/2026 23:59 (Anywhere on Earth): Deadline to submit full presentation proposals.
 
@@ -89,7 +89,7 @@ Full proposals will undergo a single-blind peer review by members of our interna
 
 ## Submission instructions
 
-*Abstract Submission*
+### Abstract Submission
 
 * [Create an account on our Indico instance](https://submissions.infoplus.team/) if you don’t have one already
 * Submit title and abstract via "Abstract Submission → Submit New Abstract."
@@ -99,9 +99,9 @@ Full proposals will undergo a single-blind peer review by members of our interna
 * For support with Indico confirmations, contact [organization@infoplus.team](mailto:organization@infoplus.team).
 * Further Indico guidance available at [https://learn.getindico.io/](https://learn.getindico.io/)
 
-*Full Proposal Submission*
+### Full Proposal Submission
 
-If selected after abstract review, submit your presentation proposal as a PDF.
+If selected after abstract review, submit your presentation proposal as a PDF.  Please check your spam or junk folder in case our reply is filtered.
 
 Questions regarding presentations should be directed to [program@infoplus.team](mailto:program@infoplus.team).
 

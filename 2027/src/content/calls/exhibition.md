@@ -14,40 +14,18 @@ submit:
 keyDates:
   - label: Call opens
     date: 16 October 2026
-  - label: Abstract deadline
-    date: 9 November 2026, 23:59 Anywhere on Earth
-  - label: Full proposal deadline
+  - label: Submission deadline
     date: 22 November 2026, 23:59 Anywhere on Earth
   - label: Notification of acceptance
     date: 8–12 February 2027
+  - label: Confirmation of participation
+    date: 15 February 2027, 23:59 Anywhere on Earth
 contacts:
-  - title: Questions about the exhibition
-    email: exhibition@infoplus.team
-    people: []
-  - title: Indico support and submission confirmations
-    email: organization@infoplus.team
-    people: []
   - title: Exhibition Chairs
     people:
       - name: Tommaso Elli
         organization: Universität Bern
       - name: Giorgia Burzio
-        organization: Politecnico di Milano
-  - title: Conference Chairs
-    people:
-      - name: Michele Mauri
-        organization: Politecnico di Milano
-      - name: Gabriele Colombo
-        organization: Politecnico di Milano
-  - title: Program Chairs
-    people:
-      - name: Paolo Ciuccarelli
-        organization: Northeastern University
-      - name: Marco Quaggiotto
-        organization: Politecnico di Milano
-      - name: Elena Aversa
-        organization: Politecnico di Milano
-      - name: Anna Cattaneo
         organization: Politecnico di Milano
 ---
 
@@ -119,18 +97,16 @@ Examples:
 - Live coding: [Rage Against the Archive](https://visap.net/2024/contributions/1068-rage_against_the_archive/)
 - Bodily choreography: [The Data Twist by Lins Derry](https://www.linsderry.com/data-kinesthetics-data-twist); [XTN?O by Olivia Funes Lastra](https://vimeo.com/1146626595/1fbf892f4c?share=copy&fl=sv&fe=ci)
 
-## Selection process
+## Exhibition set-up
 
-Submissions follow a two-stage process: a short abstract, followed by a full proposal for those invited to proceed.
+The authors of selected works will discuss with the conference organizers about the details for showcasing their pieces in the exhibition.
 
-**Stage 1: Abstract Submission**
+## Funds and costs
 
-The abstract is an expression of interest, intended to give us a clear understanding of the work you would like to exhibit. At this stage, we ask for a title and a short abstract (90-150 words) describing the work, its format, and its main ideas.  
-Abstracts are screened on a rolling basis by the organizing team to check their completeness, clarity, and relevance to Information+. **This is not a peer-review stage.** You will receive a response within a few days of submitting your abstract.
+Depending on the available budget, scale and complexity of the exhibition installation, and the travel distance of presenters, the chairs will lower conference registration fees for exhibiting artists. However, any expenses related to shipping, installation, and artwork production are considered to be covered by artists. Further information will be available at the end of the selection process.
 
-**Stage 2: Full Proposal Submission**
+## What to Submit?
 
-If your abstract passes the screening, you can upload your full proposal right away. There is no need to wait for the abstract deadline. The full proposal is the basis for the actual review process.  
 The proposal should be submitted as a two-page PDF and include:
 
 - Title of the work
@@ -144,52 +120,29 @@ The proposal should be submitted as a two-page PDF and include:
   - how it would be integrated into the exhibition space
   - how it would be integrated into the conference website
 - Technical requirements
+- A diagram of the artwork installed in an exhibition space
 
 Additional materials (such as links to web pages, images, videos, or audio files) are welcome to help reviewers evaluate the submission. All materials, including additional ones, will go through a single-blind review.
 
-Full proposals will be reviewed by the Exhibition Chairs in consultation with the conference’s organizing committee.
-
-## Exhibition set-up
-
-The authors of selected works will discuss with the conference organizers about the details for showcasing their pieces in the exhibition.
-
-## Funds and costs
-
-Depending on the available budget, scale and complexity of the exhibition installation, and the travel distance, the chairs will lower conference registration fees for exhibiting artists. However, any expenses related to shipping, installation, and artwork production are considered to be covered by exhibiting artists. Further information will be available at the end of the selection process.
+Full proposals will be reviewed by the Exhibition Chairs to identify potential desk rejects. Then proposals enter a single-blind review process in consultation with the conference’s organizing committee.
 
 ## Submission instructions
 
-Submissions go through a blind review in two consecutive stages: abstract submission and full proposal submission.
-
-***1.*** ***Abstract Submission***
-
-- Log in to our Indico instance, or create an account if you don’t have one yet: [https://submissions.infoplus.team/register/?next=/event/11](https://submissions.infoplus.team/register/?next=/event/11)
-- Submit a title and abstract (max. 150 words) via "Abstract Submission → Submit New Abstract."
-- Select "Exhibition" as your track.
-- Select a format under "Contribution Formats" to help reviewers' assignments.
-- To add co-authors/presenters, search existing Indico usernames or add manually.
-- For support with Indico confirmations, contact organization@infoplus.team.
-- Further Indico guidance available at https://learn.getindico.io/.
-
-Abstracts are reviewed on a rolling basis, so early submissions will receive an earlier decision. All authors will be notified by 12 November at the latest.
-
-**2. Wait for confirmation (within a few days)**
-
-We will notify you by email once your abstract has been screened.  Please check your spam or junk folder in case our reply is filtered.
-
-**3. Upload your full proposal**
-
-Once your abstract is accepted, upload your two-page PDF and additional materials on Indico.
+1. Open the page: [https://submissions.infoplus.team/event/11/abstracts/](https://submissions.infoplus.team/event/11/abstracts/)
+2. Use the button **Submit New Abstract** to open the submission form
+3. Fill the form with your contribution details:
+   1. Upload your two-page PDF in the **attachment** field;
+   2. Upload any additional material in the **attachment** field;
+   3. Please write a brief description of your artwork in the **summary** field;
+   4. Add 3 to 5 **keywords** to describe your artwork;
+   5. Select the closest match from the available **artwork formats**.
+   6. To add co-authors, search existing Indico usernames or add manually.
 
 ## Important Dates
 
-Call for abstracts opens: October 16, 2026
+Call for artworks opens: October 16, 2026
 
-Abstract submission deadline: November 9, 2026 — 23:59 AoE (Anywhere on Earth)
-
-Call for full proposals opens: November 13, 2026
-
-Full proposals submission deadline: November 22, 2026 — 23:59 AoE (Anywhere on Earth)
+Artwork submission deadline: November 22, 2026 — 23:59 AoE (Anywhere on Earth)
 
 Notification of acceptance (only exhibition): February 8-12, 2027
 
