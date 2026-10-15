@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "astro-2027",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "2027", "run", "astro:dev"],
+      "port": 4321
+    }
+  ]
+}

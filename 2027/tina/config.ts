@@ -15,6 +15,7 @@ const navigationIconOptions = [
   { label: 'Website', value: 'globe' },
   { label: 'Bookmark', value: 'bookmark' },
   { label: 'Featured / star', value: 'star' },
+  { label: 'Call / submission', value: 'file-text' },
 ];
 
 const tinaCollectionOrder = new Map([
@@ -22,6 +23,8 @@ const tinaCollectionOrder = new Map([
   ['navigation', 1],
   ['homepageLayout', 2],
   ['venuePage', 3],
+  ['registrationPage', 4],
+  ['call', 5],
 ]);
 
 // Tina otherwise follows declaration order. Pin the singleton/site-wide
@@ -629,8 +632,8 @@ export default defineConfig({
                 type: 'string',
                 name: 'href',
                 label: 'Page / link',
-                description: 'Use a site path such as /schedule, or a full URL for an external page.',
-                required: true,
+                description:
+                  'Use a site path such as /schedule, or a full URL for an external page. Leave empty when the item only opens a dropdown.',
               },
               {
                 type: 'boolean',
@@ -638,8 +641,168 @@ export default defineConfig({
                 label: 'Show in navbar',
                 description: 'Turn this off to hide the item without deleting it.',
               },
+              {
+                type: 'object',
+                name: 'children',
+                label: 'Dropdown items',
+                description: 'Optional. When set, this item opens a dropdown menu with these links.',
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: `${item?.enabled === false ? 'Hidden: ' : ''}${item?.label || 'Dropdown item'}`,
+                  }),
+                },
+                fields: [
+                  { type: 'string', name: 'label', label: 'Label', required: true },
+                  { type: 'string', name: 'href', label: 'Page / link', required: true },
+                  {
+                    type: 'boolean',
+                    name: 'enabled',
+                    label: 'Show in dropdown',
+                    description: 'Turn this off to hide the item without deleting it.',
+                  },
+                ],
+              },
             ],
           },
+        ],
+      },
+
+      // ---- Calls for submissions -------------------------------------
+      {
+        name: 'call',
+        label: 'Calls for submissions',
+        path: 'src/content/calls',
+        format: 'md',
+        ui: {
+          // The file name becomes the URL: /call-for-submissions/<file-name>.
+          filename: {
+            slugify: (values) =>
+              String(values?.title || 'call')
+                .toLowerCase()
+                .replace(/^call for /, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, ''),
+          },
+        },
+        fields: [
+          { type: 'string', name: 'title', label: 'Title', required: true, isTitle: true },
+          {
+            type: 'number',
+            name: 'order',
+            label: 'Order',
+            description: 'Lower numbers come first in lists.',
+          },
+          {
+            type: 'string',
+            name: 'status',
+            label: 'Status',
+            description: 'The submit button is shown only while the call is open.',
+            options: [
+              { label: 'Open', value: 'open' },
+              { label: 'Coming soon', value: 'upcoming' },
+              { label: 'Closed', value: 'closed' },
+            ],
+          },
+          {
+            type: 'string',
+            name: 'intro',
+            label: 'Intro',
+            description: 'Short summary shown under the title.',
+            ui: { component: 'textarea' },
+          },
+          {
+            type: 'object',
+            name: 'submit',
+            label: 'Submit button',
+            fields: [
+              { type: 'string', name: 'label', label: 'Label' },
+              {
+                type: 'string',
+                name: 'href',
+                label: 'Link',
+                description: 'Submission form URL. Leave empty while it is not ready.',
+              },
+            ],
+          },
+          {
+            type: 'object',
+            name: 'keyDates',
+            label: 'Key dates',
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.label || 'Date' }) },
+            fields: [
+              { type: 'string', name: 'label', label: 'Label', required: true },
+              {
+                type: 'string',
+                name: 'date',
+                label: 'Date',
+                description: 'Free text, e.g. "30 November 2026, Anywhere on Earth".',
+                required: true,
+              },
+            ],
+          },
+          {
+            type: 'object',
+            name: 'contacts',
+            label: 'Contacts',
+            list: true,
+            ui: { itemProps: (item) => ({ label: item?.title || 'Contact group' }) },
+            fields: [
+              { type: 'string', name: 'title', label: 'Title', required: true },
+              { type: 'string', name: 'email', label: 'Email' },
+              {
+                type: 'object',
+                name: 'people',
+                label: 'People',
+                list: true,
+                ui: { itemProps: (item) => ({ label: item?.name || 'Person' }) },
+                fields: [
+                  { type: 'string', name: 'name', label: 'Name', required: true },
+                  { type: 'string', name: 'organization', label: 'Organization' },
+                ],
+              },
+            ],
+          },
+          { type: 'rich-text', name: 'body', label: 'Full call text', isBody: true },
+        ],
+      },
+
+      // ---- Registration page -----------------------------------------
+      {
+        name: 'registrationPage',
+        label: 'Registration page',
+        path: 'src/content/registration-page',
+        format: 'md',
+        ui: {
+          allowedActions: { create: false, delete: false },
+        },
+        fields: [
+          {
+            type: 'string',
+            name: 'name',
+            label: 'Page name',
+            required: true,
+            isTitle: true,
+            ui: { component: 'hidden' },
+          },
+          {
+            type: 'string',
+            name: 'intro',
+            label: 'Intro',
+            ui: { component: 'textarea' },
+          },
+          {
+            type: 'object',
+            name: 'cta',
+            label: 'Registration button',
+            description: 'Shown only when both label and link are set.',
+            fields: [
+              { type: 'string', name: 'label', label: 'Label' },
+              { type: 'string', name: 'href', label: 'Link' },
+            ],
+          },
+          { type: 'rich-text', name: 'body', label: 'Page text', isBody: true },
         ],
       },
 

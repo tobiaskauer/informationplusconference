@@ -12,7 +12,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "tina:build": "tinacms build",
-    "check": "astro check"
+    "check": "astro check",
+    "deploy:preview": "bash scripts/deploy-preview.sh"
   },
   "dependencies": {
     "astro": "^7.2.9",

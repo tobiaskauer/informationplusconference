@@ -1,0 +1,102 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Icon from '../../components/Icon.astro';
+import { isExternal, resolveHref } from '../../lib/url';
+
+// One page per file in src/content/calls; the file name is the URL slug.
+export const getStaticPaths = (async () => {
+  const calls = await getCollection('calls');
+  return calls.map((call) => ({
+    params: { slug: call.id },
+    props: { call },
+  }));
+}) satisfies GetStaticPaths;
+
+const { call } = Astro.props;
+const { title, status, intro, submit, keyDates, contacts } = call.data;
+const { Content } = await render(call);
+
+const statusLabel = { open: 'Call open', upcoming: 'Coming soon', closed: 'Call closed' }[status];
+const submitHref = submit?.href?.trim();
+const submitLabel = submit?.label?.trim() || 'Submit';
+---
+
+<Base title={title} description={intro}>
+  <Breadcrumbs
+    items={[{ label: 'Home', href: '/' }, { label: 'Calls for submissions' }, { label: title }]}
+  />
+  <span class="eyebrow">Calls for submissions</span>
+  <h1 class="detail-title">{title}</h1>
+
+  {/* Same metadata row as session and room pages. */}
+  <div class="meta-list">
+    <span class="meta-item"><Icon name="megaphone" />{statusLabel}</span>
+    {keyDates.map((item) => (
+      <span class="meta-item"><Icon name="calendar" />{item.label}: {item.date}</span>
+    ))}
+  </div>
+
+  {status === 'open' && (
+    submitHref ? (
+      <div class="hero-actions call-actions">
+        <a
+          class="btn"
+          href={resolveHref(submitHref)}
+          {...(isExternal(submitHref) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
+          <span>{submitLabel}</span>
+          <Icon name={isExternal(submitHref) ? 'external-link' : 'arrow-right'} />
+        </a>
+      </div>
+    ) : (
+      <p class="sub">The submission link will be available here soon.</p>
+    )
+  )}
+
+  <div class="prose call-body">
+    {intro && <p>{intro}</p>}
+    <Content />
+  </div>
+
+  {/* Same roster as the homepage "Conference organizers" section. */}
+  {contacts.length > 0 && (
+    <section class="organizers">
+      <h2 class="section-title"><Icon name="users" />Contacts</h2>
+      <div class="organizer-groups">
+        {contacts.map((group) => (
+          <section class="organizer-group">
+            <h3>{group.title}</h3>
+            {group.email && (
+              <p class="call-contact-email"><a href={`mailto:${group.email}`}>{group.email}</a></p>
+            )}
+            <ul>
+              {group.people.map((person) => (
+                <li class="organizer-person">
+                  <p>
+                    <span class="organizer-name">{person.name}</span>
+                    {person.organization && (
+                      <>
+                        <span class="organizer-separator" aria-hidden="true">, </span>
+                        <span class="organizer-organization">{person.organization}</span>
+                      </>
+                    )}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .call-actions { margin: 0 0 48px; }
+  .call-body { margin-top: 48px; }
+  .call-actions + .call-body { margin-top: 0; }
+  .call-contact-email { margin: -8px 0 12px; font-family: var(--mono); font-size: 14px; }
+</style>

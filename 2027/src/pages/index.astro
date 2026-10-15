@@ -24,9 +24,12 @@ const hero = homepageLayout?.data.hero;
 
 // This HTML comes only from the repository-backed Tina content. If content ever
 // becomes public/user-authored, sanitize it before passing it to `set:html`.
+// Site-internal links written in the content (e.g. "/call-for-submissions/…")
+// get Astro's `base`, so they also work when the site is served from a sub-folder.
 const renderRichText = (content?: string) => {
   const html = marked.parse(content ?? '', { async: false });
-  return typeof html === 'string' ? html : '';
+  if (typeof html !== 'string') return '';
+  return html.replace(/href="(\/(?!\/)[^"]*)"/g, (_, path) => `href="${withBase(path)}"`);
 };
 
 const heroIntroHtml = renderRichText(hero?.intro);

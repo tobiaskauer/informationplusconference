@@ -8,8 +8,8 @@ hero:
     label: Save the date
     href: /conference.ics
   secondaryCta:
-    label: ''
-    href: ''
+    label: Call for presentations
+    href: /call-for-submissions/presentation
 sections:
   - enabled: true
     content: |
@@ -19,7 +19,7 @@ sections:
 
       Information+ 2027 welcomes submissions that embrace critical insights, provocations, theories, practices, and experiences within information design and data visualization and their applications. We invite contributions from design practitioners as well as voices from the humanities, sciences, and other fields, academic and non-academic alike.
 
-      Contributions fall into three categories: **Presentations**, **Workshops & Activities**, and **Exhibition Pieces**, open to proposals from any relevant area of research, practice, or pedagogy. Full guidelines and submission links go live in **October 2026**.
+      Contributions fall into three categories: [**Presentations**](/call-for-submissions/presentation), [**Workshops & Activities**](/call-for-submissions/workshop), and [**Exhibition Pieces**](/call-for-submissions/exhibition), open to proposals from any relevant area of research, practice, or pedagogy. **The calls for submissions are now open.**
     _template: introduction
   - enabled: true
     heading: Conference organizers

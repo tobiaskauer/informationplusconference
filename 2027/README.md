@@ -58,7 +58,9 @@ production settings, and the handover procedure for the next edition.
 | `settings` | shared conference name, dates, venue, and city |
 | `homepageLayout` | fixed hero copy/buttons followed by reorderable homepage sections with visibility controls; Introduction and Conference organizers keep their editable content inside their section blocks |
 | `venuePage` | venue hero image, alt text, and live dither settings |
-| `navigation` | reorderable navbar items with icon, label, page/link, and visibility toggle |
+| `call` | one file per call for submissions (file name = URL slug under `/call-for-submissions/`): title, order, status, intro, submit button, key dates, contacts, full text (body) |
+| `registrationPage` | registration page intro, optional button, and text (body) |
+| `navigation` | reorderable navbar items with icon, label, page/link, visibility toggle, and optional dropdown items |
 | `edition` | year, city, country, venue, and archive URL |
 
 Schema is defined twice intentionally: `tina/config.ts` (editor) and

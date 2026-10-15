@@ -148,6 +148,40 @@ const venuePage = defineCollection({
   }),
 });
 
+const contactGroup = z.object({
+  title: z.string(),
+  email: z.string().optional(),
+  people: z.array(z.object({ name: z.string(), organization: z.string().optional() })).default([]),
+});
+
+const calls = defineCollection({
+  // One file per call; the file name is the URL slug under /call-for-submissions/.
+  loader: glob({ pattern: '**/*.md', base: './src/content/calls' }),
+  schema: z.object({
+    title: z.string(),
+    order: z.number().default(0),
+    status: z.enum(['open', 'upcoming', 'closed']).default('upcoming'),
+    intro: z.string().optional(),
+    submit: z
+      .object({ label: z.string().optional(), href: z.string().optional() })
+      .optional(),
+    keyDates: z.array(z.object({ label: z.string(), date: z.string() })).default([]),
+    contacts: z.array(contactGroup).default([]),
+  }),
+});
+
+const registrationPage = defineCollection({
+  // Singleton in practice (`main.md`), like venuePage.
+  loader: glob({ pattern: '**/*.md', base: './src/content/registration-page' }),
+  schema: z.object({
+    name: z.string(),
+    intro: z.string().optional(),
+    cta: z
+      .object({ label: z.string().optional(), href: z.string().optional() })
+      .optional(),
+  }),
+});
+
 const navigation = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/navigation' }),
   schema: z.object({
@@ -157,8 +191,18 @@ const navigation = defineCollection({
         z.object({
           icon: z.string(),
           label: z.string(),
-          href: z.string(),
+          // Optional when the item only opens a dropdown of `children`.
+          href: z.string().optional(),
           enabled: z.boolean().default(true),
+          children: z
+            .array(
+              z.object({
+                label: z.string(),
+                href: z.string(),
+                enabled: z.boolean().default(true),
+              })
+            )
+            .default([]),
         })
       )
       .default([]),
@@ -184,5 +228,7 @@ export const collections = {
   settings,
   homepageLayout,
   venuePage,
+  calls,
+  registrationPage,
   navigation,
 };

@@ -15,9 +15,16 @@ interface Props {
 const { title, description, flushTop = false, animateBrand = false, noindex = false } = Astro.props;
 const settings = await getEntry('settings', 'home');
 const navigation = await getEntry('navigation', 'main');
-const navigationItems = (navigation?.data.items ?? []).filter(
-  (item) => item.enabled !== false
-);
+// Items with visible `children` render as a dropdown; plain items need a link.
+const navigationItems = (navigation?.data.items ?? [])
+  .filter((item) => item.enabled !== false)
+  .map((item) => ({
+    ...item,
+    children: item.children.filter((child) => child.enabled !== false),
+  }))
+  .filter((item) => item.children.length > 0 || item.href?.trim());
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const isCurrent = (href: string) => resolveHref(href).replace(/\/$/, '') === currentPath;
 const confName = settings?.data.name ?? 'Conference';
 const brandName = confName;
 const pageTitle = title ? `${title} · ${confName}` : confName;
@@ -81,7 +88,10 @@ const ACCENTS = [
     <!-- Safari uses theme-color for the status/overscroll area around the Dynamic Island.
          Keep this hex value in sync with the default --bg color in global.css. -->
     <meta name="theme-color" content="#12070c" />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {/* Preview builds (npm run deploy:preview) keep every page out of search engines. */}
+    {(noindex || import.meta.env.PUBLIC_PREVIEW === 'true') && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
     <title>{pageTitle}</title>
     {description && <meta name="description" content={description} />}
     <meta property="og:title" content={pageTitle} />
@@ -127,17 +137,53 @@ const ACCENTS = [
         {navigationItems.length > 0 && (
           <>
             <nav class="nav" id="site-nav" aria-label="Main navigation">
-              {navigationItems.map((item) => (
-                <a
-                  href={resolveHref(item.href)}
-                  {...(isExternal(item.href)
-                    ? { target: '_blank', rel: 'noopener noreferrer' }
-                    : {})}
-                >
-                  <Icon name={item.icon} />
-                  <span class="nav-label">{item.label}</span>
-                </a>
-              ))}
+              {navigationItems.map((item, index) =>
+                item.children.length > 0 ? (
+                  <div
+                    class:list={[
+                      'nav-group',
+                      { 'is-current': item.children.some((child) => isCurrent(child.href)) },
+                    ]}
+                  >
+                    <button
+                      class="nav-group-toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls={`nav-dropdown-${index}`}
+                    >
+                      <Icon name={item.icon} />
+                      <span class="nav-label">{item.label}</span>
+                      <Icon name="chevron-down" class="nav-chevron" />
+                    </button>
+                    <ul class="nav-dropdown" id={`nav-dropdown-${index}`}>
+                      {item.children.map((child) => (
+                        <li>
+                          <a
+                            href={resolveHref(child.href)}
+                            aria-current={isCurrent(child.href) ? 'page' : undefined}
+                            {...(isExternal(child.href)
+                              ? { target: '_blank', rel: 'noopener noreferrer' }
+                              : {})}
+                          >
+                            {child.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <a
+                    href={resolveHref(item.href!)}
+                    aria-current={isCurrent(item.href!) ? 'page' : undefined}
+                    {...(isExternal(item.href!)
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : {})}
+                  >
+                    <Icon name={item.icon} />
+                    <span class="nav-label">{item.label}</span>
+                  </a>
+                )
+              )}
             </nav>
             <button
               class="nav-toggle"
@@ -190,6 +236,40 @@ const ACCENTS = [
           if (window.innerWidth > 640) setOpen(false);
         });
       }
+
+      // Nav dropdowns: on desktop they also open on hover (CSS); the button
+      // toggles them for click, touch and keyboard. On mobile the hamburger
+      // menu shows them expanded, so the toggle only matters on desktop.
+      const groups = Array.from(document.querySelectorAll<HTMLElement>('.nav-group'));
+      const setGroupOpen = (group: HTMLElement, open: boolean) => {
+        group.classList.toggle('is-open', open);
+        group.querySelector('.nav-group-toggle')?.setAttribute('aria-expanded', String(open));
+      };
+      groups.forEach((group) => {
+        group.querySelector('.nav-group-toggle')?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const open = !group.classList.contains('is-open');
+          groups.forEach((other) => setGroupOpen(other, false));
+          setGroupOpen(group, open);
+        });
+        group.addEventListener('focusout', (e) => {
+          if (!group.contains(e.relatedTarget as Node)) setGroupOpen(group, false);
+        });
+      });
+      document.addEventListener('click', (e) => {
+        groups.forEach((group) => {
+          if (!group.contains(e.target as Node)) setGroupOpen(group, false);
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        groups.forEach((group) => {
+          if (group.classList.contains('is-open')) {
+            setGroupOpen(group, false);
+            group.querySelector<HTMLElement>('.nav-group-toggle')?.focus();
+          }
+        });
+      });
 
       // The homepage header begins transparent over the hero and gains its
       // regular tinted backdrop as soon as the visitor starts scrolling.

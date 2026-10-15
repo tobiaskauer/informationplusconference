@@ -85,7 +85,7 @@ const buildings = [...byBuilding.keys()].sort();
     </div>
   </div>
 
-  {VENUE_DETAILS_ARE_PUBLIC && <GettingThere />}
+  <GettingThere />
 
   {VENUE_DETAILS_ARE_PUBLIC && rooms.length === 0 && (
     <p class="sub">No rooms yet. Add some in the local editor at <code>/admin</code>.</p>

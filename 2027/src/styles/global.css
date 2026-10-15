@@ -376,8 +376,9 @@ h1            { font-family: var(--rd-70); }
 .brand .brand-grade-70 { font-family: var(--rd-70); }
 .brand .brand-grade-100 { font-family: var(--rd-100); }
 .brand:hover span { color: var(--accent); transition-delay: calc(var(--i) * 28ms); }
-.nav { display: flex; gap: 32px; }
-.nav a {
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav a,
+.nav-group-toggle {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -390,10 +391,69 @@ h1            { font-family: var(--rd-70); }
 }
 /* Keep navigation legible while the transparent homepage header sits directly
    over the moving hero. The regular muted color returns with its backdrop. */
-.site-header-home:not(.is-scrolled):not(.nav-open) .nav a { color: var(--text); }
-.nav a:hover { color: var(--accent); text-decoration: none; }
+.site-header-home:not(.is-scrolled):not(.nav-open) :is(.nav a, .nav-group-toggle) { color: var(--text); }
+.nav a:hover,
+.nav-group-toggle:hover,
+.nav-group.is-open .nav-group-toggle { color: var(--accent); text-decoration: none; }
+.nav a[aria-current="page"],
+.nav-group.is-current .nav-group-toggle { color: var(--accent); }
 .nav .pa-icon { width: 22px; height: 22px; transition: transform 0.15s ease; }
-.nav a:hover .pa-icon { transform: translateY(-2px); }
+.nav a:hover .pa-icon,
+.nav-group-toggle:hover .pa-icon:not(.nav-chevron) { transform: translateY(-2px); }
+
+/* Dropdown group: a button that reveals a list of links. Opens on hover and
+   keyboard focus with CSS, and on click/touch via `.is-open` (Base.astro). */
+/* Flex (not block) so the button isn't placed on a body-height line box, and
+   line-height: inherit because buttons default to `normal` — both keep the
+   toggle aligned with the plain nav links. */
+.nav-group { position: relative; display: flex; align-items: center; }
+.nav-group-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  line-height: inherit;
+}
+.nav .nav-chevron { width: 18px; height: 18px; margin-left: -4px; transition: transform 0.15s ease; }
+.nav-group.is-open .nav-chevron { transform: rotate(180deg); }
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  min-width: calc(100% + 40px);
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  /* closed */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+}
+/* Invisible bridge so the pointer can travel from the button to the list. */
+.nav-dropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 28px;
+}
+.nav-group:hover .nav-dropdown,
+.nav-group.is-open .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(24px);
+}
+.nav-dropdown a {
+  display: flex;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+.site-header-home:not(.is-scrolled):not(.nav-open) .nav-dropdown a { color: var(--muted); }
+.site-header-home:not(.is-scrolled):not(.nav-open) .nav-dropdown a:hover { color: var(--accent); }
+.nav-dropdown a:hover { background: var(--surface); }
 
 /* Hamburger toggle — hidden on desktop, shown on mobile. */
 .nav-toggle {
@@ -461,6 +521,33 @@ h1            { font-family: var(--rd-70); }
   }
   .nav a:hover { background: var(--surface); }
   .nav a:hover .pa-icon { transform: none; }
+
+  /* Inside the hamburger menu, dropdown groups are always expanded: the
+     button becomes a heading and its links are indented beneath it. */
+  .nav-group { display: block; }
+  .nav-group-toggle {
+    gap: 14px;
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    pointer-events: none;
+  }
+  .nav .nav-chevron { display: none; }
+  .nav-dropdown,
+  .nav-group:hover .nav-dropdown,
+  .nav-group.is-open .nav-dropdown {
+    position: static;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    opacity: 1;
+    visibility: inherit;
+    transform: none;
+    transition: none;
+  }
+  .nav-dropdown::before { display: none; }
+  .nav-dropdown a { padding: 12px 16px 12px 52px; white-space: normal; }
 
   /* menu <-> close icon swap */
   .site-header.nav-open .nav-toggle-open { display: none; }

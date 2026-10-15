@@ -14,4 +14,5 @@ public/admin/
 npm-debug.log*
 .env
 .env.production
+.env.preview
 .DS_Store
