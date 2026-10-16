@@ -1,7 +1,7 @@
 ---
 title: Call for Presentations
 order: 1
-status: open
+status: upcoming
 intro: 'Information+ 2027 invites submissions for presentations that explore critical insights, provocations, theories, practices, and experiences in information design, data visualization, and their applications. We welcome contributions from design practitioners, professionals, academics, and artists across the humanities, sciences, and other interdisciplinary fields.'
 submit:
   label: Submit a presentation proposal

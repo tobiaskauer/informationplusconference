@@ -454,6 +454,8 @@ h1            { font-family: var(--rd-70); }
 .site-header-home:not(.is-scrolled):not(.nav-open) .nav-dropdown a { color: var(--muted); }
 .site-header-home:not(.is-scrolled):not(.nav-open) .nav-dropdown a:hover { color: var(--accent); }
 .nav-dropdown a:hover { background: var(--surface); }
+/* Group icon on each dropdown link: only used in the mobile menu. */
+.nav .nav-child-icon { display: none; }
 
 /* Hamburger toggle — hidden on desktop, shown on mobile. */
 .nav-toggle {
@@ -522,17 +524,11 @@ h1            { font-family: var(--rd-70); }
   .nav a:hover { background: var(--surface); }
   .nav a:hover .pa-icon { transform: none; }
 
-  /* Inside the hamburger menu, dropdown groups are always expanded: the
-     button becomes a heading and its links are indented beneath it. */
+  /* Inside the hamburger menu, dropdown groups are flattened: the group
+     button is hidden and each link shows the group's icon, so the items read
+     like regular top-level entries. */
   .nav-group { display: block; }
-  .nav-group-toggle {
-    gap: 14px;
-    width: 100%;
-    padding: 14px 16px;
-    font-size: 15px;
-    pointer-events: none;
-  }
-  .nav .nav-chevron { display: none; }
+  .nav-group-toggle { display: none; }
   .nav-dropdown,
   .nav-group:hover .nav-dropdown,
   .nav-group.is-open .nav-dropdown {
@@ -547,7 +543,8 @@ h1            { font-family: var(--rd-70); }
     transition: none;
   }
   .nav-dropdown::before { display: none; }
-  .nav-dropdown a { padding: 12px 16px 12px 52px; white-space: normal; }
+  .nav-dropdown a { padding: 14px 16px; white-space: normal; }
+  .nav .nav-child-icon { display: inline-block; }
 
   /* menu <-> close icon swap */
   .site-header.nav-open .nav-toggle-open { display: none; }
@@ -1256,9 +1253,12 @@ a.card:hover {
   transform: translateY(-50%);
 }
 
+/* Single column on mobile. Dropping the grid (rather than overriding
+   grid-column) sidesteps the higher specificity of the :nth-child rules above,
+   which otherwise kept the desktop placement and squeezed the text. */
 @media (max-width: 640px) {
-  .gt-modes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .gt-mode { grid-column: 1 / -1; padding: 18px 0; }
+  .gt-modes { display: block; }
+  .gt-mode { padding: 18px 0; }
 }
 
 /* Previous editions — outbound link cards. */

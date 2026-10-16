@@ -165,7 +165,9 @@ const ACCENTS = [
                               ? { target: '_blank', rel: 'noopener noreferrer' }
                               : {})}
                           >
-                            {child.label}
+                            {/* Shown only in the mobile menu, where the group heading is hidden. */}
+                            <Icon name={item.icon} class="nav-child-icon" />
+                            <span class="nav-label">{child.label}</span>
                           </a>
                         </li>
                       ))}
