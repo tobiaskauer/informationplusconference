@@ -7,8 +7,6 @@ submit:
   label: Submit a workshop proposal
   href: 'https://tally.so/r/pb85VZ'
 keyDates:
-  - label: Call opens
-    date: 16 October 2026
   - label: Submission deadline
     date: '22 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
