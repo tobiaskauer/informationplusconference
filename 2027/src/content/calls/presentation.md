@@ -1,14 +1,12 @@
 ---
 title: Call for Presentations
 order: 1
-status: upcoming
+status: open
 intro: 'Information+ 2027 invites submissions for presentations that explore critical insights, provocations, theories, practices, and experiences in information design, data visualization, and their applications. We welcome contributions from design practitioners, professionals, academics, and artists across the humanities, sciences, and other interdisciplinary fields.'
 submit:
   label: Submit a presentation proposal
-  href: 'https://submissions.infoplus.team/register/?next=/event/10/'
+  href: 'https://submissions.infoplus.team/event/10/abstracts/'
 keyDates:
-  - label: Call opens
-    date: 16 October 2026
   - label: Abstract submission deadline
     date: '13 November 2026, 23:59 Anywhere on Earth'
   - label: Full proposal deadline

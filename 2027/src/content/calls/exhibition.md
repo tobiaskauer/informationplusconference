@@ -1,14 +1,12 @@
 ---
 title: Call for Exhibition
 order: 3
-status: upcoming
+status: open
 intro: 'Information+ 2027 invites artists, designers, researchers, practitioners, and contributors from diverse backgrounds to submit works for an exhibition at Politecnico di Milano during the conference week. We welcome a wide range of perspectives, approaches, and topics, particularly from those who are traditionally underrepresented in data visualization and related fields.'
 submit:
   label: Submit an exhibition proposal
-  href: 'https://submissions.infoplus.team/register/?next=/event/11'
+  href: 'https://submissions.infoplus.team/event/11/abstracts/'
 keyDates:
-  - label: Calls Open
-    date: 16/10/2026
   - label: Submission deadline
     date: '22 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
