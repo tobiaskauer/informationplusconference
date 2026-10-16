@@ -17,6 +17,7 @@ keyDates:
     date: '15 February 2027, 23:59 Anywhere on Earth'
 contacts:
   - title: Exhibition Chairs
+    email: exhibition@infoplus.team
     people:
       - name: Tommaso Elli
         organization: Universität Bern

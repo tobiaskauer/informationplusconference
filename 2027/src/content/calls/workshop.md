@@ -1,7 +1,7 @@
 ---
 title: Call for Workshops
 order: 2
-status: open
+status: upcoming
 intro: 'The Information + 2027 Conference, an interdisciplinary conference for information design and data visualization, invites participatory workshop proposals from all relevant areas of professional practice, research, and pedagogy.'
 submit:
   label: Submit a workshop proposal
