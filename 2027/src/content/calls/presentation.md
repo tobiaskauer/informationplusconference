@@ -14,7 +14,7 @@ keyDates:
   - label: Full proposal deadline
     date: '22 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
-    date: 1 February 2027
+    date: 1–9 February 2027
 contacts:
   - title: Questions about presentations
     email: program@infoplus.team
