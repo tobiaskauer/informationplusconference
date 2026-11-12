@@ -51,6 +51,9 @@ const secondaryHref = hero?.secondaryCta?.href?.trim();
 const secondaryCta = secondaryLabel && secondaryHref
   ? { label: secondaryLabel, href: secondaryHref }
   : null;
+const moreCtas = (hero?.moreCtas ?? [])
+  .map((cta) => ({ label: cta.label?.trim(), href: cta.href?.trim() }))
+  .filter((cta): cta is { label: string; href: string } => Boolean(cta.label && cta.href));
 
 const dateLabel = data?.startDate
   ? formatDateRange(data.startDate, data.endDate)
@@ -123,6 +126,16 @@ const homepageSections = (homepageLayout?.data.sections ?? []).filter(
                 <Icon name="arrow-right" />
               </a>
             )}
+            {moreCtas.map((cta) => (
+              <a
+                class="btn btn-ghost"
+                href={resolveHref(cta.href)}
+                {...(isExternal(cta.href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                <span>{cta.label}</span>
+                <Icon name="arrow-right" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -4,12 +4,19 @@ hero:
   tagline: Information+ 2027. Three days into information design and data visualization.
   intro: |
     Save the date and join us for three days of presentations, talks, workshop and exhibition pieces around interdisciplinary practices in information design and visualization.
+
+    **Deadlines extended:** submissions for all three calls are now open until **29 November 2026, 23:59 AoE**.
   primaryCta:
     label: Save the date
     href: /conference.ics
   secondaryCta:
     label: Call for presentations
     href: /call-for-submissions/presentation
+  moreCtas:
+    - label: Call for exhibition
+      href: /call-for-submissions/exhibition
+    - label: Call for workshops
+      href: /call-for-submissions/workshop
 sections:
   - enabled: true
     content: |
@@ -19,7 +26,7 @@ sections:
 
       Information+ 2027 welcomes submissions that embrace critical insights, provocations, theories, practices, and experiences within information design and data visualization and their applications. We invite contributions from design practitioners as well as voices from the humanities, sciences, and other fields, academic and non-academic alike.
 
-      Contributions fall into three categories: [**Presentations**](/call-for-submissions/presentation), [**Workshops & Activities**](/call-for-submissions/workshop), and [**Exhibition Pieces**](/call-for-submissions/exhibition), open to proposals from any relevant area of research, practice, or pedagogy. **The calls for submissions are now open.**
+      Contributions fall into three categories: [**Presentations**](/call-for-submissions/presentation), [**Workshops & Activities**](/call-for-submissions/workshop), and [**Exhibition Pieces**](/call-for-submissions/exhibition), open to proposals from any relevant area of research, practice, or pedagogy. **The calls for submissions are now open, and the deadlines have been extended:** proposals for all three calls can be submitted until ~~22 November~~ **29 November 2026, 23:59 AoE**; the abstract deadline for presentations moves from ~~13 November~~ to **19 November 2026, 23:59 AoE**.
     _template: introduction
   - enabled: true
     heading: Conference organizers

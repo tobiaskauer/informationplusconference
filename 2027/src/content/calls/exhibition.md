@@ -8,7 +8,8 @@ submit:
   href: 'https://submissions.infoplus.team/event/11/abstracts/'
 keyDates:
   - label: Submission deadline
-    date: '22 November 2026, 23:59 Anywhere on Earth'
+    previousDate: 22 November 2026
+    date: '29 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
     date: 8–12 February 2027
   - label: Confirmation of participation
@@ -136,7 +137,7 @@ Full proposals will be reviewed by the Exhibition Chairs to identify potential d
 
 Call for artworks opens: October 16, 2026
 
-Artwork submission deadline: November 22, 2026 — 23:59 AoE (Anywhere on Earth)
+Artwork submission deadline: ~~November 22, 2026~~ **November 29, 2026** — 23:59 AoE (Anywhere on Earth)
 
 Notification of acceptance (only exhibition): February 8-12, 2027
 

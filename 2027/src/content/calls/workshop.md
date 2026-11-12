@@ -8,7 +8,8 @@ submit:
   href: 'https://tally.so/r/pb85VZ'
 keyDates:
   - label: Submission deadline
-    date: '22 November 2026, 23:59 Anywhere on Earth'
+    previousDate: 22 November 2026
+    date: '29 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
     date: 1–9 February 2027
 contacts:
@@ -49,7 +50,7 @@ The workshops will be selected through a curatorial process involving a dedicate
 
 Call opens on Oct 16, 2026
 
-Deadline for submission: Nov 22, 2026, Anywhere On Earth
+Deadline for submission: ~~Nov 22, 2026~~ **Nov 29, 2026, 23:59**, Anywhere On Earth
 
 Notification of acceptance: February 1-9, 2027
 

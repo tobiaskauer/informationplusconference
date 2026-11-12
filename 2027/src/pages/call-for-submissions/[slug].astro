@@ -32,10 +32,20 @@ const submitLabel = submit?.label?.trim() || 'Submit';
   <h1 class="detail-title">{title}</h1>
 
   {/* Same metadata row as session and room pages. */}
-  <div class="meta-list">
+  <div class="meta-list call-dates">
     <span class="meta-item"><Icon name="megaphone" />{statusLabel}</span>
     {keyDates.map((item) => (
-      <span class="meta-item"><Icon name="calendar" />{item.label}: {item.date}</span>
+      <span class="meta-item">
+        <Icon name="calendar" />
+        <span>
+          {item.label}:{' '}
+          {item.previousDate ? (
+            <><del>{item.previousDate}</del>{' '}<strong>{item.date}</strong></>
+          ) : (
+            item.date
+          )}
+        </span>
+      </span>
     ))}
   </div>
 
@@ -95,6 +105,12 @@ const submitLabel = submit?.label?.trim() || 'Submit';
 </Base>
 
 <style>
+  /* Status and key dates stacked one per line: with extended deadlines (old
+     date struck through + new date) a wrapping row became hard to scan. */
+  .call-dates { flex-direction: column; gap: 12px; }
+  /* Keep the icon on the first line when a long date wraps on mobile. */
+  .call-dates :global(.meta-item) { align-items: flex-start; }
+  .call-dates :global(.meta-item .pa-icon) { margin-top: 0.1em; }
   .call-actions { margin: 0 0 48px; }
   .call-body { margin-top: 48px; }
   .call-actions + .call-body { margin-top: 0; }

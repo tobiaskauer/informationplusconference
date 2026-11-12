@@ -8,9 +8,11 @@ submit:
   href: 'https://submissions.infoplus.team/event/10/abstracts/'
 keyDates:
   - label: Abstract submission deadline
-    date: '13 November 2026, 23:59 Anywhere on Earth'
+    previousDate: 13 November 2026
+    date: '19 November 2026, 23:59 Anywhere on Earth'
   - label: Full proposal deadline
-    date: '22 November 2026, 23:59 Anywhere on Earth'
+    previousDate: 22 November 2026
+    date: '29 November 2026, 23:59 Anywhere on Earth'
   - label: Notification of acceptance
     date: 1–9 February 2027
 contacts:
@@ -79,9 +81,9 @@ Full proposals will undergo a single-blind peer review by members of our interna
 
 ## Important dates
 
-13/11/2026 23:59 (Anywhere on Earth):Abstract submission deadline
+~~13/11/2026~~ **19/11/2026** 23:59 (Anywhere on Earth): Abstract submission deadline
 
-22/11/2026 23:59 (Anywhere on Earth): Deadline to submit full presentation proposals.
+~~22/11/2026~~ **29/11/2026** 23:59 (Anywhere on Earth): Deadline to submit full presentation proposals.
 
 01/02/2027: Notification of acceptance/rejection, including summary reviews and total number of accepted submissions.
 

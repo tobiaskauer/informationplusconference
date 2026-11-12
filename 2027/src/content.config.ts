@@ -90,6 +90,10 @@ const homepageLayout = defineCollection({
         secondaryCta: z
           .object({ label: z.string().optional(), href: z.string().optional() })
           .optional(),
+        // Further ghost buttons, laid out in the same grid below the first two.
+        moreCtas: z
+          .array(z.object({ label: z.string().optional(), href: z.string().optional() }))
+          .default([]),
       })
       .optional(),
     sections: z
@@ -165,7 +169,16 @@ const calls = defineCollection({
     submit: z
       .object({ label: z.string().optional(), href: z.string().optional() })
       .optional(),
-    keyDates: z.array(z.object({ label: z.string(), date: z.string() })).default([]),
+    keyDates: z
+      .array(
+        z.object({
+          label: z.string(),
+          date: z.string(),
+          // Optional superseded date (e.g. before an extension), shown struck through.
+          previousDate: z.string().optional(),
+        })
+      )
+      .default([]),
     contacts: z.array(contactGroup).default([]),
   }),
 });

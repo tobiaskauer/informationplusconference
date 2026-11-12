@@ -412,6 +412,23 @@ export default defineConfig({
                   },
                 ],
               },
+              {
+                type: 'object',
+                name: 'moreCtas',
+                label: 'More buttons',
+                description: 'Optional extra buttons, shown two per row below the first two.',
+                list: true,
+                ui: { itemProps: (item) => ({ label: item?.label || 'Button' }) },
+                fields: [
+                  { type: 'string', name: 'label', label: 'Label' },
+                  {
+                    type: 'string',
+                    name: 'href',
+                    label: 'Link',
+                    description: 'Internal path (e.g. /call-for-submissions/workshop) or full URL (https://…)',
+                  },
+                ],
+              },
             ],
           },
           {
@@ -739,6 +756,13 @@ export default defineConfig({
                 label: 'Date',
                 description: 'Free text, e.g. "30 November 2026, Anywhere on Earth".',
                 required: true,
+              },
+              {
+                type: 'string',
+                name: 'previousDate',
+                label: 'Previous date',
+                description:
+                  'Optional. When a deadline is extended, put the old date here: it is shown struck through before the new one.',
               },
             ],
           },

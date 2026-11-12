@@ -715,6 +715,8 @@ main.main-flush-top { padding-top: 0; }
 }
 .hero-intro > :first-child { margin-top: 0; }
 .hero-intro > :last-child { margin-bottom: 0; }
+/* Emphasis in the hero copy (e.g. the deadline notice) uses the accent. */
+.hero-intro strong { color: var(--accent); }
 .hero-bar {
   position: relative;
   grid-column: 1 / -1;
@@ -1144,6 +1146,19 @@ a.card:hover {
   font-size: 16px;
 }
 .session-time .pa-icon { width: 22px; height: 22px; }
+
+/* Superseded values (e.g. an extended deadline): still legible, but clearly
+   secondary to the new value that follows. Markdown ~~text~~ renders as <del>. */
+del {
+  color: var(--muted);
+  text-decoration-thickness: 1.5px;
+}
+/* The homepage intro animation wraps each word in an inline-block, and
+   text-decoration does not propagate into inline-blocks: strike each word. */
+del .home-intro-word {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
 
 /* Prose (rendered markdown bodies) */
 .prose { max-width: 700px; }
